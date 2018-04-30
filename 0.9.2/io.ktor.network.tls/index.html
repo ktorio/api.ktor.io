@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.network.tls - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.network.tls</a><br/>
+<br/>
+<h2>Package io.ktor.network.tls</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-cipher-suite/index.html">CipherSuite</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CipherSuite</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-secret-exchange-type/index.html">SecretExchangeType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">SecretExchangeType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-alert-level/index.html">TLSAlertLevel</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">TLSAlertLevel</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-alert-type/index.html">TLSAlertType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">TLSAlertType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-handshake-header/index.html">TLSHandshakeHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TLSHandshakeHeader</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-handshake-type/index.html">TLSHandshakeType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">TLSHandshakeType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-record-header/index.html">TLSRecordHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TLSRecordHeader</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-record-type/index.html">TLSRecordType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">TLSRecordType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-l-s-version/index.html">TLSVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">TLSVersion</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-t-l-s-exception/index.html">TLSException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TLSException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html"><span class="identifier">IOException</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="kotlinx.coroutines.experimental.io.-byte-read-channel/index.html">kotlinx.coroutines.experimental.io.ByteReadChannel</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlinx.io.core.-byte-packet-builder/index.html">kotlinx.io.core.BytePacketBuilder</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="kotlinx.io.core.-byte-read-packet/index.html">kotlinx.io.core.ByteReadPacket</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="tls.html">tls</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.network.sockets/-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">.</span><span class="identifier">tls</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/trustManager">trustManager</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/X509TrustManager.html"><span class="identifier">X509TrustManager</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/serverName">serverName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ioCoroutineDispatcher<span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.network.sockets/-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.network.sockets/-socket.html"><span class="identifier">Socket</span></a><span class="symbol">.</span><span class="identifier">tls</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/trustManager">trustManager</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/X509TrustManager.html"><span class="identifier">X509TrustManager</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/randomAlgorithm">randomAlgorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"NativePRNGNonBlocking"<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/serverName">serverName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ioCoroutineDispatcher<span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.network.sockets/-socket.html"><span class="identifier">Socket</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

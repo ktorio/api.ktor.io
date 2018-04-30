@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TestHttpClientRequest - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.server.testing.client</a>&nbsp;/&nbsp;<a href="./index.html">TestHttpClientRequest</a><br/>
+<br/>
+<h1>TestHttpClientRequest</h1>
+<code><span class="keyword">class </span><span class="identifier">TestHttpClientRequest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.request/-http-request/index.html"><span class="identifier">HttpRequest</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TestHttpClientRequest</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.client.TestHttpClientRequest$<init>(io.ktor.client.call.HttpClientCall, io.ktor.server.testing.client.TestHttpClientEngine, io.ktor.client.request.HttpRequestData)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.client.TestHttpClientRequest$<init>(io.ktor.client.call.HttpClientCall, io.ktor.server.testing.client.TestHttpClientEngine, io.ktor.client.request.HttpRequestData)/engine">engine</span><span class="symbol">:</span>&nbsp;<a href="../-test-http-client-engine/index.html"><span class="identifier">TestHttpClientEngine</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.client.TestHttpClientRequest$<init>(io.ktor.client.call.HttpClientCall, io.ktor.server.testing.client.TestHttpClientEngine, io.ktor.client.request.HttpRequestData)/requestData">requestData</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.request/-http-request-data/index.html"><span class="identifier">HttpRequestData</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="attributes.html">attributes</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">attributes</span><span class="symbol">: </span><a href="../../io.ktor.util/-attributes/index.html"><span class="identifier">Attributes</span></a></code>
+<p>Typed <a href="../../io.ktor.util/-attributes/index.html">Attributes</a> associated to this request serving as a lightweight container.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><a href="../../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code>
+<p>The associated <a href="../../io.ktor.client.call/-http-client-call/index.html">HttpClientCall</a> containing both
+the underlying <a href="../../io.ktor.client.call/-http-client-call/request.html">HttpClientCall.request</a> and <a href="../../io.ktor.client.call/-http-client-call/response.html">HttpClientCall.response</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content.html">content</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">content</span><span class="symbol">: </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>An <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> representing the request body</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="execution-context.html">executionContext</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">executionContext</span><span class="symbol">: </span><span class="identifier">CompletableDeferred</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code>
+<p>A <a href="#">Job</a> representing the process of this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="method.html">method</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">method</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a></code>
+<p>The <a href="../../io.ktor.http/-http-method/index.html">HttpMethod</a> or HTTP VERB used for this request.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="url.html">url</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">url</span><span class="symbol">: </span><a href="../../io.ktor.http/-url/index.html"><span class="identifier">Url</span></a></code>
+<p>The <a href="../../io.ktor.http/-url/index.html">Url</a> representing the endpoint and the uri for this request.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/charset.html">charset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">charset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">contentLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/etag.html">etag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">etag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/expires.html">expires</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">expires</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/last-modified.html">lastModified</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">lastModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/set-cookie.html">setCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">setCookie</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/vary.html">vary</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">vary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

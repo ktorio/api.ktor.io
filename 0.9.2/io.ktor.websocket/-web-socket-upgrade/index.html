@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WebSocketUpgrade - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.websocket</a>&nbsp;/&nbsp;<a href="./index.html">WebSocketUpgrade</a><br/>
+<br/>
+<h1>WebSocketUpgrade</h1>
+<code><span class="keyword">class </span><span class="identifier">WebSocketUpgrade</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.content/-outgoing-content/-protocol-upgrade/index.html"><span class="identifier">ProtocolUpgrade</span></a></code>
+<p>An <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> response object that could be used to <code>respond()</code>: it will cause application engine to
+perform HTTP upgrade and start websocket RAW session</p>
+<p>Please note that you generally shouldn't use this object directly but use <a href="../-web-sockets/index.html">WebSockets</a> feature with routing builders
+<a href="../web-socket.html">webSocket</a> instead</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">WebSocketUpgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$<init>(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$<init>(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$<init>(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/handle">handle</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../../io.ktor.http.cio.websocket/-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>An <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> response object that could be used to <code>respond()</code>: it will cause application engine to
+perform HTTP upgrade and start websocket RAW session</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="handle.html">handle</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">handle</span><span class="symbol">: </span><span class="keyword">suspend </span><a href="../../io.ktor.http.cio.websocket/-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="protocol.html">protocol</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">protocol</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/-outgoing-content/-protocol-upgrade/status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="upgrade.html">upgrade</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">upgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/engineContext">engineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSocketUpgrade$upgrade(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext)/userContext">userContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>Upgrades an HTTP connection</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/caching.html">caching</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">caching</span><span class="symbol">: </span><a href="../../io.ktor.content/-caching-options/index.html"><span class="identifier">CachingOptions</span></a><span class="symbol">?</span></code>
+<p>Gets or sets <a href="../../io.ktor.http/-cache-control/index.html">CacheControl</a> instance as an extension property on this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/default-versions.html">defaultVersions</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">defaultVersions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves LastModified and ETag versions from this <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> headers</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/versions.html">versions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">versions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code>
+<p>Gets or sets list of <a href="../../io.ktor.content/-version/index.html">Version</a> instances as an extension property on this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.client.utils/wrap-headers.html">wrapHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">wrapHeaders</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.utils$wrapHeaders(io.ktor.content.OutgoingContent, kotlin.Function1((io.ktor.http.Headers, )))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Generates a new <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> of the same abstract type
+but with <a href="../../io.ktor.content/-outgoing-content/headers.html">OutgoingContent.headers</a> transformed by the specified <a href="../../io.ktor.client.utils/wrap-headers.html#io.ktor.client.utils$wrapHeaders(io.ktor.content.OutgoingContent, kotlin.Function1((io.ktor.http.Headers, )))/block">block</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

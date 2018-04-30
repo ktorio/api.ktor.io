@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationEngineEnvironmentReloading - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.server.engine</a>&nbsp;/&nbsp;<a href="./index.html">ApplicationEngineEnvironmentReloading</a><br/>
+<br/>
+<h1>ApplicationEngineEnvironmentReloading</h1>
+<code><span class="keyword">class </span><span class="identifier">ApplicationEngineEnvironmentReloading</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-application-engine-environment/index.html"><span class="identifier">ApplicationEngineEnvironment</span></a></code>
+<p>Implements <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> by loading an <a href="../../io.ktor.application/-application/index.html">Application</a> from a folder or jar.</p>
+<p><a href="#">watchPaths</a> specifies substrings to match against class path entries to monitor changes in folder/jar and implements hot reloading</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ApplicationEngineEnvironmentReloading</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/classLoader">classLoader</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html"><span class="identifier">ClassLoader</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/log">log</span><span class="symbol">:</span>&nbsp;<span class="identifier">Logger</span><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/config">config</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.config/-application-config/index.html"><span class="identifier">ApplicationConfig</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/connectors">connectors</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-engine-connector-config/index.html"><span class="identifier">EngineConnectorConfig</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/modules">modules</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngineEnvironmentReloading$<init>(java.lang.ClassLoader, org.slf4j.Logger, io.ktor.config.ApplicationConfig, kotlin.collections.List((io.ktor.server.engine.EngineConnectorConfig)), kotlin.collections.List((kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))), kotlin.collections.List((kotlin.String)))/watchPaths">watchPaths</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">)</span></code>
+<p>Implements <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> by loading an <a href="../../io.ktor.application/-application/index.html">Application</a> from a folder or jar.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">application</span><span class="symbol">: </span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code>
+<p>Running <a href="../../io.ktor.application/-application/index.html">Application</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="class-loader.html">classLoader</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">classLoader</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html"><span class="identifier">ClassLoader</span></a></code>
+<p><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html">ClassLoader</a> used to load application.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="config.html">config</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">config</span><span class="symbol">: </span><a href="../../io.ktor.config/-application-config/index.html"><span class="identifier">ApplicationConfig</span></a></code>
+<p>Configuration for the <a href="../../io.ktor.application/-application/index.html">Application</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="connectors.html">connectors</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">connectors</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-engine-connector-config/index.html"><span class="identifier">EngineConnectorConfig</span></a><span class="symbol">&gt;</span></code>
+<p>Connectors that describers where and how server should listen</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="log.html">log</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">log</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Instance of <a href="#">Logger</a> to be used for logging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="monitor.html">monitor</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">monitor</span><span class="symbol">: </span><a href="../../io.ktor.application/-application-events/index.html"><span class="identifier">ApplicationEvents</span></a></code>
+<p>Provides events on Application lifecycle</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="reload.html">reload</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">reload</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="start.html">start</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> and creates an application</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="stop.html">stop</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Stops <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> and destroys any running application</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

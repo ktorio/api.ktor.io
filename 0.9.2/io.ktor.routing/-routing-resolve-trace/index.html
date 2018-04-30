@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RoutingResolveTrace - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.routing</a>&nbsp;/&nbsp;<a href="./index.html">RoutingResolveTrace</a><br/>
+<br/>
+<h1>RoutingResolveTrace</h1>
+<code><span class="keyword">class </span><span class="identifier">RoutingResolveTrace</span></code>
+<p>Represents the trace of routing resolution process for diagnostics.</p>
+<h3>Parameters</h3>
+<p><a name="call"></a>
+<code>call</code> - instance of <a href="../../io.ktor.application/-application-call/index.html">ApplicationCall</a> for which this trace was created.</p>
+<p><a name="segments"></a>
+<code>segments</code> - list of <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>s for each path segment supplied for the routing resolution.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RoutingResolveTrace</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$<init>(io.ktor.application.ApplicationCall, kotlin.collections.List((kotlin.String)))/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$<init>(io.ktor.application.ApplicationCall, kotlin.collections.List((kotlin.String)))/segments">segments</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Represents the trace of routing resolution process for diagnostics.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a></code>
+<p>instance of <a href="../../io.ktor.application/-application-call/index.html">ApplicationCall</a> for which this trace was created.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="segments.html">segments</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">segments</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>list of <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>s for each path segment supplied for the routing resolution.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="begin.html">begin</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">begin</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$begin(io.ktor.routing.Route, kotlin.Int)/route">route</span><span class="symbol">:</span>&nbsp;<a href="../-route/index.html"><span class="identifier">Route</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$begin(io.ktor.routing.Route, kotlin.Int)/segmentIndex">segmentIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Begins processing a <a href="begin.html#io.ktor.routing.RoutingResolveTrace$begin(io.ktor.routing.Route, kotlin.Int)/route">route</a> at segment with <a href="begin.html#io.ktor.routing.RoutingResolveTrace$begin(io.ktor.routing.Route, kotlin.Int)/segmentIndex">segmentIndex</a> in <a href="segments.html">segments</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="build-text.html">buildText</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Builds detailed text description for this trace, including all entries.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="finish.html">finish</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/route">route</span><span class="symbol">:</span>&nbsp;<a href="../-route/index.html"><span class="identifier">Route</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/segmentIndex">segmentIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../-routing-resolve-result/index.html"><span class="identifier">RoutingResolveResult</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Finishes processing a <a href="finish.html#io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/route">route</a> at segment with <a href="finish.html#io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/segmentIndex">segmentIndex</a> in <a href="segments.html">segments</a> with the given <a href="finish.html#io.ktor.routing.RoutingResolveTrace$finish(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/result">result</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="skip.html">skip</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">skip</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/route">route</span><span class="symbol">:</span>&nbsp;<a href="../-route/index.html"><span class="identifier">Route</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/segmentIndex">segmentIndex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../-routing-resolve-result/index.html"><span class="identifier">RoutingResolveResult</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Begins and finishes processing a <a href="skip.html#io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/route">route</a> at segment with <a href="skip.html#io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/segmentIndex">segmentIndex</a> in <a href="segments.html">segments</a> with the given <a href="skip.html#io.ktor.routing.RoutingResolveTrace$skip(io.ktor.routing.Route, kotlin.Int, io.ktor.routing.RoutingResolveResult)/result">result</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

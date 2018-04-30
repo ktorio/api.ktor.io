@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SessionTransport - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.sessions</a>&nbsp;/&nbsp;<a href="./index.html">SessionTransport</a><br/>
+<br/>
+<h1>SessionTransport</h1>
+<code><span class="keyword">interface </span><span class="identifier">SessionTransport</span></code>
+<p>SessionTransport <a href="receive.html">receive</a>, <a href="send.html">send</a> or <a href="clear.html">clear</a> a session from/to an <a href="../../io.ktor.application/-application-call/index.html">ApplicationCall</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear.html">clear</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionTransport$clear(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Clears session information from a specific <a href="clear.html#io.ktor.sessions.SessionTransport$clear(io.ktor.application.ApplicationCall)/call">call</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="receive.html">receive</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">receive</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionTransport$receive(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Gets session information from a <a href="receive.html#io.ktor.sessions.SessionTransport$receive(io.ktor.application.ApplicationCall)/call">call</a> and returns a String if success or null if failed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send.html">send</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">send</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionTransport$send(io.ktor.application.ApplicationCall, kotlin.String)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.sessions.SessionTransport$send(io.ktor.application.ApplicationCall, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets session information represented by <a href="send.html#io.ktor.sessions.SessionTransport$send(io.ktor.application.ApplicationCall, kotlin.String)/value">value</a> to a <a href="send.html#io.ktor.sessions.SessionTransport$send(io.ktor.application.ApplicationCall, kotlin.String)/call">call</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-session-transport-cookie/index.html">SessionTransportCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SessionTransportCookie</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SessionTransport</span></a></code>
+<p>SessionTransport that adds a Set-Cookie header and reads Cookie header
+for the specified cookie <a href="../-session-transport-cookie/name.html">name</a>, and a specific cookie <a href="../-session-transport-cookie/configuration.html">configuration</a> after
+applying/un-applying the specified transforms defined by <a href="../-session-transport-cookie/transformers.html">transformers</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-session-transport-header/index.html">SessionTransportHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SessionTransportHeader</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SessionTransport</span></a></code>
+<p>SessionTransport that sets or gets the specific header <a href="../-session-transport-header/name.html">name</a>,
+applying/un-applying the specified transforms defined by <a href="../-session-transport-header/transformers.html">transformers</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

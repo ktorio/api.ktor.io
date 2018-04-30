@@ -1,0 +1,201 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpResponse - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.client.response</a>&nbsp;/&nbsp;<a href="./index.html">HttpResponse</a><br/>
+<br/>
+<h1>HttpResponse</h1>
+<code><span class="keyword">interface </span><span class="identifier">HttpResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">, </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>A response for <a href="../../io.ktor.client/-http-client/index.html">HttpClient</a>, second part of <a href="../../io.ktor.client.call/-http-client-call/index.html">HttpClientCall</a>.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><a href="../../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code>
+<p>The associated <a href="../../io.ktor.client.call/-http-client-call/index.html">HttpClientCall</a> containing both
+the underlying <a href="../../io.ktor.client.call/-http-client-call/request.html">HttpClientCall.request</a> and <a href="../../io.ktor.client.call/-http-client-call/response.html">HttpClientCall.response</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content.html">content</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">content</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code>
+<p><a href="#">ByteReadChannel</a> with the payload of the response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="execution-context.html">executionContext</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">executionContext</span><span class="symbol">: </span><span class="identifier">Job</span></code>
+<p>A <a href="#">Job</a> representing the process of this response.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-time.html">requestTime</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">requestTime</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a></code>
+<p><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html">Date</a> of the request start.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="response-time.html">responseTime</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">responseTime</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a></code>
+<p><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html">Date</a> of the response start.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a></code>
+<p>The <a href="../../io.ktor.http/-http-status-code/index.html">HttpStatusCode</a> returned by the server. It includes both,
+the <a href="../../io.ktor.http/-http-status-code/description.html">HttpStatusCode.description</a> and the <a href="../../io.ktor.http/-http-status-code/value.html">HttpStatusCode.value</a> (code).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="version.html">version</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">version</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-protocol-version/index.html"><span class="identifier">HttpProtocolVersion</span></a></code>
+<p>HTTP version. Usually <a href="../../io.ktor.http/-http-protocol-version/-h-t-t-p_1_1.html">HttpProtocolVersion.HTTP_1_1</a> or <a href="../../io.ktor.http/-http-protocol-version/-h-t-t-p_2_0.html">HttpProtocolVersion.HTTP_2_0</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/-http-message/headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/charset.html">charset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">charset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">contentLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../discard-remaining.html">discardRemaining</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">.</span><span class="identifier">discardRemaining</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Efficiently discards the remaining bytes of <a href="content.html">HttpResponse.content</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/etag.html">etag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">etag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/expires.html">expires</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">expires</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/last-modified.html">lastModified</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">lastModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../read-bytes.html">readBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">.</span><span class="identifier">readBytes</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.response$readBytes(io.ktor.client.response.HttpResponse, kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Exactly reads <a href="../read-bytes.html#io.ktor.client.response$readBytes(io.ktor.client.response.HttpResponse, kotlin.Int)/count">count</a> bytes of the <a href="content.html">HttpResponse.content</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">.</span><span class="identifier">readBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Reads the whole <a href="content.html">HttpResponse.content</a> if Content-Length was specified.
+Otherwise it just reads one byte.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../read-text.html">readText</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">.</span><span class="identifier">readText</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.response$readText(io.ktor.client.response.HttpResponse, java.nio.charset.Charset, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/charset">charset</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.client.response$readText(io.ktor.client.response.HttpResponse, java.nio.charset.Charset, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><span class="identifier">ByteBuffer</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;HttpClientDefaultPool<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Read the <a href="content.html">HttpResponse.content</a> as a String. You can pass an optional <a href="../read-text.html#io.ktor.client.response$readText(io.ktor.client.response.HttpResponse, java.nio.charset.Charset, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/charset">charset</a>
+to specify a charset in the case no one is specified as part of the Content-Type response.
+If no charset specified either as parameter or as part of the response, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-charsets/-i-s-o_8859_1.html">Charsets.ISO_8859_1</a> will be used.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/set-cookie.html">setCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">setCookie</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.http/vary.html">vary</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message/index.html"><span class="identifier">HttpMessage</span></a><span class="symbol">.</span><span class="identifier">vary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.testing.client/-test-http-client-response/index.html">TestHttpClientResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TestHttpClientResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpResponse</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

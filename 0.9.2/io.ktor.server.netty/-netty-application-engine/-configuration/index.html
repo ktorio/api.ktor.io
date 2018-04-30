@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NettyApplicationEngine.Configuration - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.server.netty</a>&nbsp;/&nbsp;<a href="../index.html">NettyApplicationEngine</a>&nbsp;/&nbsp;<a href="./index.html">Configuration</a><br/>
+<br/>
+<h1>Configuration</h1>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.server.engine/-base-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a></code>
+<p>Configuration for the <a href="../index.html">NettyApplicationEngine</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Configuration</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Configuration for the <a href="../index.html">NettyApplicationEngine</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="configure-bootstrap.html">configureBootstrap</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">configureBootstrap</span><span class="symbol">: </span><span class="identifier">ServerBootstrap</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>User-provided function to configure Netty's <a href="#">ServerBootstrap</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-queue-limit.html">requestQueueLimit</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">requestQueueLimit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Size of the queue to store <a href="../../../io.ktor.application/-application-call/index.html">ApplicationCall</a> instances that cannot be immediately processed</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="response-write-timeout-seconds.html">responseWriteTimeoutSeconds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">responseWriteTimeoutSeconds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Timeout in seconds for sending responses to client</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="running-limit.html">runningLimit</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">runningLimit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Number of concurrently running requests from the same http pipeline</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="share-work-group.html">shareWorkGroup</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shareWorkGroup</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Do not create separate call event group and reuse worker group for processing calls</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

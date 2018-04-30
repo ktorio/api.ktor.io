@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutgoingContent.ReadChannelContent - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="../index.html">OutgoingContent</a>&nbsp;/&nbsp;<a href="./index.html">ReadChannelContent</a><br/>
+<br/>
+<h1>ReadChannelContent</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ReadChannelContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> with payload read from <a href="#">ByteReadChannel</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ReadChannelContent</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> with payload read from <a href="#">ByteReadChannel</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">contentLength</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span></code>
+<p>Specifies content length in bytes for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code>
+<p>Specifies <a href="../../../io.ktor.http/-content-type/index.html">ContentType</a> for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="read-from.html">readFrom</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code>
+<p>Provides <a href="#">ByteReadChannel</a> for the content</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFrom</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent.ReadChannelContent$readFrom(kotlin.ranges.LongRange)/range">range</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html"><span class="identifier">LongRange</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code>
+<p>Provides <a href="#">ByteReadChannel</a> for the given range of the content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../get-property.html">getProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">getProperty</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent$getProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.getProperty.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="../get-property.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../get-property.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code>
+<p>Gets an extension property for this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../set-property.html">setProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">setProperty</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent$setProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.setProperty.T)), io.ktor.content.OutgoingContent.setProperty.T)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="../set-property.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.OutgoingContent$setProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.setProperty.T)), io.ktor.content.OutgoingContent.setProperty.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../set-property.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets an extension property for this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../-jar-file-content/index.html">JarFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JarFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ReadChannelContent</span></a></code>
+<p>Represents an <a href="../index.html">OutgoingContent</a> for a resource inside a Jar file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-local-file-content/index.html">LocalFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LocalFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ReadChannelContent</span></a></code>
+<p>OutgoingContent representing a local <a href="../../-local-file-content/file.html">file</a> with a specified <a href="../../-local-file-content/content-type.html">contentType</a>, <a href="../../../io.ktor.http/expires.html">expires</a> date and <a href="../../caching.html">caching</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-u-r-i-file-content/index.html">URIFileContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">URIFileContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ReadChannelContent</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

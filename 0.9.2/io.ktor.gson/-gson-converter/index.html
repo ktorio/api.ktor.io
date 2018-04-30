@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GsonConverter - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.gson</a>&nbsp;/&nbsp;<a href="./index.html">GsonConverter</a><br/>
+<br/>
+<h1>GsonConverter</h1>
+<code><span class="keyword">class </span><span class="identifier">GsonConverter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.features/-content-converter/index.html"><span class="identifier">ContentConverter</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GsonConverter</span><span class="symbol">(</span><span class="identifier" id="io.ktor.gson.GsonConverter$<init>(com.google.gson.Gson)/gson">gson</span><span class="symbol">:</span>&nbsp;<span class="identifier">Gson</span>&nbsp;<span class="symbol">=</span>&nbsp;Gson()<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="convert-for-receive.html">convertForReceive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">convertForReceive</span><span class="symbol">(</span><span class="identifier" id="io.ktor.gson.GsonConverter$convertForReceive(io.ktor.pipeline.PipelineContext((io.ktor.request.ApplicationReceiveRequest, io.ktor.application.ApplicationCall)))/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.pipeline/-pipeline-context/index.html"><span class="identifier">PipelineContext</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.request/-application-receive-request/index.html"><span class="identifier">ApplicationReceiveRequest</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code>
+<p>Convert a value (RAW or intermediate) from receive pipeline (deserialize)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="convert-for-send.html">convertForSend</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">convertForSend</span><span class="symbol">(</span><span class="identifier" id="io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.pipeline/-pipeline-context/index.html"><span class="identifier">PipelineContext</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code>
+<p>Convert a <a href="convert-for-send.html#io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/value">value</a> to the specified <a href="convert-for-send.html#io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</a> to a value suitable for sending (serialize).
+Note that as far as <a href="../../io.ktor.features/-content-converter/index.html">ContentConverter</a> could be registered multiple times with different content types
+hence <a href="convert-for-send.html#io.ktor.gson.GsonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</a> could be different depends on what the client accepts (inferred from Accept header).
+This function could ignore value if it is not suitable for conversion and return <code>null</code> so in this case
+other registered converters could be tried or this function could be invoked with other content types
+it the converted has been registered multiple times with different content types</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

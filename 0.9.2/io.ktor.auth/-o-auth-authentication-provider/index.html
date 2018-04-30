@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OAuthAuthenticationProvider - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.auth</a>&nbsp;/&nbsp;<a href="./index.html">OAuthAuthenticationProvider</a><br/>
+<br/>
+<h1>OAuthAuthenticationProvider</h1>
+<code><span class="keyword">class </span><span class="identifier">OAuthAuthenticationProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-authentication-provider/index.html"><span class="identifier">AuthenticationProvider</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OAuthAuthenticationProvider</span><span class="symbol">(</span><span class="identifier" id="io.ktor.auth.OAuthAuthenticationProvider$<init>(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="client.html">client</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">client</span><span class="symbol">: </span><a href="../../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="provider-lookup.html">providerLookup</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">providerLookup</span><span class="symbol">: </span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../-o-auth-server-settings/index.html"><span class="identifier">OAuthServerSettings</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="url-provider.html">urlProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">urlProvider</span><span class="symbol">: </span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../-o-auth-server-settings/index.html"><span class="identifier">OAuthServerSettings</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-authentication-provider/name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>is the name of the provider, or <code>null</code> for a default provider</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-authentication-provider/pipeline.html">pipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">pipeline</span><span class="symbol">: </span><a href="../-authentication-pipeline/index.html"><span class="identifier">AuthenticationPipeline</span></a></code>
+<p>Authentication pipeline for this provider</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-authentication-provider/skip-when.html">skipWhen</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">skipWhen</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Authentication filters specifying if authentication is required for particular <a href="../../io.ktor.application/-application-call/index.html">ApplicationCall</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-authentication-provider/skip-when.html">skipWhen</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">skipWhen</span><span class="symbol">(</span><span class="identifier" id="io.ktor.auth.AuthenticationProvider$skipWhen(kotlin.Function1((io.ktor.application.ApplicationCall, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Adds an authentication filter to the list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

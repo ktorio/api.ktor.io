@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Socket - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="index.html">io.ktor.network.sockets</a>&nbsp;/&nbsp;<a href="./-socket.html">Socket</a><br/>
+<br/>
+<h1>Socket</h1>
+<code><span class="keyword">interface </span><span class="identifier">Socket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">, </span><a href="-a-bound-socket/index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="-a-connected-socket/index.html"><span class="identifier">AConnectedSocket</span></a></code>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-a-bound-socket/local-address.html">localAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">localAddress</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/net/SocketAddress.html"><span class="identifier">SocketAddress</span></a></code>
+<p>Local socket address. Could throw an exception if no address bound yet.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-connected-socket/remote-address.html">remoteAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">remoteAddress</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/net/SocketAddress.html"><span class="identifier">SocketAddress</span></a></code>
+<p>Remote socket address. Could throw an exception if the peer is not yet connected or already disconnected.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-closed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="-a-socket/index.html"><span class="identifier">ASocket</span></a><span class="symbol">.</span><span class="identifier">isClosed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="await-closed.html">awaitClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-a-socket/index.html"><span class="identifier">ASocket</span></a><span class="symbol">.</span><span class="identifier">awaitClosed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="open-read-channel.html">openReadChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-a-readable/index.html"><span class="identifier">AReadable</span></a><span class="symbol">.</span><span class="identifier">openReadChannel</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteReadChannel</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="open-write-channel.html">openWriteChannel</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-a-writable/index.html"><span class="identifier">AWritable</span></a><span class="symbol">.</span><span class="identifier">openWriteChannel</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.sockets$openWriteChannel(io.ktor.network.sockets.AWritable, kotlin.Boolean)/autoFlush">autoFlush</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteWriteChannel</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../io.ktor.network.tls/tls.html">tls</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./-socket.html"><span class="identifier">Socket</span></a><span class="symbol">.</span><span class="identifier">tls</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/trustManager">trustManager</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/X509TrustManager.html"><span class="identifier">X509TrustManager</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/randomAlgorithm">randomAlgorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"NativePRNGNonBlocking"<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/serverName">serverName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.Socket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ioCoroutineDispatcher<span class="symbol">)</span><span class="symbol">: </span><a href="./-socket.html"><span class="identifier">Socket</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">.</span><span class="identifier">tls</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/trustManager">trustManager</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/X509TrustManager.html"><span class="identifier">X509TrustManager</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/serverName">serverName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.network.tls$tls(io.ktor.network.sockets.ReadWriteSocket, javax.net.ssl.X509TrustManager, kotlin.String, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ioCoroutineDispatcher<span class="symbol">)</span><span class="symbol">: </span><a href="-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

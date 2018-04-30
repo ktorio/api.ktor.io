@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.server.cio - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.server.cio</a><br/>
+<br/>
+<h2>Package io.ktor.server.cio</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-c-i-o/index.html">CIO</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">CIO</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-application-engine-factory/index.html"><span class="identifier">ApplicationEngineFactory</span></a><span class="symbol">&lt;</span><a href="-c-i-o-application-engine/index.html"><span class="identifier">CIOApplicationEngine</span></a><span class="symbol">,</span>&nbsp;<a href="-c-i-o-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&gt;</span></code>
+<p>An <a href="../io.ktor.server.engine/-application-engine-factory/index.html">ApplicationEngineFactory</a> providing a CIO-based <a href="../io.ktor.server.engine/-application-engine/index.html">ApplicationEngine</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-application-call/index.html">CIOApplicationCall</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOApplicationCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-call/index.html"><span class="identifier">BaseApplicationCall</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-application-engine/index.html">CIOApplicationEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-engine/index.html"><span class="identifier">BaseApplicationEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-application-request/index.html">CIOApplicationRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOApplicationRequest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-request/index.html"><span class="identifier">BaseApplicationRequest</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-application-response/index.html">CIOApplicationResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOApplicationResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-response/index.html"><span class="identifier">BaseApplicationResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-incoming-content/index.html">CIOIncomingContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOIncomingContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.content/-incoming-content/index.html"><span class="identifier">IncomingContent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-development-engine/index.html">DevelopmentEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">DevelopmentEngine</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-server/index.html">HttpServer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpServer</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-server-settings/index.html">HttpServerSettings</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">HttpServerSettings</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="http-server.html">httpServer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">httpServer</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.cio$httpServer(io.ktor.server.cio.HttpServerSettings, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/settings">settings</span><span class="symbol">:</span>&nbsp;<a href="-http-server-settings/index.html"><span class="identifier">HttpServerSettings</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.cio$httpServer(io.ktor.server.cio.HttpServerSettings, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/parentJob">parentJob</span><span class="symbol">:</span>&nbsp;<span class="identifier">Job</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.server.cio$httpServer(io.ktor.server.cio.HttpServerSettings, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/callDispatcher">callDispatcher</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ioCoroutineDispatcher<span class="symbol">, </span><span class="identifier" id="io.ktor.server.cio$httpServer(io.ktor.server.cio.HttpServerSettings, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio/-http-request-handler.html"><span class="identifier">HttpRequestHandler</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-http-server/index.html"><span class="identifier">HttpServer</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,289 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.http.cio - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.http.cio</a><br/>
+<br/>
+<h2>Package io.ktor.http.cio</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-c-i-o-headers/index.html">CIOHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOHeaders</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-multipart-data/index.html">CIOMultipartData</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOMultipartData</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-c-i-o-multipart-data-base/index.html"><span class="identifier">CIOMultipartDataBase</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-c-i-o-multipart-data-base/index.html">CIOMultipartDataBase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CIOMultipartDataBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.content/-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-connection-options/index.html">ConnectionOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ConnectionOptions</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-headers-map/index.html">HttpHeadersMap</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpHeadersMap</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-message/index.html">HttpMessage</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpMessage</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-multipart-event/index.html">MultipartEvent</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">MultipartEvent</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-request/index.html">Request</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Request</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-http-message/index.html"><span class="identifier">HttpMessage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-request-response-builder/index.html">RequestResponseBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RequestResponseBuilder</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-response/index.html">Response</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Response</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-http-message/index.html"><span class="identifier">HttpMessage</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-parser-exception/index.html">ParserException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ParserException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-decoder-job.html">DecoderJob</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">DecoderJob</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">WriterJob</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-encoder-job.html">EncoderJob</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">EncoderJob</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">ReaderJob</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-request-handler.html">HttpRequestHandler</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">HttpRequestHandler</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">request</span><span class="symbol">:</span>&nbsp;<a href="-request/index.html"><span class="identifier">Request</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">,</span>&nbsp;<span class="identifier">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">,</span>&nbsp;<span class="identifier">upgraded</span><span class="symbol">:</span>&nbsp;<span class="identifier">CompletableDeferred</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-http-pipeline-coroutine.html">HttpPipelineCoroutine</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">HttpPipelineCoroutine</span><span class="symbol">: </span><span class="identifier">CoroutineName</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-pipeline-writer-coroutine.html">HttpPipelineWriterCoroutine</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">HttpPipelineWriterCoroutine</span><span class="symbol">: </span><span class="identifier">CoroutineName</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="boundary.html">boundary</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">boundary</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$boundary(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel)/boundaryPrefixed">boundaryPrefixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$boundary(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="copy-multipart.html">copyMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">copyMultipart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$copyMultipart(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$copyMultipart(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$copyMultipart(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="decode-chunked.html">decodeChunked</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">decodeChunked</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$decodeChunked(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.coroutines.experimental.CoroutineContext)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$decodeChunked(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-decoder-job.html"><span class="identifier">DecoderJob</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">decodeChunked</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$decodeChunked(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$decodeChunked(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="dump-to.html">dumpTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">.</span><span class="identifier">dumpTo</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$dumpTo(io.ktor.http.cio.HttpHeadersMap, kotlin.String, java.lang.Appendable)/indent">indent</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$dumpTo(io.ktor.http.cio.HttpHeadersMap, kotlin.String, java.lang.Appendable)/out">out</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-appendable/index.html"><span class="identifier">Appendable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="encode-chunked.html">encodeChunked</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">encodeChunked</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$encodeChunked(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$encodeChunked(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-encoder-job.html"><span class="identifier">EncoderJob</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">encodeChunked</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$encodeChunked(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.io.ByteReadChannel)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$encodeChunked(kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.io.ByteReadChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expect-http-body.html">expectHttpBody</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">expectHttpBody</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.HttpMethod, kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlin.CharSequence)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.HttpMethod, kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlin.CharSequence)/contentLength">contentLength</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.HttpMethod, kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlin.CharSequence)/transferEncoding">transferEncoding</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.HttpMethod, kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlin.CharSequence)/connectionOptions">connectionOptions</span><span class="symbol">:</span>&nbsp;<a href="-connection-options/index.html"><span class="identifier">ConnectionOptions</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.HttpMethod, kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlin.CharSequence)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">expectHttpBody</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$expectHttpBody(io.ktor.http.cio.Request)/request">request</span><span class="symbol">:</span>&nbsp;<a href="-request/index.html"><span class="identifier">Request</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expect-http-upgrade.html">expectHttpUpgrade</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">expectHttpUpgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$expectHttpUpgrade(io.ktor.http.HttpMethod, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpUpgrade(io.ktor.http.HttpMethod, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions)/upgrade">upgrade</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$expectHttpUpgrade(io.ktor.http.HttpMethod, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions)/connectionOptions">connectionOptions</span><span class="symbol">:</span>&nbsp;<a href="-connection-options/index.html"><span class="identifier">ConnectionOptions</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">expectHttpUpgrade</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$expectHttpUpgrade(io.ktor.http.cio.Request)/request">request</span><span class="symbol">:</span>&nbsp;<a href="-request/index.html"><span class="identifier">Request</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expect-multipart.html">expectMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">expectMultipart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$expectMultipart(io.ktor.http.cio.HttpHeadersMap)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="handle-connection-pipeline.html">handleConnectionPipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><s><span class="identifier">handleConnectionPipeline</span></s><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/ioCoroutineContext">ioCoroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/callContext">callContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/timeouts">timeouts</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.internals/-weak-timeout-queue/index.html"><span class="identifier">WeakTimeoutQueue</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$handleConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<a href="-http-request-handler.html"><span class="identifier">HttpRequestHandler</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="last-http-request.html">lastHttpRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">lastHttpRequest</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$lastHttpRequest(kotlin.Boolean, io.ktor.http.cio.ConnectionOptions)/http11">http11</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$lastHttpRequest(kotlin.Boolean, io.ktor.http.cio.ConnectionOptions)/connectionOptions">connectionOptions</span><span class="symbol">:</span>&nbsp;<a href="-connection-options/index.html"><span class="identifier">ConnectionOptions</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-http-body.html">parseHttpBody</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parseHttpBody</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/contentLength">contentLength</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/transferEncoding">transferEncoding</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/connectionOptions">connectionOptions</span><span class="symbol">:</span>&nbsp;<a href="-connection-options/index.html"><span class="identifier">ConnectionOptions</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(kotlin.Long, kotlin.CharSequence, io.ktor.http.cio.ConnectionOptions, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parseHttpBody</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseHttpBody(io.ktor.http.cio.HttpHeadersMap, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel)/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-multipart.html">parseMultipart</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parseMultipart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.http.cio.HttpHeadersMap)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.http.cio.HttpHeadersMap)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.http.cio.HttpHeadersMap)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ReceiveChannel</span><span class="symbol">&lt;</span><a href="-multipart-event/index.html"><span class="identifier">MultipartEvent</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">parseMultipart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long)/contentLength">contentLength</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ReceiveChannel</span><span class="symbol">&lt;</span><a href="-multipart-event/index.html"><span class="identifier">MultipartEvent</span></a><span class="symbol">&gt;</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">parseMultipart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long)/boundaryPrefixed">boundaryPrefixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parseMultipart(kotlin.coroutines.experimental.CoroutineContext, java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long)/totalLength">totalLength</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ReceiveChannel</span><span class="symbol">&lt;</span><a href="-multipart-event/index.html"><span class="identifier">MultipartEvent</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-part.html">parsePart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parsePart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parsePart(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Long)/boundaryPrefixed">boundaryPrefixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePart(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Long)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePart(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Long)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePart(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Long)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Long.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-part-body.html">parsePartBody</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parsePartBody</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parsePartBody(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, io.ktor.http.cio.HttpHeadersMap, kotlin.Long)/boundaryPrefixed">boundaryPrefixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePartBody(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, io.ktor.http.cio.HttpHeadersMap, kotlin.Long)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePartBody(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, io.ktor.http.cio.HttpHeadersMap, kotlin.Long)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePartBody(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, io.ktor.http.cio.HttpHeadersMap, kotlin.Long)/headers">headers</span><span class="symbol">:</span>&nbsp;<a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePartBody(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, io.ktor.http.cio.HttpHeadersMap, kotlin.Long)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Long.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-part-headers.html">parsePartHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parsePartHeaders</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parsePartHeaders(kotlinx.coroutines.experimental.io.ByteReadChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-preamble.html">parsePreamble</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parsePreamble</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parsePreamble(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.io.core.BytePacketBuilder, kotlin.Long)/boundaryPrefixed">boundaryPrefixed</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteBuffer</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePreamble(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.io.core.BytePacketBuilder, kotlin.Long)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePreamble(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.io.core.BytePacketBuilder, kotlin.Long)/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">BytePacketBuilder</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$parsePreamble(java.nio.ByteBuffer, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.io.core.BytePacketBuilder, kotlin.Long)/limit">limit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Long.MAX_VALUE<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-request.html">parseRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parseRequest</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseRequest(kotlinx.coroutines.experimental.io.ByteReadChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="-request/index.html"><span class="identifier">Request</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="parse-response.html">parseResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">parseResponse</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$parseResponse(kotlinx.coroutines.experimental.io.ByteReadChannel)/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">)</span><span class="symbol">: </span><a href="-response/index.html"><span class="identifier">Response</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="start-connection-pipeline.html">startConnectionPipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">startConnectionPipeline</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/input">input</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/output">output</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteWriteChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/parentJob">parentJob</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/ioContext">ioContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/callContext">callContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.internals/-weak-timeout-queue/index.html"><span class="identifier">WeakTimeoutQueue</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio$startConnectionPipeline(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.internals.WeakTimeoutQueue, kotlin.SuspendFunction4((io.ktor.http.cio.Request, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlinx.coroutines.experimental.CompletableDeferred((kotlin.Boolean)), kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<a href="-http-request-handler.html"><span class="identifier">HttpRequestHandler</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Job</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

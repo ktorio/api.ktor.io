@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SelectorManagerSupport - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.network.selector</a>&nbsp;/&nbsp;<a href="./index.html">SelectorManagerSupport</a><br/>
+<br/>
+<h1>SelectorManagerSupport</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">SelectorManagerSupport</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-selector-manager/index.html"><span class="identifier">SelectorManager</span></a></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cancelled.html">cancelled</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">cancelled</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="pending.html">pending</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pending</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="provider.html">provider</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/spi/SelectorProvider.html"><span class="identifier">SelectorProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="apply-interest.html">applyInterest</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">applyInterest</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$applyInterest(java.nio.channels.Selector, io.ktor.network.selector.Selectable)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/Selector.html"><span class="identifier">Selector</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$applyInterest(java.nio.channels.Selector, io.ktor.network.selector.Selectable)/s">s</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="cancel-all-suspensions.html">cancelAllSuspensions</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">cancelAllSuspensions</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$cancelAllSuspensions(io.ktor.network.selector.Selectable, kotlin.Throwable)/attachment">attachment</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$cancelAllSuspensions(io.ktor.network.selector.Selectable, kotlin.Throwable)/t">t</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">cancelAllSuspensions</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$cancelAllSuspensions(java.nio.channels.Selector, kotlin.Throwable)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/Selector.html"><span class="identifier">Selector</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$cancelAllSuspensions(java.nio.channels.Selector, kotlin.Throwable)/t">t</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="handle-selected-key.html">handleSelectedKey</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleSelectedKey</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$handleSelectedKey(java.nio.channels.SelectionKey)/key">key</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="handle-selected-keys.html">handleSelectedKeys</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">handleSelectedKeys</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$handleSelectedKeys(kotlin.collections.MutableSet((java.nio.channels.SelectionKey)), kotlin.collections.Set((java.nio.channels.SelectionKey)))/selectedKeys">selectedKeys</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html"><span class="identifier">MutableSet</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$handleSelectedKeys(kotlin.collections.MutableSet((java.nio.channels.SelectionKey)), kotlin.collections.Set((java.nio.channels.SelectionKey)))/keys">keys</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-closed-impl.html">notifyClosedImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">notifyClosedImpl</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$notifyClosedImpl(java.nio.channels.Selector, java.nio.channels.SelectionKey, io.ktor.network.selector.Selectable)/selector">selector</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/Selector.html"><span class="identifier">Selector</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$notifyClosedImpl(java.nio.channels.Selector, java.nio.channels.SelectionKey, io.ktor.network.selector.Selectable)/key">key</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/SelectionKey.html"><span class="identifier">SelectionKey</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$notifyClosedImpl(java.nio.channels.Selector, java.nio.channels.SelectionKey, io.ktor.network.selector.Selectable)/attachment">attachment</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="publish-interest.html">publishInterest</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">publishInterest</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$publishInterest(io.ktor.network.selector.Selectable)/selectable">selectable</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="select.html">select</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">select</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$select(io.ktor.network.selector.Selectable, io.ktor.network.selector.SelectInterest)/selectable">selectable</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector.SelectorManagerSupport$select(io.ktor.network.selector.Selectable, io.ktor.network.selector.SelectInterest)/interest">interest</span><span class="symbol">:</span>&nbsp;<a href="../-select-interest/index.html"><span class="identifier">SelectInterest</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Suspends until <a href="select.html#io.ktor.network.selector.SelectorManagerSupport$select(io.ktor.network.selector.Selectable, io.ktor.network.selector.SelectInterest)/interest">interest</a> is selected for <a href="select.html#io.ktor.network.selector.SelectorManagerSupport$select(io.ktor.network.selector.Selectable, io.ktor.network.selector.SelectInterest)/selectable">selectable</a>
+May cause manager to allocate and run selector instance if not yet created.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-selector-manager/notify-closed.html">notifyClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">notifyClosed</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector.SelectorManager$notifyClosed(io.ktor.network.selector.Selectable)/s">s</span><span class="symbol">:</span>&nbsp;<a href="../-selectable/index.html"><span class="identifier">Selectable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Notifies the selector that selectable has been closed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../build-or-close.html">buildOrClose</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">C</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="../-selector-manager/index.html"><span class="identifier">SelectorManager</span></a><span class="symbol">.</span><span class="identifier">buildOrClose</span><span class="symbol">(</span><span class="identifier" id="io.ktor.network.selector$buildOrClose(io.ktor.network.selector.SelectorManager, kotlin.Function1((java.nio.channels.spi.SelectorProvider, io.ktor.network.selector.buildOrClose.C)), kotlin.Function1((io.ktor.network.selector.buildOrClose.C, io.ktor.network.selector.buildOrClose.R)))/create">create</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/channels/spi/SelectorProvider.html"><span class="identifier">SelectorProvider</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../build-or-close.html#C"><span class="identifier">C</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.network.selector$buildOrClose(io.ktor.network.selector.SelectorManager, kotlin.Function1((java.nio.channels.spi.SelectorProvider, io.ktor.network.selector.buildOrClose.C)), kotlin.Function1((io.ktor.network.selector.buildOrClose.C, io.ktor.network.selector.buildOrClose.R)))/setup">setup</span><span class="symbol">:</span>&nbsp;<a href="../build-or-close.html#C"><span class="identifier">C</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../build-or-close.html#R"><span class="identifier">R</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../build-or-close.html#R"><span class="identifier">R</span></a></code>
+<p>Creates a NIO entity via <a href="../build-or-close.html#io.ktor.network.selector$buildOrClose(io.ktor.network.selector.SelectorManager, kotlin.Function1((java.nio.channels.spi.SelectorProvider, io.ktor.network.selector.buildOrClose.C)), kotlin.Function1((io.ktor.network.selector.buildOrClose.C, io.ktor.network.selector.buildOrClose.R)))/create">create</a> and calls <a href="../build-or-close.html#io.ktor.network.selector$buildOrClose(io.ktor.network.selector.SelectorManager, kotlin.Function1((java.nio.channels.spi.SelectorProvider, io.ktor.network.selector.buildOrClose.C)), kotlin.Function1((io.ktor.network.selector.buildOrClose.C, io.ktor.network.selector.buildOrClose.R)))/setup">setup</a> on it. If any exception happens then the entity will be closed
+and an exception will be propagated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-actor-selector-manager/index.html">ActorSelectorManager</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ActorSelectorManager</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SelectorManagerSupport</span></a><span class="symbol">, </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

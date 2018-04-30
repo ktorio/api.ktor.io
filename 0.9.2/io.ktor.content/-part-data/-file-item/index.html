@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PartData.FileItem - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="../index.html">PartData</a>&nbsp;/&nbsp;<a href="./index.html">FileItem</a><br/>
+<br/>
+<h1>FileItem</h1>
+<code><span class="keyword">class </span><span class="identifier">FileItem</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">PartData</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">FileItem</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.PartData.FileItem$<init>(kotlin.Function0((java.io.InputStream)), kotlin.Function0((kotlin.Unit)), io.ktor.http.Headers)/streamProvider">streamProvider</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content.PartData.FileItem$<init>(kotlin.Function0((java.io.InputStream)), kotlin.Function0((kotlin.Unit)), io.ktor.http.Headers)/dispose">dispose</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.content.PartData.FileItem$<init>(kotlin.Function0((java.io.InputStream)), kotlin.Function0((kotlin.Unit)), io.ktor.http.Headers)/partHeaders">partHeaders</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="original-file-name.html">originalFileName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">originalFileName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stream-provider.html">streamProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">streamProvider</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../content-disposition.html">contentDisposition</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentDisposition</span><span class="symbol">: </span><a href="../../../io.ktor.http/-content-disposition/index.html"><span class="identifier">ContentDisposition</span></a><span class="symbol">?</span></code>
+<p>Parsed <code>Content-Disposition</code> header or <code>null</code> if missing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code>
+<p>Parsed <code>Content-Type</code> header or <code>null</code> if missing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../dispose.html">dispose</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dispose</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Optional part name based on <code>Content-Disposition</code> header</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../part-headers.html">partHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><s><span class="identifier">partHeaders</span></s><span class="symbol">: </span><a href="../../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../part-name.html">partName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><s><span class="identifier">partName</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.client.call - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.client.call</a><br/>
+<br/>
+<h2>Package io.ktor.client.call</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-http-client-call/index.html">HttpClientCall</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpClientCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>A class that represents a single pair of <a href="-http-client-call/request.html">request</a> and <a href="-http-client-call/response.html">response</a> for a specific <a href="../io.ktor.client/-http-client/index.html">HttpClient</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-engine-call/index.html">HttpEngineCall</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">HttpEngineCall</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-double-receive-exception/index.html">DoubleReceiveException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DoubleReceiveException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code>
+<p>Exception representing that the response payload has already been received.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-no-transformation-found/index.html">NoTransformationFound</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NoTransformationFound</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unsupported-operation-exception/index.html"><span class="identifier">UnsupportedOperationException</span></a></code>
+<p>Exception representing the no transformation was found.
+It includes the received type and the expected type as part of the message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-unsupported-content-type-exception/index.html">UnsupportedContentTypeException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UnsupportedContentTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code>
+<p>Constructs a <a href="-http-client-call/index.html">HttpClientCall</a> from this <a href="../io.ktor.client/-http-client/index.html">HttpClient</a> and with the specified <a href="../io.ktor.client.request/-http-request-builder/index.html">HttpRequestBuilder</a>
+configured inside the <a href="call.html#io.ktor.client.call$call(io.ktor.client.HttpClient, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, io.ktor.client.request.HttpRequestBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code>
+<p>Constructs a <a href="-http-client-call/index.html">HttpClientCall</a> from this <a href="../io.ktor.client/-http-client/index.html">HttpClient</a> and
+with the specified HTTP request <a href="call.html#io.ktor.client.call$call(io.ktor.client.HttpClient, io.ktor.client.request.HttpRequestBuilder)/builder">builder</a>.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, java.net.URL, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/url">url</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/URL.html"><span class="identifier">URL</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, java.net.URL, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">call</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.call$call(io.ktor.client.HttpClient, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span><span class="symbol">: </span><a href="-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code>
+<p>Constructs a <a href="-http-client-call/index.html">HttpClientCall</a> from this <a href="../io.ktor.client/-http-client/index.html">HttpClient</a>,
+an <a href="call.html#io.ktor.client.call$call(io.ktor.client.HttpClient, java.net.URL, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/url">url</a> and an optional <a href="call.html#io.ktor.client.call$call(io.ktor.client.HttpClient, java.net.URL, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</a> configuring a <a href="../io.ktor.client.request/-http-request-builder/index.html">HttpRequestBuilder</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="receive.html">receive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">.</span><span class="identifier">receive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="receive.html#T"><span class="identifier">T</span></a></code>
+<p>Tries to receive the payload of the <a href="#">response</a> as an specific type <a href="receive.html#T">T</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

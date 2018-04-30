@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CallLogging - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.features</a>&nbsp;/&nbsp;<a href="./index.html">CallLogging</a><br/>
+<br/>
+<h1>CallLogging</h1>
+<code><span class="keyword">class </span><span class="identifier">CallLogging</span></code>
+<p>Logs application lifecycle and call events.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span></code>
+<p>Configuration for <a href="./index.html">CallLogging</a> feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-feature/index.html">Feature</a></p>
+</td>
+<td>
+<code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">Feature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">,</span>&nbsp;<a href="-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">,</span>&nbsp;<a href="./index.html"><span class="identifier">CallLogging</span></a><span class="symbol">&gt;</span></code>
+<p>Installable feature for <a href="./index.html">CallLogging</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CallLogging</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CallLogging$<init>(org.slf4j.Logger, io.ktor.application.ApplicationEvents, org.slf4j.event.Level, kotlin.collections.List((kotlin.Function1((io.ktor.application.ApplicationCall, kotlin.Boolean)))))/log">log</span><span class="symbol">:</span>&nbsp;<span class="identifier">Logger</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features.CallLogging$<init>(org.slf4j.Logger, io.ktor.application.ApplicationEvents, org.slf4j.event.Level, kotlin.collections.List((kotlin.Function1((io.ktor.application.ApplicationCall, kotlin.Boolean)))))/monitor">monitor</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-events/index.html"><span class="identifier">ApplicationEvents</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.features.CallLogging$<init>(org.slf4j.Logger, io.ktor.application.ApplicationEvents, org.slf4j.event.Level, kotlin.collections.List((kotlin.Function1((io.ktor.application.ApplicationCall, kotlin.Boolean)))))/level">level</span><span class="symbol">:</span>&nbsp;<span class="identifier">Level</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features.CallLogging$<init>(org.slf4j.Logger, io.ktor.application.ApplicationEvents, org.slf4j.event.Level, kotlin.collections.List((kotlin.Function1((io.ktor.application.ApplicationCall, kotlin.Boolean)))))/filters">filters</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Logs application lifecycle and call events.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">CallLogging</span></a><span class="symbol">&gt;</span></code>
+<p>Unique key that identifies a feature</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="install.html">install</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CallLogging.Feature$install(io.ktor.application.Application, kotlin.Function1((io.ktor.features.CallLogging.Configuration, kotlin.Unit)))/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.features.CallLogging.Feature$install(io.ktor.application.Application, kotlin.Function1((io.ktor.features.CallLogging.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">CallLogging</span></a></code>
+<p>Feature installation script</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

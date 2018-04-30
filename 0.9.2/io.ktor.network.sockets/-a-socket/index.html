@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ASocket - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.network.sockets</a>&nbsp;/&nbsp;<a href="./index.html">ASocket</a><br/>
+<br/>
+<h1>ASocket</h1>
+<code><span class="keyword">interface </span><span class="identifier">ASocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a><span class="symbol">, </span><span class="identifier">DisposableHandle</span></code>
+<p>Base type for all async sockets</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="socket-context.html">socketContext</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">socketContext</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dispose.html">dispose</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">dispose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../is-closed.html">isClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">.</span><span class="identifier">isClosed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../await-closed.html">awaitClosed</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">.</span><span class="identifier">awaitClosed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-acceptable/index.html">Acceptable</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Acceptable</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a></code>
+<p>Represents a socket source, for example server socket</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-bound-datagram-socket.html">BoundDatagramSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">BoundDatagramSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="../-a-bound-socket/index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-a-readable/index.html"><span class="identifier">AReadable</span></a><span class="symbol">, </span><a href="../-datagram-read-write-channel.html"><span class="identifier">DatagramReadWriteChannel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-connected-datagram-socket.html">ConnectedDatagramSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ConnectedDatagramSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="../-a-bound-socket/index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-a-connected-socket/index.html"><span class="identifier">AConnectedSocket</span></a><span class="symbol">, </span><a href="../-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">, </span><a href="../-datagram-read-write-channel.html"><span class="identifier">DatagramReadWriteChannel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-read-write-socket.html">ReadWriteSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ReadWriteSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="../-a-readable/index.html"><span class="identifier">AReadable</span></a><span class="symbol">, </span><a href="../-a-writable/index.html"><span class="identifier">AWritable</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-server-socket.html">ServerSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ServerSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="../-a-bound-socket/index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-acceptable/index.html"><span class="identifier">Acceptable</span></a><span class="symbol">&lt;</span><a href="../-socket.html"><span class="identifier">Socket</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

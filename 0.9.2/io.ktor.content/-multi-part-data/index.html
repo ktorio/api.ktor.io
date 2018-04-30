@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>MultiPartData - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="./index.html">MultiPartData</a><br/>
+<br/>
+<h1>MultiPartData</h1>
+<code><span class="keyword">interface </span><span class="identifier">MultiPartData</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-empty/index.html">Empty</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">Empty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MultiPartData</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="parts.html">parts</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><s><span class="identifier">parts</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html"><span class="identifier">Sequence</span></a><span class="symbol">&lt;</span><a href="../-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="read-part.html">readPart</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">readPart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">?</span></code>
+<p>Reads next part data or <code>null</code> if end of multipart stream encountered</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../for-each-part.html">forEachPart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">forEachPart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$forEachPart(io.ktor.content.MultiPartData, kotlin.SuspendFunction1((io.ktor.content.PartData, kotlin.Unit)))/partHandler">partHandler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><a href="../-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Parse multipart data stream and invoke <a href="../for-each-part.html#io.ktor.content$forEachPart(io.ktor.content.MultiPartData, kotlin.SuspendFunction1((io.ktor.content.PartData, kotlin.Unit)))/partHandler">partHandler</a> for each <a href="../-part-data/index.html">PartData</a> encountered</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../read-all-parts.html">readAllParts</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">readAllParts</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">&gt;</span></code>
+<p>Parse multipart data stream and put all parts into a list</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.http.cio/-c-i-o-multipart-data-base/index.html">CIOMultipartDataBase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CIOMultipartDataBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MultiPartData</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-empty/index.html">Empty</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">Empty</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">MultiPartData</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

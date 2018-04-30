@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>authenticate - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="index.html">io.ktor.auth</a>&nbsp;/&nbsp;<a href="./authenticate.html">authenticate</a><br/>
+<br/>
+<h1>authenticate</h1>
+<a name="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))"></a>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">authenticate</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;arrayOf&lt;String?&gt;(null)<span class="symbol">, </span><span class="identifier" id="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a></code>
+<p>Creates an authentication route that does handle authentication by the specified providers referred by
+<a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> names. <code>null</code> could be used to point to the default provider and could be also mixed with other
+provider names.
+Other routes, handlers and interceptors could be nested into this node</p>
+<p>The <a href="-authentication/index.html">Authentication</a> feature need to be installed first otherwise
+it will fail with <a href="../io.ktor.application/-missing-application-feature-exception/index.html">MissingApplicationFeatureException</a> and all providers requested by <a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> need
+to be already registered.</p>
+<h3>Parameters</h3>
+<p><a name="configurations"></a>
+<code>configurations</code> - names that point to already registered authentication providers</p>
+<h3>Exceptions</h3>
+<p><a name="MissingApplicationFeatureException"></a>
+<code>MissingApplicationFeatureException</code> - if no <a href="-authentication/index.html">Authentication</a> feature installed first</p>
+<p><a name="IllegalArgumentException"></a>
+<code>IllegalArgumentException</code> - if there are no registered providers referred by <a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> names</p>
+</BODY>
+</HTML>

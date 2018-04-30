@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DefaultWebSocketServerSession - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="index.html">io.ktor.websocket</a>&nbsp;/&nbsp;<a href="./-default-web-socket-server-session.html">DefaultWebSocketServerSession</a><br/>
+<br/>
+<h1>DefaultWebSocketServerSession</h1>
+<code><span class="keyword">interface </span><span class="identifier">DefaultWebSocketServerSession</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">, </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a></code>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-web-socket-server-session/call.html">call</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">call</span><span class="symbol">: </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../io.ktor.http.cio.websocket/-default-web-socket-session/close-reason.html">closeReason</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">closeReason</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><a href="../io.ktor.http.cio.websocket/-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../io.ktor.http.cio.websocket/-default-web-socket-session/ping-interval.html">pingInterval</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">pingInterval</span><span class="symbol">: </span><span class="identifier">Duration</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../io.ktor.http.cio.websocket/-default-web-socket-session/timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">timeout</span><span class="symbol">: </span><span class="identifier">Duration</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a><span class="symbol">.</span><span class="identifier">application</span><span class="symbol">: </span><a href="../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../io.ktor.http.cio.websocket/close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.http.cio.websocket/-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="identifier">close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$close(io.ktor.http.cio.websocket.WebSocketSession, io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../io.ktor.http.cio.websocket/run.html">run</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="identifier">run</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$run(io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

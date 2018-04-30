@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RoutingResolveResult - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.routing</a>&nbsp;/&nbsp;<a href="./index.html">RoutingResolveResult</a><br/>
+<br/>
+<h1>RoutingResolveResult</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">RoutingResolveResult</span></code>
+<p>Represents a result of routing resolution.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-failure/index.html">Failure</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Failure</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RoutingResolveResult</span></a></code>
+<p>Represents a failed result</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-success/index.html">Success</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Success</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RoutingResolveResult</span></a></code>
+<p>Represents a successful result</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="parameters.html">parameters</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">parameters</span><span class="symbol">: </span><a href="../../io.ktor.http/-parameters/index.html"><span class="identifier">Parameters</span></a></code>
+<p>Provides all captured values for this result.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="route.html">route</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">route</span><span class="symbol">: </span><a href="../-route/index.html"><span class="identifier">Route</span></a></code>
+<p>specifies a routing node for successful resolution, or nearest one for failed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-failure/index.html">Failure</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Failure</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RoutingResolveResult</span></a></code>
+<p>Represents a failed result</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-success/index.html">Success</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Success</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RoutingResolveResult</span></a></code>
+<p>Represents a successful result</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

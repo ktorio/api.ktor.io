@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DelegatingConversionService - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.features</a>&nbsp;/&nbsp;<a href="./index.html">DelegatingConversionService</a><br/>
+<br/>
+<h1>DelegatingConversionService</h1>
+<code><span class="keyword">class </span><span class="identifier">DelegatingConversionService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DelegatingConversionService</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.DelegatingConversionService$<init>(kotlin.reflect.KClass((kotlin.Any)))/klass">klass</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="decode.html">decode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decode</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.DelegatingConversionService$decode(kotlin.Function2((kotlin.collections.List((kotlin.String)), java.lang.reflect.Type, kotlin.Any)))/converter">converter</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">values</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">type</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html"><span class="identifier">Type</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="encode.html">encode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">encode</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.DelegatingConversionService$encode(kotlin.Function1((kotlin.Any, kotlin.collections.List((kotlin.String)))))/converter">converter</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="from-values.html">fromValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">fromValues</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.DelegatingConversionService$fromValues(kotlin.collections.List((kotlin.String)), java.lang.reflect.Type)/values">values</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.features.DelegatingConversionService$fromValues(kotlin.collections.List((kotlin.String)), java.lang.reflect.Type)/type">type</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html"><span class="identifier">Type</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="to-values.html">toValues</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toValues</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.DelegatingConversionService$toValues(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

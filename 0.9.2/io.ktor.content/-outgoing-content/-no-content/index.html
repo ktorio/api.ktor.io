@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OutgoingContent.NoContent - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="../index.html">OutgoingContent</a>&nbsp;/&nbsp;<a href="./index.html">NoContent</a><br/>
+<br/>
+<h1>NoContent</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NoContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> without a payload</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NoContent</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Variant of a <a href="../index.html">OutgoingContent</a> without a payload</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../content-length.html">contentLength</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">contentLength</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span></code>
+<p>Specifies content length in bytes for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code>
+<p>Specifies <a href="../../../io.ktor.http/-content-type/index.html">ContentType</a> for this resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../get-property.html">getProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">getProperty</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent$getProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.getProperty.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="../get-property.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../get-property.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code>
+<p>Gets an extension property for this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../set-property.html">setProperty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">setProperty</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.OutgoingContent$setProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.setProperty.T)), io.ktor.content.OutgoingContent.setProperty.T)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="../set-property.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.content.OutgoingContent$setProperty(io.ktor.util.AttributeKey((io.ktor.content.OutgoingContent.setProperty.T)), io.ktor.content.OutgoingContent.setProperty.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="../set-property.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets an extension property for this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../io.ktor.client.request/-client-upgrade-content/index.html">ClientUpgradeContent</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ClientUpgradeContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">NoContent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.client.utils/-empty-content.html">EmptyContent</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">EmptyContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">NoContent</span></a></code>
+<p>Concrete <a href="../index.html">OutgoingContent</a> without a payload.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-http-status-code-content/index.html">HttpStatusCodeContent</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpStatusCodeContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">NoContent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.auth/-unauthorized-response/index.html">UnauthorizedResponse</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UnauthorizedResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">NoContent</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

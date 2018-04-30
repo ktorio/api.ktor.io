@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.http.cio.websocket - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.http.cio.websocket</a><br/>
+<br/>
+<h2>Package io.ktor.http.cio.websocket</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-close-reason/index.html">CloseReason</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CloseReason</span></code>
+<p>Websocket close reason</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-default-web-socket-session/index.html">DefaultWebSocketSession</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DefaultWebSocketSession</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a></code>
+<p>Default websocket session with ping-pong and timeout processing and built-in <a href="-default-web-socket-session/close-reason.html">closeReason</a> population</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-default-web-socket-session-impl/index.html">DefaultWebSocketSessionImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DefaultWebSocketSessionImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">, </span><a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-frame/index.html">Frame</a></p>
+</td>
+<td>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Frame</span></code>
+<p>A frame received or ready to be sent</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-frame-parser/index.html">FrameParser</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FrameParser</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-frame-type/index.html">FrameType</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">FrameType</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-raw-web-socket/index.html">RawWebSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RawWebSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-serializer/index.html">Serializer</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Serializer</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-simple-frame-collector/index.html">SimpleFrameCollector</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SimpleFrameCollector</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-reader/index.html">WebSocketReader</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WebSocketReader</span></code>
+<p>Class that continuously reads a <a href="#">byteChannel</a> and
+converts into Websocket <a href="-frame/index.html">Frame</a> exposing them in <a href="-web-socket-reader/incoming.html">incoming</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-session/index.html">WebSocketSession</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">WebSocketSession</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-writer/index.html">WebSocketWriter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WebSocketWriter</span></code>
+<p>Class that processes written <a href="-web-socket-writer/outgoing.html">outgoing</a> Websocket <a href="-frame/index.html">Frame</a>,
+serializes them and writes the bits into the <a href="#">writeChannel</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="identifier">close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$close(io.ktor.http.cio.websocket.WebSocketSession, io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="pinger.html">pinger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pinger</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/session">session</span><span class="symbol">:</span>&nbsp;<a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/period">period</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/out">out</span><span class="symbol">:</span>&nbsp;<span class="identifier">SendChannel</span><span class="symbol">&lt;</span><a href="-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;KtorDefaultPool<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SendChannel</span><span class="symbol">&lt;</span><a href="-frame/-pong/index.html"><span class="identifier">Pong</span></a><span class="symbol">&gt;</span></code>
+<p>Launch pinger coroutine on <a href="pinger.html#io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/coroutineContext">coroutineContext</a> websocket for <a href="pinger.html#io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/session">session</a> that is sending ping every specified <a href="pinger.html#io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/period">period</a>,
+waiting for and verifying client's pong frames. It is also handling <a href="pinger.html#io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/timeout">timeout</a> and sending timeout close frame
+to the dedicated <a href="pinger.html#io.ktor.http.cio.websocket$pinger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, java.time.Duration, java.time.Duration, kotlinx.coroutines.experimental.channels.SendChannel((io.ktor.http.cio.websocket.Frame)), kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/out">out</a> channel in case of failure</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ponger.html">ponger</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ponger</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$ponger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$ponger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/session">session</span><span class="symbol">:</span>&nbsp;<a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket$ponger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;KtorDefaultPool<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SendChannel</span><span class="symbol">&lt;</span><a href="-frame/-ping/index.html"><span class="identifier">Ping</span></a><span class="symbol">&gt;</span></code>
+<p>Launch a ponger actor job on the <a href="ponger.html#io.ktor.http.cio.websocket$ponger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/coroutineContext">coroutineContext</a> for websocket <a href="ponger.html#io.ktor.http.cio.websocket$ponger(kotlin.coroutines.experimental.CoroutineContext, io.ktor.http.cio.websocket.WebSocketSession, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/session">session</a>.
+It is acting for every client's ping frame and replying with corresponding pong</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read-reason.html">readReason</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-frame/-close/index.html"><span class="identifier">Close</span></a><span class="symbol">.</span><span class="identifier">readReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span></code>
+<p>Read close reason from close frame or null if no close reason provided</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read-text.html">readText</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="-frame/-text/index.html"><span class="identifier">Text</span></a><span class="symbol">.</span><span class="identifier">readText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Read text content from text frame. Shouldn't be used for fragmented frames: such frames need to be reassembled first</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="run.html">run</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="identifier">run</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$run(io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="start.html">start</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="-raw-web-socket/index.html"><span class="identifier">RawWebSocket</span></a><span class="symbol">.</span><span class="identifier">start</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$start(io.ktor.http.cio.websocket.RawWebSocket, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

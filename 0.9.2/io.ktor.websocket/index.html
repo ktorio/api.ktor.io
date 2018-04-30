@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.websocket - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.websocket</a><br/>
+<br/>
+<h2>Package io.ktor.websocket</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-default-web-socket-server-session.html">DefaultWebSocketServerSession</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DefaultWebSocketServerSession</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">, </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-server-session/index.html">WebSocketServerSession</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">WebSocketServerSession</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-upgrade/index.html">WebSocketUpgrade</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WebSocketUpgrade</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.content/-outgoing-content/-protocol-upgrade/index.html"><span class="identifier">ProtocolUpgrade</span></a></code>
+<p>An <a href="../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> response object that could be used to <code>respond()</code>: it will cause application engine to
+perform HTTP upgrade and start websocket RAW session</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-sockets/index.html">WebSockets</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WebSockets</span></code>
+<p>WebSockets support feature. It is required to be installed first before binding any websocket endpoints</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-close-reason.html">CloseReason</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><s><span class="identifier">CloseReason</span></s>&nbsp;<span class="symbol">=</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-close-reason/index.html"><span class="identifier">CloseReason</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-frame.html">Frame</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><s><span class="identifier">Frame</span></s>&nbsp;<span class="symbol">=</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-frame/index.html"><span class="identifier">Frame</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-frame-type.html">FrameType</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><s><span class="identifier">FrameType</span></s>&nbsp;<span class="symbol">=</span>&nbsp;<a href="../io.ktor.http.cio.websocket/-frame-type/index.html"><span class="identifier">FrameType</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a><span class="symbol">.</span><span class="identifier">application</span><span class="symbol">: </span><a href="../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="web-socket.html">webSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocket</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-default-web-socket-server-session.html"><span class="identifier">DefaultWebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Bind websocket at the current route optionally checking for websocket <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocket</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-default-web-socket-server-session.html"><span class="identifier">DefaultWebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Bind websocket at the current route + <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/path">path</a> optionally checking for websocket <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="web-socket-raw.html">webSocketRaw</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocketRaw</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Bind RAW websocket at the current route + <a href="web-socket-raw.html#io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/path">path</a> optionally checking for websocket <a href="web-socket-raw.html#io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+<code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocketRaw</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-web-socket-server-session/index.html"><span class="identifier">WebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Bind RAW websocket at the current route optionally checking for websocket <a href="web-socket-raw.html#io.ktor.websocket$webSocketRaw(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.WebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

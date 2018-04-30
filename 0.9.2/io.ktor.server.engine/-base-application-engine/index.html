@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseApplicationEngine - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.server.engine</a>&nbsp;/&nbsp;<a href="./index.html">BaseApplicationEngine</a><br/>
+<br/>
+<h1>BaseApplicationEngine</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-application-engine/index.html"><span class="identifier">ApplicationEngine</span></a></code>
+<p>Base class for implementing <a href="../-application-engine/index.html">ApplicationEngine</a></p>
+<p>It creates default engine pipeline, provides <a href="application.html">application</a> property and installs default transformations
+on respond and receive</p>
+<h3>Parameters</h3>
+<p><a name="environment"></a>
+<code>environment</code> - instance of <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> for this engine</p>
+<p><a name="pipeline"></a>
+<code>pipeline</code> - pipeline to use with this engine</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a></code>
+<p>Configuration for the <a href="./index.html">BaseApplicationEngine</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BaseApplicationEngine</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.BaseApplicationEngine$<init>(io.ktor.server.engine.ApplicationEngineEnvironment, io.ktor.server.engine.EnginePipeline)/environment">environment</span><span class="symbol">:</span>&nbsp;<a href="../-application-engine-environment/index.html"><span class="identifier">ApplicationEngineEnvironment</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.BaseApplicationEngine$<init>(io.ktor.server.engine.ApplicationEngineEnvironment, io.ktor.server.engine.EnginePipeline)/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="../-engine-pipeline/index.html"><span class="identifier">EnginePipeline</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultEnginePipeline(environment)<span class="symbol">)</span></code>
+<p>Base class for implementing <a href="../-application-engine/index.html">ApplicationEngine</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application.html">application</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">application</span><span class="symbol">: </span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code>
+<p>Currently running application instance</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="environment.html">environment</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">environment</span><span class="symbol">: </span><a href="../-application-engine-environment/index.html"><span class="identifier">ApplicationEngineEnvironment</span></a></code>
+<p>instance of <a href="../-application-engine-environment/index.html">ApplicationEngineEnvironment</a> for this engine</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="pipeline.html">pipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">pipeline</span><span class="symbol">: </span><a href="../-engine-pipeline/index.html"><span class="identifier">EnginePipeline</span></a></code>
+<p>pipeline to use with this engine</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-application-engine/start.html">start</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.ApplicationEngine$start(kotlin.Boolean)/wait">wait</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="../-application-engine/index.html"><span class="identifier">ApplicationEngine</span></a></code>
+<p>Starts this <a href="../-application-engine/index.html">ApplicationEngine</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-application-engine/stop.html">stop</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine.ApplicationEngine$stop(kotlin.Long, kotlin.Long, java.util.concurrent.TimeUnit)/gracePeriod">gracePeriod</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngine$stop(kotlin.Long, kotlin.Long, java.util.concurrent.TimeUnit)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.engine.ApplicationEngine$stop(kotlin.Long, kotlin.Long, java.util.concurrent.TimeUnit)/timeUnit">timeUnit</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/TimeUnit.html"><span class="identifier">TimeUnit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Stops this <a href="../-application-engine/index.html">ApplicationEngine</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.cio/-c-i-o-application-engine/index.html">CIOApplicationEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseApplicationEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.jetty/-jetty-application-engine-base/index.html">JettyApplicationEngineBase</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">JettyApplicationEngineBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseApplicationEngine</span></a></code>
+<p><a href="../-application-engine/index.html">ApplicationEngine</a> base type for running in a standalone Jetty</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.netty/-netty-application-engine/index.html">NettyApplicationEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NettyApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseApplicationEngine</span></a></code>
+<p><a href="../-application-engine/index.html">ApplicationEngine</a> implementation for running in a standalone Netty</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.testing/-test-application-engine/index.html">TestApplicationEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TestApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseApplicationEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.tomcat/-tomcat-application-engine/index.html">TomcatApplicationEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TomcatApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseApplicationEngine</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

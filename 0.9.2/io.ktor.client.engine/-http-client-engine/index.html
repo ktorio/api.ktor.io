@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpClientEngine - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.client.engine</a>&nbsp;/&nbsp;<a href="./index.html">HttpClientEngine</a><br/>
+<br/>
+<h1>HttpClientEngine</h1>
+<code><span class="keyword">interface </span><span class="identifier">HttpClientEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>Base interface use to define engines for <a href="#">HttpClient</a>.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dispatcher.html">dispatcher</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">dispatcher</span><span class="symbol">: </span><span class="identifier">CoroutineDispatcher</span></code>
+<p><a href="#">CoroutineDispatcher</a> specified for io operations.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="execute.html">execute</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.request/-http-request-data/index.html"><span class="identifier">HttpRequestData</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.client.call/-http-engine-call/index.html"><span class="identifier">HttpEngineCall</span></a></code>
+<p>Creates a new <a href="../../io.ktor.client.call/-http-client-call/index.html">HttpClientCall</a> specific for this engine, using a request <a href="execute.html#io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/data">data</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.testing.client/-test-http-client-engine/index.html">TestHttpClientEngine</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TestHttpClientEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngine</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

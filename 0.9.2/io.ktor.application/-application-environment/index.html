@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ApplicationEnvironment - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.application</a>&nbsp;/&nbsp;<a href="./index.html">ApplicationEnvironment</a><br/>
+<br/>
+<h1>ApplicationEnvironment</h1>
+<code><span class="keyword">interface </span><span class="identifier">ApplicationEnvironment</span></code>
+<p>Represents an environment in which <a href="../-application/index.html">Application</a> runs</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="class-loader.html">classLoader</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">classLoader</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html"><span class="identifier">ClassLoader</span></a></code>
+<p><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html">ClassLoader</a> used to load application.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="config.html">config</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">config</span><span class="symbol">: </span><a href="../../io.ktor.config/-application-config/index.html"><span class="identifier">ApplicationConfig</span></a></code>
+<p>Configuration for the <a href="../-application/index.html">Application</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="log.html">log</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">log</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Instance of <a href="#">Logger</a> to be used for logging.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="monitor.html">monitor</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">monitor</span><span class="symbol">: </span><a href="../-application-events/index.html"><span class="identifier">ApplicationEvents</span></a></code>
+<p>Provides events on Application lifecycle</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.server.engine/-application-engine-environment/index.html">ApplicationEngineEnvironment</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ApplicationEngineEnvironment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ApplicationEnvironment</span></a></code>
+<p>Represents an environment in which engine runs</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

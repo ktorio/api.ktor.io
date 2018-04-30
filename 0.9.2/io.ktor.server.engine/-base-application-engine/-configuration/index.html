@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseApplicationEngine.Configuration - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.server.engine</a>&nbsp;/&nbsp;<a href="../index.html">BaseApplicationEngine</a>&nbsp;/&nbsp;<a href="./index.html">Configuration</a><br/>
+<br/>
+<h1>Configuration</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a></code>
+<p>Configuration for the <a href="../index.html">BaseApplicationEngine</a></p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Configuration</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Configuration for the <a href="../index.html">BaseApplicationEngine</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../-application-engine/-configuration/call-group-size.html">callGroupSize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">callGroupSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Specifies size of the event group for running application code</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-application-engine/-configuration/connection-group-size.html">connectionGroupSize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">connectionGroupSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Specifies size of the event group for accepting connections</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-application-engine/-configuration/parallelism.html">parallelism</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">parallelism</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Provides currently available parallelism, e.g. number of available processors</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../-application-engine/-configuration/worker-group-size.html">workerGroupSize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">workerGroupSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Specifies size of the event group for processing connections, parsing messages and doing engine's internal work</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../load-common-configuration.html">loadCommonConfiguration</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">loadCommonConfiguration</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.engine$loadCommonConfiguration(io.ktor.server.engine.BaseApplicationEngine.Configuration, io.ktor.config.ApplicationConfig)/deploymentConfig">deploymentConfig</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.config/-application-config/index.html"><span class="identifier">ApplicationConfig</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../../io.ktor.server.cio/-c-i-o-application-engine/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Configuration</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.server.jetty/-jetty-application-engine-base/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Configuration</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.server.netty/-netty-application-engine/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Configuration</span></a></code>
+<p>Configuration for the <a href="../../../io.ktor.server.netty/-netty-application-engine/index.html">NettyApplicationEngine</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.server.testing/-test-application-engine/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Configuration</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../../io.ktor.server.tomcat/-tomcat-application-engine/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Configuration</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RangesSpecifier - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.http</a>&nbsp;/&nbsp;<a href="./index.html">RangesSpecifier</a><br/>
+<br/>
+<h1>RangesSpecifier</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">RangesSpecifier</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">RangesSpecifier</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$<init>(io.ktor.http.RangeUnits, kotlin.collections.List((io.ktor.http.ContentRange)))/unit">unit</span><span class="symbol">:</span>&nbsp;<a href="../-range-units/index.html"><span class="identifier">RangeUnits</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.RangesSpecifier$<init>(io.ktor.http.RangeUnits, kotlin.collections.List((io.ktor.http.ContentRange)))/ranges">ranges</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-content-range/index.html"><span class="identifier">ContentRange</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">RangesSpecifier</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$<init>(kotlin.String, kotlin.collections.List((io.ktor.http.ContentRange)))/unit">unit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;RangeUnits.Bytes.unitToken<span class="symbol">, </span><span class="identifier" id="io.ktor.http.RangesSpecifier$<init>(kotlin.String, kotlin.collections.List((io.ktor.http.ContentRange)))/ranges">ranges</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-content-range/index.html"><span class="identifier">ContentRange</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="ranges.html">ranges</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">ranges</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-content-range/index.html"><span class="identifier">ContentRange</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="unit.html">unit</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">unit</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-valid.html">isValid</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isValid</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$isValid(kotlin.Function1((kotlin.String, kotlin.Boolean)))/rangeUnitPredicate">rangeUnitPredicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ it == RangeUnits.Bytes.unitToken }<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="merge.html">merge</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">merge</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$merge(kotlin.Long, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.RangesSpecifier$merge(kotlin.Long, kotlin.Int)/maxRangeCount">maxRangeCount</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;50<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html"><span class="identifier">LongRange</span></a><span class="symbol">&gt;</span></code><code><span class="keyword">fun </span><span class="identifier">merge</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$merge(kotlin.Long)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html"><span class="identifier">LongRange</span></a><span class="symbol">&gt;</span></code>
+<p>Merges all overlapping and neighbours ranges. Currently gaps collapse is not supported but should be, one day.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="merge-to-single.html">mergeToSingle</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">mergeToSingle</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.RangesSpecifier$mergeToSingle(kotlin.Long)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html"><span class="identifier">LongRange</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JacksonConverter.convertForSend - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.jackson</a>&nbsp;/&nbsp;<a href="index.html">JacksonConverter</a>&nbsp;/&nbsp;<a href="./convert-for-send.html">convertForSend</a><br/>
+<br/>
+<h1>convertForSend</h1>
+<a name="io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">convertForSend</span><span class="symbol">(</span><span class="identifier" id="io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.pipeline/-pipeline-context/index.html"><span class="identifier">PipelineContext</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code>
+<p>Overrides <a href="../../io.ktor.features/-content-converter/convert-for-send.html">ContentConverter.convertForSend</a></p>
+<p>Convert a <a href="convert-for-send.html#io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/value">value</a> to the specified <a href="convert-for-send.html#io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</a> to a value suitable for sending (serialize).
+Note that as far as <a href="../../io.ktor.features/-content-converter/index.html">ContentConverter</a> could be registered multiple times with different content types
+hence <a href="convert-for-send.html#io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/contentType">contentType</a> could be different depends on what the client accepts (inferred from Accept header).
+This function could ignore value if it is not suitable for conversion and return <code>null</code> so in this case
+other registered converters could be tried or this function could be invoked with other content types
+it the converted has been registered multiple times with different content types</p>
+<h3>Parameters</h3>
+<p><a name="context"></a>
+<code>context</code> - pipeline context</p>
+<p><a name="contentType"></a>
+<code>contentType</code> - to which this data converted has been registered and that matches client's accept header</p>
+<p><a name="value"></a>
+<code>value</code> - to be converted</p>
+<p><strong>Return</strong><br/>
+a converted value, or null if this <a href="convert-for-send.html#io.ktor.jackson.JacksonConverter$convertForSend(io.ktor.pipeline.PipelineContext((kotlin.Any, io.ktor.application.ApplicationCall)), io.ktor.http.ContentType, kotlin.Any)/value">value</a> is not suitable for this converter</p>
+</BODY>
+</HTML>

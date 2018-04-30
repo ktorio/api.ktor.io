@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OAuth2StateProvider - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.auth</a>&nbsp;/&nbsp;<a href="./index.html">OAuth2StateProvider</a><br/>
+<br/>
+<h1>OAuth2StateProvider</h1>
+<code><span class="keyword">interface </span><span class="identifier">OAuth2StateProvider</span></code>
+<p>Provides states for OAuth2. State could be just a random number (nonce) or could contain additional form fields or
+a signature. It is important that it should be a way to verify state. So all states need to be saved somehow or
+a state need to be a signed set of parameters that could be verified later</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-state.html">getState</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getState</span><span class="symbol">(</span><span class="identifier" id="io.ktor.auth.OAuth2StateProvider$getState(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Generates a new state for given <a href="get-state.html#io.ktor.auth.OAuth2StateProvider$getState(io.ktor.application.ApplicationCall)/call">call</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="verify-state.html">verifyState</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">verifyState</span><span class="symbol">(</span><span class="identifier" id="io.ktor.auth.OAuth2StateProvider$verifyState(kotlin.String)/state">state</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Verifies <a href="verify-state.html#io.ktor.auth.OAuth2StateProvider$verifyState(kotlin.String)/state">state</a> and throws exceptions if it's not valid</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-default-o-auth2-state-provider/index.html">DefaultOAuth2StateProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">DefaultOAuth2StateProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">OAuth2StateProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

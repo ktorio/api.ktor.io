@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GsonSupport.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.gson</a>&nbsp;/&nbsp;<a href="index.html">GsonSupport</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="io.ktor.gson.GsonSupport$&lt;init&gt;(com.google.gson.Gson)"></a>
+<code><span class="identifier">GsonSupport</span><span class="symbol">(</span><span class="identifier" id="io.ktor.gson.GsonSupport$<init>(com.google.gson.Gson)/gson">gson</span><span class="symbol">:</span>&nbsp;<span class="identifier">Gson</span><span class="symbol">)</span></code><pre><code>    install(ContentNegotiation) {
+       register(ContentType.Application.Json, GsonConverter())
+    }
+
+    to be able to modify the gsonBuilder (eg. using specific serializers and/or
+    configuration options, you could use the following (as seen in the ktor-samples):
+
+    install(ContentNegotiation) {
+        gson {
+            registerTypeAdapterFactory(GsonAdaptersMyDocument())
+            setDateFormat(DateFormat.LONG)
+            setPrettyPrinting()
+        }
+    }</code></pre>
+</BODY>
+</HTML>

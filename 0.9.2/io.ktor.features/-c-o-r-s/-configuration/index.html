@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CORS.Configuration - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.features</a>&nbsp;/&nbsp;<a href="../index.html">CORS</a>&nbsp;/&nbsp;<a href="./index.html">Configuration</a><br/>
+<br/>
+<h1>Configuration</h1>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Configuration</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="allow-credentials.html">allowCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">allowCredentials</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="allow-same-origin.html">allowSameOrigin</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">allowSameOrigin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="exposed-headers.html">exposedHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">exposedHeaders</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html"><span class="identifier">TreeSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html"><span class="identifier">TreeSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="hosts.html">hosts</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">hosts</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="max-age.html">maxAge</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxAge</span><span class="symbol">: </span><span class="identifier">Duration</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="methods.html">methods</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">methods</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="any-host.html">anyHost</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">anyHost</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expose-header.html">exposeHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">exposeHeader</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CORS.Configuration$exposeHeader(kotlin.String)/header">header</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="expose-x-http-method-override.html">exposeXHttpMethodOverride</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">exposeXHttpMethodOverride</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="header.html">header</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">header</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CORS.Configuration$header(kotlin.String)/header">header</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="host.html">host</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">host</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/schemes">schemes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf("http")<span class="symbol">, </span><span class="identifier" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/subDomains">subDomains</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="method.html">method</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">method</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features.CORS.Configuration$method(io.ktor.http.HttpMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Please note that CORS operates ONLY with REAL HTTP methods
+and will never consider overridden methods via <code>X-Http-Method-Override</code>.
+However you can add them here if you are implementing CORS at client side from the scratch
+that you generally don't need to do.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-cors-default-headers.html">CorsDefaultHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">CorsDefaultHeaders</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-cors-default-methods.html">CorsDefaultMethods</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">CorsDefaultMethods</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

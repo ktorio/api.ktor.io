@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WebSockets.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.websocket</a>&nbsp;/&nbsp;<a href="index.html">WebSockets</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="io.ktor.websocket.WebSockets$&lt;init&gt;(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)"></a>
+<code><span class="identifier">WebSockets</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/pingInterval">pingInterval</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/maxFrameSize">maxFrameSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/masking">masking</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span></code>
+<p>WebSockets support feature. It is required to be installed first before binding any websocket endpoints</p>
+<pre><code>install(WebSockets)
+
+install(Routing) {
+    webSocket("/ws") {
+         incoming.consumeForEach { ... }
+    }
+}
+</code></pre>
+</BODY>
+</HTML>

@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EntityTagVersion - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="./index.html">EntityTagVersion</a><br/>
+<br/>
+<h1>EntityTagVersion</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EntityTagVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-version/index.html"><span class="identifier">Version</span></a></code>
+<p>This version checks <a href="etag.html">etag</a> value and pass it through conditions supplied by the remote client. Depending on conditions it
+produces return value of enum type <a href="../-version-check-result/index.html">VersionCheckResult</a></p>
+<p>It never handles If-None-Match: *  as it is related to non-etag logic (for example, Last modified checks).
+See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26 for more details</p>
+<h3>Parameters</h3>
+<p><a name="etag"></a>
+<code>etag</code> - <ul><li>entity tag, for example file's content hash</li>
+</ul>
+</p>
+<p><strong>Return</strong><br/>
+<a href="../-version-check-result/-o-k.html">VersionCheckResult.OK</a> if all headers pass or there was no related headers,
+<a href="../-version-check-result/-n-o-t_-m-o-d-i-f-i-e-d.html">VersionCheckResult.NOT_MODIFIED</a> for successful If-None-Match,
+<a href="../-version-check-result/-p-r-e-c-o-n-d-i-t-i-o-n_-f-a-i-l-e-d.html">VersionCheckResult.PRECONDITION_FAILED</a> for failed If-Match</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EntityTagVersion</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.EntityTagVersion$<init>(kotlin.String)/etag">etag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>This version checks <a href="-init-.html#io.ktor.content.EntityTagVersion$<init>(kotlin.String)/etag">etag</a> value and pass it through conditions supplied by the remote client. Depending on conditions it
+produces return value of enum type <a href="../-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="etag.html">etag</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">etag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code><ul><li>entity tag, for example file's content hash</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="append-headers-to.html">appendHeadersTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">appendHeadersTo</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.EntityTagVersion$appendHeadersTo(io.ktor.http.HeadersBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-headers-builder/index.html"><span class="identifier">HeadersBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends relevant headers to the builder</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.EntityTagVersion$check(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-version-check-result/index.html"><span class="identifier">VersionCheckResult</span></a></code>
+<p>Checks <a href="check.html#io.ktor.content.EntityTagVersion$check(io.ktor.application.ApplicationCall)/call">call</a> against this version and returns <a href="../-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

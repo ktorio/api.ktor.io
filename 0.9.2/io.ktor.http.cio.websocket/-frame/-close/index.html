@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Frame.Close - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.http.cio.websocket</a>&nbsp;/&nbsp;<a href="../index.html">Frame</a>&nbsp;/&nbsp;<a href="./index.html">Close</a><br/>
+<br/>
+<h1>Close</h1>
+<code><span class="keyword">class </span><span class="identifier">Close</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Frame</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(kotlinx.io.core.ByteReadPacket)/packet">packet</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadPacket</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Close</span><span class="symbol">(</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(java.nio.ByteBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../buffer.html">buffer</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">buffer</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a></code><ul><li>a frame content or fragment content</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../disposable-handle.html">disposableHandle</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">disposableHandle</span><span class="symbol">: </span><span class="identifier">DisposableHandle</span></code>
+<p>could be invoked when the frame is processed</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../fin.html">fin</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">fin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>is it final fragment, should be always <code>true</code> for control frames and if no fragmentation is used</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../frame-type.html">frameType</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">frameType</span><span class="symbol">: </span><a href="../../-frame-type/index.html"><span class="identifier">FrameType</span></a></code>
+<p>enum value</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../copy.html">copy</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">Frame</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../read-reason.html">readReason</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Close</span></a><span class="symbol">.</span><span class="identifier">readReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span></code>
+<p>Read close reason from close frame or null if no close reason provided</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

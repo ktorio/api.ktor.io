@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.jackson - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.jackson</a><br/>
+<br/>
+<h2>Package io.ktor.jackson</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-jackson-converter/index.html">JacksonConverter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">JacksonConverter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.features/-content-converter/index.html"><span class="identifier">ContentConverter</span></a></code><pre><code>    install(ContentNegotiation) {
+       register(ContentType.Application.Json, JacksonConverter())
+    }
+
+    to be able to modify the objectMapper (eg. using specific modules and/or serializers and/or
+    configuration options, you could use the following (as seen in the ktor-samples):
+
+    install(ContentNegotiation) {
+        jackson {
+            configure(SerializationFeature.INDENT_OUTPUT, true)
+            registerModule(JavaTimeModule())</code></pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="jackson.html">jackson</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.features/-content-negotiation/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">jackson</span><span class="symbol">(</span><span class="identifier" id="io.ktor.jackson$jackson(io.ktor.features.ContentNegotiation.Configuration, kotlin.Function1((com.fasterxml.jackson.databind.ObjectMapper, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

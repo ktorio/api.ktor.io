@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpClientCall - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.client.call</a>&nbsp;/&nbsp;<a href="./index.html">HttpClientCall</a><br/>
+<br/>
+<h1>HttpClientCall</h1>
+<code><span class="keyword">class </span><span class="identifier">HttpClientCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>A class that represents a single pair of <a href="request.html">request</a> and <a href="response.html">response</a> for a specific <a href="../../io.ktor.client/-http-client/index.html">HttpClient</a>.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="request.html">request</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">request</span><span class="symbol">: </span><a href="../../io.ktor.client.request/-http-request/index.html"><span class="identifier">HttpRequest</span></a></code>
+<p>Represents the <a href="../../io.ktor.client.request/request.html">request</a> sent by the client.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="response.html">response</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">response</span><span class="symbol">: </span><a href="../../io.ktor.client.response/-http-response/index.html"><span class="identifier">HttpResponse</span></a></code>
+<p>Represents the <a href="response.html">response</a> sent by the server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Closes the underlying <a href="response.html">response</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="receive.html">receive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">receive</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.call.HttpClientCall$receive(kotlin.reflect.KClass((kotlin.Any)))/expectedType">expectedType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code>
+<p>Tries to receive the payload of the <a href="response.html">response</a> as an specific <a href="receive.html#io.ktor.client.call.HttpClientCall$receive(kotlin.reflect.KClass((kotlin.Any)))/expectedType">expectedType</a>.
+Returns <a href="response.html">response</a> if <a href="receive.html#io.ktor.client.call.HttpClientCall$receive(kotlin.reflect.KClass((kotlin.Any)))/expectedType">expectedType</a> is <a href="../../io.ktor.client.response/-http-response/index.html">HttpResponse</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../receive.html">receive</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">.</span><span class="identifier">receive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../receive.html#T"><span class="identifier">T</span></a></code>
+<p>Tries to receive the payload of the <a href="#">response</a> as an specific type <a href="../receive.html#T">T</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

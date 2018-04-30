@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DefaultWebSocketSessionImpl - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.http.cio.websocket</a>&nbsp;/&nbsp;<a href="./index.html">DefaultWebSocketSessionImpl</a><br/>
+<br/>
+<h1>DefaultWebSocketSessionImpl</h1>
+<code><span class="keyword">class </span><span class="identifier">DefaultWebSocketSessionImpl</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">, </span><a href="../-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">DefaultWebSocketSessionImpl</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$<init>(io.ktor.http.cio.websocket.WebSocketSession, kotlinx.coroutines.experimental.Job, java.time.Duration, java.time.Duration, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/raw">raw</span><span class="symbol">:</span>&nbsp;<a href="../-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$<init>(io.ktor.http.cio.websocket.WebSocketSession, kotlinx.coroutines.experimental.Job, java.time.Duration, java.time.Duration, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Job</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$<init>(io.ktor.http.cio.websocket.WebSocketSession, kotlinx.coroutines.experimental.Job, java.time.Duration, java.time.Duration, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pingInterval">pingInterval</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$<init>(io.ktor.http.cio.websocket.WebSocketSession, kotlinx.coroutines.experimental.Job, java.time.Duration, java.time.Duration, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span>&nbsp;<span class="symbol">=</span>&nbsp;Duration.ofSeconds(15)<span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$<init>(io.ktor.http.cio.websocket.WebSocketSession, kotlinx.coroutines.experimental.Job, java.time.Duration, java.time.Duration, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;KtorDefaultPool<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close-reason.html">closeReason</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">closeReason</span><span class="symbol">: </span><span class="identifier">Deferred</span><span class="symbol">&lt;</span><a href="../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="dispatcher.html">dispatcher</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dispatcher</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a></code>
+<p>Dispatcher to handle io operations</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="incoming.html">incoming</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">incoming</span><span class="symbol">: </span><span class="identifier">ReceiveChannel</span><span class="symbol">&lt;</span><a href="../-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">&gt;</span></code>
+<p>Incoming frames channel</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="outgoing.html">outgoing</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">outgoing</span><span class="symbol">: </span><span class="identifier">SendChannel</span><span class="symbol">&lt;</span><a href="../-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">&gt;</span></code>
+<p>Outgoing frames channel</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ping-interval.html">pingInterval</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">pingInterval</span><span class="symbol">: </span><span class="identifier">Duration</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">timeout</span><span class="symbol">: </span><span class="identifier">Duration</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.DefaultWebSocketSessionImpl$close(kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="identifier">close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$close(io.ktor.http.cio.websocket.WebSocketSession, io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../run.html">run</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="identifier">run</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket$run(io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.DefaultWebSocketSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../-default-web-socket-session/index.html"><span class="identifier">DefaultWebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

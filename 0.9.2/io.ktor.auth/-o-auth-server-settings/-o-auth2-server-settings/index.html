@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>OAuthServerSettings.OAuth2ServerSettings - </title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">io.ktor.auth</a>&nbsp;/&nbsp;<a href="../index.html">OAuthServerSettings</a>&nbsp;/&nbsp;<a href="./index.html">OAuth2ServerSettings</a><br/>
+<br/>
+<h1>OAuth2ServerSettings</h1>
+<code><span class="keyword">class </span><span class="identifier">OAuth2ServerSettings</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">OAuthServerSettings</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">OAuth2ServerSettings</span><span class="symbol">(</span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/authorizeUrl">authorizeUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/accessTokenUrl">accessTokenUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/requestMethod">requestMethod</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HttpMethod.Get<span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/clientId">clientId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/clientSecret">clientSecret</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/defaultScopes">defaultScopes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/accessTokenRequiresBasicAuth">accessTokenRequiresBasicAuth</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/stateProvider">stateProvider</span><span class="symbol">:</span>&nbsp;<a href="../../-o-auth2-state-provider/index.html"><span class="identifier">OAuth2StateProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DefaultOAuth2StateProvider<span class="symbol">, </span><span class="identifier" id="io.ktor.auth.OAuthServerSettings.OAuth2ServerSettings$<init>(kotlin.String, kotlin.String, kotlin.String, io.ktor.http.HttpMethod, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.Boolean, io.ktor.auth.OAuth2StateProvider, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/authorizeUrlInterceptor">authorizeUrlInterceptor</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="access-token-requires-basic-auth.html">accessTokenRequiresBasicAuth</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">accessTokenRequiresBasicAuth</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="access-token-url.html">accessTokenUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">accessTokenUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="authorize-url.html">authorizeUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">authorizeUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="authorize-url-interceptor.html">authorizeUrlInterceptor</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">authorizeUrlInterceptor</span><span class="symbol">: </span><a href="../../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="client-id.html">clientId</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="client-secret.html">clientSecret</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientSecret</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default-scopes.html">defaultScopes</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultScopes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="request-method.html">requestMethod</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">requestMethod</span><span class="symbol">: </span><a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="state-provider.html">stateProvider</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">stateProvider</span><span class="symbol">: </span><a href="../../-o-auth2-state-provider/index.html"><span class="identifier">OAuth2StateProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../version.html">version</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">version</span><span class="symbol">: </span><a href="../../-o-auth-version/index.html"><span class="identifier">OAuthVersion</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

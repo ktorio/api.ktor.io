@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PartData - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="./index.html">PartData</a><br/>
+<br/>
+<h1>PartData</h1>
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">PartData</span></code>
+<p>Represents a multipart/form-data entry. Could be a <a href="-form-item/index.html">FormItem</a> or <a href="-file-item/index.html">FileItem</a></p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-file-item/index.html">FileItem</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FileItem</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PartData</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-form-item/index.html">FormItem</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FormItem</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PartData</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="content-disposition.html">contentDisposition</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentDisposition</span><span class="symbol">: </span><a href="../../io.ktor.http/-content-disposition/index.html"><span class="identifier">ContentDisposition</span></a><span class="symbol">?</span></code>
+<p>Parsed <code>Content-Disposition</code> header or <code>null</code> if missing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="content-type.html">contentType</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code>
+<p>Parsed <code>Content-Type</code> header or <code>null</code> if missing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="dispose.html">dispose</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">dispose</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Optional part name based on <code>Content-Disposition</code> header</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="part-headers.html">partHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><s><span class="identifier">partHeaders</span></s><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="part-name.html">partName</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><s><span class="identifier">partName</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-file-item/index.html">FileItem</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FileItem</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PartData</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-form-item/index.html">FormItem</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FormItem</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PartData</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

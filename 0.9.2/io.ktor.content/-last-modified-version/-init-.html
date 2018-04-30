@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LastModifiedVersion.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="index.html">LastModifiedVersion</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="io.ktor.content.LastModifiedVersion$&lt;init&gt;(java.nio.file.attribute.FileTime)"></a>
+<code><span class="identifier">LastModifiedVersion</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.LastModifiedVersion$<init>(java.nio.file.attribute.FileTime)/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<span class="identifier">FileTime</span><span class="symbol">)</span></code><br/>
+<a name="io.ktor.content.LastModifiedVersion$&lt;init&gt;(java.util.Date)"></a>
+<code><span class="identifier">LastModifiedVersion</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.LastModifiedVersion$<init>(java.util.Date)/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">)</span></code><a name="io.ktor.content.LastModifiedVersion$&lt;init&gt;(java.time.ZonedDateTime)"></a>
+<code><span class="identifier">LastModifiedVersion</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.LastModifiedVersion$<init>(java.time.ZonedDateTime)/lastModified">lastModified</span><span class="symbol">:</span>&nbsp;<span class="identifier">ZonedDateTime</span><span class="symbol">)</span></code>
+<p>This version passes the given <a href="-init-.html#io.ktor.content.LastModifiedVersion$<init>(java.time.ZonedDateTime)/lastModified">lastModified</a> date through the client provided
+http conditional headers If-Modified-Since and If-Unmodified-Since.</p>
+<p>Notice the second precision so it may work wrong if there were few changes during the same second.</p>
+<p>For better behaviour use etag instead</p>
+<p>See https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.28 and
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25</p>
+<h3>Parameters</h3>
+<p><a name="lastModified"></a>
+<code>lastModified</code> - of the current content, for example file's last modified date</p>
+</BODY>
+</HTML>

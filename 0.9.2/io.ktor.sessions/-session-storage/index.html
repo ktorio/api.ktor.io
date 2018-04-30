@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SessionStorage - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.sessions</a>&nbsp;/&nbsp;<a href="./index.html">SessionStorage</a><br/>
+<br/>
+<h1>SessionStorage</h1>
+<code><span class="keyword">interface </span><span class="identifier">SessionStorage</span></code>
+<p>Represents a way to <a href="write.html">write</a>, <a href="read.html">read</a> and <a href="invalidate.html">invalidate</a> session bits.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="invalidate.html">invalidate</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">invalidate</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionStorage$invalidate(kotlin.String)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Invalidates session <a href="invalidate.html#io.ktor.sessions.SessionStorage$invalidate(kotlin.String)/id">id</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read.html">read</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">read</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionStorage$read(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.sessions.SessionStorage.read.R)))/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.sessions.SessionStorage$read(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.sessions.SessionStorage.read.R)))/consumer">consumer</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">ByteReadChannel</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="read.html#R"><span class="identifier">R</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="read.html#R"><span class="identifier">R</span></a></code>
+<p>Reads session <a href="read.html#io.ktor.sessions.SessionStorage$read(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.sessions.SessionStorage.read.R)))/id">id</a> using a <a href="read.html#io.ktor.sessions.SessionStorage$read(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteReadChannel, io.ktor.sessions.SessionStorage.read.R)))/consumer">consumer</a> as <a href="read.html#R">R</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="write.html">write</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">write</span><span class="symbol">(</span><span class="identifier" id="io.ktor.sessions.SessionStorage$write(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Unit)))/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.sessions.SessionStorage$write(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Unit)))/provider">provider</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="identifier">ByteWriteChannel</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Writes a session <a href="write.html#io.ktor.sessions.SessionStorage$write(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Unit)))/id">id</a> using a specific <a href="write.html#io.ktor.sessions.SessionStorage$write(kotlin.String, kotlin.SuspendFunction1((kotlinx.coroutines.experimental.io.ByteWriteChannel, kotlin.Unit)))/provider">provider</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-cache-storage/index.html">CacheStorage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CacheStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SessionStorage</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-session-storage-memory/index.html">SessionStorageMemory</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SessionStorageMemory</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">SessionStorage</span></a></code>
+<p><a href="./index.html">SessionStorage</a> that stores session contents into memory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

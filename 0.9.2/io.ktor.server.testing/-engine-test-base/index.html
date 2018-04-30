@@ -1,0 +1,277 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>EngineTestBase - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.server.testing</a>&nbsp;/&nbsp;<a href="./index.html">EngineTestBase</a><br/>
+<br/>
+<h1>EngineTestBase</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">EngineTestBase</span><span class="symbol">&lt;</span><span class="identifier">TEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/index.html"><span class="identifier">ApplicationEngine</span></a><span class="symbol">, </span><span class="identifier">TConfiguration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-published-timeout/index.html">PublishedTimeout</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PublishedTimeout</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Timeout</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Annotations</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-http2-only/index.html">Http2Only</a></p>
+</td>
+<td>
+<code><span class="keyword">annotation</span> <span class="keyword">class </span><span class="identifier">Http2Only</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-no-http2/index.html">NoHttp2</a></p>
+</td>
+<td>
+<code><span class="keyword">annotation</span> <span class="keyword">class </span><span class="identifier">NoHttp2</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">EngineTestBase</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$<init>(io.ktor.server.engine.ApplicationEngineFactory((io.ktor.server.testing.EngineTestBase.TEngine, io.ktor.server.testing.EngineTestBase.TConfiguration)))/applicationEngineFactory">applicationEngineFactory</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine-factory/index.html"><span class="identifier">ApplicationEngineFactory</span></a><span class="symbol">&lt;</span><a href="index.html#TEngine"><span class="identifier">TEngine</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="application-engine-factory.html">applicationEngineFactory</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">applicationEngineFactory</span><span class="symbol">: </span><a href="../../io.ktor.server.engine/-application-engine-factory/index.html"><span class="identifier">ApplicationEngineFactory</span></a><span class="symbol">&lt;</span><a href="index.html#TEngine"><span class="identifier">TEngine</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="call-group-size.html">callGroupSize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">callGroupSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-http2.html">enableHttp2</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableHttp2</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="enable-ssl.html">enableSsl</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">enableSsl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="exceptions.html">exceptions</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">exceptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-under-debugger.html">isUnderDebugger</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">isUnderDebugger</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="server.html">server</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">server</span><span class="symbol">: </span><a href="index.html#TEngine"><span class="identifier">TEngine</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="socket-read-timeout.html">socketReadTimeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">socketReadTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ssl-port.html">sslPort</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">sslPort</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="test.html">test</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">test</span><span class="symbol">: </span><span class="identifier">TestName</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="test-log.html">testLog</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">testLog</span><span class="symbol">: </span><span class="identifier">Logger</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">timeout</span><span class="symbol">: </span><a href="-published-timeout/index.html"><span class="identifier">PublishedTimeout</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="configure.html">configure</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$configure(io.ktor.server.testing.EngineTestBase.TConfiguration)/configuration">configuration</span><span class="symbol">:</span>&nbsp;<a href="index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="create-and-start-server.html">createAndStartServer</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createAndStartServer</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$createAndStartServer(org.slf4j.Logger, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/log">log</span><span class="symbol">:</span>&nbsp;<span class="identifier">Logger</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$createAndStartServer(org.slf4j.Logger, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/routingConfigurer">routingConfigurer</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.routing/-routing/index.html"><span class="identifier">Routing</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#TEngine"><span class="identifier">TEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="create-server.html">createServer</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">createServer</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$createServer(org.slf4j.Logger, kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))/log">log</span><span class="symbol">:</span>&nbsp;<span class="identifier">Logger</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$createServer(org.slf4j.Logger, kotlin.Function1((io.ktor.application.Application, kotlin.Unit)))/module">module</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#TEngine"><span class="identifier">TEngine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="features.html">features</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">features</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$features(io.ktor.application.Application, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/application">application</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$features(io.ktor.application.Application, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/routingConfigurer">routingConfigurer</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.routing/-routing/index.html"><span class="identifier">Routing</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="find-free-port.html">findFreePort</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">findFreePort</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-up-base.html">setUpBase</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setUpBase</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="socket.html">socket</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">socket</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$socket(kotlin.Function1((java.net.Socket, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/Socket.html"><span class="identifier">Socket</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tear-down-base.html">tearDownBase</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">tearDownBase</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-url.html">withUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withUrl</span><span class="symbol">(</span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$withUrl(kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction2((io.ktor.client.response.HttpResponse, kotlin.Int, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$withUrl(kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction2((io.ktor.client.response.HttpResponse, kotlin.Int, kotlin.Unit)))/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">, </span><span class="identifier" id="io.ktor.server.testing.EngineTestBase$withUrl(kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction2((io.ktor.client.response.HttpResponse, kotlin.Int, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../../io.ktor.client.response/-http-response/index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="key-store.html">keyStore</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">keyStore</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyStore.html"><span class="identifier">KeyStore</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="key-store-file.html">keyStoreFile</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keyStoreFile</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ssl-context.html">sslContext</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">sslContext</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/SSLContext.html"><span class="identifier">SSLContext</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="setup-all.html">setupAll</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setupAll</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-engine-stress-suite/index.html">EngineStressSuite</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">EngineStressSuite</span><span class="symbol">&lt;</span><span class="identifier">TEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/index.html"><span class="identifier">ApplicationEngine</span></a><span class="symbol">, </span><span class="identifier">TConfiguration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EngineTestBase</span></a><span class="symbol">&lt;</span><a href="../-engine-stress-suite/index.html#TEngine"><span class="identifier">TEngine</span></a><span class="symbol">,</span>&nbsp;<a href="../-engine-stress-suite/index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-engine-test-suite/index.html">EngineTestSuite</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">EngineTestSuite</span><span class="symbol">&lt;</span><span class="identifier">TEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/index.html"><span class="identifier">ApplicationEngine</span></a><span class="symbol">, </span><span class="identifier">TConfiguration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.server.engine/-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">EngineTestBase</span></a><span class="symbol">&lt;</span><a href="../-engine-test-suite/index.html#TEngine"><span class="identifier">TEngine</span></a><span class="symbol">,</span>&nbsp;<a href="../-engine-test-suite/index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

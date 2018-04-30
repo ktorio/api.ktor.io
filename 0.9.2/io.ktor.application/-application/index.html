@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Application - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.application</a>&nbsp;/&nbsp;<a href="./index.html">Application</a><br/>
+<br/>
+<h1>Application</h1>
+<code><span class="keyword">class </span><span class="identifier">Application</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a></code>
+<p>Represents configured and running web application, capable of handling requests</p>
+<h3>Parameters</h3>
+<p><a name="environment"></a>
+<code>environment</code> - Instance of <a href="../-application-environment/index.html">ApplicationEnvironment</a> describing environment this application runs in</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Application</span><span class="symbol">(</span><span class="identifier" id="io.ktor.application.Application$<init>(io.ktor.application.ApplicationEnvironment)/environment">environment</span><span class="symbol">:</span>&nbsp;<a href="../-application-environment/index.html"><span class="identifier">ApplicationEnvironment</span></a><span class="symbol">)</span></code>
+<p>Represents configured and running web application, capable of handling requests</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="environment.html">environment</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">environment</span><span class="symbol">: </span><a href="../-application-environment/index.html"><span class="identifier">ApplicationEnvironment</span></a></code>
+<p>Instance of <a href="../-application-environment/index.html">ApplicationEnvironment</a> describing environment this application runs in</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-application-call-pipeline/receive-pipeline.html">receivePipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">receivePipeline</span><span class="symbol">: </span><a href="../../io.ktor.request/-application-receive-pipeline/index.html"><span class="identifier">ApplicationReceivePipeline</span></a></code>
+<p>Pipeline for receiving content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-application-call-pipeline/send-pipeline.html">sendPipeline</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sendPipeline</span><span class="symbol">: </span><a href="../../io.ktor.response/-application-send-pipeline/index.html"><span class="identifier">ApplicationSendPipeline</span></a></code>
+<p>Pipeline for sending content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="dispose.html">dispose</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dispose</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Called by <a href="#">ApplicationEngine</a> when <a href="./index.html">Application</a> is terminated</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/conversion-service.html">conversionService</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="../-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">.</span><span class="identifier">conversionService</span><span class="symbol">: </span><a href="../../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.locations/locations.html">locations</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="./index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><span class="identifier">locations</span><span class="symbol">: </span><a href="../../io.ktor.locations/-locations/index.html"><span class="identifier">Locations</span></a></code>
+<p>Gets the <a href="../../io.ktor.locations/locations.html">Application.locations</a> feature</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../log.html">log</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="./index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><span class="identifier">log</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Convenience property to access log from application</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.auth/authentication.html">authentication</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><s><span class="identifier">authentication</span></s><span class="symbol">(</span><span class="identifier" id="io.ktor.auth$authentication(io.ktor.application.Application, kotlin.Function1((io.ktor.auth.Authentication.Configuration, kotlin.Unit)))/body">body</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.auth/-authentication/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.auth/-authentication/index.html"><span class="identifier">Authentication</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.pipeline/execute.html">execute</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">TContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../../io.ktor.pipeline/-pipeline/index.html"><span class="identifier">Pipeline</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.pipeline/execute.html#TContext"><span class="identifier">TContext</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">execute</span><span class="symbol">(</span><span class="identifier" id="io.ktor.pipeline$execute(io.ktor.pipeline.Pipeline((kotlin.Unit, io.ktor.pipeline.execute.TContext)), io.ktor.pipeline.execute.TContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.pipeline/execute.html#TContext"><span class="identifier">TContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Executes this pipeline</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.pipeline/intercept.html">intercept</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">TSubject</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">TContext</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../../io.ktor.pipeline/-pipeline/index.html"><span class="identifier">Pipeline</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.pipeline/intercept.html#TContext"><span class="identifier">TContext</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">intercept</span><span class="symbol">(</span><span class="identifier" id="io.ktor.pipeline$intercept(io.ktor.pipeline.Pipeline((kotlin.Any, io.ktor.pipeline.intercept.TContext)), io.ktor.pipeline.PipelinePhase, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((io.ktor.pipeline.intercept.TSubject, io.ktor.pipeline.intercept.TContext)), , kotlin.Unit)))/phase">phase</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.pipeline/-pipeline-phase/index.html"><span class="identifier">PipelinePhase</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.pipeline$intercept(io.ktor.pipeline.Pipeline((kotlin.Any, io.ktor.pipeline.intercept.TContext)), io.ktor.pipeline.PipelinePhase, kotlin.SuspendFunction2((io.ktor.pipeline.PipelineContext((io.ktor.pipeline.intercept.TSubject, io.ktor.pipeline.intercept.TContext)), , kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../../io.ktor.pipeline/-pipeline-context/index.html"><span class="identifier">PipelineContext</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.pipeline/intercept.html#TSubject"><span class="identifier">TSubject</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.pipeline/intercept.html#TContext"><span class="identifier">TContext</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="../../io.ktor.pipeline/intercept.html#TSubject"><span class="identifier">TSubject</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Intercepts an untyped pipeline when the subject is of the given type</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.routing/routing.html">routing</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Application</span></a><span class="symbol">.</span><span class="identifier">routing</span><span class="symbol">(</span><span class="identifier" id="io.ktor.routing$routing(io.ktor.application.Application, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.routing/-routing/index.html"><span class="identifier">Routing</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.routing/-routing/index.html"><span class="identifier">Routing</span></a></code>
+<p>Gets or installs a <a href="../../io.ktor.routing/-routing/index.html">Routing</a> feature for the this <a href="./index.html">Application</a> and runs a <a href="../../io.ktor.routing/routing.html#io.ktor.routing$routing(io.ktor.application.Application, kotlin.Function1((io.ktor.routing.Routing, kotlin.Unit)))/configuration">configuration</a> script on it</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

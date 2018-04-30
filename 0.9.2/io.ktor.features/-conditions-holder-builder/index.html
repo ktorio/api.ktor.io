@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ConditionsHolderBuilder - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.features</a>&nbsp;/&nbsp;<a href="./index.html">ConditionsHolderBuilder</a><br/>
+<br/>
+<h1>ConditionsHolderBuilder</h1>
+<code><span class="keyword">interface </span><span class="identifier">ConditionsHolderBuilder</span></code>
+<p>Represents a builder for conditions</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="conditions.html">conditions</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">conditions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../condition.html">condition</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">condition</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$condition(io.ktor.features.ConditionsHolderBuilder, kotlin.Function2((io.ktor.application.ApplicationCall, io.ktor.content.OutgoingContent, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends a custom condition to the encoder or Compression configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../exclude-content-type.html">excludeContentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">excludeContentType</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="io.ktor.features$excludeContentType(io.ktor.features.ConditionsHolderBuilder, kotlin.Array((io.ktor.http.ContentType)))/mimeTypes">mimeTypes</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends a content type exclusion condition to the encoder or Compression configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../match-content-type.html">matchContentType</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">matchContentType</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="io.ktor.features$matchContentType(io.ktor.features.ConditionsHolderBuilder, kotlin.Array((io.ktor.http.ContentType)))/mimeTypes">mimeTypes</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends a content type condition to the encoder or Compression configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../minimum-size.html">minimumSize</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">minimumSize</span><span class="symbol">(</span><span class="identifier" id="io.ktor.features$minimumSize(io.ktor.features.ConditionsHolderBuilder, kotlin.Long)/minSize">minSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends a minimum size condition to the encoder or Compression configuration</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CompressionEncoderBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a></code>
+<p>Builder for compression encoder configuration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-compression/-configuration/index.html">Configuration</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Configuration</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ConditionsHolderBuilder</span></a></code>
+<p>Configuration builder for Compression feature</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

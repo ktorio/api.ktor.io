@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Version - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.content</a>&nbsp;/&nbsp;<a href="./index.html">Version</a><br/>
+<br/>
+<h1>Version</h1>
+<code><span class="keyword">interface </span><span class="identifier">Version</span></code>
+<p>Represents content version</p>
+<p>An example of version is <a href="../-entity-tag-version/index.html">EntityTagVersion</a> or <a href="../-last-modified-version/index.html">LastModifiedVersion</a></p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="append-headers-to.html">appendHeadersTo</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">appendHeadersTo</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.Version$appendHeadersTo(io.ktor.http.HeadersBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-headers-builder/index.html"><span class="identifier">HeadersBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Appends relevant headers to the builder</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="check.html">check</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">check</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content.Version$check(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-version-check-result/index.html"><span class="identifier">VersionCheckResult</span></a></code>
+<p>Checks <a href="check.html#io.ktor.content.Version$check(io.ktor.application.ApplicationCall)/call">call</a> against this version and returns <a href="../-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-entity-tag-version/index.html">EntityTagVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EntityTagVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Version</span></a></code>
+<p>This version checks <a href="../-entity-tag-version/etag.html">etag</a> value and pass it through conditions supplied by the remote client. Depending on conditions it
+produces return value of enum type <a href="../-version-check-result/index.html">VersionCheckResult</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-last-modified-version/index.html">LastModifiedVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">LastModifiedVersion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Version</span></a></code>
+<p>This version passes the given <a href="../-last-modified-version/last-modified.html">lastModified</a> date through the client provided
+http conditional headers If-Modified-Since and If-Unmodified-Since.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

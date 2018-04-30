@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.gson - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.gson</a><br/>
+<br/>
+<h2>Package io.ktor.gson</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-gson-converter/index.html">GsonConverter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">GsonConverter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.features/-content-converter/index.html"><span class="identifier">ContentConverter</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-gson-support/index.html">GsonSupport</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><s><span class="identifier">GsonSupport</span></s></code><pre><code>    install(ContentNegotiation) {
+       register(ContentType.Application.Json, GsonConverter())
+    }
+
+    to be able to modify the gsonBuilder (eg. using specific serializers and/or
+    configuration options, you could use the following (as seen in the ktor-samples):
+
+    install(ContentNegotiation) {
+        gson {
+            registerTypeAdapterFactory(GsonAdaptersMyDocument())
+            setDateFormat(DateFormat.LONG)
+            setPrettyPrinting()
+        }
+    }</code></pre></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="gson.html">gson</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.features/-content-negotiation/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">gson</span><span class="symbol">(</span><span class="identifier" id="io.ktor.gson$gson(io.ktor.features.ContentNegotiation.Configuration, kotlin.Function1((com.google.gson.GsonBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">GsonBuilder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

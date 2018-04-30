@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JacksonConverter.<init> - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.jackson</a>&nbsp;/&nbsp;<a href="index.html">JacksonConverter</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="io.ktor.jackson.JacksonConverter$&lt;init&gt;(com.fasterxml.jackson.databind.ObjectMapper)"></a>
+<code><span class="identifier">JacksonConverter</span><span class="symbol">(</span><span class="identifier" id="io.ktor.jackson.JacksonConverter$<init>(com.fasterxml.jackson.databind.ObjectMapper)/objectmapper">objectmapper</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span>&nbsp;<span class="symbol">=</span>&nbsp;jacksonObjectMapper()<span class="symbol">)</span></code><pre><code>    install(ContentNegotiation) {
+       register(ContentType.Application.Json, JacksonConverter())
+    }
+
+    to be able to modify the objectMapper (eg. using specific modules and/or serializers and/or
+    configuration options, you could use the following (as seen in the ktor-samples):
+
+    install(ContentNegotiation) {
+        jackson {
+            configure(SerializationFeature.INDENT_OUTPUT, true)
+            registerModule(JavaTimeModule())</code></pre><ul><li><pre><code>       }</code></pre>  
+<p>  }</p>
+</li>
+</ul>
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WebSocketReader - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.http.cio.websocket</a>&nbsp;/&nbsp;<a href="./index.html">WebSocketReader</a><br/>
+<br/>
+<h1>WebSocketReader</h1>
+<code><span class="keyword">class </span><span class="identifier">WebSocketReader</span></code>
+<p>Class that continuously reads a <a href="#">byteChannel</a> and
+converts into Websocket <a href="../-frame/index.html">Frame</a> exposing them in <a href="incoming.html">incoming</a>.</p>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-frame-too-big-exception/index.html">FrameTooBigException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FrameTooBigException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">WebSocketReader</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/byteChannel">byteChannel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/maxFrameSize">maxFrameSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">Job</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/pool">pool</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectPool</span><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;KtorDefaultPool<span class="symbol">)</span></code>
+<p>Class that continuously reads a <a href="-init-.html#io.ktor.http.cio.websocket.WebSocketReader$<init>(kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.Long, kotlinx.coroutines.experimental.Job, kotlin.coroutines.experimental.CoroutineContext, kotlinx.io.pool.ObjectPool((java.nio.ByteBuffer)))/byteChannel">byteChannel</a> and
+converts into Websocket <a href="../-frame/index.html">Frame</a> exposing them in <a href="incoming.html">incoming</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="incoming.html">incoming</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">incoming</span><span class="symbol">: </span><span class="identifier">ReceiveChannel</span><span class="symbol">&lt;</span><a href="../-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">&gt;</span></code>
+<p>Channel receiving Websocket's <a href="../-frame/index.html">Frame</a> objects read from <a href="#">byteChannel</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="max-frame-size.html">maxFrameSize</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">maxFrameSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

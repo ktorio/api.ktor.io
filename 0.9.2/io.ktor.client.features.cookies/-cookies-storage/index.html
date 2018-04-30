@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CookiesStorage - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.client.features.cookies</a>&nbsp;/&nbsp;<a href="./index.html">CookiesStorage</a><br/>
+<br/>
+<h1>CookiesStorage</h1>
+<code><span class="keyword">interface </span><span class="identifier">CookiesStorage</span></code>
+<p>Storage for <a href="../../io.ktor.http/-cookie/index.html">Cookie</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-cookie.html">addCookie</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">addCookie</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.features.cookies.CookiesStorage$addCookie(kotlin.String, io.ktor.http.Cookie)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.features.cookies.CookiesStorage$addCookie(kotlin.String, io.ktor.http.Cookie)/cookie">cookie</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Sets a <a href="add-cookie.html#io.ktor.client.features.cookies.CookiesStorage$addCookie(kotlin.String, io.ktor.http.Cookie)/cookie">cookie</a> for the specified <a href="add-cookie.html#io.ktor.client.features.cookies.CookiesStorage$addCookie(kotlin.String, io.ktor.http.Cookie)/host">host</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Gets a map of <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> to <a href="../../io.ktor.http/-cookie/index.html">Cookie</a> for a specific <a href="get.html#io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String)/host">host</a>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">?</span></code>
+<p>Try to get a <a href="../../io.ktor.http/-cookie/index.html">Cookie</a> with the specified cookie's <a href="get.html#io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String, kotlin.String)/name">name</a> for a <a href="get.html#io.ktor.client.features.cookies.CookiesStorage$get(kotlin.String, kotlin.String)/host">host</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../for-each.html">forEach</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="./index.html"><span class="identifier">CookiesStorage</span></a><span class="symbol">.</span><span class="identifier">forEach</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.features.cookies$forEach(io.ktor.client.features.cookies.CookiesStorage, kotlin.String, kotlin.Function1((io.ktor.http.Cookie, kotlin.Unit)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.client.features.cookies$forEach(io.ktor.client.features.cookies.CookiesStorage, kotlin.String, kotlin.Function1((io.ktor.http.Cookie, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Runs a <a href="../for-each.html#io.ktor.client.features.cookies$forEach(io.ktor.client.features.cookies.CookiesStorage, kotlin.String, kotlin.Function1((io.ktor.http.Cookie, kotlin.Unit)))/block">block</a> of code, for all the cookies set in the specified <a href="../for-each.html#io.ktor.client.features.cookies$forEach(io.ktor.client.features.cookies.CookiesStorage, kotlin.String, kotlin.Function1((io.ktor.http.Cookie, kotlin.Unit)))/host">host</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-accept-all-cookies-storage/index.html">AcceptAllCookiesStorage</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AcceptAllCookiesStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CookiesStorage</span></a></code>
+<p><a href="./index.html">CookiesStorage</a> that stores all the cookies in an in-memory map.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-constant-cookie-storage/index.html">ConstantCookieStorage</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ConstantCookieStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CookiesStorage</span></a></code>
+<p><a href="./index.html">CookiesStorage</a> that ignores <a href="../-constant-cookie-storage/add-cookie.html">addCookie</a> and returns a list of specified <a href="../cookies.html">cookies</a> when constructed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

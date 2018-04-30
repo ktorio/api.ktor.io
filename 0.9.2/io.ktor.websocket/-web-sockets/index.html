@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>WebSockets - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.websocket</a>&nbsp;/&nbsp;<a href="./index.html">WebSockets</a><br/>
+<br/>
+<h1>WebSockets</h1>
+<code><span class="keyword">class </span><span class="identifier">WebSockets</span></code>
+<p>WebSockets support feature. It is required to be installed first before binding any websocket endpoints</p>
+<pre><code>install(WebSockets)
+
+install(Routing) {
+    webSocket("/ws") {
+         incoming.consumeForEach { ... }
+    }
+}
+</code></pre>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-feature/index.html">Feature</a></p>
+</td>
+<td>
+<code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">Feature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">,</span>&nbsp;<a href="-web-socket-options/index.html"><span class="identifier">WebSocketOptions</span></a><span class="symbol">,</span>&nbsp;<a href="./index.html"><span class="identifier">WebSockets</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-web-socket-options/index.html">WebSocketOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">WebSocketOptions</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">WebSockets</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/pingInterval">pingInterval</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/maxFrameSize">maxFrameSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets$<init>(java.time.Duration, java.time.Duration, kotlin.Long, kotlin.Boolean)/masking">masking</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span></code>
+<p>WebSockets support feature. It is required to be installed first before binding any websocket endpoints</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><span class="identifier">CompletableDeferred</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="masking.html">masking</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">masking</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="max-frame-size.html">maxFrameSize</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxFrameSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="ping-interval.html">pingInterval</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">pingInterval</span><span class="symbol">: </span><span class="identifier">Duration</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">timeout</span><span class="symbol">: </span><span class="identifier">Duration</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="key.html">key</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">WebSockets</span></a><span class="symbol">&gt;</span></code>
+<p>Unique key that identifies a feature</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="install.html">install</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><span class="identifier" id="io.ktor.websocket.WebSockets.Feature$install(io.ktor.application.Application, kotlin.Function1((io.ktor.websocket.WebSockets.WebSocketOptions, kotlin.Unit)))/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.websocket.WebSockets.Feature$install(io.ktor.application.Application, kotlin.Function1((io.ktor.websocket.WebSockets.WebSocketOptions, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="-web-socket-options/index.html"><span class="identifier">WebSocketOptions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WebSockets</span></a></code>
+<p>Feature installation script</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

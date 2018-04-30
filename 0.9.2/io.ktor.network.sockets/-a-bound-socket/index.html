@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ABoundSocket - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.network.sockets</a>&nbsp;/&nbsp;<a href="./index.html">ABoundSocket</a><br/>
+<br/>
+<h1>ABoundSocket</h1>
+<code><span class="keyword">interface </span><span class="identifier">ABoundSocket</span></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="local-address.html">localAddress</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">localAddress</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/net/SocketAddress.html"><span class="identifier">SocketAddress</span></a></code>
+<p>Local socket address. Could throw an exception if no address bound yet.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-bound-datagram-socket.html">BoundDatagramSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">BoundDatagramSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-a-socket/index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-a-readable/index.html"><span class="identifier">AReadable</span></a><span class="symbol">, </span><a href="../-datagram-read-write-channel.html"><span class="identifier">DatagramReadWriteChannel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-connected-datagram-socket.html">ConnectedDatagramSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ConnectedDatagramSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-a-socket/index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-a-connected-socket/index.html"><span class="identifier">AConnectedSocket</span></a><span class="symbol">, </span><a href="../-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">, </span><a href="../-datagram-read-write-channel.html"><span class="identifier">DatagramReadWriteChannel</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-server-socket.html">ServerSocket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">ServerSocket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-a-socket/index.html"><span class="identifier">ASocket</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-acceptable/index.html"><span class="identifier">Acceptable</span></a><span class="symbol">&lt;</span><a href="../-socket.html"><span class="identifier">Socket</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-socket.html">Socket</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Socket</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-read-write-socket.html"><span class="identifier">ReadWriteSocket</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">ABoundSocket</span></a><span class="symbol">, </span><a href="../-a-connected-socket/index.html"><span class="identifier">AConnectedSocket</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

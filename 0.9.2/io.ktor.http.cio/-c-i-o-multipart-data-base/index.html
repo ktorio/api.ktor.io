@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CIOMultipartDataBase - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.http.cio</a>&nbsp;/&nbsp;<a href="./index.html">CIOMultipartDataBase</a><br/>
+<br/>
+<h1>CIOMultipartDataBase</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CIOMultipartDataBase</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.content/-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CIOMultipartDataBase</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/coroutineContext">coroutineContext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines.experimental/-coroutine-context/index.html"><span class="identifier">CoroutineContext</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/channel">channel</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadChannel</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/contentLength">contentLength</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/formFieldLimit">formFieldLimit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;65536<span class="symbol">, </span><span class="identifier" id="io.ktor.http.cio.CIOMultipartDataBase$<init>(kotlin.coroutines.experimental.CoroutineContext, kotlinx.coroutines.experimental.io.ByteReadChannel, kotlin.CharSequence, kotlin.Long, kotlin.Int, kotlin.Int)/inMemoryFileUploadLimit">inMemoryFileUploadLimit</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;formFieldLimit<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="parts.html">parts</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">parts</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html"><span class="identifier">Sequence</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="read-part.html">readPart</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">readPart</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.content/-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">?</span></code>
+<p>Reads next part data or <code>null</code> if end of multipart stream encountered</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/for-each-part.html">forEachPart</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../../io.ktor.content/-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">forEachPart</span><span class="symbol">(</span><span class="identifier" id="io.ktor.content$forEachPart(io.ktor.content.MultiPartData, kotlin.SuspendFunction1((io.ktor.content.PartData, kotlin.Unit)))/partHandler">partHandler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><a href="../../io.ktor.content/-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Parse multipart data stream and invoke <a href="../../io.ktor.content/for-each-part.html#io.ktor.content$forEachPart(io.ktor.content.MultiPartData, kotlin.SuspendFunction1((io.ktor.content.PartData, kotlin.Unit)))/partHandler">partHandler</a> for each <a href="../../io.ktor.content/-part-data/index.html">PartData</a> encountered</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/read-all-parts.html">readAllParts</a></p>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../../io.ktor.content/-multi-part-data/index.html"><span class="identifier">MultiPartData</span></a><span class="symbol">.</span><span class="identifier">readAllParts</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-part-data/index.html"><span class="identifier">PartData</span></a><span class="symbol">&gt;</span></code>
+<p>Parse multipart data stream and put all parts into a list</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-c-i-o-multipart-data/index.html">CIOMultipartData</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CIOMultipartData</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">CIOMultipartDataBase</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

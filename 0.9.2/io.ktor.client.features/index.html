@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>io.ktor.client.features - </title>
+<link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="./index.html">io.ktor.client.features</a><br/>
+<br/>
+<h2>Package io.ktor.client.features</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-http-client-feature/index.html">HttpClientFeature</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">HttpClientFeature</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">TBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">TFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Base interface representing a <a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-ignore-body/index.html">HttpIgnoreBody</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpIgnoreBody</span></code>
+<p><a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature that closes the <a href="../io.ktor.client.call/-http-client-call/response.html">HttpClientCall.response</a> early for optimizing resources.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-plain-text/index.html">HttpPlainText</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpPlainText</span></code>
+<p><a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature that encodes <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> request bodies to <a href="../io.ktor.content/-text-content/index.html">TextContent</a>
+using a specific charset defined at <a href="#">HttpPlainText.defaultCharset</a>.
+And also processes the response body as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-http-redirect/index.html">HttpRedirect</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HttpRedirect</span></code>
+<p><a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature that handles http redirect</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-redirect-exception/index.html">RedirectException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RedirectException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default-transformers.html">defaultTransformers</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">defaultTransformers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="feature.html">feature</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">F</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">feature</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.features$feature(io.ktor.client.HttpClient, io.ktor.client.features.HttpClientFeature((io.ktor.client.features.feature.B, io.ktor.client.features.feature.F)))/feature">feature</span><span class="symbol">:</span>&nbsp;<a href="-http-client-feature/index.html"><span class="identifier">HttpClientFeature</span></a><span class="symbol">&lt;</span><a href="feature.html#B"><span class="identifier">B</span></a><span class="symbol">,</span>&nbsp;<a href="feature.html#F"><span class="identifier">F</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="feature.html#F"><span class="identifier">F</span></a><span class="symbol">?</span></code>
+<p>Try to get a <a href="feature.html#io.ktor.client.features$feature(io.ktor.client.HttpClient, io.ktor.client.features.HttpClientFeature((io.ktor.client.features.feature.B, io.ktor.client.features.feature.F)))/feature">feature</a> installed in this client. Returns <code>null</code> if the feature was not previously installed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

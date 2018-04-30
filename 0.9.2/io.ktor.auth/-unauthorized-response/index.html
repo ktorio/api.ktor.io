@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>UnauthorizedResponse - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">io.ktor.auth</a>&nbsp;/&nbsp;<a href="./index.html">UnauthorizedResponse</a><br/>
+<br/>
+<h1>UnauthorizedResponse</h1>
+<code><span class="keyword">class </span><span class="identifier">UnauthorizedResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.content/-outgoing-content/-no-content/index.html"><span class="identifier">NoContent</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">UnauthorizedResponse</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="io.ktor.auth.UnauthorizedResponse$<init>(kotlin.Array((io.ktor.auth.HttpAuthHeader)))/challenges">challenges</span><span class="symbol">:</span>&nbsp;<a href="../-http-auth-header/index.html"><span class="identifier">HttpAuthHeader</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="challenges.html">challenges</a></p>
+</td>
+<td>
+<code><span class="keyword">vararg</span> <span class="keyword">val </span><span class="identifier">challenges</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="../-http-auth-header/index.html"><span class="identifier">HttpAuthHeader</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="headers.html">headers</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code>
+<p>Headers to set when sending this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code>
+<p>Status code to set when sending this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/caching.html">caching</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">caching</span><span class="symbol">: </span><a href="../../io.ktor.content/-caching-options/index.html"><span class="identifier">CachingOptions</span></a><span class="symbol">?</span></code>
+<p>Gets or sets <a href="../../io.ktor.http/-cache-control/index.html">CacheControl</a> instance as an extension property on this content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.features/default-versions.html">defaultVersions</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">defaultVersions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code>
+<p>Retrieves LastModified and ETag versions from this <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> headers</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../io.ktor.content/versions.html">versions</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">versions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code>
+<p>Gets or sets list of <a href="../../io.ktor.content/-version/index.html">Version</a> instances as an extension property on this content</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../io.ktor.client.utils/wrap-headers.html">wrapHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><span class="identifier">wrapHeaders</span><span class="symbol">(</span><span class="identifier" id="io.ktor.client.utils$wrapHeaders(io.ktor.content.OutgoingContent, kotlin.Function1((io.ktor.http.Headers, )))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a></code>
+<p>Generates a new <a href="../../io.ktor.content/-outgoing-content/index.html">OutgoingContent</a> of the same abstract type
+but with <a href="../../io.ktor.content/-outgoing-content/headers.html">OutgoingContent.headers</a> transformed by the specified <a href="../../io.ktor.client.utils/wrap-headers.html#io.ktor.client.utils$wrapHeaders(io.ktor.content.OutgoingContent, kotlin.Function1((io.ktor.http.Headers, )))/block">block</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
