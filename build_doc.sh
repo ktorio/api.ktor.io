@@ -46,7 +46,7 @@ JEKYLL_CONFIG="$(cat <<-EOF
 title: Ktor
 description: Asynchronous framework for web applications
 url: "https://api.ktor.io/"
-baseurl: /
+baseurl: /$KTOR_VERSION/
 
 # Dirs
 source: .

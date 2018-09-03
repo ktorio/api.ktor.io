@@ -1,102 +1,179 @@
-<HTML>
-<HEAD>
-<meta charset="UTF-8">
-<title>Frame.Close - </title>
-<link rel="stylesheet" href="../../../style.css">
-</HEAD>
-<BODY>
-<a href="../../index.html">io.ktor.http.cio.websocket</a>&nbsp;/&nbsp;<a href="../index.html">Frame</a>&nbsp;/&nbsp;<a href="./index.html">Close</a><br/>
-<br/>
-<h1>Close</h1>
-<code><span class="keyword">class </span><span class="identifier">Close</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Frame</span></a></code>
-<h3>Constructors</h3>
-<table>
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frame.Close -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/0.9.2/assets/main.css">
+  <link rel="canonical" href="https://api.ktor.io//0.9.2/io.ktor.http.cio.websocket/-frame/-close/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/0.9.2/assets/js/api.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" href="/0.9.2/">Ktor</a>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../../index.html">io.ktor.http.cio.websocket</a> / <a href="../index.html">Frame</a> / <a href="./index.html">Close</a></div>
+
+<h1 id="close">Close</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">Close</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">Frame</span></a></code></div>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
 <tbody>
 <tr>
 <td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
-</td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
 <td>
-<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span></code><br/>
-<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(kotlinx.io.core.ByteReadPacket)/packet">packet</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadPacket</span><span class="symbol">)</span></code><br/>
-<code><span class="identifier">Close</span><span class="symbol">(</span><span class="symbol">)</span></code><br/>
-<code><span class="identifier">Close</span><span class="symbol">(</span><span class="identifier" id="io.ktor.http.cio.websocket.Frame.Close$<init>(java.nio.ByteBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span></code></td>
+        <div class="signature"><code><span class="identifier">Close</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Close$&lt;init&gt;(io.ktor.http.cio.websocket.CloseReason)/reason">reason</span><span class="symbol">:</span>&nbsp;<a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">)</span></code></div>
+
+        <div class="signature"><code><span class="identifier">Close</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Close$&lt;init&gt;(kotlinx.io.core.ByteReadPacket)/packet">packet</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteReadPacket</span><span class="symbol">)</span></code></div>
+
+        <div class="signature"><code><span class="identifier">Close</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <div class="signature"><code><span class="identifier">Close</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Close$&lt;init&gt;(java.nio.ByteBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><span class="symbol">)</span></code></div>
+
+      </td>
 </tr>
 </tbody>
 </table>
-<h3>Inherited Properties</h3>
-<table>
+
+<h3 id="inherited-properties">Inherited Properties</h3>
+
+<table class="api-docs-table">
 <tbody>
 <tr>
 <td>
-<p><a href="../buffer.html">buffer</a></p>
-</td>
+
+        <p><a href="../buffer.html">buffer</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">buffer</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a></code><ul><li>a frame content or fragment content</li>
-</ul>
-</td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">buffer</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a></code></div>
+        <ul>
+          <li>a frame content or fragment content</li>
+        </ul>
+
+      </td>
 </tr>
 <tr>
 <td>
-<p><a href="../disposable-handle.html">disposableHandle</a></p>
-</td>
+
+        <p><a href="../disposable-handle.html">disposableHandle</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">disposableHandle</span><span class="symbol">: </span><span class="identifier">DisposableHandle</span></code>
-<p>could be invoked when the frame is processed</p>
-</td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">disposableHandle</span><span class="symbol">: </span><span class="identifier">DisposableHandle</span></code></div>
+
+        <p>could be invoked when the frame is processed</p>
+
+      </td>
 </tr>
 <tr>
 <td>
-<p><a href="../fin.html">fin</a></p>
-</td>
+
+        <p><a href="../fin.html">fin</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">fin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
-<p>is it final fragment, should be always <code>true</code> for control frames and if no fragmentation is used</p>
-</td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">fin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>is it final fragment, should be always <code>true</code> for control frames and if no fragmentation is used</p>
+
+      </td>
 </tr>
 <tr>
 <td>
-<p><a href="../frame-type.html">frameType</a></p>
-</td>
+
+        <p><a href="../frame-type.html">frameType</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">frameType</span><span class="symbol">: </span><a href="../../-frame-type/index.html"><span class="identifier">FrameType</span></a></code>
-<p>enum value</p>
-</td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">frameType</span><span class="symbol">: </span><a href="../../-frame-type/index.html"><span class="identifier">FrameType</span></a></code></div>
+
+        <p>enum value</p>
+
+      </td>
 </tr>
 </tbody>
 </table>
-<h3>Inherited Functions</h3>
-<table>
+
+<h3 id="inherited-functions">Inherited Functions</h3>
+
+<table class="api-docs-table">
 <tbody>
 <tr>
 <td>
-<p><a href="../copy.html">copy</a></p>
-</td>
+
+        <p><a href="../copy.html">copy</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">Frame</span></a></code></td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">Frame</span></a></code></div>
+
+      </td>
 </tr>
 <tr>
 <td>
-<p><a href="../to-string.html">toString</a></p>
-</td>
+
+        <p><a href="../to-string.html">toString</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+      </td>
 </tr>
 </tbody>
 </table>
-<h3>Extension Functions</h3>
-<table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
 <tbody>
 <tr>
 <td>
-<p><a href="../../read-reason.html">readReason</a></p>
-</td>
+
+        <p><a href="../../read-reason.html">readReason</a></p>
+
+      </td>
 <td>
-<code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Close</span></a><span class="symbol">.</span><span class="identifier">readReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span></code>
-<p>Read close reason from close frame or null if no close reason provided</p>
-</td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.md"><span class="identifier">Close</span></a><span class="symbol">.</span><span class="identifier">readReason</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../-close-reason/index.html"><span class="identifier">CloseReason</span></a><span class="symbol">?</span></code></div>
+
+        <p>Read close reason from close frame or null if no close reason provided</p>
+
+      </td>
 </tr>
 </tbody>
 </table>
-</BODY>
-</HTML>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
