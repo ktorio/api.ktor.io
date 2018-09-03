@@ -6,7 +6,7 @@ if [ "$#" -ne 1 ]; then
 	exit 1
 fi
 
-KTOR_VERSION=$1
+KTOR_VERSION=`basename $1`
 
 echo "Building KTOR_VERSION=$KTOR_VERSION..."
 
@@ -45,8 +45,8 @@ JEKYLL_CONFIG="$(cat <<-EOF
 # Jekyll configuration file
 title: Ktor
 description: Asynchronous framework for web applications
-baseurl: "/$KTOR_VERSION"
-#url: "https://api.ktor.io/"
+url: "https://api.ktor.io/"
+baseurl: /
 
 # Dirs
 source: .
@@ -57,8 +57,9 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
-include:
   - package-list
+#include:
+#  - package-list
 
 EOF
 )"
@@ -67,12 +68,28 @@ EOF
 
 #echo "$SUFFIX"
 
+rm -rf $KTOR_VERSION
 rm -rf doc-output
 cp -rf template doc-output
+#unzip template.zip -d doc-output
 
-echo "$JEKYLL_CONFIG" >> doc-output/_config.yml
+echo "$JEKYLL_CONFIG" > doc-output/_config.yml
 
-pushd ../ktor
+if [ ! -d ktor  ]; then
+    git clone https://github.com/ktorio/ktor.git
+fi
+
+pushd ktor
+
+git reset --hard
+git checkout master
+git fetch --all
+git reset --hard origin/master
+
+#git reset --hard
+#git checkout master
+git pull https://github.com/ktorio/ktor.git master
+git checkout $KTOR_VERSION
 
 if [ ! -f build.gradle.bak ]; then
     cp -f build.gradle build.gradle.bak
@@ -93,3 +110,5 @@ pushd "$API_DOC_FOLDER"
 jekyll b
 
 popd
+
+rm -f $KTOR_VERSION/index.yml
