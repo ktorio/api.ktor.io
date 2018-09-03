@@ -7,6 +7,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 KTOR_VERSION=`basename $1`
+CNAME=`cat CNAME`
 
 echo "Building KTOR_VERSION=$KTOR_VERSION..."
 
@@ -45,7 +46,7 @@ JEKYLL_CONFIG="$(cat <<-EOF
 # Jekyll configuration file
 title: Ktor
 description: Asynchronous framework for web applications
-url: "https://api.ktor.io/"
+url: "https://$CNAME/"
 baseurl: /$KTOR_VERSION/
 
 # Dirs
