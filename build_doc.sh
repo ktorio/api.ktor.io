@@ -89,14 +89,15 @@ git checkout master
 git fetch --all
 git reset --hard origin/master
 
-#git reset --hard
-#git checkout master
+git reset --hard
+git checkout master
 git pull https://github.com/ktorio/ktor.git master
+git reset --hard
 git checkout $KTOR_VERSION
 
-if [ ! -f build.gradle.bak ]; then
-    cp -f build.gradle build.gradle.bak
-fi
+#if [ ! -f build.gradle.bak ]; then
+cp -f build.gradle build.gradle.bak
+#fi
 
 cp -f build.gradle.bak build.gradle
 echo "$SUFFIX" >> build.gradle
