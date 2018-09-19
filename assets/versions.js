@@ -4,7 +4,7 @@ var info = document.createElement('span');
 info.innerText = 'Versions:'
 versionPlaceholder.appendChild(info);
 versionPlaceholder.appendChild(ul);
-for (version of ['0.9.2', '0.9.3', '0.9.4']) {
+for (version of ['0.9.2', '0.9.3', '0.9.4', '0.9.5']) {
 	var active = document.location.pathname.match(new RegExp('^/' + version)) != null;
 	var li = document.createElement('li');
 	if (active) {
