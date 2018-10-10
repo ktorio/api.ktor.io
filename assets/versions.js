@@ -1,10 +1,11 @@
+var versions = ['0.9.2', '0.9.3', '0.9.4', '0.9.5', '1.0.0-alpha-1'];
 var versionPlaceholder = document.getElementById('version-placeholder');
 var ul = document.createElement('ul');
 var info = document.createElement('span');
 info.innerText = 'Versions:'
 versionPlaceholder.appendChild(info);
 versionPlaceholder.appendChild(ul);
-for (version of ['0.9.2', '0.9.3', '0.9.4', '0.9.5']) {
+for (version of versions) {
 	var active = document.location.pathname.match(new RegExp('^/' + version)) != null;
 	var li = document.createElement('li');
 	if (active) {
