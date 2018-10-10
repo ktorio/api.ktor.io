@@ -3,13 +3,34 @@
 import java.io.*
 
 fun main(args: Array<String>) {
+    // Get versions
     val versions = getVersions()
-    val versionsFile = File("assets/versions.js")
-    val versionsText = versionsFile.readText()
-    val versionsTextMod = Regex("var versions = (.*);").replace(versionsText) {
-        "var versions = [" + versions.joinToString(", ") { "'$it'" } + "];"
+
+    // Update assets/versions.js
+    run {
+        val versionsFile = File("assets/versions.js")
+        val versionsText = versionsFile.readText()
+        val versionsTextMod = Regex("var versions = (.*);").replace(versionsText) {
+            "var versions = [" + versions.joinToString(", ") { "'$it'" } + "];"
+        }
+        println("Updating $versionsFile...")
+        versionsFile.writeText(versionsTextMod)
     }
-    versionsFile.writeText(versionsTextMod)
+
+
+    // Update
+    run {
+        val lastVersion = versions.last()
+        val latestIndexFile = File("latest/index.html")
+        val latestIndexText = latestIndexFile.readText()
+        val latestIndexTextMod = Regex("\\.\\./([^'\"<]+)").replace(latestIndexText) {
+            "../$lastVersion"
+        }
+        println("Updating $latestIndexFile...")
+        latestIndexFile.writeText(latestIndexTextMod)
+        //println(latestIndexTextMod)
+    }
+
 }
 
 fun getVersions() : List<String> {
