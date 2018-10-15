@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebSocketUpgrade.&lt;init&gt; -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.0.0-beta-1/io.ktor.websocket/-web-socket-upgrade/-init-.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.0.0-beta-1/">Ktor 1.0.0-beta-1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.websocket</a> / <a href="index.html">WebSocketUpgrade</a> / <a href="./-init-.html">&lt;init&gt;</a></div>
+
+<h1 id="init">&lt;init&gt;</h1>
+
+<div class="signature"><code><span class="identifier">WebSocketUpgrade</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket.WebSocketUpgrade$&lt;init&gt;(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket.WebSocketUpgrade$&lt;init&gt;(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket.WebSocketUpgrade$&lt;init&gt;(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/handle">handle</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="../../io.ktor.http.cio.websocket/-web-socket-session/index.html"><span class="identifier">WebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code></div>
+
+<p>An <a href="../../io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a> response object that could be used to <code>respond()</code>: it will cause application engine to
+perform HTTP upgrade and start websocket RAW session.</p>
+
+<p>Please note that you generally shouldn’t use this object directly but use <a href="../-web-sockets/index.html">WebSockets</a> feature with routing builders
+<a href="../web-socket.html">webSocket</a> instead.</p>
+
+<p><a href="-init-.html#io.ktor.websocket.WebSocketUpgrade$&lt;init&gt;(io.ktor.application.ApplicationCall, kotlin.String, kotlin.SuspendFunction1((io.ktor.http.cio.websocket.WebSocketSession, kotlin.Unit)))/handle">handle</a> function is applied to a session and as far as it is a RAW session, you should handle all low-level
+frames yourself and deal with ping/pongs, timeouts, close frames, frame fragmentation and so on.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p><code>call</code> - that is starting web socket session</p>
+
+<p><code>protocol</code> - web socket negotiated protocol name (optional)</p>
+
+<p><code>handle</code> - function that is started once HTTP upgrade complete and the session will end once this function exit</p>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

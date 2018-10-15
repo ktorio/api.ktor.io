@@ -5,15 +5,15 @@ permalink: /404.html
 <h1>404 - Not Found</h1>
 
 <script type="text/javascript">
-var documentPathname = document.location.pathname;
+    let documentPathname = document.location.pathname;
 
-if (documentPathname.substr(-1, 1) == '/') {
-	documentPathname = documentPathname.substr(0, documentPathname.length - 1);
-}
+    if (documentPathname.substr(-1, 1) === '/') {
+        documentPathname = documentPathname.substr(0, documentPathname.length - 1);
+    }
 
-var barIndex = documentPathname.lastIndexOf('/');
-documentPathname = documentPathname.substr(0, barIndex);
+    const barIndex = documentPathname.lastIndexOf('/');
+    documentPathname = documentPathname.substr(0, barIndex);
 
-document.location.href = documentPathname;
-//console.log(documentPathname);
+    document.location.href = documentPathname;
+    //console.log(documentPathname);
 </script>

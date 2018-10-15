@@ -1,4 +1,4 @@
-var versions = ['0.9.2', '0.9.3', '0.9.4', '0.9.5', '1.0.0-alpha-1'];
+var versions = ['0.9.2', '0.9.3', '0.9.4', '0.9.5', '1.0.0-alpha-1', '1.0.0-beta-1'];
 
 if (!String.prototype.startsWith) {
 	String.prototype.startsWith = function(search, pos) {
