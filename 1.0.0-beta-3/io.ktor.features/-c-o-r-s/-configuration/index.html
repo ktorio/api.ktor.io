@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CORS.Configuration -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.0.0-beta-3/io.ktor.features/-c-o-r-s/-configuration/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.0.0-beta-3/">Ktor 1.0.0-beta-3</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../../index.html">io.ktor.features</a> / <a href="../index.html">CORS</a> / <a href="./index.html">Configuration</a></div>
+
+<h1 id="configuration">Configuration</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">Configuration</span></code></div>
+
+<p>CORS feature configuration</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">Configuration</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>CORS feature configuration</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="allow-credentials.html">allowCredentials</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">allowCredentials</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Allow sending credentials</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="allow-same-origin.html">allowSameOrigin</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">allowSameOrigin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Allow requests from the same origin</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="exposed-headers.html">exposedHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">exposedHeaders</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html"><span class="identifier">TreeSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Exposed HTTP headers that could be accessed by a client</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="headers.html">headers</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/TreeSet.html"><span class="identifier">TreeSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Allowed CORS headers</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="hosts.html">hosts</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">hosts</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Allowed CORS hosts</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="max-age.html">maxAge</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">maxAge</span><span class="symbol">: </span><span class="identifier">Duration</span></code></div>
+
+        <p>Max-Age for cached CORS options</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="methods.html">methods</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">methods</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Allowed HTTP methods</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="any-host.html">anyHost</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">anyHost</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Allow requests from any host</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="expose-header.html">exposeHeader</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">exposeHeader</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features.CORS.Configuration$exposeHeader(kotlin.String)/header">header</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Allow to expose <a href="expose-header.html#io.ktor.features.CORS.Configuration$exposeHeader(kotlin.String)/header">header</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="expose-x-http-method-override.html">exposeXHttpMethodOverride</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">exposeXHttpMethodOverride</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Allow to expose <code>X-Http-Method-Override</code> header</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="header.html">header</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">header</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features.CORS.Configuration$header(kotlin.String)/header">header</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Allow sending <a href="header.html#io.ktor.features.CORS.Configuration$header(kotlin.String)/header">header</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="host.html">host</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">host</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/schemes">schemes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;listOf("http")<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.CORS.Configuration$host(kotlin.String, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/subDomains">subDomains</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Allow requests from the specified domains and schemes</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="method.html">method</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">method</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features.CORS.Configuration$method(io.ktor.http.HttpMethod)/method">method</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Please note that CORS operates ONLY with REAL HTTP methods
+and will never consider overridden methods via <code>X-Http-Method-Override</code>.
+However you can add them here if you are implementing CORS at client side from the scratch
+that you generally don’t need to do.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-cors-default-headers.html">CorsDefaultHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">CorsDefaultHeaders</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Default HTTP headers that are always allowed by CORS</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cors-default-methods.html">CorsDefaultMethods</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">CorsDefaultMethods</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span class="symbol">&lt;</span><a href="../../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Default HTTP methods that are always allowed by CORS</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
