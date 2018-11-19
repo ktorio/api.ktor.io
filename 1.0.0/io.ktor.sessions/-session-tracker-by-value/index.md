@@ -1,0 +1,140 @@
+---
+title: SessionTrackerByValue - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.sessions</a> / <a href="./index.html">SessionTrackerByValue</a></div>
+
+# SessionTrackerByValue
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTrackerByValue</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-session-tracker/index.html"><span class="identifier">SessionTracker</span></a></code></div>
+
+<a href="../-session-tracker/index.html">SessionTracker</a> that stores the contents of the session as part of HTTP Cookies/Headers.
+It uses a specific <a href="serializer.html">serializer</a> to serialize and deserialize objects of type <a href="type.html">type</a>.
+
+### Constructors
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td markdown="1">
+
+<a href="-init-.html">&lt;init&gt;</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="identifier">SessionTrackerByValue</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$<init>(kotlin.reflect.KClass((kotlin.Any)), io.ktor.sessions.SessionSerializer)/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$<init>(kotlin.reflect.KClass((kotlin.Any)), io.ktor.sessions.SessionSerializer)/serializer">serializer</span><span class="symbol">:</span>&nbsp;<a href="../-session-serializer/index.html"><span class="identifier">SessionSerializer</span></a><span class="symbol">)</span></code></div>
+
+<a href="../-session-tracker/index.html">SessionTracker</a> that stores the contents of the session as part of HTTP Cookies/Headers.
+It uses a specific <a href="-init-.html#io.ktor.sessions.SessionTrackerByValue$<init>(kotlin.reflect.KClass((kotlin.Any)), io.ktor.sessions.SessionSerializer)/serializer">serializer</a> to serialize and deserialize objects of type <a href="-init-.html#io.ktor.sessions.SessionTrackerByValue$<init>(kotlin.reflect.KClass((kotlin.Any)), io.ktor.sessions.SessionSerializer)/type">type</a>.
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### Properties
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td markdown="1">
+
+<a href="serializer.html">serializer</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">serializer</span><span class="symbol">: </span><a href="../-session-serializer/index.html"><span class="identifier">SessionSerializer</span></a></code></div>
+
+session serializer
+
+
+</td>
+</tr>
+<tr>
+<td markdown="1">
+
+<a href="type.html">type</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">type</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span></code></div>
+
+is a session instance type
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+### Functions
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td markdown="1">
+
+<a href="clear.html">clear</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">clear</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$clear(io.ktor.application.ApplicationCall)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+Clear session information
+
+
+</td>
+</tr>
+<tr>
+<td markdown="1">
+
+<a href="load.html">load</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">load</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$load(io.ktor.application.ApplicationCall, kotlin.String)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$load(io.ktor.application.ApplicationCall, kotlin.String)/transport">transport</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><br/><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code></div>
+
+Load session value from <a href="load.html#io.ktor.sessions.SessionTrackerByValue$load(io.ktor.application.ApplicationCall, kotlin.String)/transport">transport</a> string for the specified <a href="load.html#io.ktor.sessions.SessionTrackerByValue$load(io.ktor.application.ApplicationCall, kotlin.String)/call">call</a>
+
+
+</td>
+</tr>
+<tr>
+<td markdown="1">
+
+<a href="store.html">store</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">store</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$store(io.ktor.application.ApplicationCall, kotlin.Any)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">, </span><span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$store(io.ktor.application.ApplicationCall, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+Store session <a href="store.html#io.ktor.sessions.SessionTrackerByValue$store(io.ktor.application.ApplicationCall, kotlin.Any)/value">value</a> and return respective transport string for the specified <a href="store.html#io.ktor.sessions.SessionTrackerByValue$store(io.ktor.application.ApplicationCall, kotlin.Any)/call">call</a>.
+
+
+</td>
+</tr>
+<tr>
+<td markdown="1">
+
+<a href="validate.html">validate</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">fun </span><span class="identifier">validate</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions.SessionTrackerByValue$validate(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+Validate session information
+
+
+</td>
+</tr>
+</tbody>
+</table>

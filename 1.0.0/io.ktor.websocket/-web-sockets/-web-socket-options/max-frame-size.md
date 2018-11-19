@@ -1,0 +1,13 @@
+---
+title: WebSockets.WebSocketOptions.maxFrameSize - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../../index.html">io.ktor.websocket</a> / <a href="../index.html">WebSockets</a> / <a href="index.html">WebSocketOptions</a> / <a href="./max-frame-size.html">maxFrameSize</a></div>
+
+# maxFrameSize
+
+<div class="signature"><code><span class="keyword">var </span><span class="identifier">maxFrameSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></div>
+
+Maximum frame that could be received or sent
+

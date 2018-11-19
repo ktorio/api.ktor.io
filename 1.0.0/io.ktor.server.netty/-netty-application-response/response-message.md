@@ -1,0 +1,14 @@
+---
+title: NettyApplicationResponse.responseMessage - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.server.netty</a> / <a href="index.html">NettyApplicationResponse</a> / <a href="./response-message.html">responseMessage</a></div>
+
+# responseMessage
+
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">responseMessage</span><span class="symbol">: </span><span class="identifier">CompletableDeferred</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+<div class="signature"><code><span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">responseMessage</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.netty.NettyApplicationResponse$responseMessage(kotlin.Boolean, kotlin.Boolean)/chunked">chunked</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.netty.NettyApplicationResponse$responseMessage(kotlin.Boolean, kotlin.Boolean)/last">last</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><br/><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></div>
+
+<div class="signature"><code><span class="keyword">protected</span> <span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">responseMessage</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.netty.NettyApplicationResponse$responseMessage(kotlin.Boolean, kotlin.ByteArray)/chunked">chunked</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.netty.NettyApplicationResponse$responseMessage(kotlin.Boolean, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><br/><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></div>

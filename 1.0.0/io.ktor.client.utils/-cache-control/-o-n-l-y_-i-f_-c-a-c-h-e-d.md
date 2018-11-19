@@ -1,0 +1,10 @@
+---
+title: CacheControl.ONLY_IF_CACHED - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.client.utils</a> / <a href="index.html">CacheControl</a> / <a href="./-o-n-l-y_-i-f_-c-a-c-h-e-d.html">ONLY_IF_CACHED</a></div>
+
+# ONLY_IF_CACHED
+
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">ONLY_IF_CACHED</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>

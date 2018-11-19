@@ -1,0 +1,13 @@
+---
+title: digest - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="index.html">io.ktor.auth</a> / <a href="./digest.html">digest</a></div>
+
+# digest
+
+<div class="signature"><code><span class="keyword">fun </span><a href="-authentication/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">digest</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$digest(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.DigestAuthenticationProvider, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$digest(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.DigestAuthenticationProvider, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="-digest-authentication-provider/index.html"><span class="identifier">DigestAuthenticationProvider</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br/><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+Installs Digest Authentication mechanism
+

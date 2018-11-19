@@ -1,0 +1,15 @@
+---
+title: HttpStatusCodeContent.status - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.http.content</a> / <a href="index.html">HttpStatusCodeContent</a> / <a href="./status.html">status</a></div>
+
+# status
+
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a></code></div>
+
+Overrides <a href="../-outgoing-content/status.html">OutgoingContent.status</a>
+
+Status code to set when sending this content
+

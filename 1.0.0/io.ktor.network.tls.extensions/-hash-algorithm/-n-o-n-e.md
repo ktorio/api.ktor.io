@@ -1,0 +1,47 @@
+---
+title: HashAlgorithm.NONE - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.network.tls.extensions</a> / <a href="index.html">HashAlgorithm</a> / <a href="./-n-o-n-e.html">NONE</a></div>
+
+# NONE
+
+<div class="signature"><code><span class="identifier">NONE</span></code></div>
+
+### Inherited Properties
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td markdown="1">
+
+<a href="code.html">code</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">code</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html"><span class="identifier">Byte</span></a></code></div>
+
+numeric hash algorithm code
+
+
+</td>
+</tr>
+<tr>
+<td markdown="1">
+
+<a href="open-s-s-l-name.html">openSSLName</a>
+
+
+</td>
+<td markdown="1">
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">openSSLName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+is a name used in openssl for this algorithm
+
+
+</td>
+</tr>
+</tbody>
+</table>

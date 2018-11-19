@@ -1,0 +1,13 @@
+---
+title: ApplicationFeature.install - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.application</a> / <a href="index.html">ApplicationFeature</a> / <a href="./install.html">install</a></div>
+
+# install
+
+<div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.application.ApplicationFeature$install(io.ktor.application.ApplicationFeature.TPipeline, kotlin.Function1((io.ktor.application.ApplicationFeature.TConfiguration, kotlin.Unit)))/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="index.html#TPipeline"><span class="identifier">TPipeline</span></a><span class="symbol">, </span><br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.application.ApplicationFeature$install(io.ktor.application.ApplicationFeature.TPipeline, kotlin.Function1((io.ktor.application.ApplicationFeature.TConfiguration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="index.html#TConfiguration"><span class="identifier">TConfiguration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br/><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#TFeature"><span class="identifier">TFeature</span></a></code></div>
+
+Feature installation script
+

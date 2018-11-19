@@ -1,0 +1,13 @@
+---
+title: PathSegmentParameterRouteSelector.name - 
+layout: api
+---
+
+<div class='api-docs-breadcrumbs'><a href="../index.html">io.ktor.routing</a> / <a href="index.html">PathSegmentParameterRouteSelector</a> / <a href="./name.html">name</a></div>
+
+# name
+
+<div class="signature"><code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+is the name of the parameter to capture values to
+
