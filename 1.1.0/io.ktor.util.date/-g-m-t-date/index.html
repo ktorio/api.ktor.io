@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GMTDate -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.0.1/io.ktor.util.date/-g-m-t-date/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.0.1/">Ktor 1.0.1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.util.date</a> / <a href="./index.html">GMTDate</a></div>
+
+<h1 id="gmtdate">GMTDate</h1>
+
+<div class="signature"><code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GMTDate</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">&gt;</span></code></div>
+
+<p>Date in GMT timezone</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="day-of-month.html">dayOfMonth</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">dayOfMonth</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: day of month from 1 to 31</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="day-of-week.html">dayOfWeek</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">dayOfWeek</span><span class="symbol">: </span><a href="../-week-day/index.html"><span class="identifier">WeekDay</span></a></code></div>
+
+        <p>an instance of the corresponding day of week</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="day-of-year.html">dayOfYear</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">dayOfYear</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: day of year from 1 to 366</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="hours.html">hours</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">hours</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: hours from 0 to 23</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="minutes.html">minutes</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">minutes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: minutes from 0 to 59</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="month.html">month</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">month</span><span class="symbol">: </span><a href="../-month/index.html"><span class="identifier">Month</span></a></code></div>
+
+        <p>an instance of the corresponding month</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="seconds.html">seconds</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">seconds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: seconds from 0 to 60(last is for leap second)</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="timestamp.html">timestamp</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">timestamp</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></div>
+
+        <p>is a number of epoch milliseconds</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="year.html">year</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">year</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>: year in common era(CE: https://en.wikipedia.org/wiki/Common_Era)</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="compare-to.html">compareTo</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">compareTo</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.date.GMTDate$compareTo(io.ktor.util.date.GMTDate)/other">other</span><span class="symbol">:</span>&nbsp;<a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-s-t-a-r-t.html">START</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">START</span><span class="symbol">: </span><a href="./index.md"><span class="identifier">GMTDate</span></a></code></div>
+
+        <p>An instance of <a href="./index.md">GMTDate</a> corresponding to the epoch beginning</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../minus.html">minus</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">.</span><span class="identifier">minus</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.date$minus(io.ktor.util.date.GMTDate, kotlin.Long)/milliseconds">milliseconds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.md"><span class="identifier">GMTDate</span></a></code></div>
+
+        <p>Subtracts the specified number of <a href="../minus.html#io.ktor.util.date$minus(io.ktor.util.date.GMTDate, kotlin.Long)/milliseconds">milliseconds</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../plus.html">plus</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">.</span><span class="identifier">plus</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.date$plus(io.ktor.util.date.GMTDate, kotlin.Long)/milliseconds">milliseconds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.md"><span class="identifier">GMTDate</span></a></code></div>
+
+        <p>Adds the specified number of <a href="../plus.html#io.ktor.util.date$plus(io.ktor.util.date.GMTDate, kotlin.Long)/milliseconds">milliseconds</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/to-http-date.html">toHttpDate</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">.</span><span class="identifier">toHttpDate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Convert <a href="./index.md">GMTDate</a> to valid http date <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../to-jvm-date.html">toJvmDate</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.md"><span class="identifier">GMTDate</span></a><span class="symbol">.</span><span class="identifier">toJvmDate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a></code></div>
+
+        <p>Convert to <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html">Date</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
