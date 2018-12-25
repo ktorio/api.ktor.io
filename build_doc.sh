@@ -20,8 +20,8 @@ SUFFIX="$(cat <<-EOF
 afterEvaluate {
     def allCompileKotlinTasks = subprojects
             .collect {
-                if (it.hasProperty("compileKotlin")) {
-                    [it.compileKotlin]
+                if (it.hasProperty("compileKotlinJvm")) {
+                    [it.compileKotlinJvm]
                 } else {
                     []
                 }
