@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.server.engine/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.server.engine/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -354,6 +354,19 @@ unless a custom server engine implementation is required</p>
         <div class="signature"><code><span class="keyword">fun </span><span class="identifier">defaultEnginePipeline</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.engine$defaultEnginePipeline(io.ktor.application.ApplicationEnvironment)/environment">environment</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.application/-application-environment/index.html"><span class="identifier">ApplicationEnvironment</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-engine-pipeline/index.html"><span class="identifier">EnginePipeline</span></a></code></div>
 
         <p>Default engine pipeline for all engines. Use it only if you are writing your own application engine implementation.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="default-exception-status-code.html">defaultExceptionStatusCode</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">defaultExceptionStatusCode</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.engine$defaultExceptionStatusCode(kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">?</span></code></div>
+
+        <p>Map <a href="default-exception-status-code.html#io.ktor.server.engine$defaultExceptionStatusCode(kotlin.Throwable)/cause">cause</a> to the corresponding status code or <code>null</code> if no default exception mapping for this <a href="default-exception-status-code.html#io.ktor.server.engine$defaultExceptionStatusCode(kotlin.Throwable)/cause">cause</a> type</p>
 
       </td>
 </tr>

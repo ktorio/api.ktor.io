@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.server.engine/-base-application-engine/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.server.engine/-base-application-engine/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -43,7 +43,7 @@
 
 <p>Base class for implementing <a href="../-application-engine/index.html">ApplicationEngine</a></p>
 
-<p>It creates default engine pipeline, provides <a href="application.html">application</a> property and installs default transformations
+<p>It creates default engine pipeline, provides <a href="../-application-engine/application.html">application</a> property and installs default transformations
 on respond and receive</p>
 
 <h3 id="parameters">Parameters</h3>
@@ -99,19 +99,6 @@ on respond and receive</p>
 <tr>
 <td>
 
-        <p><a href="application.html">application</a></p>
-
-      </td>
-<td>
-        <div class="signature"><code><span class="keyword">val </span><span class="identifier">application</span><span class="symbol">: </span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code></div>
-
-        <p>Currently running application instance</p>
-
-      </td>
-</tr>
-<tr>
-<td>
-
         <p><a href="environment.html">environment</a></p>
 
       </td>
@@ -132,6 +119,26 @@ on respond and receive</p>
         <div class="signature"><code><span class="keyword">val </span><span class="identifier">pipeline</span><span class="symbol">: </span><a href="../-engine-pipeline/index.html"><span class="identifier">EnginePipeline</span></a></code></div>
 
         <p>pipeline to use with this engine</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-properties">Inherited Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-application-engine/application.html">application</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">application</span><span class="symbol">: </span><a href="../../io.ktor.application/-application/index.html"><span class="identifier">Application</span></a></code></div>
+
+        <p>Currently running application instance</p>
 
       </td>
 </tr>

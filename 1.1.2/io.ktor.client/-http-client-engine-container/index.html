@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.client/-http-client-engine-container/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.client/-http-client-engine-container/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -41,6 +41,11 @@
 
 <div class="signature"><code><span class="keyword">interface </span><span class="identifier">HttpClientEngineContainer</span></code></div>
 
+<p>A container is searched across dependencies using <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html">ServiceLoader</a> to find client implementations.
+An implementation of this interface provides HTTP client <a href="factory.html">factory</a> and only used
+to find the default client engine
+when <a href="../-http-client/index.html">HttpClient</a> function is called with no particular client implementation specified</p>
+
 <h3 id="properties">Properties</h3>
 
 <table class="api-docs-table">
@@ -53,6 +58,8 @@
       </td>
 <td>
         <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">factory</span><span class="symbol">: </span><a href="../../io.ktor.client.engine/-http-client-engine-factory/index.html"><span class="identifier">HttpClientEngineFactory</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span></code></div>
+
+        <p>that produces HTTP client instances</p>
 
       </td>
 </tr>

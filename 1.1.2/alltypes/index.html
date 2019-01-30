@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/alltypes/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/alltypes/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -124,6 +124,17 @@
 <td>
 
         <p>Default CIO selector manager implementation</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.util/-always-fail-nonce-manager/index.html">io.ktor.util.AlwaysFailNonceManager</a></p>
+      </td>
+<td>
+
+        <p>Stub implementation that always fails.
+Will be removed so no public signatures should rely on it</p>
 
       </td>
 </tr>
@@ -585,6 +596,19 @@ unless you are writing an extension</p>
 <td>
 
         <p>Exception thrown when a content type string is malformed.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.features/-bad-request-exception/index.html">io.ktor.features.BadRequestException</a></p>
+      </td>
+<td>
+
+        <p>Base exception to indicate that the request is not correct due to
+wrong/missing request parameters, body content or header values.
+Throwing this exception in a handler will lead to 400 Bad Request response
+unless a custom <a href="../io.ktor.features/-status-pages/index.html">io.ktor.features.StatusPages</a> handler registered.</p>
 
       </td>
 </tr>
@@ -1062,6 +1086,14 @@ Usually it happens when a remote client closed the connection.</p>
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.network.tls/-cipher-type/index.html">io.ktor.network.tls.CipherType</a></p>
+      </td>
+<td>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.util/java.lang.-class/index.html">java.lang.Class</a> (extensions in package io.ktor.util)</p>
       </td>
 <td>
@@ -1334,7 +1366,19 @@ One of the most typical examples of content converter is a json content converte
 </tr>
 <tr>
 <td>
-        <p><a href="../io.ktor.request/-content-transformation-exception/index.html">io.ktor.request.ContentTransformationException</a></p>
+        <p><a href="../io.ktor.features/-content-transformation-exception/index.html">io.ktor.features.ContentTransformationException</a></p>
+      </td>
+<td>
+
+        <p>Thrown when content cannot be transformed to the desired type.
+It is not defined which status code will be replied when an exception of this type is thrown and not caught.
+Depending on child type it could be 4xx or 5xx status code. By default it will be 500 Internal Server Error.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.request/-content-transformation-exception.html">io.ktor.request.ContentTransformationException</a></p>
       </td>
 <td>
 
@@ -2217,6 +2261,16 @@ produces return value of enum type <a href="../io.ktor.http.content/-version-che
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.util/-generate-only-nonce-manager/index.html">io.ktor.util.GenerateOnlyNonceManager</a></p>
+      </td>
+<td>
+
+        <p>This implementation does only generate nonce values but doesn’t validate them. This is recommended for testing only.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.gson/-gson-converter/index.html">io.ktor.gson.GsonConverter</a></p>
       </td>
 <td>
@@ -2403,6 +2457,16 @@ any time characteristics.</p>
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.routing/-host-route-selector/index.html">io.ktor.routing.HostRouteSelector</a></p>
+      </td>
+<td>
+
+        <p>Evaluates a route against a request’s host and port</p>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.html/-html-content/index.html">io.ktor.html.HtmlContent</a></p>
       </td>
 <td>
@@ -2496,6 +2560,11 @@ any time characteristics.</p>
         <p><a href="../io.ktor.client/-http-client-engine-container/index.html">io.ktor.client.HttpClientEngineContainer</a></p>
       </td>
 <td>
+
+        <p>A container is searched across dependencies using <a href="http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html">ServiceLoader</a> to find client implementations.
+An implementation of this interface provides HTTP client <a href="../io.ktor.client/-http-client-engine-container/factory.html">factory</a> and only used
+to find the default client engine
+when <a href="../io.ktor.client/-http-client/index.html">HttpClient</a> function is called with no particular client implementation specified</p>
 
       </td>
 </tr>
@@ -3455,6 +3524,16 @@ http conditional headers If-Modified-Since and If-Unmodified-Since.</p>
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.features/-missing-request-parameter-exception/index.html">io.ktor.features.MissingRequestParameterException</a></p>
+      </td>
+<td>
+
+        <p>This exception is thrown when a required parameter with name <a href="../io.ktor.features/-missing-request-parameter-exception/parameter-name.html">parameterName</a> is missing</p>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.client.engine.mock/-mock-engine/index.html">io.ktor.client.engine.mock.MockEngine</a></p>
       </td>
 <td>
@@ -3699,9 +3778,36 @@ It includes the received type and the expected type as part of the message.</p>
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.util/-nonce-manager/index.html">io.ktor.util.NonceManager</a></p>
+      </td>
+<td>
+
+        <p>Represents a nonce manager. It’s responsibility is to produce nonce values
+and verify nonce values from untrusted sources that they are provided by this manager.
+This is usually required in web environment to mitigate CSRF attacks.
+Depending on it’s underlying implementation it could be stateful or stateless.
+Note that there is usually some timeout for nonce values to reduce memory usage and to avoid replay attacks.
+Nonce length is unspecified.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.util.cio/-noop-continuation/index.html">io.ktor.util.cio.NoopContinuation</a></p>
       </td>
 <td>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.features/-not-found-exception/index.html">io.ktor.features.NotFoundException</a></p>
+      </td>
+<td>
+
+        <p>This exception means that the requested resource is not found.
+HTTP status 404 Not found will be replied when this exception is thrown and not caught.
+404 status page could be configured by registering a custom <a href="../io.ktor.features/-status-pages/index.html">io.ktor.features.StatusPages</a> handler.</p>
 
       </td>
 </tr>
@@ -3897,6 +4003,16 @@ a state need to be a signed set of parameters that could be verified later</p>
 
         <p><a href="../io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a> to respond with <a href="http://docs.oracle.com/javase/6/docs/api/java/io/OutputStream.html">OutputStream</a>.
 The stream would be automatically closed after <a href="#">body</a> finish.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.features/-parameter-conversion-exception/index.html">io.ktor.features.ParameterConversionException</a></p>
+      </td>
+<td>
+
+        <p>This exception is thrown when a required parameter with name <a href="../io.ktor.features/-parameter-conversion-exception/parameter-name.html">parameterName</a> couldn’t be converted to the <a href="../io.ktor.features/-parameter-conversion-exception/type.html">type</a></p>
 
       </td>
 </tr>
@@ -4945,6 +5061,17 @@ It uses a specified <a href="../io.ktor.sessions/-session-transport-transformer-
 </tr>
 <tr>
 <td>
+        <p><a href="../io.ktor.util/-stateless-hmac-nonce-manager/index.html">io.ktor.util.StatelessHmacNonceManager</a></p>
+      </td>
+<td>
+
+        <p>Stateless nonce manager implementation with HMAC verification and timeout.
+Every nonce provided by this manager consist of a random part, timestamp and HMAC.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
         <p><a href="../io.ktor.features/-status-pages/index.html">io.ktor.features.StatusPages</a></p>
       </td>
 <td>
@@ -5138,14 +5265,6 @@ without actual HTTP connection</p>
 </tr>
 <tr>
 <td>
-        <p><a href="../io.ktor.tests.server.testing/-test-application-engine-test/index.html">io.ktor.tests.server.testing.TestApplicationEngineTest</a></p>
-      </td>
-<td>
-
-      </td>
-</tr>
-<tr>
-<td>
         <p><a href="../io.ktor.server.testing/-test-application-request/index.html">io.ktor.server.testing.TestApplicationRequest</a></p>
       </td>
 <td>
@@ -5257,6 +5376,16 @@ without actual HTTP connection</p>
 <td>
 
         <p>Tomcat application engine that runs it in embedded mode</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+        <p><a href="../io.ktor.sessions/-too-late-session-set-exception/index.html">io.ktor.sessions.TooLateSessionSetException</a></p>
+      </td>
+<td>
+
+        <p>This exception is thrown when HTTP response has been already sent but an attempt to modify session is made</p>
 
       </td>
 </tr>
@@ -5386,7 +5515,8 @@ without actual HTTP connection</p>
       </td>
 <td>
 
-        <p>Thrown when there is no conversion for a content type configured</p>
+        <p>Thrown when there is no conversion for a content type configured.
+HTTP status 415 Unsupported Media Type will be replied when this exception is thrown and not caught.</p>
 
       </td>
 </tr>

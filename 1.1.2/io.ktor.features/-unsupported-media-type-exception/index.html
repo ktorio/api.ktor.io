@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.features/-unsupported-media-type-exception/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.features/-unsupported-media-type-exception/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -39,9 +39,10 @@
 
 <h1 id="unsupportedmediatypeexception">UnsupportedMediaTypeException</h1>
 
-<div class="signature"><code><span class="keyword">class </span><span class="identifier">UnsupportedMediaTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../io.ktor.request/-content-transformation-exception/index.html"><span class="identifier">ContentTransformationException</span></a></code></div>
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">UnsupportedMediaTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../-content-transformation-exception/index.html"><span class="identifier">ContentTransformationException</span></a></code></div>
 
-<p>Thrown when there is no conversion for a content type configured</p>
+<p>Thrown when there is no conversion for a content type configured.
+HTTP status 415 Unsupported Media Type will be replied when this exception is thrown and not caught.</p>
 
 <h3 id="constructors">Constructors</h3>
 
@@ -56,7 +57,8 @@
 <td>
         <div class="signature"><code><span class="identifier">UnsupportedMediaTypeException</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features.UnsupportedMediaTypeException$&lt;init&gt;(io.ktor.http.ContentType)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span></code></div>
 
-        <p>Thrown when there is no conversion for a content type configured</p>
+        <p>Thrown when there is no conversion for a content type configured.
+HTTP status 415 Unsupported Media Type will be replied when this exception is thrown and not caught.</p>
 
       </td>
 </tr>

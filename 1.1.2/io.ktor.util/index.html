@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.util/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.util/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -41,6 +41,20 @@
 
 <table class="api-docs-table">
 <tbody>
+<tr>
+<td>
+
+        <p><a href="-always-fail-nonce-manager/index.html">AlwaysFailNonceManager</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><s><span class="identifier">AlwaysFailNonceManager</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-nonce-manager/index.html"><span class="identifier">NonceManager</span></a></code></div>
+
+        <p>Stub implementation that always fails.
+Will be removed so no public signatures should rely on it</p>
+
+      </td>
+</tr>
 <tr>
 <td>
 
@@ -133,6 +147,19 @@
 <tr>
 <td>
 
+        <p><a href="-generate-only-nonce-manager/index.html">GenerateOnlyNonceManager</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">GenerateOnlyNonceManager</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-nonce-manager/index.html"><span class="identifier">NonceManager</span></a></code></div>
+
+        <p>This implementation does only generate nonce values but doesn’t validate them. This is recommended for testing only.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
         <p><a href="-hash/index.html">Hash</a></p>
 
       </td>
@@ -149,6 +176,38 @@
       </td>
 <td>
         <div class="signature"><code><span class="keyword">expect</span> <span class="keyword">class </span><span class="identifier">Lock</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-nonce-manager/index.html">NonceManager</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">NonceManager</span></code></div>
+
+        <p>Represents a nonce manager. It’s responsibility is to produce nonce values
+and verify nonce values from untrusted sources that they are provided by this manager.
+This is usually required in web environment to mitigate CSRF attacks.
+Depending on it’s underlying implementation it could be stateful or stateless.
+Note that there is usually some timeout for nonce values to reduce memory usage and to avoid replay attacks.
+Nonce length is unspecified.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-stateless-hmac-nonce-manager/index.html">StatelessHmacNonceManager</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">StatelessHmacNonceManager</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-nonce-manager/index.html"><span class="identifier">NonceManager</span></a></code></div>
+
+        <p>Stateless nonce manager implementation with HMAC verification and timeout.
+Every nonce provided by this manager consist of a random part, timestamp and HMAC.</p>
 
       </td>
 </tr>
@@ -595,6 +654,8 @@ any strange effects.</p>
 <td>
         <div class="signature"><code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="identifier">generateNonce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
 
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">generateNonce</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util$generateNonce(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></div>
+
       </td>
 </tr>
 <tr>
@@ -607,6 +668,33 @@ any strange effects.</p>
         <div class="signature"><code><span class="keyword">fun </span><span class="identifier">getDigestFunction</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/salt">salt</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></div>
 
         <p>Create a digest function with the specified <a href="get-digest-function.html#io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/algorithm">algorithm</a> and <a href="get-digest-function.html#io.ktor.util$getDigestFunction(kotlin.String, kotlin.String)/salt">salt</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get-or-fail.html">getOrFail</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.http/-parameters/index.html"><span class="identifier">Parameters</span></a><span class="symbol">.</span><span class="identifier">getOrFail</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util$getOrFail(io.ktor.http.Parameters, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Get parameters value associated with this <a href="get-or-fail.html#io.ktor.util$getOrFail(io.ktor.http.Parameters, kotlin.String)/name">name</a> or fail with <a href="../io.ktor.features/-missing-request-parameter-exception/index.html">MissingRequestParameterException</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get-value.html">getValue</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../io.ktor.http/-parameters/index.html"><span class="identifier">Parameters</span></a><span class="symbol">.</span><span class="identifier">getValue</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util$getValue(io.ktor.http.Parameters, kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)))/thisRef">thisRef</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util$getValue(io.ktor.http.Parameters, kotlin.Any, kotlin.reflect.KProperty((kotlin.Any)))/property">property</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"><span class="identifier">KProperty</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="get-value.html#R"><span class="identifier">R</span></a></code></div>
+
+        <p>Operator function that allows to delegate variables by call parameters.
+It does conversion to type <a href="get-value.html#R">R</a> using <a href="-default-conversion-service/index.html">DefaultConversionService</a></p>
 
       </td>
 </tr>

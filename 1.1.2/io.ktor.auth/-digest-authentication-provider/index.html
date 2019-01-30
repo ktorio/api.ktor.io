@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.auth/-digest-authentication-provider/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.auth/-digest-authentication-provider/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -74,13 +74,39 @@
 <tr>
 <td>
 
+        <p><a href="algorithm-name.html">algorithmName</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">algorithmName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Message digest algorithm to be used. Usually only <code>MD5</code> is supported by clients.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
         <p><a href="digester.html">digester</a></p>
 
       </td>
 <td>
-        <div class="signature"><code><span class="keyword">var </span><span class="identifier">digester</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/MessageDigest.html"><span class="identifier">MessageDigest</span></a></code></div>
+        <div class="signature"><code><span class="keyword">var </span><s><span class="identifier">digester</span></s><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/MessageDigest.html"><span class="identifier">MessageDigest</span></a></code></div>
 
         <p>Message digest algorithm to be used</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="nonce-manager.html">nonceManager</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">nonceManager</span><span class="symbol">: </span><a href="../../io.ktor.util/-nonce-manager/index.html"><span class="identifier">NonceManager</span></a></code></div>
+
+        <p><a href="../../io.ktor.util/-nonce-manager/index.html">NonceManager</a> to be used to generate nonce values</p>
 
       </td>
 </tr>

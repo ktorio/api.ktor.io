@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.server.testing/-test-application-response/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.server.testing/-test-application-response/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -76,7 +76,7 @@
 <td>
         <div class="signature"><code><span class="keyword">var </span><span class="identifier">byteContent</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">?</span></code></div>
 
-        <p>Response body byte content. Could be blocking</p>
+        <p>Response body byte content. Could be blocking. Remains <code>null</code> until response appears.</p>
 
       </td>
 </tr>
@@ -89,7 +89,7 @@
 <td>
         <div class="signature"><code><span class="keyword">val </span><span class="identifier">content</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
 
-        <p>Response body text content. Could be blocking.</p>
+        <p>Response body text content. Could be blocking. Remains <code>null</code> until response appears.</p>
 
       </td>
 </tr>
@@ -113,7 +113,7 @@
 
       </td>
 <td>
-        <div class="signature"><code><span class="keyword">val </span><span class="identifier">readResponse</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+        <div class="signature"><code><span class="keyword">val </span><s><span class="identifier">readResponse</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
 
         <p>if response channel need to be consumed into byteContent</p>
 
@@ -192,7 +192,7 @@
 
       </td>
 <td>
-        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">awaitWebSocket</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.server.testing.TestApplicationResponse$awaitWebSocket(java.time.Duration)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span></code></div>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">awaitWebSocket</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.server.testing.TestApplicationResponse$awaitWebSocket(java.time.Duration)/duration">duration</span><span class="symbol">:</span>&nbsp;<span class="identifier">Duration</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
 
         <p>Wait for websocket session completion</p>
 
@@ -218,9 +218,22 @@
 
       </td>
 <td>
-        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">flush</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><s><span class="identifier">flush</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
 
         <p>Await for response job completion</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="respond-outgoing-content.html">respondOutgoingContent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondOutgoingContent</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.testing.TestApplicationResponse$respondOutgoingContent(io.ktor.http.content.OutgoingContent)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Process response outgoing <a href="../../io.ktor.server.engine/-base-application-response/respond-outgoing-content.html#io.ktor.server.engine.BaseApplicationResponse$respondOutgoingContent(io.ktor.http.content.OutgoingContent)/content">content</a></p>
 
       </td>
 </tr>
@@ -346,19 +359,6 @@ or does nothing. Exact behaviour is up to engine implementation.</p>
         <div class="signature"><code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondNoContent</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.server.engine.BaseApplicationResponse$respondNoContent(io.ktor.http.content.OutgoingContent.NoContent)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http.content/-outgoing-content/-no-content/index.html"><span class="identifier">NoContent</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
 
         <p>Process response with no content</p>
-
-      </td>
-</tr>
-<tr>
-<td>
-
-        <p><a href="../../io.ktor.server.engine/-base-application-response/respond-outgoing-content.html">respondOutgoingContent</a></p>
-
-      </td>
-<td>
-        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">respondOutgoingContent</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.server.engine.BaseApplicationResponse$respondOutgoingContent(io.ktor.http.content.OutgoingContent)/content">content</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
-
-        <p>Process response outgoing <a href="../../io.ktor.server.engine/-base-application-response/respond-outgoing-content.html#io.ktor.server.engine.BaseApplicationResponse$respondOutgoingContent(io.ktor.http.content.OutgoingContent)/content">content</a></p>
 
       </td>
 </tr>

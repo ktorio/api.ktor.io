@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.features/">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.features/">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -415,6 +415,78 @@ See http://ktor.io/servers/features/forward-headers.html for details</p>
 <tr>
 <td>
 
+        <p><a href="-bad-request-exception/index.html">BadRequestException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BadRequestException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>Base exception to indicate that the request is not correct due to
+wrong/missing request parameters, body content or header values.
+Throwing this exception in a handler will lead to 400 Bad Request response
+unless a custom <a href="-status-pages/index.html">io.ktor.features.StatusPages</a> handler registered.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-content-transformation-exception/index.html">ContentTransformationException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ContentTransformationException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>Thrown when content cannot be transformed to the desired type.
+It is not defined which status code will be replied when an exception of this type is thrown and not caught.
+Depending on child type it could be 4xx or 5xx status code. By default it will be 500 Internal Server Error.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-missing-request-parameter-exception/index.html">MissingRequestParameterException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">MissingRequestParameterException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-bad-request-exception/index.html"><span class="identifier">BadRequestException</span></a></code></div>
+
+        <p>This exception is thrown when a required parameter with name <a href="-missing-request-parameter-exception/parameter-name.html">parameterName</a> is missing</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-not-found-exception/index.html">NotFoundException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NotFoundException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>This exception means that the requested resource is not found.
+HTTP status 404 Not found will be replied when this exception is thrown and not caught.
+404 status page could be configured by registering a custom <a href="-status-pages/index.html">io.ktor.features.StatusPages</a> handler.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-parameter-conversion-exception/index.html">ParameterConversionException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ParameterConversionException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-bad-request-exception/index.html"><span class="identifier">BadRequestException</span></a></code></div>
+
+        <p>This exception is thrown when a required parameter with name <a href="-parameter-conversion-exception/parameter-name.html">parameterName</a> couldn’t be converted to the <a href="-parameter-conversion-exception/type.html">type</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
         <p><a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a></p>
 
       </td>
@@ -432,9 +504,10 @@ See http://ktor.io/servers/features/forward-headers.html for details</p>
 
       </td>
 <td>
-        <div class="signature"><code><span class="keyword">class </span><span class="identifier">UnsupportedMediaTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.request/-content-transformation-exception/index.html"><span class="identifier">ContentTransformationException</span></a></code></div>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">UnsupportedMediaTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-content-transformation-exception/index.html"><span class="identifier">ContentTransformationException</span></a></code></div>
 
-        <p>Thrown when there is no conversion for a content type configured</p>
+        <p>Thrown when there is no conversion for a content type configured.
+HTTP status 415 Unsupported Media Type will be replied when this exception is thrown and not caught.</p>
 
       </td>
 </tr>
@@ -606,7 +679,9 @@ By default it fallbacks to <a href="../io.ktor.request/-application-request/loca
 <td>
         <div class="signature"><code><span class="keyword">fun </span><a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">condition</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$condition(io.ktor.features.ConditionsHolderBuilder, kotlin.Function2((io.ktor.application.ApplicationCall, io.ktor.http.content.OutgoingContent, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../io.ktor.http.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
 
-        <p>Appends a custom condition to the encoder or Compression configuration</p>
+        <p>Appends a custom condition to the encoder or Compression configuration.
+A predicate returns <code>true</code> when a response need to be compressed.
+If at least one condition is not met then the response compression is skipped.</p>
 
       </td>
 </tr>

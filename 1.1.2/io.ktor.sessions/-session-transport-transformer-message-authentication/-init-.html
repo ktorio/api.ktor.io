@@ -8,7 +8,7 @@
   <meta name="description" content="Asynchronous framework for web applications">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="/assets/common.css">
-  <link rel="canonical" href="https://api.ktor.io//1.1.1/io.ktor.sessions/-session-transport-transformer-message-authentication/-init-.html">
+  <link rel="canonical" href="https://api.ktor.io//1.1.2/io.ktor.sessions/-session-transport-transformer-message-authentication/-init-.html">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/assets/js/api.js"></script>
   <script src="/assets/common.js"></script>
@@ -26,7 +26,7 @@
     <header class="site-header" role="banner">
   <div class="wrapper">
     <div class="site-header-title">
-      <a class="site-title" href="/1.1.1/">Ktor 1.1.1</a>
+      <a class="site-title" href="/1.1.2/">Ktor 1.1.2</a>
     </div>
     <div id="version-placeholder"></div>
     <script src="/assets/versions.js"></script>
@@ -41,12 +41,12 @@
 
 <div class="overload-group">
 
-  <div class="signature"><code><span class="identifier">SessionTransportTransformerMessageAuthentication</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(kotlin.ByteArray, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(kotlin.ByteArray, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"HmacSHA1"<span class="symbol">)</span></code></div>
+  <div class="signature"><code><span class="identifier">SessionTransportTransformerMessageAuthentication</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(kotlin.ByteArray, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(kotlin.ByteArray, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"HmacSHA256"<span class="symbol">)</span></code></div>
 
 </div>
 <div class="overload-group">
 
-  <div class="signature"><code><span class="identifier">SessionTransportTransformerMessageAuthentication</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(javax.crypto.spec.SecretKeySpec, kotlin.String)/keySpec">keySpec</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/spec/SecretKeySpec.html"><span class="identifier">SecretKeySpec</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(javax.crypto.spec.SecretKeySpec, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"HmacSHA1"<span class="symbol">)</span></code></div>
+  <div class="signature"><code><span class="identifier">SessionTransportTransformerMessageAuthentication</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(javax.crypto.spec.SecretKeySpec, kotlin.String)/keySpec">keySpec</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/spec/SecretKeySpec.html"><span class="identifier">SecretKeySpec</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions.SessionTransportTransformerMessageAuthentication$&lt;init&gt;(javax.crypto.spec.SecretKeySpec, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"HmacSHA256"<span class="symbol">)</span></code></div>
 
   <p>Session transformer that appends an <a href="algorithm.html">algorithm</a> MAC (Message Authentication Code) hash of the input.
 Where the input is either a session contents or a previous transformation.
