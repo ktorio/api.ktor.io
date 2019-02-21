@@ -73,10 +73,21 @@ popd
 
 cp -rf ktor/apidoc/* "$API_DOC_FOLDER"
 
-pushd "$API_DOC_FOLDER"
+# create site output and chmod so docker will be able to write into in
+mkdir -p "$KTOR_VERSION"
+chmod a+rwx "$KTOR_VERSION"
 
-jekyll b
+USER_ID=`id -u`
+USER_GROUP=`id -g`
 
-popd
+# jekyll b
+docker run -v "$PWD:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -w "/srv/jekyll/doc-output" -it jekyll/jekyll jekyll b $* 
+
+# change generated files' owner
+docker run -v "$PWD:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -w "/srv/jekyll" -it jekyll/jekyll chown -R "$USER_ID:$USER_GROUP" "$KTOR_VERSION"
+
+# revoke permissions to the directory (non-recursive)
+chmod og-w "$KTOR_VERSION"
 
 rm -f $KTOR_VERSION/index.yml
+
