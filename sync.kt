@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
 
     // Update
     run {
-        val lastVersion = versions.last()
+        val lastVersion = versions.filter { "alpha" !in it && "dev" !in it }.last()
         val latestIndexFile = File("latest/index.html")
         val latestIndexText = latestIndexFile.readText()
         val latestIndexTextMod = Regex("\\.\\./([^'\"<]+)").replace(latestIndexText) {
