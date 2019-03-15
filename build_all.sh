@@ -4,5 +4,6 @@
 ./build_doc.sh 1.0.0 && \
 ./build_doc.sh 1.0.1 && \
 ./build_doc.sh 1.1.1 && \
-./build_doc.sh 1.1.2
+./build_doc.sh 1.1.2 && \
+./build_doc.sh 1.1.3
 
