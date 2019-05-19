@@ -34,9 +34,6 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
-  - package-list
-#include:
-#  - package-list
 
 EOF
 )"

@@ -17,6 +17,7 @@ function initializeVersionPlaceholder() {
 
 	for (version of versions) {
 		var active = documentPathname.startsWith("/" + version);
+		if (!active && documentPathname.startsWith("/latest") && version == versions[versions.length - 1]) active = true;
 		var li = document.createElement('li');
 		if (active) {
 			var strong = document.createElement('strong');
