@@ -1,4 +1,5 @@
 var versions = ['0.9.3', '0.9.4', '0.9.5', '1.0.0', '1.0.1', '1.1.1', '1.1.2', '1.1.3', '1.1.4', '1.1.5', '1.2.0'];
+var latest_version = '1.2.0';
 
 if (!String.prototype.startsWith) {
 	String.prototype.startsWith = function(search, pos) {
@@ -17,7 +18,7 @@ function initializeVersionPlaceholder() {
 
 	for (version of versions) {
 		var active = documentPathname.startsWith("/" + version);
-		if (!active && documentPathname.startsWith("/latest") && version == versions[versions.length - 1]) active = true;
+		if (!active && documentPathname.startsWith("/latest") && version == latest_version) active = true;
 		var li = document.createElement('li');
 		if (active) {
 			var strong = document.createElement('strong');
