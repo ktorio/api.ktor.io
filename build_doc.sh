@@ -20,7 +20,7 @@ JEKYLL_CONFIG="$(cat <<-EOF
 # Jekyll configuration file
 title: "Ktor $KTOR_VERSION"
 description: Asynchronous framework for web applications
-url: "https://$CNAME/"
+url: "https://$CNAME"
 baseurl: /$KTOR_VERSION/
 
 # Dirs
@@ -34,7 +34,8 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
-
+plugins:
+  - jekyll-sitemap
 EOF
 )"
 
