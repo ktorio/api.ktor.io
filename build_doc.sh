@@ -89,3 +89,5 @@ chmod og-w "$KTOR_VERSION"
 
 rm -f $KTOR_VERSION/index.yml
 
+java -jar tools/apidoc-indexer.jar $KTOR_VERSION
+
