@@ -13,6 +13,9 @@ permalink: /404.html
 
     const barIndex = documentPathname.lastIndexOf('/');
     documentPathname = documentPathname.substr(0, barIndex);
+    if (documentPathname == "") {
+        documentPathname = "/";
+    }
 
     document.location.href = documentPathname;
     //console.log(documentPathname);
