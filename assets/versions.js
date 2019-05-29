@@ -9,6 +9,7 @@ if (!String.prototype.startsWith) {
 
 function initializeVersionPlaceholder() {
 	var versionPlaceholder = document.getElementById('version-placeholder');
+    if (!versionPlaceholder) { return; }
 	var ul = document.createElement('ul');
 	var info = document.createElement('span');
 	info.innerText = 'Versions:'
