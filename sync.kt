@@ -34,6 +34,24 @@ fun main(args: Array<String>) {
         println("Updating latest -> $latestVersion...")
     }
 
+
+    // update sitemap.xml
+    run {
+        val sitemapCatalog = buildString {
+            append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
+            append("<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n")
+            versions.forEach { version ->
+                if (File(version, "sitemap.xml").exists()) {
+                    append("  <sitemap>\n")
+                    append("    <loc>https://api.ktor.io/$version/sitemap.xml</loc>\n")
+                    append("  </sitemap>\n")
+                }
+            }
+            append("</sitemapindex>\n")
+        }
+        println("Updating sitemap.xml...")
+        File("sitemap.xml").writeText(sitemapCatalog)
+    }
 }
 
 val ignoredVersions = setOf("dist", "output", "doc-output", "latest")
