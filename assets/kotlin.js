@@ -989,6 +989,10 @@
   Kotlin.isChar = function (value) {
     return value instanceof Kotlin.BoxedChar;
   };
+  Kotlin.isComparable = function (value) {
+    var type = typeof value;
+    return type === 'string' || type === 'boolean' || Kotlin.isNumber(value) || Kotlin.isType(value, Kotlin.kotlin.Comparable);
+  };
   Kotlin.isCharSequence = function (value) {
     return typeof value === 'string' || Kotlin.isType(value, Kotlin.kotlin.CharSequence);
   };
@@ -1238,6 +1242,8 @@
     AbstractMap$get_AbstractMap$values$ObjectLiteral.prototype.constructor = AbstractMap$get_AbstractMap$values$ObjectLiteral;
     CoroutineSingletons.prototype = Object.create(Enum.prototype);
     CoroutineSingletons.prototype.constructor = CoroutineSingletons;
+    iterator$ObjectLiteral.prototype = Object.create(CharIterator.prototype);
+    iterator$ObjectLiteral.prototype.constructor = iterator$ObjectLiteral;
     NotImplementedError.prototype = Object.create(Error_0.prototype);
     NotImplementedError.prototype.constructor = NotImplementedError;
     function contains($receiver, element) {
@@ -1354,6 +1360,9 @@
         throw new NoSuchElementException('List is empty.');
       return $receiver.get_za3lpa$(0);
     }
+    function getOrNull_8($receiver, index) {
+      return index >= 0 && index <= get_lastIndex_12($receiver) ? $receiver.get_za3lpa$(index) : null;
+    }
     function lastOrNull_18($receiver) {
       return $receiver.isEmpty() ? null : $receiver.get_za3lpa$($receiver.size - 1 | 0);
     }
@@ -1406,6 +1415,19 @@
         list.add_11rb$(item);
       }
       return optimizeReadOnlyList(list);
+    }
+    function sortedWith_8($receiver, comparator) {
+      var tmp$;
+      if (Kotlin.isType($receiver, Collection)) {
+        if ($receiver.size <= 1)
+          return toList_8($receiver);
+        var $receiver_0 = Kotlin.isArray(tmp$ = copyToArray($receiver)) ? tmp$ : throwCCE_0();
+        sortWith($receiver_0, comparator);
+        return asList($receiver_0);
+      }
+      var $receiver_1 = toMutableList_8($receiver);
+      sortWith_0($receiver_1, comparator);
+      return $receiver_1;
     }
     function toCollection_8($receiver, destination) {
       var tmp$;
@@ -2445,6 +2467,10 @@
       AbstractList$Companion_getInstance().checkRangeIndexes_cub51b$(fromIndex, toIndex, $receiver.length);
       return $receiver.slice(fromIndex, toIndex);
     }
+    function sortWith($receiver, comparator) {
+      if ($receiver.length > 1)
+        sortArrayWith_0($receiver, comparator);
+    }
     function Comparator() {
     }
     Comparator.$metadata$ = {kind: Kind_INTERFACE, simpleName: 'Comparator', interfaces: []};
@@ -2478,6 +2504,18 @@
     }
     function setOf(element) {
       return hashSetOf_0([element]);
+    }
+    function sortWith_0($receiver, comparator) {
+      collectionsSort($receiver, comparator);
+    }
+    function collectionsSort(list, comparator) {
+      if (list.size <= 1)
+        return;
+      var array = copyToArray(list);
+      sortArrayWith_0(array, comparator);
+      for (var i = 0; i < array.length; i++) {
+        list.set_wxm5ur$(i, array[i]);
+      }
     }
     function AbstractMutableCollection() {
       AbstractCollection.call(this);
@@ -3004,7 +3042,89 @@
       ArrayList.call($this, copyToArray(elements));
       return $this;
     }
+    function sortArrayWith$lambda(closure$comparator) {
+      return function (a, b) {
+        return closure$comparator.compare(a, b);
+      };
+    }
+    function sortArrayWith_0(array, comparator) {
+      if (getStableSortingIsSupported()) {
+        var comparison = sortArrayWith$lambda(comparator);
+        array.sort(comparison);
+      }
+       else {
+        mergeSort(array, 0, get_lastIndex(array), comparator);
+      }
+    }
     var _stableSortingIsSupported;
+    function getStableSortingIsSupported$lambda(a, b) {
+      return (a & 3) - (b & 3) | 0;
+    }
+    function getStableSortingIsSupported() {
+      if (_stableSortingIsSupported != null) {
+        return _stableSortingIsSupported;
+      }
+      _stableSortingIsSupported = false;
+      var array = [];
+      for (var index = 0; index < 600; index++)
+        array.push(index);
+      var comparison = getStableSortingIsSupported$lambda;
+      array.sort(comparison);
+      for (var index_0 = 1; index_0 < array.length; index_0++) {
+        var a = array[index_0 - 1 | 0];
+        var b = array[index_0];
+        if ((a & 3) === (b & 3) && a >= b)
+          return false;
+      }
+      _stableSortingIsSupported = true;
+      return true;
+    }
+    function mergeSort(array, start, endInclusive, comparator) {
+      var buffer = Kotlin.newArray(array.length, null);
+      var result = mergeSort_0(array, buffer, start, endInclusive, comparator);
+      if (result !== array) {
+        var tmp$, tmp$_0;
+        var index = 0;
+        for (tmp$ = 0; tmp$ !== result.length; ++tmp$) {
+          var item = result[tmp$];
+          array[tmp$_0 = index, index = tmp$_0 + 1 | 0, tmp$_0] = item;
+        }
+      }
+    }
+    function mergeSort_0(array, buffer, start, end, comparator) {
+      if (start === end) {
+        return array;
+      }
+      var median = (start + end | 0) / 2 | 0;
+      var left = mergeSort_0(array, buffer, start, median, comparator);
+      var right = mergeSort_0(array, buffer, median + 1 | 0, end, comparator);
+      var target = left === buffer ? array : buffer;
+      var leftIndex = start;
+      var rightIndex = median + 1 | 0;
+      for (var i = start; i <= end; i++) {
+        if (leftIndex <= median && rightIndex <= end) {
+          var leftValue = left[leftIndex];
+          var rightValue = right[rightIndex];
+          if (comparator.compare(leftValue, rightValue) <= 0) {
+            target[i] = leftValue;
+            leftIndex = leftIndex + 1 | 0;
+          }
+           else {
+            target[i] = rightValue;
+            rightIndex = rightIndex + 1 | 0;
+          }
+        }
+         else if (leftIndex <= median) {
+          target[i] = left[leftIndex];
+          leftIndex = leftIndex + 1 | 0;
+        }
+         else {
+          target[i] = right[rightIndex];
+          rightIndex = rightIndex + 1 | 0;
+        }
+      }
+      return target;
+    }
     function EqualityComparator() {
     }
     function EqualityComparator$HashCode() {
@@ -5114,6 +5234,47 @@
     function hashSetOf_0(elements) {
       return toCollection(elements, HashSet_init_2(mapCapacity(elements.length)));
     }
+    function Comparator$ObjectLiteral_1(closure$comparison) {
+      this.closure$comparison = closure$comparison;
+    }
+    Comparator$ObjectLiteral_1.prototype.compare = function (a, b) {
+      return this.closure$comparison(a, b);
+    };
+    Comparator$ObjectLiteral_1.$metadata$ = {kind: Kind_CLASS, interfaces: [Comparator]};
+    function compareValuesByImpl(a, b, selectors) {
+      var tmp$;
+      for (tmp$ = 0; tmp$ !== selectors.length; ++tmp$) {
+        var fn = selectors[tmp$];
+        var v1 = fn(a);
+        var v2 = fn(b);
+        var diff = compareValues(v1, v2);
+        if (diff !== 0)
+          return diff;
+      }
+      return 0;
+    }
+    function compareValues(a, b) {
+      var tmp$;
+      if (a === b)
+        return 0;
+      if (a == null)
+        return -1;
+      if (b == null)
+        return 1;
+      return Kotlin.compareTo(Kotlin.isComparable(tmp$ = a) ? tmp$ : throwCCE_0(), b);
+    }
+    function compareBy$lambda(closure$selectors) {
+      return function (a, b) {
+        return compareValuesByImpl(a, b, closure$selectors);
+      };
+    }
+    function compareBy(selectors) {
+      if (!(selectors.length > 0)) {
+        var message = 'Failed requirement.';
+        throw IllegalArgumentException_init_0(message.toString());
+      }
+      return new Comparator$ObjectLiteral_1(compareBy$lambda(selectors));
+    }
     var NaturalOrderComparator_instance = null;
     var ReverseOrderComparator_instance = null;
     var InvocationKind$AT_MOST_ONCE_instance;
@@ -5510,6 +5671,23 @@
         }
       }
       return Kotlin.subSequence($receiver, startIndex, endIndex + 1 | 0);
+    }
+    function iterator$ObjectLiteral(this$iterator) {
+      this.this$iterator = this$iterator;
+      CharIterator.call(this);
+      this.index_0 = 0;
+    }
+    iterator$ObjectLiteral.prototype.nextChar = function () {
+      var tmp$, tmp$_0;
+      tmp$_0 = (tmp$ = this.index_0, this.index_0 = tmp$ + 1 | 0, tmp$);
+      return this.this$iterator.charCodeAt(tmp$_0);
+    };
+    iterator$ObjectLiteral.prototype.hasNext = function () {
+      return this.index_0 < this.this$iterator.length;
+    };
+    iterator$ObjectLiteral.$metadata$ = {kind: Kind_CLASS, interfaces: [CharIterator]};
+    function iterator_4($receiver) {
+      return new iterator$ObjectLiteral($receiver);
     }
     function get_indices_13($receiver) {
       return new IntRange(0, $receiver.length - 1 | 0);
@@ -6041,6 +6219,7 @@
     package$collections.emptyList_287e2$ = emptyList;
     package$collections.ArrayList_init_287e2$ = ArrayList_init;
     package$collections.toList_us0mfu$ = toList;
+    package$collections.sortWith_iwcb0m$ = sortWith;
     package$collections.mapCapacity_za3lpa$ = mapCapacity;
     package$ranges.coerceAtLeast_dqglrj$ = coerceAtLeast_2;
     package$collections.toCollection_5n4o2z$ = toCollection;
@@ -6050,6 +6229,7 @@
     package$kotlin.UnsupportedOperationException_init_pdl1vj$ = UnsupportedOperationException_init_0;
     package$collections.collectionSizeOrDefault_ba2ldo$ = collectionSizeOrDefault;
     package$collections.get_lastIndex_55thoc$ = get_lastIndex_12;
+    package$collections.getOrNull_yzln2o$ = getOrNull_8;
     package$collections.first_7wnvza$ = first_17;
     package$collections.first_2p1efm$ = first_18;
     package$collections.lastOrNull_2p1efm$ = lastOrNull_18;
@@ -6057,12 +6237,15 @@
     package$collections.single_2p1efm$ = single_18;
     package$collections.take_ba2ldo$ = take_8;
     package$collections.toList_7wnvza$ = toList_8;
+    package$collections.sortWith_nqfjgj$ = sortWith_0;
+    package$collections.sortedWith_eknfly$ = sortedWith_8;
     package$collections.toCollection_5cfyqp$ = toCollection_8;
     package$collections.toMutableList_7wnvza$ = toMutableList_8;
     package$collections.toMutableList_4c7yge$ = toMutableList_9;
     package$collections.Collection = Collection;
     package$collections.joinTo_gcc71v$ = joinTo_8;
     package$collections.joinToString_fmv235$ = joinToString_8;
+    var package$comparisons = package$kotlin.comparisons || (package$kotlin.comparisons = {});
     package$ranges.downTo_dqglrj$ = downTo_4;
     package$ranges.until_dqglrj$ = until_4;
     package$ranges.coerceAtMost_dqglrj$ = coerceAtMost_2;
@@ -6072,6 +6255,7 @@
     package$sequences.asIterable_veqyi0$ = asIterable_10;
     var package$text = package$kotlin.text || (package$kotlin.text = {});
     package$text.get_lastIndex_gw00vp$ = get_lastIndex_13;
+    package$text.iterator_gw00vp$ = iterator_4;
     package$text.get_indices_gw00vp$ = get_indices_13;
     package$text.StringBuilder_init = StringBuilder_init_1;
     package$kotlin.CharSequence = CharSequence;
@@ -6175,6 +6359,7 @@
     package$collections.AbstractMutableSet = AbstractMutableSet;
     package$collections.ArrayList_init_mqih57$ = ArrayList_init_1;
     package$collections.ArrayList = ArrayList;
+    package$collections.sortArrayWith_6xblhi$ = sortArrayWith_0;
     Object.defineProperty(EqualityComparator, 'HashCode', {get: EqualityComparator$HashCode_getInstance});
     package$collections.EqualityComparator = EqualityComparator;
     package$collections.HashMap_init_va96d4$ = HashMap_init;
@@ -6262,12 +6447,14 @@
     package$collections.asCollection_vj43ah$ = asCollection;
     package$collections.arrayListOf_i5x0yv$ = arrayListOf_0;
     package$collections.optimizeReadOnlyList_qzupvv$ = optimizeReadOnlyList;
+    package$comparisons.compareValues_s00gnj$ = compareValues;
     package$collections.removeAll_uhyeqt$ = removeAll_0;
     package$collections.removeAll_qafx1e$ = removeAll_1;
     Object.defineProperty(package$collections, 'EmptySet', {get: EmptySet_getInstance});
     package$collections.emptySet_287e2$ = emptySet;
     package$collections.setOf_i5x0yv$ = setOf_0;
     package$collections.hashSetOf_i5x0yv$ = hashSetOf_0;
+    package$comparisons.compareBy_bvgy4j$ = compareBy;
     package$coroutines.Continuation = Continuation;
     package$kotlin.Result = Result;
     package$intrinsics.get_COROUTINE_SUSPENDED = get_COROUTINE_SUSPENDED;

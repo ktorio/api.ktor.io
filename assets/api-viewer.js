@@ -13,11 +13,13 @@
   'use strict';
   var split = Kotlin.kotlin.text.split_o64adg$;
   var toInt = Kotlin.kotlin.text.toInt_pdl1vz$;
+  var getOrNull = Kotlin.kotlin.collections.getOrNull_yzln2o$;
+  var equals = Kotlin.equals;
   var IllegalArgumentException_init = Kotlin.kotlin.IllegalArgumentException_init_pdl1vj$;
   var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_287e2$;
-  var equals = Kotlin.equals;
   var Kind_OBJECT = Kotlin.Kind.OBJECT;
   var Kind_CLASS = Kotlin.Kind.CLASS;
+  var get_lastIndex = Kotlin.kotlin.collections.get_lastIndex_55thoc$;
   var throwCCE = Kotlin.throwCCE;
   var trim = Kotlin.kotlin.text.trim_gw00vp$;
   var emptyList = Kotlin.kotlin.collections.emptyList_287e2$;
@@ -52,6 +54,11 @@
   var Pair = Kotlin.kotlin.Pair;
   var collectionSizeOrDefault = Kotlin.kotlin.collections.collectionSizeOrDefault_ba2ldo$;
   var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
+  var sortedWith = Kotlin.kotlin.collections.sortedWith_eknfly$;
+  var unboxChar = Kotlin.unboxChar;
+  var compareBy = Kotlin.kotlin.comparisons.compareBy_bvgy4j$;
+  var iterator = Kotlin.kotlin.text.iterator_gw00vp$;
+  var toBoxedChar = Kotlin.toBoxedChar;
   var clear = Kotlin.kotlin.dom.clear_asww5s$;
   var defineInlineFunction = Kotlin.defineInlineFunction;
   var wrapFunction = Kotlin.wrapFunction;
@@ -76,6 +83,8 @@
     var name = components.get_za3lpa$(1);
     var kind = components.get_za3lpa$(2);
     var url = components.get_za3lpa$(3);
+    var path = 4 >= 0 && 4 <= get_lastIndex(components) ? components.get_za3lpa$(4) : '';
+    var deprecated = equals(getOrNull(components, 5), 'd');
     tmp$_0 = this.packageNames.get_za3lpa$(packageIndex);
     switch (kind.charCodeAt(0)) {
       case 84:
@@ -89,7 +98,7 @@
         break;
       default:throw IllegalArgumentException_init('Illegal kind ' + kind);
     }
-    var entry = new Entry(tmp$_0, name, tmp$_1, url);
+    var entry = new Entry(tmp$_0, name, path, tmp$_1, url, deprecated);
     this.cached_0[index] = entry;
     return entry;
   };
@@ -229,11 +238,13 @@
     }
     return result;
   }
-  function Entry(packageName, name, kind, url) {
+  function Entry(packageName, name, path, kind, url, deprecated) {
     this.packageName = packageName;
     this.name = name;
+    this.path = path;
     this.kind = kind;
     this.url = url;
+    this.deprecated = deprecated;
   }
   function Entry$Kind(name, ordinal) {
     Enum.call(this);
@@ -316,27 +327,35 @@
     return this.name;
   };
   Entry.prototype.component3 = function () {
-    return this.kind;
+    return this.path;
   };
   Entry.prototype.component4 = function () {
+    return this.kind;
+  };
+  Entry.prototype.component5 = function () {
     return this.url;
   };
-  Entry.prototype.copy_ksls54$ = function (packageName, name, kind, url) {
-    return new Entry(packageName === void 0 ? this.packageName : packageName, name === void 0 ? this.name : name, kind === void 0 ? this.kind : kind, url === void 0 ? this.url : url);
+  Entry.prototype.component6 = function () {
+    return this.deprecated;
+  };
+  Entry.prototype.copy_fzka6p$ = function (packageName, name, path, kind, url, deprecated) {
+    return new Entry(packageName === void 0 ? this.packageName : packageName, name === void 0 ? this.name : name, path === void 0 ? this.path : path, kind === void 0 ? this.kind : kind, url === void 0 ? this.url : url, deprecated === void 0 ? this.deprecated : deprecated);
   };
   Entry.prototype.toString = function () {
-    return 'Entry(packageName=' + Kotlin.toString(this.packageName) + (', name=' + Kotlin.toString(this.name)) + (', kind=' + Kotlin.toString(this.kind)) + (', url=' + Kotlin.toString(this.url)) + ')';
+    return 'Entry(packageName=' + Kotlin.toString(this.packageName) + (', name=' + Kotlin.toString(this.name)) + (', path=' + Kotlin.toString(this.path)) + (', kind=' + Kotlin.toString(this.kind)) + (', url=' + Kotlin.toString(this.url)) + (', deprecated=' + Kotlin.toString(this.deprecated)) + ')';
   };
   Entry.prototype.hashCode = function () {
     var result = 0;
     result = result * 31 + Kotlin.hashCode(this.packageName) | 0;
     result = result * 31 + Kotlin.hashCode(this.name) | 0;
+    result = result * 31 + Kotlin.hashCode(this.path) | 0;
     result = result * 31 + Kotlin.hashCode(this.kind) | 0;
     result = result * 31 + Kotlin.hashCode(this.url) | 0;
+    result = result * 31 + Kotlin.hashCode(this.deprecated) | 0;
     return result;
   };
   Entry.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.packageName, other.packageName) && Kotlin.equals(this.name, other.name) && Kotlin.equals(this.kind, other.kind) && Kotlin.equals(this.url, other.url)))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.packageName, other.packageName) && Kotlin.equals(this.name, other.name) && Kotlin.equals(this.path, other.path) && Kotlin.equals(this.kind, other.kind) && Kotlin.equals(this.url, other.url) && Kotlin.equals(this.deprecated, other.deprecated)))));
   };
   function tokenize($receiver) {
     var tmp$, tmp$_0, tmp$_1, tmp$_2;
@@ -747,6 +766,7 @@
     refreshPackageList(latestVersion);
     searchPresenter.search_61zpoe$(LocationHashTermStore_getInstance().searchTerms);
     searchPresenter.refresh();
+    searchPresenter.focus();
     window.addEventListener('hashchange', mainAfterLoaded$lambda_3(view));
   }
   function PackagesListView(parent) {
@@ -904,6 +924,7 @@
   }
   SearchTermStore.$metadata$ = {kind: Kind_INTERFACE, simpleName: 'SearchTermStore', interfaces: []};
   function SearchPresenter(view, engineProvider) {
+    SearchPresenter$Companion_getInstance();
     this.view_0 = view;
     this.engineProvider_0 = engineProvider;
     this.searchTerms_0 = '';
@@ -918,6 +939,9 @@
   SearchPresenter.prototype.refresh = function () {
     this.search_0();
   };
+  SearchPresenter.prototype.focus = function () {
+    this.view_0.focus();
+  };
   SearchPresenter.prototype.searchTermsChanged_0 = function () {
     var $receiver = this.view_0.searchTerms;
     var tmp$;
@@ -931,7 +955,7 @@
   function SearchPresenter$search$lambda(closure$request, this$SearchPresenter, closure$searchTerms) {
     return function (search) {
       if (closure$request === this$SearchPresenter.currentRequest_0) {
-        this$SearchPresenter.view_0.searchResults = search(closure$searchTerms);
+        this$SearchPresenter.view_0.searchResults = sortedWith(search(closure$searchTerms), SearchPresenter$Companion_getInstance().EntryComparator_0);
       }
       return Unit;
     };
@@ -949,6 +973,35 @@
     var request = (this.currentRequest_0 = this.currentRequest_0 + 1 | 0, this.currentRequest_0);
     this.engineProvider_0().then(SearchPresenter$search$lambda(request, this, searchTerms)).catch(SearchPresenter$search$lambda_0(request, this));
   };
+  function SearchPresenter$Companion() {
+    SearchPresenter$Companion_instance = this;
+    this.EntryComparator_0 = compareBy([SearchPresenter$Companion$EntryComparator$lambda, SearchPresenter$Companion$EntryComparator$lambda_0, SearchPresenter$Companion$EntryComparator$lambda_1]);
+  }
+  function SearchPresenter$Companion$EntryComparator$lambda(it) {
+    return it.name.length;
+  }
+  function SearchPresenter$Companion$EntryComparator$lambda_0(it) {
+    var tmp$;
+    var count = 0;
+    tmp$ = iterator(it.path);
+    while (tmp$.hasNext()) {
+      var element = unboxChar(tmp$.next());
+      if (unboxChar(toBoxedChar(element)) === 46)
+        count = count + 1 | 0;
+    }
+    return count;
+  }
+  function SearchPresenter$Companion$EntryComparator$lambda_1(it) {
+    return it.deprecated;
+  }
+  SearchPresenter$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
+  var SearchPresenter$Companion_instance = null;
+  function SearchPresenter$Companion_getInstance() {
+    if (SearchPresenter$Companion_instance === null) {
+      new SearchPresenter$Companion();
+    }
+    return SearchPresenter$Companion_instance;
+  }
   function SearchPresenter_init$lambda(this$SearchPresenter) {
     return function (it) {
       this$SearchPresenter.searchTermsChanged_0();
@@ -1015,41 +1068,34 @@
       var element = tmp$.next();
       var tmp$_0;
       var $receiver_0 = Kotlin.isType(tmp$_0 = document.createElement('p'), HTMLElement_0) ? tmp$_0 : throwCCE();
-      var tmp$_1;
-      var $receiver_1 = Kotlin.isType(tmp$_1 = document.createElement('span'), HTMLElement_0) ? tmp$_1 : throwCCE();
-      var tmp$_2;
-      $receiver_1.className = 'badge';
-      switch (element.kind.name) {
-        case 'FUNCTION':
-          tmp$_2 = 'f';
-          break;
-        case 'PROPERTY':
-          tmp$_2 = 'p';
-          break;
-        case 'TYPE':
-          tmp$_2 = 't';
-          break;
-        default:tmp$_2 = Kotlin.noWhenBranchMatched();
-          break;
+      if (element.deprecated) {
+        $receiver_0.classList.add('deprecated');
       }
-      $receiver_1.textContent = tmp$_2;
-      $receiver_0.appendChild($receiver_1);
+      badge($receiver_0, element.kind);
+      var tmp$_1;
+      var $receiver_1 = Kotlin.isType(tmp$_1 = document.createElement('a'), HTMLAnchorElement_0) ? tmp$_1 : throwCCE();
+      $receiver_1.href = this.urlProvider(element);
+      var tmp$_2;
+      var $receiver_2 = Kotlin.isType(tmp$_2 = document.createElement('span'), HTMLElement_0) ? tmp$_2 : throwCCE();
       var tmp$_3;
-      var $receiver_2 = Kotlin.isType(tmp$_3 = document.createElement('a'), HTMLAnchorElement_0) ? tmp$_3 : throwCCE();
-      $receiver_2.href = this.urlProvider(element);
+      if (element.path.length > 0)
+        tmp$_3 = element.packageName + '.' + element.path + '.';
+      else
+        tmp$_3 = element.packageName + '.';
+      $receiver_2.textContent = tmp$_3;
+      $receiver_1.appendChild($receiver_2);
       var tmp$_4;
-      var $receiver_3 = Kotlin.isType(tmp$_4 = document.createElement('span'), HTMLElement_0) ? tmp$_4 : throwCCE();
-      $receiver_3.textContent = element.packageName + '.';
-      $receiver_2.appendChild($receiver_3);
-      var tmp$_5;
-      var $receiver_4 = Kotlin.isType(tmp$_5 = document.createElement('strong'), HTMLElement_0) ? tmp$_5 : throwCCE();
-      $receiver_4.textContent = element.name;
-      $receiver_2.appendChild($receiver_4);
-      $receiver_0.appendChild($receiver_2);
+      var $receiver_3 = Kotlin.isType(tmp$_4 = document.createElement('strong'), HTMLElement_0) ? tmp$_4 : throwCCE();
+      $receiver_3.textContent = element.name;
+      $receiver_1.appendChild($receiver_3);
+      $receiver_0.appendChild($receiver_1);
       $receiver.appendChild($receiver_0);
     }
     this.searchResults_p4r73r$_0 = newResults;
   }});
+  SearchViewImpl.prototype.focus = function () {
+    this.searchInput_0.focus();
+  };
   function SearchViewImpl_init$lambda$lambda(this$SearchViewImpl) {
     return function () {
       this$SearchViewImpl.searchTermsChangedListener(this$SearchViewImpl.searchTerms);
@@ -1069,6 +1115,41 @@
     return it.url;
   }
   SearchViewImpl.$metadata$ = {kind: Kind_CLASS, simpleName: 'SearchViewImpl', interfaces: [SearchView]};
+  function badge($receiver, kind) {
+    var tmp$;
+    var $receiver_0 = Kotlin.isType(tmp$ = document.createElement('span'), HTMLElement_0) ? tmp$ : throwCCE();
+    var tmp$_0, tmp$_1;
+    $receiver_0.className = 'badge';
+    switch (kind.name) {
+      case 'FUNCTION':
+        tmp$_0 = 'Function or constructor';
+        break;
+      case 'PROPERTY':
+        tmp$_0 = 'Property or constant';
+        break;
+      case 'TYPE':
+        tmp$_0 = 'Type: class, interface, object or typealias';
+        break;
+      default:tmp$_0 = Kotlin.noWhenBranchMatched();
+        break;
+    }
+    $receiver_0.title = tmp$_0;
+    switch (kind.name) {
+      case 'FUNCTION':
+        tmp$_1 = 'f';
+        break;
+      case 'PROPERTY':
+        tmp$_1 = 'p';
+        break;
+      case 'TYPE':
+        tmp$_1 = 't';
+        break;
+      default:tmp$_1 = Kotlin.noWhenBranchMatched();
+        break;
+    }
+    $receiver_0.textContent = tmp$_1;
+    $receiver.appendChild($receiver_0);
+  }
   function VersionsView() {
   }
   VersionsView.$metadata$ = {kind: Kind_INTERFACE, simpleName: 'VersionsView', interfaces: []};
@@ -1208,6 +1289,7 @@
   package$sample.searchEngineProvider_61zpoe$ = searchEngineProvider;
   package$sample.toSearchFunction_hemxz4$ = toSearchFunction;
   package$sample.SearchTermStore = SearchTermStore;
+  Object.defineProperty(SearchPresenter, 'Companion', {get: SearchPresenter$Companion_getInstance});
   package$sample.SearchPresenter = SearchPresenter;
   package$sample.SearchView = SearchView;
   package$sample.SearchViewImpl = SearchViewImpl;
