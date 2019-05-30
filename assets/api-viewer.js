@@ -16,12 +16,15 @@
   var getOrNull = Kotlin.kotlin.collections.getOrNull_yzln2o$;
   var equals = Kotlin.equals;
   var IllegalArgumentException_init = Kotlin.kotlin.IllegalArgumentException_init_pdl1vj$;
+  var get_indices = Kotlin.kotlin.text.get_indices_gw00vp$;
   var ArrayList_init = Kotlin.kotlin.collections.ArrayList_init_287e2$;
+  var startsWith = Kotlin.kotlin.text.startsWith_7epoxm$;
+  var removePrefix = Kotlin.kotlin.text.removePrefix_gsj5wt$;
+  var removeSuffix = Kotlin.kotlin.text.removeSuffix_gsj5wt$;
   var Kind_OBJECT = Kotlin.Kind.OBJECT;
   var Kind_CLASS = Kotlin.Kind.CLASS;
   var get_lastIndex = Kotlin.kotlin.collections.get_lastIndex_55thoc$;
-  var throwCCE = Kotlin.throwCCE;
-  var trim = Kotlin.kotlin.text.trim_gw00vp$;
+  var StringBuilder_init = Kotlin.kotlin.text.StringBuilder_init;
   var emptyList = Kotlin.kotlin.collections.emptyList_287e2$;
   var take = Kotlin.kotlin.collections.take_ba2ldo$;
   var toList = Kotlin.kotlin.collections.toList_7wnvza$;
@@ -29,14 +32,13 @@
   var split_0 = Kotlin.kotlin.text.split_ip8yn$;
   var toIntOrNull = Kotlin.kotlin.text.toIntOrNull_pdl1vz$;
   var Math_0 = Math;
+  var throwCCE = Kotlin.throwCCE;
+  var trim = Kotlin.kotlin.text.trim_gw00vp$;
   var setOf = Kotlin.kotlin.collections.setOf_i5x0yv$;
   var Enum = Kotlin.kotlin.Enum;
   var throwISE = Kotlin.throwISE;
-  var get_indices = Kotlin.kotlin.text.get_indices_gw00vp$;
   var CharRange = Kotlin.kotlin.ranges.CharRange;
   var indexOf = Kotlin.kotlin.text.indexOf_8eortd$;
-  var removePrefix = Kotlin.kotlin.text.removePrefix_gsj5wt$;
-  var removeSuffix = Kotlin.kotlin.text.removeSuffix_gsj5wt$;
   var ArrayList_init_0 = Kotlin.kotlin.collections.ArrayList_init_mqih57$;
   var ArrayList_init_1 = Kotlin.kotlin.collections.ArrayList_init_ww73n8$;
   var first = Kotlin.kotlin.collections.first_2p1efm$;
@@ -44,7 +46,6 @@
   var joinToString = Kotlin.kotlin.collections.joinToString_fmv235$;
   var listOf = Kotlin.kotlin.collections.listOf_mh5how$;
   var IllegalStateException_init = Kotlin.kotlin.IllegalStateException_init_pdl1vj$;
-  var StringBuilder_init_0 = Kotlin.kotlin.text.StringBuilder_init;
   var toList_0 = Kotlin.kotlin.collections.toList_us0mfu$;
   var lastOrNull = Kotlin.kotlin.collections.lastOrNull_2p1efm$;
   var ensureNotNull = Kotlin.ensureNotNull;
@@ -63,9 +64,10 @@
   var equals_0 = Kotlin.kotlin.text.equals_igcy3c$;
   Entry$Kind.prototype = Object.create(Enum.prototype);
   Entry$Kind.prototype.constructor = Entry$Kind;
-  function ApiList(packageNames, entries) {
+  function ApiList(packageNames, urlComponents, entries) {
     ApiList$Companion_getInstance();
     this.packageNames = packageNames;
+    this.urlComponents = urlComponents;
     this.entries = entries;
     this.cached_0 = Kotlin.newArray(this.entries.size, null);
   }
@@ -79,7 +81,7 @@
     var packageIndex = toInt(components.get_za3lpa$(0));
     var name = components.get_za3lpa$(1);
     var kind = components.get_za3lpa$(2);
-    var url = components.get_za3lpa$(3);
+    var url = this.unpackUrl_0(components.get_za3lpa$(3));
     var path = 4 >= 0 && 4 <= get_lastIndex(components) ? components.get_za3lpa$(4) : '';
     var deprecated = equals(getOrNull(components, 5), 'd');
     tmp$_0 = this.packageNames.get_za3lpa$(packageIndex);
@@ -99,6 +101,33 @@
     this.cached_0[index] = entry;
     return entry;
   };
+  ApiList.prototype.unpackUrl_0 = function (packed) {
+    var $receiver = StringBuilder_init();
+    var tmp$, tmp$_0, tmp$_1, tmp$_2;
+    var urlComponents = this.urlComponents;
+    var start = 0;
+    tmp$ = get_indices(packed);
+    tmp$_0 = tmp$.first;
+    tmp$_1 = tmp$.last;
+    tmp$_2 = tmp$.step;
+    for (var index = tmp$_0; index <= tmp$_1; index += tmp$_2) {
+      if (packed.charCodeAt(index) === 47) {
+        if (index > start) {
+          var startIndex = start;
+          var componentIndex = toInt(packed.substring(startIndex, index));
+          $receiver.append_gw00v9$(urlComponents.get_za3lpa$(componentIndex));
+        }
+        $receiver.append_s8itvh$(47);
+        start = index + 1 | 0;
+      }
+    }
+    if (start < packed.length) {
+      var startIndex_0 = start;
+      var componentIndex_0 = toInt(packed.substring(startIndex_0));
+      $receiver.append_gw00v9$(urlComponents.get_za3lpa$(componentIndex_0));
+    }
+    return $receiver.toString();
+  };
   function ApiList$Companion() {
     ApiList$Companion_instance = this;
   }
@@ -106,38 +135,37 @@
     var tmp$;
     var packageNames = ArrayList_init();
     var entryLines = ArrayList_init();
+    var urlComponents = ArrayList_init();
     var state = '';
     tmp$ = lines.iterator();
     while (tmp$.hasNext()) {
       var line = tmp$.next();
-      switch (state) {
-        case '':
-          var tmp$_0;
-          if (equals(trim(Kotlin.isCharSequence(tmp$_0 = line) ? tmp$_0 : throwCCE()).toString(), '[packages]')) {
-            state = 'packages';
-          }
-
-          break;
-        case 'packages':
-          if (equals(line, '[entries]')) {
-            state = 'entries';
-          }
-           else {
-            if (line.length > 0) {
-              packageNames.add_11rb$(line);
-            }
-          }
-
-          break;
-        case 'entries':
-          if (line.length > 0) {
+      var tmp$_0 = !startsWith(line, '[');
+      if (tmp$_0) {
+        tmp$_0 = line.length > 0;
+      }
+      if (tmp$_0) {
+        switch (state) {
+          case '':
+            break;
+          case 'packages':
+            packageNames.add_11rb$(line);
+            break;
+          case 'entries':
             entryLines.add_11rb$(line);
-          }
-
-          break;
+            break;
+          case 'url-components':
+            urlComponents.add_11rb$(line);
+            break;
+        }
+      }
+       else {
+        if (startsWith(line, '[')) {
+          state = removeSuffix(removePrefix(line, '['), ']');
+        }
       }
     }
-    return new ApiList(packageNames, entryLines);
+    return new ApiList(packageNames, urlComponents, entryLines);
   };
   ApiList$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
   var ApiList$Companion_instance = null;
@@ -588,7 +616,7 @@
     return '[]';
   };
   SmallIntSet.prototype.toString2_0 = function (start) {
-    var $receiver = StringBuilder_init_0();
+    var $receiver = StringBuilder_init();
     $receiver.append_s8itvh$(91);
     $receiver.append_s8jyv4$(start);
     var content = this.content_0;
@@ -659,7 +687,7 @@
       if (url.length === 0)
         tmp$ = '';
       else {
-        var $receiver = StringBuilder_init_0();
+        var $receiver = StringBuilder_init();
         var closure$currentSearchEngineVersion_0 = closure$currentSearchEngineVersion;
         $receiver.append_s8itvh$(47);
         $receiver.append_gw00v9$(closure$currentSearchEngineVersion_0.v);
@@ -831,7 +859,7 @@
   };
   PackagesListView.$metadata$ = {kind: Kind_CLASS, simpleName: 'PackagesListView', interfaces: []};
   function address() {
-    var $receiver = StringBuilder_init_0();
+    var $receiver = StringBuilder_init();
     var $receiver_0 = window.location;
     $receiver.append_gw00v9$($receiver_0.protocol);
     $receiver.append_gw00v9$('//');
