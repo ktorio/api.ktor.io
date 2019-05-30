@@ -1242,8 +1242,6 @@
     AbstractMap$get_AbstractMap$values$ObjectLiteral.prototype.constructor = AbstractMap$get_AbstractMap$values$ObjectLiteral;
     CoroutineSingletons.prototype = Object.create(Enum.prototype);
     CoroutineSingletons.prototype.constructor = CoroutineSingletons;
-    iterator$ObjectLiteral.prototype = Object.create(CharIterator.prototype);
-    iterator$ObjectLiteral.prototype.constructor = iterator$ObjectLiteral;
     NotImplementedError.prototype = Object.create(Error_0.prototype);
     NotImplementedError.prototype.constructor = NotImplementedError;
     function contains($receiver, element) {
@@ -5672,23 +5670,6 @@
       }
       return Kotlin.subSequence($receiver, startIndex, endIndex + 1 | 0);
     }
-    function iterator$ObjectLiteral(this$iterator) {
-      this.this$iterator = this$iterator;
-      CharIterator.call(this);
-      this.index_0 = 0;
-    }
-    iterator$ObjectLiteral.prototype.nextChar = function () {
-      var tmp$, tmp$_0;
-      tmp$_0 = (tmp$ = this.index_0, this.index_0 = tmp$ + 1 | 0, tmp$);
-      return this.this$iterator.charCodeAt(tmp$_0);
-    };
-    iterator$ObjectLiteral.prototype.hasNext = function () {
-      return this.index_0 < this.this$iterator.length;
-    };
-    iterator$ObjectLiteral.$metadata$ = {kind: Kind_CLASS, interfaces: [CharIterator]};
-    function iterator_4($receiver) {
-      return new iterator$ObjectLiteral($receiver);
-    }
     function get_indices_13($receiver) {
       return new IntRange(0, $receiver.length - 1 | 0);
     }
@@ -6255,7 +6236,6 @@
     package$sequences.asIterable_veqyi0$ = asIterable_10;
     var package$text = package$kotlin.text || (package$kotlin.text = {});
     package$text.get_lastIndex_gw00vp$ = get_lastIndex_13;
-    package$text.iterator_gw00vp$ = iterator_4;
     package$text.get_indices_gw00vp$ = get_indices_13;
     package$text.StringBuilder_init = StringBuilder_init_1;
     package$kotlin.CharSequence = CharSequence;

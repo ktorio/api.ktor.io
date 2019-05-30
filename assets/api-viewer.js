@@ -55,10 +55,7 @@
   var collectionSizeOrDefault = Kotlin.kotlin.collections.collectionSizeOrDefault_ba2ldo$;
   var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
   var sortedWith = Kotlin.kotlin.collections.sortedWith_eknfly$;
-  var unboxChar = Kotlin.unboxChar;
   var compareBy = Kotlin.kotlin.comparisons.compareBy_bvgy4j$;
-  var iterator = Kotlin.kotlin.text.iterator_gw00vp$;
-  var toBoxedChar = Kotlin.toBoxedChar;
   var clear = Kotlin.kotlin.dom.clear_asww5s$;
   var defineInlineFunction = Kotlin.defineInlineFunction;
   var wrapFunction = Kotlin.wrapFunction;
@@ -880,7 +877,7 @@
   }
   function toSearchFunction$lambda$lambda(closure$searchData, closure$apiList) {
     return function (terms) {
-      var $receiver = search(closure$searchData, terms, 20);
+      var $receiver = search(closure$searchData, terms);
       var destination = ArrayList_init_1(collectionSizeOrDefault($receiver, 10));
       var tmp$;
       tmp$ = $receiver.iterator();
@@ -955,7 +952,7 @@
   function SearchPresenter$search$lambda(closure$request, this$SearchPresenter, closure$searchTerms) {
     return function (search) {
       if (closure$request === this$SearchPresenter.currentRequest_0) {
-        this$SearchPresenter.view_0.searchResults = sortedWith(search(closure$searchTerms), SearchPresenter$Companion_getInstance().EntryComparator_0);
+        this$SearchPresenter.view_0.searchResults = take(sortedWith(search(closure$searchTerms), SearchPresenter$Companion_getInstance().EntryComparator_0), 20);
       }
       return Unit;
     };
@@ -975,24 +972,35 @@
   };
   function SearchPresenter$Companion() {
     SearchPresenter$Companion_instance = this;
-    this.EntryComparator_0 = compareBy([SearchPresenter$Companion$EntryComparator$lambda, SearchPresenter$Companion$EntryComparator$lambda_0, SearchPresenter$Companion$EntryComparator$lambda_1]);
+    this.EntryComparator_0 = compareBy([SearchPresenter$Companion$EntryComparator$lambda, SearchPresenter$Companion$EntryComparator$lambda_0(this), SearchPresenter$Companion$EntryComparator$lambda_1, SearchPresenter$Companion$EntryComparator$lambda_2(this)]);
   }
+  SearchPresenter$Companion.prototype.countComponents_0 = function ($receiver) {
+    var length = $receiver.length;
+    if (length === 0)
+      return 0;
+    var count = 1;
+    for (var index = 0; index < length; index++) {
+      if ($receiver.charCodeAt(index) === 46) {
+        count = count + 1 | 0;
+      }
+    }
+    return count;
+  };
   function SearchPresenter$Companion$EntryComparator$lambda(it) {
     return it.name.length;
   }
-  function SearchPresenter$Companion$EntryComparator$lambda_0(it) {
-    var tmp$;
-    var count = 0;
-    tmp$ = iterator(it.path);
-    while (tmp$.hasNext()) {
-      var element = unboxChar(tmp$.next());
-      if (unboxChar(toBoxedChar(element)) === 46)
-        count = count + 1 | 0;
-    }
-    return count;
+  function SearchPresenter$Companion$EntryComparator$lambda_0(this$SearchPresenter$) {
+    return function (it) {
+      return this$SearchPresenter$.countComponents_0(it.path);
+    };
   }
   function SearchPresenter$Companion$EntryComparator$lambda_1(it) {
     return it.deprecated;
+  }
+  function SearchPresenter$Companion$EntryComparator$lambda_2(this$SearchPresenter$) {
+    return function (it) {
+      return this$SearchPresenter$.countComponents_0(it.packageName);
+    };
   }
   SearchPresenter$Companion.$metadata$ = {kind: Kind_OBJECT, simpleName: 'Companion', interfaces: []};
   var SearchPresenter$Companion_instance = null;
