@@ -8,5 +8,7 @@
 ./build_doc.sh 1.1.3 && \
 ./build_doc.sh 1.1.4 && \
 ./build_doc.sh 1.1.5 && \
-./build_doc.sh 1.2.0
-
+./build_doc.sh 1.2.0 && \
+./build_doc.sh 1.2.1 && \
+./build_doc.sh 1.2.2 && \
+./build_doc.sh 1.2.3
