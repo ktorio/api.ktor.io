@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SocketOptions.PeerSocketOptions -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.3.0-beta-1/io.ktor.network.sockets/-socket-options/-peer-socket-options/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.3.0-beta-1/">Ktor 1.3.0-beta-1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../../index.html">io.ktor.network.sockets</a> / <a href="../index.html">SocketOptions</a> / <a href="./index.html">PeerSocketOptions</a></div>
+
+<h1 id="peersocketoptions">PeerSocketOptions</h1>
+
+<div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">PeerSocketOptions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">SocketOptions</span></a></code></div>
+
+<p>Represents TCP client or UDP socket options</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="receive-buffer-size.html">receiveBufferSize</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">receiveBufferSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Socket incoming buffer size (SO_RCVBUF), <code>-1</code> or <code>0</code> to make system decide</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="send-buffer-size.html">sendBufferSize</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">sendBufferSize</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Socket ougoing buffer size (SO_SNDBUF), <code>-1</code> or <code>0</code> to make system decide</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-properties">Inherited Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../custom-options.html">customOptions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">customOptions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../reuse-address.html">reuseAddress</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">reuseAddress</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>SO_REUSEADDR option</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../reuse-port.html">reusePort</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">reusePort</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>SO_REUSEPORT option, may not work with old JDK (will be silently ignored)</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../type-of-service.html">typeOfService</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">typeOfService</span><span class="symbol">: </span><a href="../../-type-of-service/index.html"><span class="identifier">TypeOfService</span></a></code></div>
+
+        <p>ToS value, <a href="../../-type-of-service/-u-n-d-e-f-i-n-e-d.html">TypeOfService.UNDEFINED</a> by default, may not work with old JDK (will be silently ignored)</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="copy-common.html">copyCommon</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">copyCommon</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.network.sockets.SocketOptions.PeerSocketOptions$copyCommon(io.ktor.network.sockets.SocketOptions)/from">from</span><span class="symbol">:</span>&nbsp;<a href="../index.html"><span class="identifier">SocketOptions</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-t-c-p-client-socket-options/index.html">TCPClientSocketOptions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">TCPClientSocketOptions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PeerSocketOptions</span></a></code></div>
+
+        <p>Represents TCP client socket options</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../-u-d-p-socket-options.html">UDPSocketOptions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">UDPSocketOptions</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PeerSocketOptions</span></a></code></div>
+
+        <p>Represents UDP socket options</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

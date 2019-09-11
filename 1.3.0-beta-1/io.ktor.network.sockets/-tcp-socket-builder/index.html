@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TcpSocketBuilder -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.3.0-beta-1/io.ktor.network.sockets/-tcp-socket-builder/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.3.0-beta-1/">Ktor 1.3.0-beta-1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.network.sockets</a> / <a href="./index.html">TcpSocketBuilder</a></div>
+
+<h1 id="tcpsocketbuilder">TcpSocketBuilder</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">TcpSocketBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../-configurable/index.html"><span class="identifier">Configurable</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">TcpSocketBuilder</span></a><span class="symbol">,</span>&nbsp;<a href="../-socket-options/index.html"><span class="identifier">SocketOptions</span></a><span class="symbol">&gt;</span></code></div>
+
+<p>TCP socket builder</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="options.html">options</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">options</span><span class="symbol">: </span><a href="../-socket-options/index.html"><span class="identifier">SocketOptions</span></a></code></div>
+
+        <p>Current socket options</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="bind.html">bind</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">bind</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$bind(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/hostname">hostname</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"0.0.0.0"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$bind(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$bind(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../-socket-options/-acceptor-options.html"><span class="identifier">AcceptorOptions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="../-server-socket.html"><span class="identifier">ServerSocket</span></a></code></div>
+
+        <p>Bind server socket at <a href="bind.html#io.ktor.network.sockets.TcpSocketBuilder$bind(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/port">port</a> to listen to <a href="bind.html#io.ktor.network.sockets.TcpSocketBuilder$bind(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/hostname">hostname</a></p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">bind</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$bind(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/localAddress">localAddress</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/SocketAddress.html"><span class="identifier">SocketAddress</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$bind(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../-socket-options/-acceptor-options.html"><span class="identifier">AcceptorOptions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="../-server-socket.html"><span class="identifier">ServerSocket</span></a></code></div>
+
+        <p>Bind server socket to listen to <a href="bind.html#io.ktor.network.sockets.TcpSocketBuilder$bind(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.AcceptorOptions, kotlin.Unit)))/localAddress">localAddress</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="connect.html">connect</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">connect</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$connect(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/hostname">hostname</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$connect(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$connect(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../-socket-options/-t-c-p-client-socket-options/index.html"><span class="identifier">TCPClientSocketOptions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="../-socket.html"><span class="identifier">Socket</span></a></code></div>
+
+        <p>Connect to <a href="connect.html#io.ktor.network.sockets.TcpSocketBuilder$connect(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/hostname">hostname</a> and <a href="connect.html#io.ktor.network.sockets.TcpSocketBuilder$connect(kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/port">port</a></p>
+
+        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">connect</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$connect(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/remoteAddress">remoteAddress</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/SocketAddress.html"><span class="identifier">SocketAddress</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.network.sockets.TcpSocketBuilder$connect(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../-socket-options/-t-c-p-client-socket-options/index.html"><span class="identifier">TCPClientSocketOptions</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="../-socket.html"><span class="identifier">Socket</span></a></code></div>
+
+        <p>Connect to <a href="connect.html#io.ktor.network.sockets.TcpSocketBuilder$connect(java.net.SocketAddress, kotlin.Function1((io.ktor.network.sockets.SocketOptions.TCPClientSocketOptions, kotlin.Unit)))/remoteAddress">remoteAddress</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-functions">Inherited Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-configurable/configure.html">configure</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">configure</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.network.sockets.Configurable$configure(kotlin.Function1((io.ktor.network.sockets.Configurable.O, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../-configurable/index.html#O"><span class="identifier">O</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-configurable/index.html#T"><span class="identifier">T</span></a></code></div>
+
+        <p>Configure socket options in <a href="../-configurable/configure.html#io.ktor.network.sockets.Configurable$configure(kotlin.Function1((io.ktor.network.sockets.Configurable.O, kotlin.Unit)))/block">block</a> function</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

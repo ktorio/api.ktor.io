@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>authenticate -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.3.0-beta-1/io.ktor.auth/authenticate.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.3.0-beta-1/">Ktor 1.3.0-beta-1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="index.html">io.ktor.auth</a> / <a href="./authenticate.html">authenticate</a></div>
+
+<h1 id="authenticate">authenticate</h1>
+
+<div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">authenticate</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">vararg</span> <span class="parameterName" id="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;arrayOf&lt;String?&gt;(null)<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/optional">optional</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a></code></div>
+
+<p>Creates an authentication route that does handle authentication by the specified providers referred by
+<a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> names. <code>null</code> could be used to point to the default provider and could be also mixed with other
+provider names.
+Other routes, handlers and interceptors could be nested into this node</p>
+
+<p>The <a href="-authentication/index.html">Authentication</a> feature need to be installed first otherwise
+it will fail with <a href="../io.ktor.application/-missing-application-feature-exception/index.html">MissingApplicationFeatureException</a> and all providers requested by <a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> need
+to be already registered.</p>
+
+<p>Is is important to note that when <a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/optional">optional</a> is set, challenges will be skipped only if no credentials are provided.</p>
+
+<p>To summarize:</p>
+
+<p>optional=false:</p>
+
+<ul>
+  <li>No credentials: challenge is sent and route is NOT executed</li>
+  <li>Bad credentials: Unauthorized</li>
+  <li>Good credentials: route handler will be executed</li>
+</ul>
+
+<p>optional=true:</p>
+
+<ul>
+  <li>No credentials: route handler will be executed with a null <a href="-principal.html">Principal</a></li>
+  <li>Bad credentials: Unauthorized</li>
+  <li>Good credentials: route handler will be executed</li>
+</ul>
+
+<h3 id="parameters">Parameters</h3>
+
+<p><code>configurations</code> - names that point to already registered authentication providers</p>
+
+<p><code>optional</code> - when set, if no auth is provided by the client, the call will continue but with a null <a href="-principal.html">Principal</a></p>
+
+<h3 id="exceptions">Exceptions</h3>
+
+<p><code>MissingApplicationFeatureException</code> - if no <a href="-authentication/index.html">Authentication</a> feature installed first</p>
+
+<p><code>IllegalArgumentException</code> - if there are no registered providers referred by <a href="authenticate.html#io.ktor.auth$authenticate(io.ktor.routing.Route, kotlin.Array((kotlin.String)), kotlin.Boolean, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/configurations">configurations</a> names</p>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
