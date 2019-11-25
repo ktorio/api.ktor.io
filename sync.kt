@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     // Get versions
     val versions = getVersions()
 
-    val latestVersion = versions.filter { "alpha" !in it && "dev" !in it }.last()
+    val latestVersion = versions.filter { "alpha" !in it && "dev" !in it && "beta" !in it }.last()
 
     // Update assets/versions.js
     run {
@@ -15,8 +15,9 @@ fun main(args: Array<String>) {
         var versionsText = versionsFile.readText()
 
         // Update list of all versions
+        val visibleVersions = visibleVersions(versions)
         versionsText = Regex("var versions = (.*);").replace(versionsText) {
-            "var versions = [" + versions.joinToString(", ") { "'$it'" } + "];"
+            "var versions = [" + visibleVersions.joinToString(", ") { "'$it'" } + "];"
         }
         // Update latest version
         versionsText = Regex("var latestVersion = (.*);").replace(versionsText) {
@@ -60,4 +61,35 @@ fun getVersions() : List<String> {
     return File(".").listFiles().filter {
         it.isDirectory && File(it, "alltypes").exists() && it.name !in ignoredVersions
     }.map { it.name }.sorted()
+}
+
+object VersionComparator : Comparator<String> {
+    override fun compare(a: String, b: String): Int {
+        return compare(extract(a), extract(b))
+    }
+
+    private fun compare(a: List<Int>, b: List<Int>): Int {
+        for (index in 0 until minOf(a.size, b.size)) {
+            val componentCompared = a[index].compareTo(b[index])
+            if (componentCompared != 0) {
+                return componentCompared
+            }
+        }
+
+        return a.size.compareTo(b.size)
+    }
+
+    private fun extract(version: String): List<Int> {
+        return version.split('.', '_', '-').mapNotNull { it.toIntOrNull() }
+    }
+}
+
+fun visibleVersions(allVersions: List<String>): List<String> {
+    val pattern = "^(\\d+)\\.(\\d+)".toRegex()
+
+    return allVersions
+        .groupBy { pattern.find(it)?.value ?: it }
+        .mapValues { (_, it) ->
+            it.sortedWith(VersionComparator).last()
+        }.flatMap { listOf(it.value) }.sortedWith(VersionComparator)
 }
