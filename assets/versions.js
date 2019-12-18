@@ -1,5 +1,5 @@
-var versions = ['0.9.5', '1.0.1', '1.1.5', '1.2.6', '1.3.0-beta-2'];
-var latestVersion = '1.2.6';
+var versions = ['0.9.5', '1.0.1', '1.1.5', '1.2.6', '1.3.0-rc'];
+var latestVersion = '1.3.0-rc';
 
 if (!String.prototype.startsWith) {
 	String.prototype.startsWith = function(search, pos) {
