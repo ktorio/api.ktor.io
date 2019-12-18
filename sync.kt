@@ -80,7 +80,13 @@ object VersionComparator : Comparator<String> {
     }
 
     private fun extract(version: String): List<Int> {
-        return version.split('.', '_', '-').mapNotNull { it.toIntOrNull() }
+        return version.split('.', '_', '-').mapNotNull { it.toIntOrNull() ?: when (it) {
+                "alpha" -> 0
+                "beta" -> 1
+                "rc" -> 2
+                else -> null
+            }
+        }
     }
 }
 
