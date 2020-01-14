@@ -76,7 +76,7 @@ object VersionComparator : Comparator<String> {
             }
         }
 
-        return a.size.compareTo(b.size)
+        return b.size.compareTo(a.size)
     }
 
     private fun extract(version: String): List<Int> {
@@ -84,6 +84,7 @@ object VersionComparator : Comparator<String> {
                 "alpha" -> 0
                 "beta" -> 1
                 "rc" -> 2
+                "rc2" -> 3
                 else -> null
             }
         }
