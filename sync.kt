@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     // Get versions
     val versions = getVersions()
 
-    val latestVersion = versions.filter { "alpha" !in it && "dev" !in it && "beta" !in it }.last()
+    val latestVersion = versions.filter { "alpha" !in it && "dev" !in it && "beta" !in it && "rc" !in it }.last()
 
     // Update assets/versions.js
     run {
