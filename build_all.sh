@@ -15,4 +15,5 @@
 ./build_doc.sh 1.2.4 && \
 ./build_doc.sh 1.2.5 && \
 ./build_doc.sh 1.2.6 && \
-./build_doc.sh 1.4.0
+./build_doc.sh 1.4.0 && \
+./build_doc.sh 1.4.1
