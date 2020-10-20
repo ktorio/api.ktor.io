@@ -56,6 +56,13 @@ rm -f "${KTOR_VERSION}/index.yml"
 
 java -jar tools/apidoc-indexer.jar "${KTOR_VERSION}"
 
+# Update common files for all versions
 docker run -i -v "${DIR}:/srv/work" -w "/srv/work" holgerbrandl/kscript - < "${DIR}/sync.kts"
 
+# Clean up
 rm -rf "${WORK_DIR}"
+
+# Commit and push changes
+git add "${RESULT_DIR}" assets/versions.js latest/index.html
+git commit -m "Update for ${KTOR_VERSION}"
+git push
