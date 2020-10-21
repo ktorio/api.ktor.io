@@ -64,8 +64,3 @@ docker run -i -v "${DIR}:/srv/work" -w "/srv/work" holgerbrandl/kscript - < "${D
 
 # Clean up
 rm -rf "${WORK_DIR}"
-
-# Commit and push changes
-git add "${RESULT_DIR}" "${DIR}/assets/versions.js" "${DIR}/sitemap.xml" "${DIR}/latest"
-git commit -m "Update for ${KTOR_VERSION}"
-git push
