@@ -22,7 +22,7 @@ cp -rf "${DIR}/template" "${WORK_DIR}"
 cat > "${WORK_DIR}/_config.yml" <<- EOF
 
 title: "Ktor ${KTOR_VERSION}"
-description: Asynchronous framework for web applications
+description: Ktor is an asynchronous framework for creating microservices, web applications, and more.
 url: "https://${DOMAIN}"
 baseurl: /${KTOR_VERSION}/
 
