@@ -1,93 +1,71 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
-if [ "$#" -ne 1 ]; then
-	echo "./build_doc.sh <ktor_version>"
-	exit 1
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+KTOR_VERSION=$1
+DOKKA_DIR=$2
+
+if [ -z "${KTOR_VERSION}" ] || [ -z "${DOKKA_DIR}" ]; then
+  echo "Usage: $(basename "$0") version dokka-directory"
+  exit 1
 fi
 
-KTOR_VERSION=$1
-CNAME=`cat CNAME`
+DOMAIN="$(cat "${DIR}/CNAME")"
+WORK_DIRNAME="output"
+WORK_DIR="${DIR}/${WORK_DIRNAME}"
 
-echo "Building KTOR_VERSION=$KTOR_VERSION..."
+RESULT_DIRNAME="${KTOR_VERSION}"
+RESULT_DIR="${DIR}/${RESULT_DIRNAME}"
 
-API_DOC_FOLDER="$PWD/doc-output"
+# Prepare working directory
+cp -rf "${DIR}/template" "${WORK_DIR}"
+cat > "${WORK_DIR}/_config.yml" <<- EOF
 
-#######################################################################
+title: "Ktor ${KTOR_VERSION}"
+description: Ktor is an asynchronous framework for creating microservices, web applications, and more.
+url: "https://${DOMAIN}"
+baseurl: /${KTOR_VERSION}/
 
-JEKYLL_CONFIG="$(cat <<-EOF
-
-# Jekyll configuration file
-title: "Ktor $KTOR_VERSION"
-description: Asynchronous framework for web applications
-url: "https://$CNAME"
-baseurl: /$KTOR_VERSION/
-
-# Dirs
 source: .
-destination: ../$KTOR_VERSION
+destination: ../${RESULT_DIRNAME}
 
-ktor_version: $KTOR_VERSION
+ktor_version: ${KTOR_VERSION}
 
-# Build settings
 markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
 plugins:
   - jekyll-sitemap
+
 EOF
-)"
 
-#######################################################################
-rm -rf "$KTOR_VERSION"
-rm -rf doc-output
-cp -rf template doc-output
-#unzip template.zip -d doc-output
+cp -rf "${DOKKA_DIR}"/* "${WORK_DIR}"
 
-echo "$KTOR_VERSION"
-echo "$JEKYLL_CONFIG" > doc-output/_config.yml
+# Prepare result directory
+mkdir -p "${RESULT_DIR}"
 
-if [ ! -d ktor  ]; then
-    git clone https://github.com/ktorio/ktor.git
-fi
+USER="$(id -u)"
+GROUP="$(id -g)"
 
-pushd ktor
+# Generate files via Jekyll and set appropriate permissions
+docker run -v "${DIR}:/srv/jekyll" -v "${DIR}/vendor/bundle:/usr/local/bundle" jekyll/jekyll chown -R jekyll:jekyll "/srv/jekyll/${RESULT_DIRNAME}"
+docker run -v "${DIR}:/srv/jekyll" -v "${DIR}/vendor/bundle:/usr/local/bundle" jekyll/jekyll chown -R jekyll:jekyll "/srv/jekyll/${WORK_DIRNAME}"
+docker run -v "${DIR}:/srv/jekyll" -v "${DIR}/vendor/bundle:/usr/local/bundle" -w "/srv/jekyll/${WORK_DIRNAME}" jekyll/jekyll jekyll build
+docker run -v "${DIR}:/srv/jekyll" -v "${DIR}/vendor/bundle:/usr/local/bundle" jekyll/jekyll chown -R "${USER}:${GROUP}" "/srv/jekyll/${RESULT_DIRNAME}"
+docker run -v "${DIR}:/srv/jekyll" -v "${DIR}/vendor/bundle:/usr/local/bundle" jekyll/jekyll chown -R "${USER}:${GROUP}" "/srv/jekyll/${WORK_DIRNAME}"
 
-git reset --hard
-git checkout master
-git fetch --all
-git reset --hard origin/master
+rm -f "${RESULT_DIR}/index.yml"
 
-git reset --hard
-git checkout master
-git pull https://github.com/ktorio/ktor.git master
-git reset --hard
-git checkout "$KTOR_VERSION"
+java -jar tools/apidoc-indexer.jar "${RESULT_DIR}"
 
-./gradlew dokkaWebsite
+# Update common files for all versions
+docker run -i -v "${DIR}:/srv/work" -w "/srv/work" holgerbrandl/kscript - < "${DIR}/sync.kts"
 
-popd
+# Clean up
+rm -rf "${WORK_DIR}"
 
-cp -rf ktor/apidoc/* "$API_DOC_FOLDER"
-
-# create site output and chmod so docker will be able to write into in
-mkdir -p "$KTOR_VERSION"
-chmod a+rwx "$KTOR_VERSION"
-
-USER_ID=`id -u`
-USER_GROUP=`id -g`
-
-# jekyll b
-docker run -v "$PWD:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -w "/srv/jekyll/doc-output" -it jekyll/jekyll jekyll b $* 
-
-# change generated files' owner
-docker run -v "$PWD:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -w "/srv/jekyll" -it jekyll/jekyll chown -R "$USER_ID:$USER_GROUP" "$KTOR_VERSION"
-
-# revoke permissions to the directory (non-recursive)
-chmod og-w "$KTOR_VERSION"
-
-rm -f $KTOR_VERSION/index.yml
-
-java -jar tools/apidoc-indexer.jar $KTOR_VERSION
-
+# Commit and push changes
+git add "${RESULT_DIR}" "${DIR}/assets/versions.js" "${DIR}/sitemap.xml" "${DIR}/latest"
+git commit -m "Update for ${KTOR_VERSION}"
+git push

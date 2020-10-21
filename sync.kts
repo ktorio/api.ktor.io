@@ -1,9 +1,9 @@
-#!/usr/bin/env kscript
-
 import java.io.*
 import java.nio.file.*
 
-fun main(args: Array<String>) {
+main()
+
+fun main() {
     // Get versions
     val versions = getVersions()
 
@@ -55,11 +55,11 @@ fun main(args: Array<String>) {
     }
 }
 
-val ignoredVersions = setOf("dist", "output", "doc-output", "latest")
-
-fun getVersions() : List<String> {
+fun getVersions(): List<String> {
     return File(".").listFiles().filter {
-        it.isDirectory && File(it, "alltypes").exists() && it.name !in ignoredVersions
+        it.isDirectory
+                && File(it, "alltypes").exists()
+                && it.name !in setOf("dist", "output", "doc-output", "apidoc", "latest")
     }.map { it.name }.sorted()
 }
 
