@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HttpRequestBuilder -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.0/io.ktor.client.request/-http-request-builder/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.0/">Ktor 1.5.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.client.request</a> / <a href="./index.html">HttpRequestBuilder</a></div>
+
+<h1 id="httprequestbuilder">HttpRequestBuilder</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpRequestBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a></code></div>
+
+<p>Class for building <a href="../-http-request-data/index.html">HttpRequestData</a>.</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">HttpRequestBuilder</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>Class for building <a href="../-http-request-data/index.html">HttpRequestData</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="attributes.html">attributes</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">attributes</span><span class="symbol">: </span><a href="../../io.ktor.util/-attributes/index.html"><span class="identifier">Attributes</span></a></code></div>
+
+        <p>Call specific attributes.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="body.html">body</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">body</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></div>
+
+        <p>The <a href="body.html">body</a> for this request. Initially <a href="../../io.ktor.client.utils/-empty-content/index.html">EmptyContent</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="execution-context.html">executionContext</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">executionContext</span><span class="symbol">: </span><span class="identifier">Job</span></code></div>
+
+        <p>A deferred used to control the execution of this request.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="headers.html">headers</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers-builder/index.html"><span class="identifier">HeadersBuilder</span></a></code></div>
+
+        <p><a href="../../io.ktor.http/-headers-builder/index.html">HeadersBuilder</a> to configure the headers for this request.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="method.html">method</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">method</span><span class="symbol">: </span><a href="../../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a></code></div>
+
+        <p><a href="../../io.ktor.http/-http-method/index.html">HttpMethod</a> used by this request. <a href="../../io.ktor.http/-http-method/-get.html">HttpMethod.Get</a> by default.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="url.html">url</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">url</span><span class="symbol">: </span><a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a></code></div>
+
+        <p><a href="../../io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> to configure the URL for this request.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="build.html">build</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-http-request-data/index.html"><span class="identifier">HttpRequestData</span></a></code></div>
+
+        <p>Create immutable <a href="../-http-request-data/index.html">HttpRequestData</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get-capability-or-null.html">getCapabilityOrNull</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">getCapabilityOrNull</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$getCapabilityOrNull(io.ktor.client.engine.HttpClientEngineCapability((io.ktor.client.request.HttpRequestBuilder.getCapabilityOrNull.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.engine/-http-client-engine-capability.html"><span class="identifier">HttpClientEngineCapability</span></a><span class="symbol">&lt;</span><a href="get-capability-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="get-capability-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code></div>
+
+        <p>Retrieve capability by key.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="set-attributes.html">setAttributes</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">setAttributes</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$setAttributes(kotlin.Function1((io.ktor.util.Attributes, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.util/-attributes/index.html"><span class="identifier">Attributes</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set request specific attributes specified by <a href="set-attributes.html#io.ktor.client.request.HttpRequestBuilder$setAttributes(kotlin.Function1((io.ktor.util.Attributes, kotlin.Unit)))/block">block</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="set-capability.html">setCapability</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">setCapability</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$setCapability(io.ktor.client.engine.HttpClientEngineCapability((io.ktor.client.request.HttpRequestBuilder.setCapability.T)), io.ktor.client.request.HttpRequestBuilder.setCapability.T)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.engine/-http-client-engine-capability.html"><span class="identifier">HttpClientEngineCapability</span></a><span class="symbol">&lt;</span><a href="set-capability.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$setCapability(io.ktor.client.engine.HttpClientEngineCapability((io.ktor.client.request.HttpRequestBuilder.setCapability.T)), io.ktor.client.request.HttpRequestBuilder.setCapability.T)/capability">capability</span><span class="symbol">:</span>&nbsp;<a href="set-capability.html#T"><span class="identifier">T</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set capability configuration.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="take-from.html">takeFrom</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">takeFrom</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$takeFrom(io.ktor.client.request.HttpRequestBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Mutates <a href="#">this</a> copying all the data but execution context from another <a href="take-from.html#io.ktor.client.request.HttpRequestBuilder$takeFrom(io.ktor.client.request.HttpRequestBuilder)/builder">builder</a> using it as base.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="take-from-with-execution-context.html">takeFromWithExecutionContext</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">takeFromWithExecutionContext</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$takeFromWithExecutionContext(io.ktor.client.request.HttpRequestBuilder)/builder">builder</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Mutates <a href="#">this</a> copying all the data from another <a href="take-from-with-execution-context.html#io.ktor.client.request.HttpRequestBuilder$takeFromWithExecutionContext(io.ktor.client.request.HttpRequestBuilder)/builder">builder</a> using it as base.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="url.html">url</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">url</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request.HttpRequestBuilder$url(kotlin.Function2((io.ktor.http.URLBuilder, , kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Executes a <a href="url.html#io.ktor.client.request.HttpRequestBuilder$url(kotlin.Function2((io.ktor.http.URLBuilder, , kotlin.Unit)))/block">block</a> that configures the <a href="../../io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-properties">Extension Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.features/expect-success.html">expectSuccess</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">expectSuccess</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../host.html">host</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">host</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Gets the associated URL’s host.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../port.html">port</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Gets the associated URL’s port.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../accept.html">accept</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">accept</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request$accept(io.ktor.client.request.HttpRequestBuilder, io.ktor.http.ContentType)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets the <code>Accept</code> header with a specific <a href="../accept.html#io.ktor.client.request$accept(io.ktor.client.request.HttpRequestBuilder, io.ktor.http.ContentType)/contentType">contentType</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/charset.html">charset</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><s><span class="identifier">charset</span></s><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$charset(io.ktor.http.HttpMessageBuilder, java.nio.charset.Charset)/charset">charset</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.utils.io.charsets/-charset/index.html"><span class="identifier">Charset</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">?</span></code></div>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">charset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.utils.io.charsets/-charset/index.html"><span class="identifier">Charset</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse charset from <code>Content-Type</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/content-length.html">contentLength</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><s><span class="identifier">contentLength</span></s><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$contentLength(io.ktor.http.HttpMessageBuilder, kotlin.Int)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">contentLength</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>Content-Length</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/content-type.html">contentType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$contentType(io.ktor.http.HttpMessageBuilder, io.ktor.http.ContentType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set <code>Content-Type</code> header.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">contentType</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>Content-Type</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../cookie.html">cookie</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">cookie</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/maxAge">maxAge</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/expires">expires</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.util.date/-g-m-t-date/index.html"><span class="identifier">GMTDate</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/domain">domain</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/secure">secure</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/httpOnly">httpOnly</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/extensions">extensions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyMap()<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets a single header of <a href="#">key</a> with a specific <a href="../cookie.html#io.ktor.client.request$cookie(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, io.ktor.util.date.GMTDate, kotlin.String, kotlin.String, kotlin.Boolean, kotlin.Boolean, kotlin.collections.Map((kotlin.String, kotlin.String)))/value">value</a> if the value is not null.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/cookies.html">cookies</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">cookies</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.http/-cookie/index.html"><span class="identifier">Cookie</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Parse <code>Set-Cookie</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/etag.html">etag</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">etag</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>E-Tag</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/expires.html">expires</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">expires</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>Expires</code> header.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../header.html">header</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request$header(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="parameterName" id="io.ktor.client.request$header(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets a single header of <a href="../header.html#io.ktor.client.request$header(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/key">key</a> with a specific <a href="../header.html#io.ktor.client.request$header(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/value">value</a> if the value is not null.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../headers.html">headers</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">headers</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$headers(io.ktor.client.request.HttpRequestBuilder, kotlin.Function1((io.ktor.http.HeadersBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-headers-builder/index.html"><span class="identifier">HeadersBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-headers-builder/index.html"><span class="identifier">HeadersBuilder</span></a></code></div>
+
+        <p>Executes a <a href="../headers.html#io.ktor.client.request$headers(io.ktor.client.request.HttpRequestBuilder, kotlin.Function1((io.ktor.http.HeadersBuilder, kotlin.Unit)))/block">block</a> that configures the <a href="../../io.ktor.http/-headers-builder/index.html">HeadersBuilder</a> associated to this request.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/if-modified-since.html">ifModifiedSince</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">ifModifiedSince</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$ifModifiedSince(io.ktor.http.HttpMessageBuilder, java.util.Date)/date">date</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set <code>If-Modified-Since</code> header.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/if-none-match.html">ifNoneMatch</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">ifNoneMatch</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$ifNoneMatch(io.ktor.http.HttpMessageBuilder, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set <code>If-None-Match</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/last-modified.html">lastModified</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">lastModified</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>Last-Modified</code> header.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/max-age.html">maxAge</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">maxAge</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$maxAge(io.ktor.http.HttpMessageBuilder, kotlin.Int)/seconds">seconds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Append <code>Max-Age</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../parameter.html">parameter</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">parameter</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$parameter(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$parameter(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets a single URL query parameter of <a href="../parameter.html#io.ktor.client.request$parameter(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/key">key</a> with a specific <a href="../parameter.html#io.ktor.client.request$parameter(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.Any)/value">value</a> if the value is not null. Can not be used to set
+form parameters in the body.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../take-from.html">takeFrom</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">takeFrom</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$takeFrom(io.ktor.client.request.HttpRequestBuilder, io.ktor.client.request.HttpRequest)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../-http-request/index.html"><span class="identifier">HttpRequest</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Mutates <a href="../take-from/-this-.html">this</a> copying all the data from another <a href="../take-from.html#io.ktor.client.request$takeFrom(io.ktor.client.request.HttpRequestBuilder, io.ktor.client.request.HttpRequest)/request">request</a> using it as base.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">takeFrom</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$takeFrom(io.ktor.client.request.HttpRequestBuilder, io.ktor.client.request.HttpRequestData)/request">request</span><span class="symbol">:</span>&nbsp;<a href="../-http-request-data/index.html"><span class="identifier">HttpRequestData</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Sets the <a href="./index.html">HttpRequestBuilder</a> from <a href="../take-from.html#io.ktor.client.request$takeFrom(io.ktor.client.request.HttpRequestBuilder, io.ktor.client.request.HttpRequestData)/request">request</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.features/timeout.html">timeout</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">timeout</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features$timeout(io.ktor.client.request.HttpRequestBuilder, kotlin.Function1((io.ktor.client.features.HttpTimeout.HttpTimeoutCapabilityConfiguration, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.features/-http-timeout/-http-timeout-capability-configuration/index.html"><span class="identifier">HttpTimeoutCapabilityConfiguration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Adds timeout boundaries to the request. Requires <a href="../../io.ktor.client.features/-http-timeout/index.html">HttpTimeout</a> feature to be installed.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../url.html">url</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Executes a <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</a> that configures the <a href="../../io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/scheme">scheme</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"http"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"localhost"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_PORT<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"/"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets the <a href="../url.html">url</a> using the specified <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/scheme">scheme</a>, <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/host">host</a>, <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/port">port</a> and <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/path">path</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String)/urlString">urlString</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, kotlin.String)/urlString">urlString</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, io.ktor.http.Url)/url">url</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-url/index.html"><span class="identifier">Url</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="identifier">url</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, java.net.URL)/url">url</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/URL.html"><span class="identifier">URL</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a></code></div>
+
+        <p>Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html#io.ktor.client.request$url(io.ktor.client.request.HttpRequestBuilder, io.ktor.http.Url)/url">url</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/user-agent.html">userAgent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">userAgent</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$userAgent(io.ktor.http.HttpMessageBuilder, kotlin.String)/content">content</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set <code>User-Agent</code> header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.http/vary.html">vary</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../../io.ktor.http/-http-message-builder/index.html"><span class="identifier">HttpMessageBuilder</span></a><span class="symbol">.</span><span class="identifier">vary</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></div>
+
+        <p>Parse <code>Vary</code> header value.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-extension-functions">Companion Object Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../invoke.html">invoke</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">HttpRequestBuilder.Companion</span><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Executes a <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</a> that configures the <a href="../../io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to thisrequest.</p>
+
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">HttpRequestBuilder.Companion</span><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/scheme">scheme</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"http"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"localhost"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_PORT<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"/"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.http/-u-r-l-builder/index.html"><span class="identifier">URLBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Constructs a <a href="./index.html">HttpRequestBuilder</a> from URL information: <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/scheme">scheme</a>, <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/host">host</a>, <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/port">port</a> and <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/path">path</a>
+and optionally further configures it using <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, kotlin.String, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.http.URLBuilder, kotlin.Unit)))/block">block</a>.</p>
+
+        <div class="signature"><code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">HttpRequestBuilder.Companion</span><span class="symbol">.</span><span class="identifier">invoke</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, java.net.URL)/url">url</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/net/URL.html"><span class="identifier">URL</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">HttpRequestBuilder</span></a></code></div>
+
+        <p>Constructs a <a href="./index.html">HttpRequestBuilder</a> from <a href="../invoke.html#io.ktor.client.request$invoke(io.ktor.client.request.HttpRequestBuilder.Companion, java.net.URL)/url">url</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
