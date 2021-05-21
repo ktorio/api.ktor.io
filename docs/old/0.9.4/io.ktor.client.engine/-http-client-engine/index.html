@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HttpClientEngine -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//0.9.4/io.ktor.client.engine/-http-client-engine/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/0.9.4/">Ktor 0.9.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.client.engine</a> / <a href="./index.html">HttpClientEngine</a></div>
+
+<h1 id="httpclientengine">HttpClientEngine</h1>
+
+<div class="signature"><code><span class="keyword">interface </span><span class="identifier">HttpClientEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Closeable</span></code></div>
+
+<p>Base interface use to define engines for <a href="#">HttpClient</a>.</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="config.html">config</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">config</span><span class="symbol">: </span><a href="../-http-client-engine-config/index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Engine configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="dispatcher.html">dispatcher</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">dispatcher</span><span class="symbol">: </span><span class="identifier">CoroutineDispatcher</span></code></div>
+
+        <p><a href="#">CoroutineDispatcher</a> specified for io operations.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="execute.html">execute</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/call">call</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/data">data</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.request/-http-request-data/index.html"><span class="identifier">HttpRequestData</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="../../io.ktor.client.call/-http-engine-call/index.html"><span class="identifier">HttpEngineCall</span></a></code></div>
+
+        <p>Creates a new <a href="../../io.ktor.client.call/-http-client-call/index.html">HttpClientCall</a> specific for this engine, using a request <a href="execute.html#io.ktor.client.engine.HttpClientEngine$execute(io.ktor.client.call.HttpClientCall, io.ktor.client.request.HttpRequestData)/data">data</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.android/-android-client-engine/index.html">AndroidClientEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AndroidClientEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.md"><span class="identifier">HttpClientEngine</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.mock/-mock-engine/index.html">MockEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">MockEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.md"><span class="identifier">HttpClientEngine</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.okhttp/-ok-http-engine/index.html">OkHttpEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">OkHttpEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.md"><span class="identifier">HttpClientEngine</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.server.testing.client/-test-http-client-engine/index.html">TestHttpClientEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">TestHttpClientEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.md"><span class="identifier">HttpClientEngine</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

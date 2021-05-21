@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>webSocket -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.2/io.ktor.websocket/web-socket.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.2/">Ktor 1.2.2</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="index.html">io.ktor.websocket</a> / <a href="./web-socket.html">webSocket</a></div>
+
+<h1 id="websocket">webSocket</h1>
+
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocket</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-default-web-socket-server-session.html"><span class="identifier">DefaultWebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+  <p>Bind websocket at the current route optionally checking for websocket <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+
+  <p><a href="../io.ktor.http.cio.websocket/-web-socket-session/incoming.html">DefaultWebSocketSession.incoming</a> will never contain any control frames and no fragmented frames could be found.
+Default websocket implementation is handling ping/pongs, timeouts, close frames and reassembling fragmented frames</p>
+
+  <p>When a websocket session is created, a <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</a> lambda will be called with websocket session instance on receiver.
+Once <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</a> function returns, the websocket termination sequence will be scheduled so you shouldn’t use
+<a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html">DefaultWebSocketSession</a> anymore. However websocket could live for a while until close sequence completed or
+a timeout exceeds</p>
+
+</div>
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.routing/-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">webSocket</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-default-web-socket-server-session.html"><span class="identifier">DefaultWebSocketServerSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+  <p>Bind websocket at the current route + <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/path">path</a> optionally checking for websocket <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/protocol">protocol</a> (ignored if <code>null</code>)
+Requires <a href="-web-sockets/index.html">WebSockets</a> feature to be installed first</p>
+
+  <p><a href="../io.ktor.http.cio.websocket/-web-socket-session/incoming.html">DefaultWebSocketSession.incoming</a> will never contain any control frames and no fragmented frames could be found.
+Default websocket implementation is handling ping/pongs, timeouts, close frames and reassembling fragmented frames</p>
+
+  <p>When a websocket session is created, a <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</a> lambda will be called with websocket session instance on receiver.
+Once <a href="web-socket.html#io.ktor.websocket$webSocket(io.ktor.routing.Route, kotlin.String, kotlin.String, kotlin.SuspendFunction1((io.ktor.websocket.DefaultWebSocketServerSession, kotlin.Unit)))/handler">handler</a> function returns, the websocket termination sequence will be scheduled so you shouldn’t use
+<a href="../io.ktor.http.cio.websocket/-default-web-socket-session/index.html">DefaultWebSocketSession</a> anymore. However websocket could live for a while until close sequence completed or
+a timeout exceeds</p>
+
+</div>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
