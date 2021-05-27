@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attributes -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.4/io.ktor.util/-attributes/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.4/">Ktor 1.5.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.util</a> / <a href="./index.html">Attributes</a></div>
+
+<h1 id="attributes">Attributes</h1>
+
+<div class="signature"><code><span class="keyword">interface </span><span class="identifier">Attributes</span></code></div>
+
+<p>Map of attributes accessible by <a href="../-attribute-key/index.html">AttributeKey</a> in a typed manner</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="all-keys.html">allKeys</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">allKeys</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></div>
+
+        <p>Returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a> of all <a href="../-attribute-key/index.html">AttributeKey</a> instances in this map</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="compute-if-absent.html">computeIfAbsent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">computeIfAbsent</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util.Attributes$computeIfAbsent(io.ktor.util.AttributeKey((io.ktor.util.Attributes.computeIfAbsent.T)), kotlin.Function0((io.ktor.util.Attributes.computeIfAbsent.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="compute-if-absent.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util.Attributes$computeIfAbsent(io.ktor.util.AttributeKey((io.ktor.util.Attributes.computeIfAbsent.T)), kotlin.Function0((io.ktor.util.Attributes.computeIfAbsent.T)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="compute-if-absent.html#T"><span class="identifier">T</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="compute-if-absent.html#T"><span class="identifier">T</span></a></code></div>
+
+        <p>Gets a value of the attribute for the specified <a href="compute-if-absent.html#io.ktor.util.Attributes$computeIfAbsent(io.ktor.util.AttributeKey((io.ktor.util.Attributes.computeIfAbsent.T)), kotlin.Function0((io.ktor.util.Attributes.computeIfAbsent.T)))/key">key</a>, or calls supplied <a href="compute-if-absent.html#io.ktor.util.Attributes$computeIfAbsent(io.ktor.util.AttributeKey((io.ktor.util.Attributes.computeIfAbsent.T)), kotlin.Function0((io.ktor.util.Attributes.computeIfAbsent.T)))/block">block</a> to compute its value</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="contains.html">contains</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">contains</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$contains(io.ktor.util.AttributeKey((kotlin.Any)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Checks if an attribute with the specified <a href="contains.html#io.ktor.util.Attributes$contains(io.ktor.util.AttributeKey((kotlin.Any)))/key">key</a> exists</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get.html">get</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">get</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$get(io.ktor.util.AttributeKey((io.ktor.util.Attributes.get.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="get.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="get.html#T"><span class="identifier">T</span></a></code></div>
+
+        <p>Gets a value of the attribute for the specified <a href="get.html#io.ktor.util.Attributes$get(io.ktor.util.AttributeKey((io.ktor.util.Attributes.get.T)))/key">key</a>, or throws an exception if an attribute doesn’t exist</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get-or-null.html">getOrNull</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">getOrNull</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$getOrNull(io.ktor.util.AttributeKey((io.ktor.util.Attributes.getOrNull.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="get-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="get-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code></div>
+
+        <p>Gets a value of the attribute for the specified <a href="get-or-null.html#io.ktor.util.Attributes$getOrNull(io.ktor.util.AttributeKey((io.ktor.util.Attributes.getOrNull.T)))/key">key</a>, or return <code>null</code> if an attribute doesn’t exist</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="put.html">put</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">put</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util.Attributes$put(io.ktor.util.AttributeKey((io.ktor.util.Attributes.put.T)), io.ktor.util.Attributes.put.T)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="put.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.util.Attributes$put(io.ktor.util.AttributeKey((io.ktor.util.Attributes.put.T)), io.ktor.util.Attributes.put.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="put.html#T"><span class="identifier">T</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Creates or changes an attribute with the specified <a href="put.html#io.ktor.util.Attributes$put(io.ktor.util.AttributeKey((io.ktor.util.Attributes.put.T)), io.ktor.util.Attributes.put.T)/key">key</a> using <a href="put.html#io.ktor.util.Attributes$put(io.ktor.util.AttributeKey((io.ktor.util.Attributes.put.T)), io.ktor.util.Attributes.put.T)/value">value</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="remove.html">remove</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">remove</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$remove(io.ktor.util.AttributeKey((io.ktor.util.Attributes.remove.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="remove.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Removes an attribute with the specified <a href="remove.html#io.ktor.util.Attributes$remove(io.ktor.util.AttributeKey((io.ktor.util.Attributes.remove.T)))/key">key</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="take.html">take</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">take</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$take(io.ktor.util.AttributeKey((io.ktor.util.Attributes.take.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="take.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="take.html#T"><span class="identifier">T</span></a></code></div>
+
+        <p>Removes an attribute with the specified <a href="take.html#io.ktor.util.Attributes$take(io.ktor.util.AttributeKey((io.ktor.util.Attributes.take.T)))/key">key</a> and returns its current value, throws an exception if an attribute doesn’t exist</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="take-or-null.html">takeOrNull</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">takeOrNull</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.util.Attributes$takeOrNull(io.ktor.util.AttributeKey((io.ktor.util.Attributes.takeOrNull.T)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="../-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="take-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="take-or-null.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code></div>
+
+        <p>Removes an attribute with the specified <a href="take-or-null.html#io.ktor.util.Attributes$takeOrNull(io.ktor.util.AttributeKey((io.ktor.util.Attributes.takeOrNull.T)))/key">key</a> and returns its current value, returns <code>null</code> if an attribute doesn’t exist</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

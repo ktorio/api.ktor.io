@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>host -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.1.3/io.ktor.routing/host.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.1.3/">Ktor 1.1.3</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="index.html">io.ktor.routing</a> / <a href="./host.html">host</a></div>
+
+<h1 id="host">host</h1>
+
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">host</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.String, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-route/index.html"><span class="identifier">Route</span></a></code></div>
+
+  <p>Create a route to match request host and port.
+There are no any host resolutions/transformations applied to a host: a request host is treated as a string.</p>
+
+  <p>When passes it puts request host and port into
+call parameters by keys <a href="-host-route-selector/-host-name-parameter.html">HostRouteSelector.HostNameParameter</a> and <a href="-host-route-selector/-port-parameter.html">HostRouteSelector.PortParameter</a></p>
+
+  <h3 id="parameters">Parameters</h3>
+
+  <p><code>host</code> - exact host name that is treated literally</p>
+
+  <p><code>port</code> - to be tested or <code>0</code> to pass all ports</p>
+
+</div>
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">host</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.text.Regex, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hostPattern">hostPattern</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/index.html"><span class="identifier">Regex</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.text.Regex, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.text.Regex, kotlin.Int, kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-route/index.html"><span class="identifier">Route</span></a></code></div>
+
+  <p>Create a route to match request host and port.
+There are no any host resolutions/transformations applied to a host: a request host is treated as a string.</p>
+
+  <p>When passes it puts request host and port into
+call parameters by keys <a href="-host-route-selector/-host-name-parameter.html">HostRouteSelector.HostNameParameter</a> and <a href="-host-route-selector/-port-parameter.html">HostRouteSelector.PortParameter</a></p>
+
+  <h3 id="parameters-1">Parameters</h3>
+
+  <p><code>hostPattern</code> - is a  regular expression to match request host</p>
+
+  <p><code>port</code> - to be tested or <code>0</code> to pass all ports</p>
+
+</div>
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">host</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hosts">hosts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/ports">ports</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-route/index.html"><span class="identifier">Route</span></a></code></div>
+
+  <p>Create a route to match request host and port.
+There are no any host resolutions/transformations applied to a host: a request host is treated as a string.</p>
+
+  <p>When passes it puts request host and port into
+call parameters by keys <a href="-host-route-selector/-host-name-parameter.html">HostRouteSelector.HostNameParameter</a> and <a href="-host-route-selector/-port-parameter.html">HostRouteSelector.PortParameter</a></p>
+
+  <h3 id="parameters-2">Parameters</h3>
+
+  <p><code>hosts</code> - a list of exact host names that are treated literally</p>
+
+  <p><code>ports</code> - a list of ports to be passed or empty to pass all ports</p>
+
+  <h3 id="exceptions">Exceptions</h3>
+
+  <p><code>IllegalArgumentException</code> - when no constraints were applied in <a href="host.html#io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hosts">hosts</a> and <a href="host.html#io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/ports">ports</a></p>
+
+</div>
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="identifier">host</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hosts">hosts</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hostPatterns">hostPatterns</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/index.html"><span class="identifier">Regex</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/ports">ports</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/build">build</span><span class="symbol">:</span>&nbsp;<a href="-route/index.html"><span class="identifier">Route</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-route/index.html"><span class="identifier">Route</span></a></code></div>
+
+  <p>Create a route to match request host and port.
+There are no any host resolutions/transformations applied to a host: a request host is treated as a string.</p>
+
+  <p>When passes it puts request host and port into
+call parameters by keys <a href="-host-route-selector/-host-name-parameter.html">HostRouteSelector.HostNameParameter</a> and <a href="-host-route-selector/-port-parameter.html">HostRouteSelector.PortParameter</a></p>
+
+  <h3 id="parameters-3">Parameters</h3>
+
+  <p><code>hosts</code> - a list of exact host names that are treated literally</p>
+
+  <p><code>hostPatterns</code> - a list of regular expressions to match request host</p>
+
+  <p><code>ports</code> - a list of ports to be passed or empty to pass all ports</p>
+
+  <h3 id="exceptions-1">Exceptions</h3>
+
+  <p><code>IllegalArgumentException</code> - when no constraints were applied in <a href="./host.html">host</a>, <a href="host.html#io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/hostPatterns">hostPatterns</a> and <a href="host.html#io.ktor.routing$host(io.ktor.routing.Route, kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.text.Regex)), kotlin.collections.List((kotlin.Int)), kotlin.Function1((io.ktor.routing.Route, kotlin.Unit)))/ports">ports</a></p>
+
+</div>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

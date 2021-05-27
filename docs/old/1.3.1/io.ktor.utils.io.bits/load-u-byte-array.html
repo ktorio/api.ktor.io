@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>loadUByteArray -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.3.1/io.ktor.utils.io.bits/load-u-byte-array.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.3.1/">Ktor 1.3.1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="index.html">io.ktor.utils.io.bits</a> / <a href="./load-u-byte-array.html">loadUByteArray</a></div>
+
+<h1 id="loadubytearray">loadUByteArray</h1>
+
+<div class="signature"><code><span class="keyword">inline</span> <span class="keyword">fun </span><a href="-memory/index.html"><span class="identifier">Memory</span></a><span class="symbol">.</span><span class="identifier">loadUByteArray</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/destination">destination</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/destinationOffset">destinationOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;destination.size - destinationOffset<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+<div class="signature"><code><span class="keyword">inline</span> <span class="keyword">fun </span><a href="-memory/index.html"><span class="identifier">Memory</span></a><span class="symbol">.</span><span class="identifier">loadUByteArray</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Long, , kotlin.Int, kotlin.Int)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Long, , kotlin.Int, kotlin.Int)/destination">destination</span><span class="symbol">:</span>&nbsp;<span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Long, , kotlin.Int, kotlin.Int)/destinationOffset">destinationOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Long, , kotlin.Int, kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;destination.size - destinationOffset<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+<p>Copies unsigned shorts integers from this memory range from the specified <a href="load-u-byte-array.html#io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/offset">offset</a> and <a href="load-u-byte-array.html#io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/count">count</a>
+to the <a href="load-u-byte-array.html#io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/destination">destination</a> at <a href="load-u-byte-array.html#io.ktor.utils.io.bits$loadUByteArray(io.ktor.utils.io.bits.Memory, kotlin.Int, , kotlin.Int, kotlin.Int)/destinationOffset">destinationOffset</a> interpreting numbers in the network order (Big Endian).</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<p><code>destinationOffset</code> - items</p>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

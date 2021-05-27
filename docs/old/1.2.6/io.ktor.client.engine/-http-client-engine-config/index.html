@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HttpClientEngineConfig -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.6/io.ktor.client.engine/-http-client-engine-config/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.6/">Ktor 1.2.6</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.client.engine</a> / <a href="./index.html">HttpClientEngineConfig</a></div>
+
+<h1 id="httpclientengineconfig">HttpClientEngineConfig</h1>
+
+<div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HttpClientEngineConfig</span></code></div>
+
+<p>Base configuration for <a href="../-http-client-engine/index.html">HttpClientEngine</a>.</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">HttpClientEngineConfig</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>Base configuration for <a href="../-http-client-engine/index.html">HttpClientEngine</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="dispatcher.html">dispatcher</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><s><span class="identifier">dispatcher</span></s><span class="symbol">: </span><span class="identifier">CoroutineDispatcher</span><span class="symbol">?</span></code></div>
+
+        <p>The <a href="#">CoroutineDispatcher</a> that will be used for the client requests.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="pipelining.html">pipelining</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">pipelining</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Enable http pipelining advice.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="response.html">response</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">response</span><span class="symbol">: </span><a href="../../io.ktor.client.response/-http-response-config/index.html"><span class="identifier">HttpResponseConfig</span></a></code></div>
+
+        <p>Configuration for http response.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="threads-count.html">threadsCount</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">threadsCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Network threads count advice.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.android/-android-engine-config/index.html">AndroidEngineConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">AndroidEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Configuration for <a href="../../io.ktor.client.engine.android/-android/index.html">Android</a> client engine.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.apache/-apache-engine-config/index.html">ApacheEngineConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ApacheEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Configuration for <a href="../../io.ktor.client.engine.apache/-apache/index.html">Apache</a> implementation of <a href="../-http-client-engine-factory/index.html">HttpClientEngineFactory</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.cio/-c-i-o-engine-config/index.html">CIOEngineConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CIOEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Configuration for <a href="../../io.ktor.client.engine.cio/-c-i-o/index.html">CIO</a> client engine.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.jetty/-jetty-engine-config/index.html">JettyEngineConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">JettyEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Configuration for <a href="../../io.ktor.client.engine.jetty/-jetty/index.html">Jetty</a> implementation of <a href="../-http-client-engine-factory/index.html">HttpClientEngineFactory</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.mock/-mock-engine-config/index.html">MockEngineConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">MockEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p><a href="./index.html">HttpClientEngineConfig</a> for <a href="../../io.ktor.client.engine.mock/-mock-engine/index.html">MockEngine</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine.okhttp/-ok-http-config/index.html">OkHttpConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">OkHttpConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+        <p>Configuration for <a href="../../io.ktor.client.engine.okhttp/-ok-http/index.html">OkHttp</a> client engine.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.server.testing.client/-test-http-client-config/index.html">TestHttpClientConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">TestHttpClientConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

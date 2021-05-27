@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebSocketDeflateExtension -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.0/io.ktor.http.cio.websocket/-web-socket-deflate-extension/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.0/">Ktor 1.5.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http.cio.websocket</a> / <a href="./index.html">WebSocketDeflateExtension</a></div>
+
+<h1 id="websocketdeflateextension">WebSocketDeflateExtension</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">WebSocketDeflateExtension</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-web-socket-extension/index.html"><span class="identifier">WebSocketExtension</span></a><span class="symbol">&lt;</span><a href="-config/index.html"><span class="identifier">Config</span></a><span class="symbol">&gt;</span></code></div>
+
+<p>Compress and decompress WebSocket frames to reduce amount of transferred bytes.</p>
+
+<p>Usage</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">install</span><span class="p">(</span><span class="nc">WebSockets</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">extensions</span> <span class="p">{</span>
+        <span class="nf">install</span><span class="p">(</span><span class="nc">WebSocketDeflateExtension</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Implements WebSocket deflate extension from <a href="https://tools.ietf.org/html/rfc7692">RFC-7692</a>.
+This implementation is using window size = 15 due to limitations of <a href="http://docs.oracle.com/javase/6/docs/api/java/util/zip/Deflater.html">Deflater</a> implementation.</p>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-companion/index.html">Companion</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">Companion</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../-web-socket-extension-factory/index.html"><span class="identifier">WebSocketExtensionFactory</span></a><span class="symbol">&lt;</span><a href="-config/index.html"><span class="identifier">Config</span></a><span class="symbol">,</span>&nbsp;<a href="./index.html"><span class="identifier">WebSocketDeflateExtension</span></a><span class="symbol">&gt;</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-config/index.html">Config</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Config</span></code></div>
+
+        <p>WebSocket deflate extension configuration.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="factory.html">factory</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">factory</span><span class="symbol">: </span><a href="../-web-socket-extension-factory/index.html"><span class="identifier">WebSocketExtensionFactory</span></a><span class="symbol">&lt;</span><a href="-config/index.html"><span class="identifier">Config</span></a><span class="symbol">,</span>&nbsp;<span class="keyword">out</span>&nbsp;<a href="../-web-socket-extension/index.html"><span class="identifier">WebSocketExtension</span></a><span class="symbol">&lt;</span><a href="-config/index.html"><span class="identifier">Config</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></div>
+
+        <p>Reference to the <a href="../-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a>, which produced this extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="protocols.html">protocols</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">protocols</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-web-socket-extension-header/index.html"><span class="identifier">WebSocketExtensionHeader</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>List of WebSocket extension protocols which will be sent by client in headers.
+They are required to inform server that client wants to negotiate current extension.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="client-negotiation.html">clientNegotiation</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">clientNegotiation</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketDeflateExtension$clientNegotiation(kotlin.collections.List((io.ktor.http.cio.websocket.WebSocketExtensionHeader)))/negotiatedProtocols">negotiatedProtocols</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-web-socket-extension-header/index.html"><span class="identifier">WebSocketExtensionHeader</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>This method is called only for a client, when it receives the WebSocket upgrade response.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="process-incoming-frame.html">processIncomingFrame</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">processIncomingFrame</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketDeflateExtension$processIncomingFrame(io.ktor.http.cio.websocket.Frame)/frame">frame</span><span class="symbol">:</span>&nbsp;<a href="../-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-frame/index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>This method is called on each incoming frame before handling it in WebSocket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="process-outgoing-frame.html">processOutgoingFrame</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">processOutgoingFrame</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketDeflateExtension$processOutgoingFrame(io.ktor.http.cio.websocket.Frame)/frame">frame</span><span class="symbol">:</span>&nbsp;<a href="../-frame/index.html"><span class="identifier">Frame</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-frame/index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>This method is called on each outgoing frame and handle it before sending.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="server-negotiation.html">serverNegotiation</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">serverNegotiation</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketDeflateExtension$serverNegotiation(kotlin.collections.List((io.ktor.http.cio.websocket.WebSocketExtensionHeader)))/requestedProtocols">requestedProtocols</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-web-socket-extension-header/index.html"><span class="identifier">WebSocketExtensionHeader</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-web-socket-extension-header/index.html"><span class="identifier">WebSocketExtensionHeader</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>This method is called only for a server, when it receives websocket session.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="key.html">key</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">WebSocketDeflateExtension</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Key is used to locate extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv1.html">rsv1</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">rsv1</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>First extension bit used by current extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv2.html">rsv2</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">rsv2</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Second extension bit used by current extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv3.html">rsv3</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">rsv3</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Third extension bit used by current extension.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-functions">Companion Object Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="install.html">install</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketDeflateExtension.Companion$install(kotlin.Function1((io.ktor.http.cio.websocket.WebSocketDeflateExtension.Config, kotlin.Unit)))/config">config</span><span class="symbol">:</span>&nbsp;<a href="-config/index.html"><span class="identifier">Config</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">WebSocketDeflateExtension</span></a></code></div>
+
+        <p>Create extension instance using <a href="../-web-socket-extension-factory/install.html#io.ktor.http.cio.websocket.WebSocketExtensionFactory$install(kotlin.Function1((io.ktor.http.cio.websocket.WebSocketExtensionFactory.ConfigType, kotlin.Unit)))/config">config</a> block. The extension instance is created for each WebSocket request.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CallId -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//0.9.5/io.ktor.features/-call-id/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/0.9.5/">Ktor 0.9.5</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.features</a> / <a href="./index.html">CallId</a></div>
+
+<h1 id="callid">CallId</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">CallId</span></code></div>
+
+<p>Retrieves and generates if necessary a call id. A call id (or correlation id) could be retrieved_ from a call
+via <a href="-configuration/retrieve.html">CallId.Configuration.retrieve</a> function. Multiple retrieve functions could be configured that will be invoked
+one by one until one of them return non-null value. If no value has been provided by retrievers then a generator
+could be applied to generate a new call id. Generators could be provided via <a href="-configuration/generate.html">CallId.Configuration.generate</a> function.
+Similar to retrieve, multiple generators could be configured so they will be invoked one by one.
+Usually call id is passed via <a href="../../io.ktor.http/-http-headers/-x-request-id.html">io.ktor.http.HttpHeaders.XRequestId</a> so
+one could use <a href="-configuration/retrieve-from-header.html">CallId.Configuration.retrieveFromHeader</a> function to retrieve call id from a header.</p>
+
+<p>All retrieved or generated call ids are verified against <a href="../-c-a-l-l_-i-d_-d-e-f-a-u-l-t_-d-i-c-t-i-o-n-a-r-y.html">CALL_ID_DEFAULT_DICTIONARY</a> by default. Alternatively
+a custom dictionary or functional predicate could be provided via <a href="-configuration/verify.html">CallId.Configuration.verify</a> that could
+pass a valid call id, discard an illegal call id
+or reject completely an <a href="../../io.ktor.application/-application-call/index.html">ApplicationCall</a> with <a href="../../io.ktor.http/-http-status-code/-bad-request.html">HttpStatusCode.BadRequest</a> if an <a href="../-rejected-call-id-exception/index.html">RejectedCallIdException</a> is thrown.
+Please note that this rejection functionality is not compatible with <a href="../-status-pages/index.html">StatusPages</a> for now and you cannot
+configure rejection response message.</p>
+
+<p>Once a call id is retrieved or generated, it could be accessed via <a href="../call-id.html">ApplicationCall.callId</a> otherwise it will be
+always <code>null</code>. Also a call id could be replied with response by registering <a href="-configuration/reply.html">CallId.Configuration.reply</a> or
+<a href="-configuration/reply-to-header.html">CallId.Configuration.replyToHeader</a> so client will be able to know call id in case when it is generated.</p>
+
+<p>Please note that call id feature is only intended for debugging and troubleshooting purposes to correlate
+client requests with logs in multitier/microservices architecture. So usually it is not guaranteed that call id
+is strictly random/unique. This is why you should NEVER rely on it’s uniqueness.</p>
+
+<p><a href="./index.md">CallId</a> feature will be installed to <a href="-feature/phase.html">CallId.phase</a> into <a href="../../io.ktor.application/-application-call-pipeline/index.html">ApplicationCallPipeline</a>.</p>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-configuration/index.html">Configuration</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Configuration</span></code></div>
+
+        <p><a href="./index.md">CallId</a> feature’s configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-feature/index.html">Feature</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">Feature</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">,</span>&nbsp;<a href="-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">,</span>&nbsp;<a href="./index.md"><span class="identifier">CallId</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Installable feature for <a href="./index.md">CallId</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="key.html">key</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="./index.md"><span class="identifier">CallId</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Unique key that identifies a feature</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="phase.html">phase</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">phase</span><span class="symbol">: </span><a href="../../io.ktor.pipeline/-pipeline-phase.html"><span class="identifier">PipelinePhase</span></a></code></div>
+
+        <p><a href="../../io.ktor.application/-application-call-pipeline/index.html">ApplicationCallPipeline</a>’s phase which this feature will be installed to</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-functions">Companion Object Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="install.html">install</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.CallId.Feature$install(io.ktor.application.ApplicationCallPipeline, kotlin.Function1((io.ktor.features.CallId.Configuration, kotlin.Unit)))/pipeline">pipeline</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.CallId.Feature$install(io.ktor.application.ApplicationCallPipeline, kotlin.Function1((io.ktor.features.CallId.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.md"><span class="identifier">CallId</span></a></code></div>
+
+        <p>Feature installation script</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

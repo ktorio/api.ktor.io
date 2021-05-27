@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.sessions -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.2/io.ktor.sessions/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.2/">Ktor 1.5.2</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktorsessions">Package io.ktor.sessions</h2>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-cache/index.html">Cache</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">Cache</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cache-storage/index.html">CacheStorage</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CacheStorage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cookie-configuration/index.html">CookieConfiguration</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CookieConfiguration</span></code></div>
+
+        <p>Cookie configuration being used to send sessions</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CookieIdSessionBuilder</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-cookie-session-builder/index.html"><span class="identifier">CookieSessionBuilder</span></a><span class="symbol">&lt;</span><a href="-cookie-id-session-builder/index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Cookie session configuration builder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cookie-session-builder/index.html">CookieSessionBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CookieSessionBuilder</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Cookie session configuration builder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-current-session/index.html">CurrentSession</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">CurrentSession</span></code></div>
+
+        <p>Represents a container for all session instances</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-header-id-session-builder/index.html">HeaderIdSessionBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HeaderIdSessionBuilder</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-header-session-builder/index.html"><span class="identifier">HeaderSessionBuilder</span></a><span class="symbol">&lt;</span><a href="-header-id-session-builder/index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Header session configuration builder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-header-session-builder/index.html">HeaderSessionBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HeaderSessionBuilder</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Header session configuration builder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-provider/index.html">SessionProvider</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionProvider</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Specifies a provider for a session with the specific <a href="-session-provider/name.html">name</a> and <a href="-session-provider/type.html">type</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-serializer/index.html">SessionSerializer</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">SessionSerializer</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></div>
+
+        <p>Serializes session from and to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-serializer-reflection/index.html">SessionSerializerReflection</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><s><span class="identifier">SessionSerializerReflection</span></s><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-session-serializer/index.html"><span class="identifier">SessionSerializer</span></a><span class="symbol">&lt;</span><a href="-session-serializer-reflection/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Default reflection-based session serializer that does it via reflection.
+Serialized format is textual and optimized for size as it is could be transferred via HTTP headers or cookies</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-storage/index.html">SessionStorage</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">SessionStorage</span></code></div>
+
+        <p>Represents a way to <a href="-session-storage/write.html">write</a>, <a href="-session-storage/read.html">read</a> and <a href="-session-storage/invalidate.html">invalidate</a> session bits.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-storage-memory/index.html">SessionStorageMemory</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionStorageMemory</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a></code></div>
+
+        <p><a href="-session-storage/index.html">SessionStorage</a> that stores session contents into memory.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-tracker/index.html">SessionTracker</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">SessionTracker</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>SessionTracker provides ability to track and extract session from the call context.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-tracker-by-id/index.html">SessionTrackerById</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTrackerById</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-tracker/index.html"><span class="identifier">SessionTracker</span></a><span class="symbol">&lt;</span><a href="-session-tracker-by-id/index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p><a href="-session-tracker/index.html">SessionTracker</a> that transfers a Session Id generated by a <a href="-session-tracker-by-id/session-id-provider.html">sessionIdProvider</a> in HTTP Headers/Cookies.
+It uses a <a href="-session-tracker-by-id/storage.html">storage</a> and a <a href="-session-tracker-by-id/serializer.html">serializer</a> to store/load serialized/deserialized session content of a specific <a href="-session-tracker-by-id/type.html">type</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-tracker-by-value/index.html">SessionTrackerByValue</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTrackerByValue</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-tracker/index.html"><span class="identifier">SessionTracker</span></a><span class="symbol">&lt;</span><a href="-session-tracker-by-value/index.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p><a href="-session-tracker/index.html">SessionTracker</a> that stores the contents of the session as part of HTTP Cookies/Headers.
+It uses a specific <a href="-session-tracker-by-value/serializer.html">serializer</a> to serialize and deserialize objects of type <a href="-session-tracker-by-value/type.html">type</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport/index.html">SessionTransport</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">SessionTransport</span></code></div>
+
+        <p>SessionTransport <a href="-session-transport/receive.html">receive</a>, <a href="-session-transport/send.html">send</a> or <a href="-session-transport/clear.html">clear</a> a session from/to an <a href="../io.ktor.application/-application-call/index.html">ApplicationCall</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-cookie/index.html">SessionTransportCookie</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTransportCookie</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-transport/index.html"><span class="identifier">SessionTransport</span></a></code></div>
+
+        <p>SessionTransport that adds a Set-Cookie header and reads Cookie header
+for the specified cookie <a href="-session-transport-cookie/name.html">name</a>, and a specific cookie <a href="-session-transport-cookie/configuration.html">configuration</a> after
+applying/un-applying the specified transforms defined by <a href="-session-transport-cookie/transformers.html">transformers</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-header/index.html">SessionTransportHeader</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTransportHeader</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-session-transport/index.html"><span class="identifier">SessionTransport</span></a></code></div>
+
+        <p>SessionTransport that sets or gets the specific header <a href="-session-transport-header/name.html">name</a>,
+applying/un-applying the specified transforms defined by <a href="-session-transport-header/transformers.html">transformers</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">SessionTransportTransformer</span></code></div>
+
+        <p>Represents a session cookie transformation. Useful for such things like signing and encryption</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-transformer-digest/index.html">SessionTransportTransformerDigest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><s><span class="identifier">SessionTransportTransformerDigest</span></s>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-session-transport-transformer/index.html"><span class="identifier">SessionTransportTransformer</span></a></code></div>
+
+        <p>Session transformer that appends an <a href="-session-transport-transformer-digest/algorithm.html">algorithm</a> hash of the input.
+Where the input is either a session contents or a previous transformation.
+It prepends a <a href="-session-transport-transformer-digest/salt.html">salt</a> when computing the hash.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-transformer-encrypt/index.html">SessionTransportTransformerEncrypt</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTransportTransformerEncrypt</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-session-transport-transformer/index.html"><span class="identifier">SessionTransportTransformer</span></a></code></div>
+
+        <p>Session transformer that encrypts/decrypts the input.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-session-transport-transformer-message-authentication/index.html">SessionTransportTransformerMessageAuthentication</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionTransportTransformerMessageAuthentication</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-session-transport-transformer/index.html"><span class="identifier">SessionTransportTransformer</span></a></code></div>
+
+        <p>Session transformer that appends an <a href="-session-transport-transformer-message-authentication/algorithm.html">algorithm</a> MAC (Message Authentication Code) hash of the input.
+Where the input is either a session contents or a previous transformation.
+It uses a specified <a href="-session-transport-transformer-message-authentication/key-spec.html">keySpec</a> when generating the Mac hash.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-sessions/index.html">Sessions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Sessions</span></code></div>
+
+        <p>Sessions feature that provides a mechanism to persist information between requests.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="exceptions">Exceptions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-session-not-yet-configured-exception/index.html">SessionNotYetConfiguredException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SessionNotYetConfiguredException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html"><span class="identifier">IllegalStateException</span></a></code></div>
+
+        <p>This exception is thrown when a session is asked too early before the <a href="-sessions/index.html">Sessions</a> feature had chance to configure it.
+For example, in a phase before <a href="../io.ktor.application/-application-call-pipeline/-features.html">ApplicationCallPipeline.Features</a> or in a feature installed before <a href="-sessions/index.html">Sessions</a> into
+the same phase.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-too-late-session-set-exception/index.html">TooLateSessionSetException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">TooLateSessionSetException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalStateException.html"><span class="identifier">IllegalStateException</span></a></code></div>
+
+        <p>This exception is thrown when HTTP response has been already sent but an attempt to modify session is made</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extensions-for-external-classes">Extensions for External Classes</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="kotlin.collections.-list/index.html">kotlin.collections.List</a></p>
+
+      </td>
+<td>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-d-e-f-a-u-l-t_-s-e-s-s-i-o-n_-m-a-x_-a-g-e.html">DEFAULT_SESSION_MAX_AGE</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_SESSION_MAX_AGE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="duration.html">duration</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="-cookie-configuration/index.html"><span class="identifier">CookieConfiguration</span></a><span class="symbol">.</span><s><span class="identifier">duration</span></s><span class="symbol">: </span><span class="identifier">TemporalAmount</span><span class="symbol">?</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="session-id.html">sessionId</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">sessionId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>Returns a sessionId for for a single session identified by ID.
+This will not work if there are multiple sessions by ID were registered or
+the <a href="-sessions/index.html">Sessions</a> feature is not installed.
+If you are using multiple sessions, please use <a href="session-id.html">sessionId</a> function instead.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="sessions.html">sessions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">sessions</span><span class="symbol">: </span><a href="-current-session/index.html"><span class="identifier">CurrentSession</span></a></code></div>
+
+        <p>Get current session or fail if no session feature installed</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="auto-serializer-of.html">autoSerializerOf</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <s><span class="identifier">autoSerializerOf</span></s><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-session-serializer-reflection/index.html"><span class="identifier">SessionSerializerReflection</span></a><span class="symbol">&lt;</span><a href="auto-serializer-of.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Creates the the default <a href="-session-serializer/index.html">SessionSerializer</a> for type <a href="auto-serializer-of.html#T">T</a></p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <s><span class="identifier">autoSerializerOf</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$autoSerializerOf(kotlin.reflect.KClass((io.ktor.sessions.autoSerializerOf.T)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="auto-serializer-of.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-session-serializer-reflection/index.html"><span class="identifier">SessionSerializerReflection</span></a><span class="symbol">&lt;</span><a href="auto-serializer-of.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Creates the the default <a href="-session-serializer/index.html">SessionSerializer</a> for class <a href="auto-serializer-of.html#io.ktor.sessions$autoSerializerOf(kotlin.reflect.KClass((io.ktor.sessions.autoSerializerOf.T)))/type">type</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="clear.html">clear</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-current-session/index.html"><span class="identifier">CurrentSession</span></a><span class="symbol">.</span><span class="identifier">clear</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Clear session instance with type <a href="clear.html#T">T</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="cookie.html">cookie</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">cookie</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage)/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage)/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">cookie</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage)/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">cookie</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-cookie-id-session-builder/index.html"><span class="identifier">CookieIdSessionBuilder</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure sessions to get it from cookie using session <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), io.ktor.sessions.SessionStorage)/storage">storage</a></p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">cookie</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-cookie-id-session-builder/index.html"><span class="identifier">CookieIdSessionBuilder</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configures a session using a cookie with the specified <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</a> using it as a session id.
+The actual content of the session is stored at server side using the specified <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/storage">storage</a>.
+The cookie configuration can be set inside <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.CookieIdSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</a> using the cookie property exposed by <a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">cookie</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">cookie</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure sessions to serialize to/from HTTP cookie</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">cookie</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-cookie-session-builder/index.html"><span class="identifier">CookieSessionBuilder</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configures a session using a cookie with the specified <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</a> using it as for the actual session content
+optionally transformed by specified transforms in <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</a>.
+The cookie configuration can be set inside <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</a> using the cookie property exposed by <a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">cookie</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-cookie-session-builder/index.html"><span class="identifier">CookieSessionBuilder</span></a><span class="symbol">&lt;</span><a href="cookie.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure sessions to serialize to/from HTTP cookie configuring it by <a href="cookie.html#io.ktor.sessions$cookie(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.cookie.S)), kotlin.Function1((io.ktor.sessions.CookieSessionBuilder((io.ktor.sessions.cookie.S)), kotlin.Unit)))/block">block</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="default-session-serializer.html">defaultSessionSerializer</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">defaultSessionSerializer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-session-serializer/index.html"><span class="identifier">SessionSerializer</span></a><span class="symbol">&lt;</span><a href="default-session-serializer.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> for type <a href="default-session-serializer.html#T">T</a></p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">defaultSessionSerializer</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$defaultSessionSerializer(kotlin.reflect.KType)/typeInfo">typeInfo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html"><span class="identifier">KType</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="-session-serializer/index.html"><span class="identifier">SessionSerializer</span></a><span class="symbol">&lt;</span><a href="default-session-serializer.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> by <a href="default-session-serializer.html#io.ktor.sessions$defaultSessionSerializer(kotlin.reflect.KType)/typeInfo">typeInfo</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="directory-session-storage.html">directorySessionStorage</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">directorySessionStorage</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$directorySessionStorage(java.io.File, kotlin.Boolean)/rootDir">rootDir</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$directorySessionStorage(java.io.File, kotlin.Boolean)/cached">cached</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<br /><span class="symbol">)</span><span class="symbol">: </span><a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a></code></div>
+
+        <p>Creates a session storage that serializes them into regular files under the specified <a href="directory-session-storage.html#io.ktor.sessions$directorySessionStorage(java.io.File, kotlin.Boolean)/rootDir">rootDir</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="generate-session-id.html">generateSessionId</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">generateSessionId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Generates a secure random session ID</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get.html">get</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-current-session/index.html"><span class="identifier">CurrentSession</span></a><span class="symbol">.</span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="get.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code></div>
+
+        <p>Get session instance with type <a href="get.html#T">T</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="get-or-set.html">getOrSet</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-current-session/index.html"><span class="identifier">CurrentSession</span></a><span class="symbol">.</span><span class="identifier">getOrSet</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$getOrSet(io.ktor.sessions.CurrentSession, kotlin.String, kotlin.Function0((io.ktor.sessions.getOrSet.T)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;findName(T::class)<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$getOrSet(io.ktor.sessions.CurrentSession, kotlin.String, kotlin.Function0((io.ktor.sessions.getOrSet.T)))/generator">generator</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="get-or-set.html#T"><span class="identifier">T</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="get-or-set.html#T"><span class="identifier">T</span></a></code></div>
+
+        <p>Get or generate a new session instance using <a href="get-or-set.html#io.ktor.sessions$getOrSet(io.ktor.sessions.CurrentSession, kotlin.String, kotlin.Function0((io.ktor.sessions.getOrSet.T)))/generator">generator</a> with type <a href="get-or-set.html#T">T</a> (or <a href="get-or-set.html#io.ktor.sessions$getOrSet(io.ktor.sessions.CurrentSession, kotlin.String, kotlin.Function0((io.ktor.sessions.getOrSet.T)))/name">name</a> if specified)</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="header.html">header</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">header</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage)/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage)/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage)/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure sessions to get it from HTTP header using session <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage)/storage">storage</a></p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-header-id-session-builder/index.html"><span class="identifier">HeaderIdSessionBuilder</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">header</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/storage">storage</span><span class="symbol">:</span>&nbsp;<a href="-session-storage/index.html"><span class="identifier">SessionStorage</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-header-id-session-builder/index.html"><span class="identifier">HeaderIdSessionBuilder</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configures a session using a header with the specified <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</a> using it as a session id.
+The actual content of the session is stored at server side using the specified <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, io.ktor.sessions.SessionStorage, kotlin.Function1((io.ktor.sessions.HeaderIdSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/storage">storage</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">header</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure sessions to serialize to/from HTTP header</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">header</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-header-session-builder/index.html"><span class="identifier">HeaderSessionBuilder</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configures a session using a header with the specified <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</a> using it for the actual session content
+optionally transformed by specified transforms in <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</a>.</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="-sessions/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">header</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/sessionType">sessionType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-header-session-builder/index.html"><span class="identifier">HeaderSessionBuilder</span></a><span class="symbol">&lt;</span><a href="header.html#S"><span class="identifier">S</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configures a session using a header with the specified <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/name">name</a> using it for the actual session content
+and apply <a href="header.html#io.ktor.sessions$header(io.ktor.sessions.Sessions.Configuration, kotlin.String, kotlin.reflect.KClass((io.ktor.sessions.header.S)), kotlin.Function1((io.ktor.sessions.HeaderSessionBuilder((io.ktor.sessions.header.S)), kotlin.Unit)))/block">block</a> function to configure serializataion and optional transformations</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="session-id.html">sessionId</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">SessionType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">sessionId</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>Returns the corresponding session ID for the type <a href="session-id.html#SessionType">SessionType</a> or <code>null</code> if no session provided.
+It will crash if no session provider for type <a href="session-id.html#SessionType">SessionType</a> installed or no <a href="-sessions/index.html">Sessions</a> feature installed.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="set.html">set</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-current-session/index.html"><span class="identifier">CurrentSession</span></a><span class="symbol">.</span><span class="identifier">set</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.sessions$set(io.ktor.sessions.CurrentSession, io.ktor.sessions.set.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="set.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set session instance with type <a href="set.html#T">T</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

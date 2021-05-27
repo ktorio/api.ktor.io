@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.client.features -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.0/io.ktor.client.features/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.0/">Ktor 1.2.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktorclientfeatures">Package io.ktor.client.features</h2>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-default-request/index.html">DefaultRequest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">DefaultRequest</span></code></div>
+
+        <p><a href="-default-request/-feature/index.html">Feature</a> is used to set request default parameters.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-expect-success/index.html">ExpectSuccess</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><s><span class="identifier">ExpectSuccess</span></s></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-call-validator/index.html">HttpCallValidator</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpCallValidator</span></code></div>
+
+        <p>Response validator feature is used for validate response and handle response exceptions.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-client-feature/index.html">HttpClientFeature</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">HttpClientFeature</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">TConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">TFeature</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Base interface representing a <a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-plain-text/index.html">HttpPlainText</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpPlainText</span></code></div>
+
+        <p><a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature that encodes <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> request bodies to <a href="../io.ktor.http.content/-text-content/index.html">TextContent</a>
+and processes the response body as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-redirect/index.html">HttpRedirect</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpRedirect</span></code></div>
+
+        <p><a href="../io.ktor.client/-http-client/index.html">HttpClient</a> feature that handles http redirect</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-send/index.html">HttpSend</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpSend</span></code></div>
+
+        <p>This is internal feature that is always installed.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-sender/index.html">Sender</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">Sender</span></code></div>
+
+        <p>This interface represents a request send pipeline interceptor chain</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-user-agent/index.html">UserAgent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">UserAgent</span></code></div>
+
+        <p>Default user-agent feature for <a href="../io.ktor.client/-http-client/index.html">HttpClient</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="exceptions">Exceptions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-client-request-exception/index.html">ClientRequestException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ClientRequestException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-response-exception/index.html"><span class="identifier">ResponseException</span></a></code></div>
+
+        <p>Bad client request exception.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-redirect-response-exception/index.html">RedirectResponseException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">RedirectResponseException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-response-exception/index.html"><span class="identifier">ResponseException</span></a></code></div>
+
+        <p>Unhandled redirect exception.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-response-exception/index.html">ResponseException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ResponseException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code></div>
+
+        <p>Base for default response exceptions.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-send-count-exceed-exception/index.html">SendCountExceedException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">SendCountExceedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html"><span class="identifier">IllegalStateException</span></a></code></div>
+
+        <p>Thrown when too many actual requests were sent during a client call.
+It could be caused by infinite or too long redirect sequence.
+Maximum number of requests is limited by <a href="-http-send/max-send-count.html">HttpSend.maxSendCount</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-server-response-exception/index.html">ServerResponseException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ServerResponseException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-response-exception/index.html"><span class="identifier">ResponseException</span></a></code></div>
+
+        <p>Server error exception.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="type-aliases">Type Aliases</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-bad-response-status-exception.html">BadResponseStatusException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><s><span class="identifier">BadResponseStatusException</span></s>&nbsp;<span class="symbol">=</span>&nbsp;<a href="-response-exception/index.html"><span class="identifier">ResponseException</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-call-exception-handler.html">CallExceptionHandler</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">CallExceptionHandler</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="parameterName">cause</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Response exception handler method.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-send-interceptor.html">HttpSendInterceptor</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">HttpSendInterceptor</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><a href="-sender/index.html"><span class="identifier">Sender</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../io.ktor.client.call/-http-client-call/index.html"><span class="identifier">HttpClientCall</span></a></code></div>
+
+        <p>HttpSend pipeline interceptor function</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-response-validator.html">ResponseValidator</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">ResponseValidator</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="parameterName">response</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.response/-http-response/index.html"><span class="identifier">HttpResponse</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Response validator method.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-browser-user-agent.html">BrowserUserAgent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">BrowserUserAgent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Install <a href="-user-agent/index.html">UserAgent</a> feature with browser-like user agent.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-charsets.html">Charsets</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">Charsets</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features$Charsets(io.ktor.client.HttpClientConfig((io.ktor.client.engine.HttpClientEngineConfig)), kotlin.Function1((io.ktor.client.features.HttpPlainText.Config, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-http-plain-text/-config/index.html"><span class="identifier">Config</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Configure client charsets.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-curl-user-agent.html">CurlUserAgent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">CurlUserAgent</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Install <a href="-user-agent/index.html">UserAgent</a> feature with browser-like user agent.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-http-response-validator.html">HttpResponseValidator</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">HttpResponseValidator</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features$HttpResponseValidator(io.ktor.client.HttpClientConfig((io.ktor.client.engine.HttpClientEngineConfig)), kotlin.Function1((io.ktor.client.features.HttpCallValidator.Config, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-http-call-validator/-config/index.html"><span class="identifier">Config</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Install <a href="-http-call-validator/index.html">HttpCallValidator</a> with <a href="-http-response-validator.html#io.ktor.client.features$HttpResponseValidator(io.ktor.client.HttpClientConfig((io.ktor.client.engine.HttpClientEngineConfig)), kotlin.Function1((io.ktor.client.features.HttpCallValidator.Config, kotlin.Unit)))/block">block</a> configuration.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="add-default-response-validation.html">addDefaultResponseValidation</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">addDefaultResponseValidation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Default response validation.
+Check the response status code in range (0..299).</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="default-request.html">defaultRequest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client-config/index.html"><span class="identifier">HttpClientConfig</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">defaultRequest</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features$defaultRequest(io.ktor.client.HttpClientConfig((io.ktor.client.engine.HttpClientEngineConfig)), kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Set request default parameters.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="default-transformers.html">defaultTransformers</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">defaultTransformers</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Install default transformers.
+Usually installed by default so there is no need to use it
+unless you have disabled it via <a href="../io.ktor.client/-http-client-config/use-default-transformers.html">HttpClientConfig.useDefaultTransformers</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="feature.html">feature</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">F</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">feature</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features$feature(io.ktor.client.HttpClient, io.ktor.client.features.HttpClientFeature((io.ktor.client.features.feature.B, io.ktor.client.features.feature.F)))/feature">feature</span><span class="symbol">:</span>&nbsp;<a href="-http-client-feature/index.html"><span class="identifier">HttpClientFeature</span></a><span class="symbol">&lt;</span><a href="feature.html#B"><span class="identifier">B</span></a><span class="symbol">,</span>&nbsp;<a href="feature.html#F"><span class="identifier">F</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="feature.html#F"><span class="identifier">F</span></a><span class="symbol">?</span></code></div>
+
+        <p>Try to get a <a href="feature.html#io.ktor.client.features$feature(io.ktor.client.HttpClient, io.ktor.client.features.HttpClientFeature((io.ktor.client.features.feature.B, io.ktor.client.features.feature.F)))/feature">feature</a> installed in this client. Returns <code>null</code> if the feature was not previously installed.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

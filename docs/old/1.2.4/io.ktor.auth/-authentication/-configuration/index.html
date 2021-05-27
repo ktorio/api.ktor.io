@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authentication.Configuration -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.4/io.ktor.auth/-authentication/-configuration/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.4/">Ktor 1.2.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../../index.html">io.ktor.auth</a> / <a href="../index.html">Authentication</a> / <a href="./index.html">Configuration</a></div>
+
+<h1 id="configuration">Configuration</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">Configuration</span></code></div>
+
+<p>Authentication configuration</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">Configuration</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth.Authentication.Configuration$&lt;init&gt;(kotlin.collections.List((io.ktor.auth.AuthenticationProvider)))/providers">providers</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../-authentication-provider/index.html"><span class="identifier">AuthenticationProvider</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">)</span></code></div>
+
+        <p>Authentication configuration</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="provider.html">provider</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">provider</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth.Authentication.Configuration$provider(kotlin.String, kotlin.Function1((io.ktor.auth.AuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth.Authentication.Configuration$provider(kotlin.String, kotlin.Function1((io.ktor.auth.AuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register a provider with the specified <a href="provider.html#io.ktor.auth.Authentication.Configuration$provider(kotlin.String, kotlin.Function1((io.ktor.auth.AuthenticationProvider.Configuration, kotlin.Unit)))/name">name</a> and <a href="provider.html#io.ktor.auth.Authentication.Configuration$provider(kotlin.String, kotlin.Function1((io.ktor.auth.AuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</a> it</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="register.html">register</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">register</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.auth.Authentication.Configuration$register(io.ktor.auth.AuthenticationProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../../-authentication-provider/index.html"><span class="identifier">AuthenticationProvider</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register the specified <a href="register.html#io.ktor.auth.Authentication.Configuration$register(io.ktor.auth.AuthenticationProvider)/provider">provider</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../basic.html">basic</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">basic</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$basic(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.BasicAuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$basic(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.BasicAuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-basic-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Installs Basic Authentication mechanism</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../digest.html">digest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">digest</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$digest(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.DigestAuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$digest(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.DigestAuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-digest-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Installs Digest Authentication mechanism</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../form.html">form</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">form</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$form(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.FormAuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$form(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.FormAuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-form-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Installs Form Authentication mechanism</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../../io.ktor.auth.jwt/jwt.html">jwt</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">jwt</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth.jwt$jwt(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.jwt.JWTAuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth.jwt$jwt(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.jwt.JWTAuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.auth.jwt/-j-w-t-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Installs JWT Authentication mechanism</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../oauth.html">oauth</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">oauth</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$oauth(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.OAuthAuthenticationProvider.Configuration, kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$oauth(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.OAuthAuthenticationProvider.Configuration, kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-o-auth-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Installs OAuth Authentication mechanism</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../session.html">session</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../-principal.html"><span class="identifier">Principal</span></a><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><s><span class="identifier">session</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$session(io.ktor.auth.Authentication.Configuration, kotlin.String, io.ktor.auth.SessionAuthChallenge((io.ktor.auth.session.T)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$session(io.ktor.auth.Authentication.Configuration, kotlin.String, io.ktor.auth.SessionAuthChallenge((io.ktor.auth.session.T)))/challenge">challenge</span><span class="symbol">:</span>&nbsp;<a href="../../-session-auth-challenge/index.html"><span class="identifier">SessionAuthChallenge</span></a><span class="symbol">&lt;</span><a href="../../session.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../-principal.html"><span class="identifier">Principal</span></a><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">session</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$session(io.ktor.auth.Authentication.Configuration, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Provides ability to authenticate users via sessions. It only works if <a href="../../session.html#T">T</a> session type denotes <a href="../../-principal.html">Principal</a> as well
+otherwise use full <a href="../../session.html">session</a> with lambda function with <a href="../../-session-authentication-provider/-configuration/validate.html">SessionAuthenticationProvider.Configuration.validate</a> configuration</p>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">session</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$session(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.SessionAuthenticationProvider.Configuration((io.ktor.auth.session.T)), kotlin.Unit)))/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.auth$session(io.ktor.auth.Authentication.Configuration, kotlin.String, kotlin.Function1((io.ktor.auth.SessionAuthenticationProvider.Configuration((io.ktor.auth.session.T)), kotlin.Unit)))/configure">configure</span><span class="symbol">:</span>&nbsp;<a href="../../-session-authentication-provider/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&lt;</span><a href="../../session.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Provides ability to authenticate users via sessions. It is important to have
+specified <a href="../../-session-authentication-provider/-configuration/validate.html">SessionAuthenticationProvider.Configuration.validate</a> and
+<a href="../../-session-authentication-provider/-configuration/challenge.html">SessionAuthenticationProvider.Configuration.challenge</a> in the lambda
+to get it work property</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

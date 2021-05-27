@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frame -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.1.4/io.ktor.http.cio.websocket/-frame/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.1.4/">Ktor 1.1.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http.cio.websocket</a> / <a href="./index.html">Frame</a></div>
+
+<h1 id="frame">Frame</h1>
+
+<div class="signature"><code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Frame</span></code></div>
+
+<p>A frame received or ready to be sent. It is not reusable and not thread-safe</p>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-binary/index.html">Binary</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Binary</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents an application level binary frame.
+In a RAW web socket session a big text frame could be fragmented
+(separated into several text frames so they have <a href="fin.html">fin</a> = false except the last one).
+Note that usually there is no need to handle fragments unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-close/index.html">Close</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Close</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level level close frame. It could be sent to indicate web socket session end.
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-ping/index.html">Ping</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Ping</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level ping frame. Could be sent to test connection (peer should reply with <a href="-pong/index.html">Pong</a>).
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-pong/index.html">Pong</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Pong</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level pong frame. Should be sent in reply to a <a href="-ping/index.html">Ping</a> frame.
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-text/index.html">Text</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Text</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents an application level text frame.
+In a RAW web socket session a big text frame could be fragmented
+(separated into several text frames so they have <a href="fin.html">fin</a> = false except the last one).
+Please note that a boundary between fragments could be in the middle of multi-byte (unicode) character
+so don’t apply String constructor to every fragment but use decoder loop instead of concatenate fragments first.
+Note that usually there is no need to handle fragments unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="buffer.html">buffer</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">buffer</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a></code></div>
+        <ul>
+          <li>a frame content or fragment content</li>
+        </ul>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="disposable-handle.html">disposableHandle</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">disposableHandle</span><span class="symbol">: </span><span class="identifier">DisposableHandle</span></code></div>
+
+        <p>could be invoked when the frame is processed</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="fin.html">fin</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">fin</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>is it final fragment, should be always <code>true</code> for control frames and if no fragmentation is used</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="frame-type.html">frameType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">frameType</span><span class="symbol">: </span><a href="../-frame-type/index.html"><span class="identifier">FrameType</span></a></code></div>
+
+        <p>enum value</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="copy.html">copy</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Creates a frame copy</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="to-string.html">toString</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-functions">Companion Object Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="by-type.html">byType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">byType</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Companion$byType(kotlin.Boolean, io.ktor.http.cio.websocket.FrameType, java.nio.ByteBuffer)/fin">fin</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Companion$byType(kotlin.Boolean, io.ktor.http.cio.websocket.FrameType, java.nio.ByteBuffer)/frameType">frameType</span><span class="symbol">:</span>&nbsp;<a href="../-frame-type/index.html"><span class="identifier">FrameType</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.Frame.Companion$byType(kotlin.Boolean, io.ktor.http.cio.websocket.FrameType, java.nio.ByteBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Create a particular <a href="./index.html">Frame</a> instance by frame type</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../read-bytes.html">readBytes</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Frame</span></a><span class="symbol">.</span><span class="identifier">readBytes</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code></div>
+
+        <p>Read binary content from a frame. For fragmented frames only returns this fragment.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-binary/index.html">Binary</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Binary</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents an application level binary frame.
+In a RAW web socket session a big text frame could be fragmented
+(separated into several text frames so they have <a href="fin.html">fin</a> = false except the last one).
+Note that usually there is no need to handle fragments unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-close/index.html">Close</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Close</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level level close frame. It could be sent to indicate web socket session end.
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-ping/index.html">Ping</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Ping</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level ping frame. Could be sent to test connection (peer should reply with <a href="-pong/index.html">Pong</a>).
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-pong/index.html">Pong</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Pong</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents a low-level pong frame. Should be sent in reply to a <a href="-ping/index.html">Ping</a> frame.
+Usually there is no need to send/handle it unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-text/index.html">Text</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Text</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Frame</span></a></code></div>
+
+        <p>Represents an application level text frame.
+In a RAW web socket session a big text frame could be fragmented
+(separated into several text frames so they have <a href="fin.html">fin</a> = false except the last one).
+Please note that a boundary between fragments could be in the middle of multi-byte (unicode) character
+so don’t apply String constructor to every fragment but use decoder loop instead of concatenate fragments first.
+Note that usually there is no need to handle fragments unless you have a RAW web socket session.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

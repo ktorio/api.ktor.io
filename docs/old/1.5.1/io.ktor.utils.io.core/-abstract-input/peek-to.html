@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AbstractInput.peekTo -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.1/io.ktor.utils.io.core/-abstract-input/peek-to.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.1/">Ktor 1.5.1</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.utils.io.core</a> / <a href="index.html">AbstractInput</a> / <a href="./peek-to.html">peekTo</a></div>
+
+<h1 id="peekto">peekTo</h1>
+
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><span class="identifier">peekTo</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/destination">destination</span><span class="symbol">:</span>&nbsp;<a href="../../io.ktor.utils.io.bits/-memory/index.html"><span class="identifier">Memory</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/destinationOffset">destinationOffset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/offset">offset</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/min">min</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/max">max</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></div>
+
+  <p>Overrides <a href="../-input/peek-to.html">Input.peekTo</a></p>
+
+  <p>Copy at least <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/min">min</a> but up to <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/max">max</a> bytes to the specified <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/destination">destination</a> buffer from this input
+skipping <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/offset">offset</a> bytes. If there are not enough bytes available to provide <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/min">min</a> bytes then
+it fails with an exception.
+It is safe to specify <code>max &gt; destination.writeRemaining</code> but
+<code>min</code> shouldn’t be bigger than the <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/destination">destination</a> free space.
+This function could trigger the underlying source reading that may lead to blocking I/O.
+It is safe to specify too big <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/offset">offset</a> but only if <code>min = 0</code>, fails otherwise.
+This function usually copy more bytes than <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/min">min</a> (unless <code>max = min</code>).</p>
+
+  <h3 id="parameters">Parameters</h3>
+
+  <p><code>destination</code> - to write bytes</p>
+
+  <p><code>offset</code> - to skip input</p>
+
+  <p><code>min</code> - bytes to be copied, shouldn’t be greater than the buffer free space. Could be <code>0</code>.</p>
+
+  <p><code>max</code> - bytes to be copied even if there are more bytes buffered, could be <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/-companion/-m-a-x_-v-a-l-u-e.html">Int.MAX_VALUE</a>.</p>
+
+  <h3 id="exceptions">Exceptions</h3>
+
+  <p><code>Throwable</code> - when not enough bytes available to provide</p>
+
+  <p><strong>Return</strong>
+number of bytes copied to the <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.bits.Memory, kotlin.Long, kotlin.Long, kotlin.Long, kotlin.Long)/destination">destination</a> possibly <code>0</code></p>
+
+</div>
+<div class="overload-group">
+
+  <div class="signature"><code><span class="keyword">fun </span><s><span class="identifier">peekTo</span></s><span class="symbol">(</span><span class="parameterName" id="io.ktor.utils.io.core.AbstractInput$peekTo(io.ktor.utils.io.core.IoBuffer)/buffer">buffer</span><span class="symbol">:</span>&nbsp;<a href="../-io-buffer/index.html"><span class="identifier">IoBuffer</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+  <p>Overrides <a href="../-input/peek-to.html">Input.peekTo</a></p>
+
+  <p><strong>Deprecated:</strong> Binary compatibility.</p>
+
+  <p>Copy available bytes to the specified <a href="../-input/peek-to.html#io.ktor.utils.io.core.Input$peekTo(io.ktor.utils.io.core.IoBuffer)/buffer">buffer</a> but keep them available.
+If the underlying implementation could trigger
+bytes population from the underlying source and block until any bytes available</p>
+
+  <p>Very similar to <a href="../-input/read-available.html">readAvailable</a> but don’t discard copied bytes.</p>
+
+  <p><strong>Return</strong>
+number of bytes were copied</p>
+
+</div>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContentNegotiation.Configuration -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.4/io.ktor.features/-content-negotiation/-configuration/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.4/">Ktor 1.2.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../../index.html">io.ktor.features</a> / <a href="../index.html">ContentNegotiation</a> / <a href="./index.html">Configuration</a></div>
+
+<h1 id="configuration">Configuration</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">Configuration</span></code></div>
+
+<p>Configuration type for <a href="../index.html">ContentNegotiation</a> feature</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">Configuration</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>Configuration type for <a href="../index.html">ContentNegotiation</a> feature</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="accept.html">accept</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">accept</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</span><span class="symbol">:</span>&nbsp;<a href="../../-accept-header-contributor.html"><span class="identifier">AcceptHeaderContributor</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register a custom accepted content types <a href="accept.html#io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</a>. A <a href="accept.html#io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</a> function takes <a href="../../../io.ktor.application/-application-call/index.html">ApplicationCall</a>
+and a list of content types accepted according to <a href="../../../io.ktor.http/-http-headers/-accept.html">HttpHeaders.Accept</a> header or provided by the previous
+contributor if exists. Result of this <a href="accept.html#io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</a> should be a list of accepted content types
+with quality. A <a href="accept.html#io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</a> could either keep or replace input list of accepted content types depending
+on use-case. For example a contributor taking <code>format=json</code> request parameter could replace the original
+content types list with the specified one from the uri argument.
+Note that the returned list of accepted types will be sorted according to quality using <a href="../../kotlin.collections.-list/sorted-by-quality.html">sortedByQuality</a>
+so a custom <a href="accept.html#io.ktor.features.ContentNegotiation.Configuration$accept(kotlin.Function2((io.ktor.application.ApplicationCall, kotlin.collections.List((io.ktor.features.ContentTypeWithQuality)), )))/contributor">contributor</a> may keep it unsorted and should not rely on input list order.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="register.html">register</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../-content-converter/index.html"><span class="identifier">ContentConverter</span></a><span class="symbol">&gt;</span> <span class="identifier">register</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/converter">converter</span><span class="symbol">:</span>&nbsp;<a href="register.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/configuration">configuration</span><span class="symbol">:</span>&nbsp;<a href="register.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Registers a <a href="register.html#io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/contentType">contentType</a> to a specified <a href="register.html#io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/converter">converter</a> with an optional <a href="register.html#io.ktor.features.ContentNegotiation.Configuration$register(io.ktor.http.ContentType, io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Function1((io.ktor.features.ContentNegotiation.Configuration.register.T, kotlin.Unit)))/configuration">configuration</a> script for converter</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../../io.ktor.gson/gson.html">gson</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">gson</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.gson$gson(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlin.Function1((com.google.gson.GsonBuilder, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.Application.Json<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.gson$gson(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlin.Function1((com.google.gson.GsonBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">GsonBuilder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register GSON to <a href="../index.html">ContentNegotiation</a> feature</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../../io.ktor.jackson/jackson.html">jackson</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">jackson</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.jackson$jackson(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlin.Function1((com.fasterxml.jackson.databind.ObjectMapper, kotlin.Unit)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.Application.Json<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.jackson$jackson(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlin.Function1((com.fasterxml.jackson.databind.ObjectMapper, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register Jackson converter into <a href="../index.html">ContentNegotiation</a> feature</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../../io.ktor.serialization/serialization.html">serialization</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">serialization</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.serialization$serialization(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlinx.serialization.json.Json)/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="../../../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ContentType.Application.Json<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.serialization$serialization(io.ktor.features.ContentNegotiation.Configuration, io.ktor.http.ContentType, kotlinx.serialization.json.Json)/json">json</span><span class="symbol">:</span>&nbsp;<span class="identifier">Json</span>&nbsp;<span class="symbol">=</span>&nbsp;Json(DefaultJsonConfiguration)<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register kotlinx.serialization converter into <a href="../index.html">ContentNegotiation</a> feature</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CookieConfiguration -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.2/io.ktor.sessions/-cookie-configuration/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.2/">Ktor 1.5.2</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.sessions</a> / <a href="./index.html">CookieConfiguration</a></div>
+
+<h1 id="cookieconfiguration">CookieConfiguration</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">CookieConfiguration</span></code></div>
+
+<p>Cookie configuration being used to send sessions</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">CookieConfiguration</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>Cookie configuration being used to send sessions</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="domain.html">domain</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">domain</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>Cookie domain</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="duration.html">duration</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><s><span class="identifier">duration</span></s><span class="symbol">: </span><span class="identifier">TemporalAmount</span><span class="symbol">?</span></code></div>
+
+        <p>Cookie time to live duration or <code>null</code> for session cookies.
+Session cookies are client-driven. For example, a web browser usually removes session
+cookies at browser or window close unless the session is restored.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="encoding.html">encoding</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">encoding</span><span class="symbol">: </span><a href="../../io.ktor.http/-cookie-encoding/index.html"><span class="identifier">CookieEncoding</span></a></code></div>
+
+        <p>Cookie encoding</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="extensions.html">extensions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">extensions</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></div>
+
+        <p>Any additional extra cookie parameters</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="http-only.html">httpOnly</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">httpOnly</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>This cookie is only for transferring over HTTP(s) and shouldn’t be accessible via JavaScript</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="max-age-in-seconds.html">maxAgeInSeconds</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">maxAgeInSeconds</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></div>
+
+        <p>Cookie time to live duration or 0 for session cookies.
+Session cookies are client-driven. For example, a web browser usually removes session
+cookies at browser or window close unless the session is restored.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="path.html">path</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">path</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>Cookie path</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="secure.html">secure</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">secure</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Send cookies only over secure connection</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-properties">Extension Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../duration.html">duration</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="./index.html"><span class="identifier">CookieConfiguration</span></a><span class="symbol">.</span><s><span class="identifier">duration</span></s><span class="symbol">: </span><span class="identifier">TemporalAmount</span><span class="symbol">?</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.features/max-age.html">maxAge</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><a href="./index.html"><span class="identifier">CookieConfiguration</span></a><span class="symbol">.</span><span class="identifier">maxAge</span><span class="symbol">: </span><span class="identifier">&lt;ERROR CLASS&gt;</span><span class="symbol">?</span></code></div>
+
+        <p>Cookie time to live duration or <code>null</code> for session cookies.
+Session cookies are client-driven. For example, a web browser usually removes session
+cookies at browser or window close unless the session is restored.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
