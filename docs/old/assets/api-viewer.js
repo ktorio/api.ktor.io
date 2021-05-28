@@ -867,10 +867,10 @@
     return $receiver.toString();
   }
   function apiList(address, version) {
-    return window.fetch(address + '/' + version + '/api-list.list');
+    return window.fetch(address + '/old/' + version + '/api-list.list');
   }
   function index(address, version) {
-    return window.fetch(address + '/' + version + '/search-index.dat');
+    return window.fetch(address + '/old/' + version + '/search-index.dat');
   }
   function searchEngineProvider$lambda$lambda(text) {
     return lines2(text);
