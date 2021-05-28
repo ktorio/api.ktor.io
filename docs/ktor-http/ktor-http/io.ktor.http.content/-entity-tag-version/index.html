@@ -1,0 +1,223 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EntityTagVersion</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="ktor-http::io.ktor.http.content/EntityTagVersion///PointingToDeclaration//-352733350">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">ktor-http</a>/<a href="../index.html">io.ktor.http.content</a>/<a href="index.html">EntityTagVersion</a></div>
+            <div class="pull-right d-flex">
+              <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-http:dokkaHtmlPartial/jvmMain">jvm</button></div>
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>Entity</span><wbr><span>Tag</span><wbr><span>Version</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">data class <a href="index.html">EntityTagVersion</a>(etag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, weak: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>) : <a href="../-version/index.html">Version</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This version checks <a href="etag.html">etag</a> value and pass it through conditions supplied by the remote client. Depending on conditions it produces return value of enum type <a href="../-version-check-result/index.html">VersionCheckResult</a></p><p class="paragraph">It never handles If-None-Match: *  as it is related to non-etag logic (for example, Last modified checks). See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26 for more details</p><h4 class="">Return</h4><p class="paragraph"><a href="../-version-check-result/-o-k/index.html">VersionCheckResult.OK</a> if all headers pass or there was no related headers, <a href="../-version-check-result/-n-o-t_-m-o-d-i-f-i-e-d/index.html">VersionCheckResult.NOT_MODIFIED</a> for successful If-None-Match, <a href="../-version-check-result/-p-r-e-c-o-n-d-i-t-i-o-n_-f-a-i-l-e-d/index.html">VersionCheckResult.PRECONDITION_FAILED</a> for failed If-Match</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Parameters</h2>
+              <div data-togglable="Parameters">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">etag</span></div><div><div class="title"><div data-togglable="Parameters"><ul><li><p class="paragraph">entity tag, for example file's content hash</p></li></ul></div></div></div></div></div><div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">weak</span></div><div><div class="title"><div data-togglable="Parameters"><ul><li><p class="paragraph">whether strong or weak validation should be applied</p></li></ul></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-1643364012%2FConstructors%2F-352733350" anchor-label="EntityTagVersion" id="-1643364012%2FConstructors%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-entity-tag-version.html">EntityTagVersion</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1643364012%2FConstructors%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace strikethrough">fun <a href="-entity-tag-version.html">EntityTagVersion</a>(etag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-150798416%2FConstructors%2F-352733350" anchor-label="EntityTagVersion" id="-150798416%2FConstructors%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-entity-tag-version.html">EntityTagVersion</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-150798416%2FConstructors%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="-entity-tag-version.html">EntityTagVersion</a>(etag: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, weak: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><ul><li><p class="paragraph">entity tag, for example file's content hash</p></li></ul></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="-1338516368%2FClasslikes%2F-352733350" anchor-label="Companion" id="-1338516368%2FClasslikes%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-companion/index.html">Companion</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1338516368%2FClasslikes%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">object <a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-550541409%2FFunctions%2F-352733350" anchor-label="appendHeadersTo" id="-550541409%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="append-headers-to.html">appendHeadersTo</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-550541409%2FFunctions%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">open override fun <a href="append-headers-to.html">appendHeadersTo</a>(builder: <a href="../../io.ktor.http/-headers-builder/index.html">HeadersBuilder</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-550541409%2FFunctions%2F-352733350" anchor-label="appendHeadersTo" id="-550541409%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="brief "><a data-name="-550541409%2FFunctions%2F-352733350" anchor-label="appendHeadersTo" id="-550541409%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>Appends relevant headers to the builder</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1367987463%2FFunctions%2F-352733350" anchor-label="check" id="1367987463%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="check.html">check</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1367987463%2FFunctions%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">open override fun <a href="check.html">check</a>(requestHeaders: <a href="../../io.ktor.http/-headers/index.html">Headers</a>): <a href="../-version-check-result/index.html">VersionCheckResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="1367987463%2FFunctions%2F-352733350" anchor-label="check" id="1367987463%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="brief "><a data-name="1367987463%2FFunctions%2F-352733350" anchor-label="check" id="1367987463%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>Checks <a href="check.html">requestHeaders</a> against this version and returns <a href="../-version-check-result/index.html">VersionCheckResult</a></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="870544194%2FFunctions%2F-352733350" anchor-label="match" id="870544194%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="match.html">match</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="870544194%2FFunctions%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="match.html">match</a>(other: <a href="index.html">EntityTagVersion</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-1955818852%2FFunctions%2F-352733350" anchor-label="match" id="-1955818852%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="brief "><a data-name="-1955818852%2FFunctions%2F-352733350" anchor-label="match" id="-1955818852%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>Examine two entity-tags for match (strong).</div></div>
+<div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="match.html">match</a>(givenMatchEtags: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="index.html">EntityTagVersion</a>&gt;): <a href="../-version-check-result/index.html">VersionCheckResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="1933973042%2FFunctions%2F-352733350" anchor-label="match" id="1933973042%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="brief "><a data-name="1933973042%2FFunctions%2F-352733350" anchor-label="match" id="1933973042%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><code>If-Match</code> logic using <a href="match.html">match</a> function.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-519209078%2FFunctions%2F-352733350" anchor-label="noneMatch" id="-519209078%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="none-match.html">noneMatch</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-519209078%2FFunctions%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">fun <a href="none-match.html">noneMatch</a>(givenNoneMatchEtags: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="index.html">EntityTagVersion</a>&gt;): <a href="../-version-check-result/index.html">VersionCheckResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-519209078%2FFunctions%2F-352733350" anchor-label="noneMatch" id="-519209078%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="brief "><a data-name="-519209078%2FFunctions%2F-352733350" anchor-label="noneMatch" id="-519209078%2FFunctions%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><code>If-None-Match</code> logic using <a href="match.html">match</a> function.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="681087324%2FProperties%2F-352733350" anchor-label="etag" id="681087324%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="etag.html">etag</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="681087324%2FProperties%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><a data-name="681087324%2FProperties%2F-352733350" anchor-label="etag" id="681087324%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace">val <a href="etag.html">etag</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="681087324%2FProperties%2F-352733350" anchor-label="etag" id="681087324%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><ul><li><p class="paragraph">entity tag, for example file's content hash</p></li></ul></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-77823911%2FProperties%2F-352733350" anchor-label="weak" id="-77823911%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-http:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="weak.html">weak</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-77823911%2FProperties%2F-352733350"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag jvm-like">jvm</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-http:dokkaHtmlPartial/jvmMain"><a data-name="-77823911%2FProperties%2F-352733350" anchor-label="weak" id="-77823911%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace">val <a href="weak.html">weak</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-77823911%2FProperties%2F-352733350" anchor-label="weak" id="-77823911%2FProperties%2F-352733350" data-filterable-set=":ktor-http:dokkaHtmlPartial/jvmMain"></a><ul><li><p class="paragraph">whether strong or weak validation should be applied</p></li></ul></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
