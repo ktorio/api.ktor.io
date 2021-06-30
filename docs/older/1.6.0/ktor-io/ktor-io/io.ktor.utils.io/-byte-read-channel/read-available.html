@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>readAvailable</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="ktor-io::io.ktor.utils.io/ByteReadChannel/readAvailable/#kotlin.Int#kotlin.Function1[java.nio.ByteBuffer,kotlin.Unit]/PointingToDeclaration//1740649208">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">ktor-io</a>/<a href="../index.html">io.ktor.utils.io</a>/<a href="index.html">ByteReadChannel</a>/<a href="read-available.html">readAvailable</a></div>
+            <div class="pull-right d-flex">
+              <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-io:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-tag platform-selector native-like" data-active="" data-filter=":ktor-io:dokkaHtmlPartial/posixMain">posix</button><button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>read</span><wbr><span>Available</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag jvm-like">jvm</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">abstract fun <a href="read-available.html">readAvailable</a>(min: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a> = 1, block: (<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a>) -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Invokes <a href="read-available.html">block</a> if it is possible to read at least <a href="read-available.html">min</a> byte providing byte buffer to it so lambda can read from the buffer up to ByteBuffer.available bytes. If there are no <a href="read-available.html">min</a> bytes available then the invocation returns 0.</p><p class="paragraph">Warning: it is not guaranteed that all of available bytes will be represented as a single byte buffer eg: it could be 4 bytes available for read but the provided byte buffer could have only 2 available bytes: in this case you have to invoke read again (with decreased <a href="read-available.html">min</a> accordingly).</p><h4 class="">Return</h4><p class="paragraph">number of consumed bytes or -1 if the block wasn't executed.</p><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/jvmMain"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">min</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">amount of bytes available for read, should be positive</p></div></div></div></div></div><div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">block</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">to be invoked when at least <a href="read-available.html">min</a> bytes available</p></div></div></div></div></div></div></div></div></div></div></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain :ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain :ktor-io:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html">readAvailable</a>(dst: <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">abstract suspend fun <a href="read-available.html">readAvailable</a>(dst: <a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace">abstract suspend fun <a href="index.html#-550763454%2FFunctions%2F-1955460546">readAvailable</a>(dst: <a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+  </div>
+</div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/posixMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag native-like">posix</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/posixMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html#1543163342%2FMain%2F582699878">readAvailable</a>(dst: <span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span>&lt;<span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span>&gt;, offset: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, length: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html#1543163342%2FMain%2F582699878">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/posixMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag native-like">posix</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/posixMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html#873152034%2FMain%2F582699878">readAvailable</a>(dst: <span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span>&lt;<span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span>&gt;, offset: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, length: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html#873152034%2FMain%2F582699878">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag common-like">common</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html#-1743067198%2FMain%2F-1955460546">readAvailable</a>(dst: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a>, offset: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, length: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html#-1743067198%2FMain%2F-1955460546">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag jvm-like">jvm</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/jvmMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html">readAvailable</a>(dst: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a>, offset: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, length: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/posixMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag native-like">posix</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/posixMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html#-1743067198%2FMain%2F582699878">readAvailable</a>(dst: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a>, offset: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, length: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html#-1743067198%2FMain%2F582699878">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+<div class="divergent-group" data-filterable-current=":ktor-io:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/posixMain"><div class="with-platform-tags"><span class="pull-right">
+  <div class="platform-tags ">
+    <div class="platform-tag native-like">posix</div>
+  </div>
+</span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/posixMain"><div class="symbol monospace">abstract suspend fun <a href="read-available.html#-550763454%2FMain%2F582699878">readAvailable</a>(dst: <a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Reads all available bytes to <a href="read-available.html#-550763454%2FMain%2F582699878">dst</a> buffer and returns immediately or suspends if no bytes available</p><h4 class="">Return</h4><p class="paragraph">number of bytes were read or <code>-1</code> if the channel has been closed</p></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
