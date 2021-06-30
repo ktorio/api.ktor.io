@@ -10,7 +10,6 @@ if [ -z "${KTOR_VERSION}" ]; then
   exit 1
 fi
 
-DOMAIN="$(cat "${DIR}/CNAME")"
 WORK_DIRNAME="output"
 WORK_DIR="${DIR}/${WORK_DIRNAME}"
 
