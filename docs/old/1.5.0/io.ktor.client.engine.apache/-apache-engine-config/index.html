@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ApacheEngineConfig -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.0/io.ktor.client.engine.apache/-apache-engine-config/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.0/">Ktor 1.5.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.client.engine.apache</a> / <a href="./index.html">ApacheEngineConfig</a></div>
+
+<h1 id="apacheengineconfig">ApacheEngineConfig</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">ApacheEngineConfig</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.client.engine/-http-client-engine-config/index.html"><span class="identifier">HttpClientEngineConfig</span></a></code></div>
+
+<p>Configuration for <a href="../-apache/index.html">Apache</a> implementation of <a href="../../io.ktor.client.engine/-http-client-engine-factory/index.html">HttpClientEngineFactory</a>.</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">ApacheEngineConfig</span><span class="symbol">(</span><span class="symbol">)</span></code></div>
+
+        <p>Configuration for <a href="../-apache/index.html">Apache</a> implementation of <a href="../../io.ktor.client.engine/-http-client-engine-factory/index.html">HttpClientEngineFactory</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="connect-timeout.html">connectTimeout</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">connectTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Max milliseconds to establish an HTTP connection - default 10 seconds.
+A value of 0 represents infinite, while -1 represents system’s default value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="connection-request-timeout.html">connectionRequestTimeout</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">connectionRequestTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Max milliseconds for the connection manager to start a request - default 20 seconds.
+A value of 0 represents infinite, while -1 represents system’s default value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="custom-client.html">customClient</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">customClient</span><span class="symbol">: </span><span class="identifier">HttpAsyncClientBuilder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">HttpAsyncClientBuilder</span></code></div>
+
+        <p>Custom processor for <a href="#">HttpAsyncClientBuilder</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="custom-request.html">customRequest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">customRequest</span><span class="symbol">: </span><span class="identifier">Builder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Builder</span></code></div>
+
+        <p>Custom processor for <a href="#">RequestConfig.Builder</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="follow-redirects.html">followRedirects</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">followRedirects</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Whether or not, it will follow <code>Location</code> headers. <code>false</code> by default.
+It uses the default number of redirects defined by Apache’s HttpClient that is 50.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="socket-timeout.html">socketTimeout</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">socketTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Max milliseconds between TCP packets - default 10 seconds.
+A value of 0 represents infinite, while -1 represents system’s default value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="ssl-context.html">sslContext</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">sslContext</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/net/ssl/SSLContext.html"><span class="identifier">SSLContext</span></a><span class="symbol">?</span></code></div>
+
+        <p>Optional Java’s SSLContext allowing to set custom keys,
+trust manager or custom source for secure random data</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-properties">Inherited Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine/-http-client-engine-config/pipelining.html">pipelining</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">pipelining</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Enable http pipelining advice.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine/-http-client-engine-config/proxy.html">proxy</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">proxy</span><span class="symbol">: </span><a href="../../io.ktor.client.engine/-proxy-config/index.html"><span class="identifier">ProxyConfig</span></a><span class="symbol">?</span></code></div>
+
+        <p>Proxy address to use. Use system proxy by default.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine/-http-client-engine-config/response.html">response</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><s><span class="identifier">response</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html"><span class="identifier">Nothing</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../../io.ktor.client.engine/-http-client-engine-config/threads-count.html">threadsCount</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">var </span><span class="identifier">threadsCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>Network threads count advice.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="customize-client.html">customizeClient</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">customizeClient</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.engine.apache.ApacheEngineConfig$customizeClient(kotlin.Function1((org.apache.http.impl.nio.client.HttpAsyncClientBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">HttpAsyncClientBuilder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Customizes a <a href="#">HttpAsyncClientBuilder</a> in the specified <a href="customize-client.html#io.ktor.client.engine.apache.ApacheEngineConfig$customizeClient(kotlin.Function1((org.apache.http.impl.nio.client.HttpAsyncClientBuilder, kotlin.Unit)))/block">block</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="customize-request.html">customizeRequest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">customizeRequest</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.client.engine.apache.ApacheEngineConfig$customizeRequest(kotlin.Function1((org.apache.http.client.config.RequestConfig.Builder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="identifier">Builder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Customizes a <a href="#">RequestConfig.Builder</a> in the specified <a href="customize-request.html#io.ktor.client.engine.apache.ApacheEngineConfig$customizeRequest(kotlin.Function1((org.apache.http.client.config.RequestConfig.Builder, kotlin.Unit)))/block">block</a>.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

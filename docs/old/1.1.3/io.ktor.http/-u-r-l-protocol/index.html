@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URLProtocol -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.1.3/io.ktor.http/-u-r-l-protocol/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.1.3/">Ktor 1.1.3</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http</a> / <a href="./index.html">URLProtocol</a></div>
+
+<h1 id="urlprotocol">URLProtocol</h1>
+
+<div class="signature"><code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">URLProtocol</span></code></div>
+
+<p>Represents URL protocol</p>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">URLProtocol</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.URLProtocol$&lt;init&gt;(kotlin.String, kotlin.Int)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="parameterName" id="io.ktor.http.URLProtocol$&lt;init&gt;(kotlin.String, kotlin.Int)/defaultPort">defaultPort</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code></div>
+
+        <p>Represents URL protocol</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="default-port.html">defaultPort</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">defaultPort</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+        <p>default port for protocol or <code>-1</code> if not known</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="name.html">name</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>of protocol (schema)</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-h-t-t-p.html">HTTP</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">HTTP</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">URLProtocol</span></a></code></div>
+
+        <p>HTTP with port 80</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-h-t-t-p-s.html">HTTPS</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">HTTPS</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">URLProtocol</span></a></code></div>
+
+        <p>secure HTTPS with port 443</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-w-s.html">WS</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">WS</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">URLProtocol</span></a></code></div>
+
+        <p>Web socket over HTTP on port 80</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-w-s-s.html">WSS</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">WSS</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">URLProtocol</span></a></code></div>
+
+        <p>Web socket over secure HTTPS on port 443</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="by-name.html">byName</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">byName</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="./index.html"><span class="identifier">URLProtocol</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Protocols by names map</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-functions">Companion Object Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="create-or-default.html">createOrDefault</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">createOrDefault</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.URLProtocol.Companion$createOrDefault(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">URLProtocol</span></a></code></div>
+
+        <p>Create an instance by <a href="create-or-default.html#io.ktor.http.URLProtocol.Companion$createOrDefault(kotlin.String)/name">name</a> or use already existing instance</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../is-secure.html">isSecure</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">URLProtocol</span></a><span class="symbol">.</span><span class="identifier">isSecure</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Check if the protocol is secure</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../is-websocket.html">isWebsocket</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">URLProtocol</span></a><span class="symbol">.</span><span class="identifier">isWebsocket</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Check if the protocol is websocket</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

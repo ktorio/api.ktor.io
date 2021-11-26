@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContentType -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//1.1.5/io.ktor.http/-content-type/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.1.5/">Ktor 1.1.5</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http</a> / <a href="./index.html">ContentType</a></div>
+
+<h1 id="contenttype">ContentType</h1>
+
+<div class="signature"><code><span class="keyword">class </span><span class="identifier">ContentType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-header-value-with-parameters/index.html"><span class="identifier">HeaderValueWithParameters</span></a></code></div>
+
+<p>Represents a value for a <code>Content-Type</code> header.</p>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-application/index.html">Application</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Application</span></code></div>
+
+        <p>Provides a list of standard subtypes of an <code>application</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-audio/index.html">Audio</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Audio</span></code></div>
+
+        <p>Provides a list of standard subtypes of an <code>audio</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-image/index.html">Image</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Image</span></code></div>
+
+        <p>Provides a list of standard subtypes of an <code>image</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-message/index.html">Message</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Message</span></code></div>
+
+        <p>Provides a list of standard subtypes of a <code>message</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-multi-part/index.html">MultiPart</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">MultiPart</span></code></div>
+
+        <p>Provides a list of standard subtypes of a <code>multipart</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-text/index.html">Text</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Text</span></code></div>
+
+        <p>Provides a list of standard subtypes of a <code>text</code> content type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-video/index.html">Video</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Video</span></code></div>
+
+        <p>Provides a list of standard subtypes of a <code>video</code> content type.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="constructors">Constructors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-init-.html">&lt;init&gt;</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="identifier">ContentType</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.ContentType$&lt;init&gt;(kotlin.String, kotlin.String, kotlin.collections.List((io.ktor.http.HeaderValueParam)))/contentType">contentType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.ContentType$&lt;init&gt;(kotlin.String, kotlin.String, kotlin.collections.List((io.ktor.http.HeaderValueParam)))/contentSubtype">contentSubtype</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.ContentType$&lt;init&gt;(kotlin.String, kotlin.String, kotlin.collections.List((io.ktor.http.HeaderValueParam)))/parameters">parameters</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-header-value-param/index.html"><span class="identifier">HeaderValueParam</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;emptyList()<span class="symbol">)</span></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="content-subtype.html">contentSubtype</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">contentSubtype</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>represents a subtype part of the media type.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="content-type.html">contentType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">contentType</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>represents a type part of the media type.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-properties">Inherited Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-header-value-with-parameters/content.html">content</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">content</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>header’s content without parameters</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../-header-value-with-parameters/parameters.html">parameters</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">parameters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../-header-value-param/index.html"><span class="identifier">HeaderValueParam</span></a><span class="symbol">&gt;</span></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="equals.html">equals</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.ContentType$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="hash-code.html">hashCode</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="match.html">match</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">match</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.ContentType$match(io.ktor.http.ContentType)/pattern">pattern</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ContentType</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">match</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.ContentType$match(kotlin.String)/pattern">pattern</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Checks if <code>this</code> type matches a <a href="match.html#io.ktor.http.ContentType$match(io.ktor.http.ContentType)/pattern">pattern</a> type taking into account placeholder symbols <code>*</code> and parameters.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="with-parameter.html">withParameter</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">withParameter</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.ContentType$withParameter(kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="parameterName" id="io.ktor.http.ContentType$withParameter(kotlin.String, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Creates a copy of <code>this</code> type with the added parameter with the <a href="with-parameter.html#io.ktor.http.ContentType$withParameter(kotlin.String, kotlin.String)/name">name</a> and <a href="with-parameter.html#io.ktor.http.ContentType$withParameter(kotlin.String, kotlin.String)/value">value</a>.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="without-parameters.html">withoutParameters</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">withoutParameters</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Creates a copy of <code>this</code> type without any parameters</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inherited-functions">Inherited Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-header-value-with-parameters/parameter.html">parameter</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">parameter</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.HeaderValueWithParameters$parameter(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>The first value for the parameter with <a href="../-header-value-with-parameters/parameter.html#io.ktor.http.HeaderValueWithParameters$parameter(kotlin.String)/name">name</a> comparing case-insensitively or <code>null</code> if no such parameters found</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../-header-value-with-parameters/to-string.html">toString</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-properties">Companion Object Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-any.html">Any</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">Any</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Represents a pattern <code>* / *</code> to match any content type.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-functions">Companion Object Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="parse.html">parse</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http.ContentType.Companion$parse(kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Parses a string representing a <code>Content-Type</code> header into a <a href="./index.html">ContentType</a> instance.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extension-functions">Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../charset.html">charset</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../-header-value-with-parameters/index.html"><span class="identifier">HeaderValueWithParameters</span></a><span class="symbol">.</span><span class="identifier">charset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Charset</span><span class="symbol">?</span></code></div>
+
+        <p>Extracts a <a href="#">Charset</a> value from the given <code>Content-Type</code>, <code>Content-Disposition</code> or similar header value.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../file-extensions.html">fileExtensions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ContentType</span></a><span class="symbol">.</span><span class="identifier">fileExtensions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Recommended file name extensions for this content type</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../with-charset.html">withCharset</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">ContentType</span></a><span class="symbol">.</span><span class="identifier">withCharset</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.http$withCharset(io.ktor.http.ContentType, java.nio.charset.Charset)/charset">charset</span><span class="symbol">:</span>&nbsp;<span class="identifier">Charset</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Creates a copy of <code>this</code> type with the added charset parameter with <a href="../with-charset.html#io.ktor.http$withCharset(io.ktor.http.ContentType, java.nio.charset.Charset)/charset">charset</a> value.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="companion-object-extension-functions">Companion Object Extension Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../default-for-file.html">defaultForFile</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">defaultForFile</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$defaultForFile(io.ktor.http.ContentType.Companion, java.io.File)/file">file</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">defaultForFile</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$defaultForFile(io.ktor.http.ContentType.Companion, java.nio.file.Path)/file">file</span><span class="symbol">:</span>&nbsp;<span class="identifier">Path</span><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../default-for-file-extension.html">defaultForFileExtension</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">defaultForFileExtension</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$defaultForFileExtension(io.ktor.http.ContentType.Companion, kotlin.String)/extension">extension</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Default <a href="./index.html">ContentType</a> for <a href="../default-for-file-extension.html#io.ktor.http$defaultForFileExtension(io.ktor.http.ContentType.Companion, kotlin.String)/extension">extension</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../default-for-file-path.html">defaultForFilePath</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">defaultForFilePath</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$defaultForFilePath(io.ktor.http.ContentType.Companion, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ContentType</span></a></code></div>
+
+        <p>Default <a href="./index.html">ContentType</a> for file <a href="../default-for-file-path.html#io.ktor.http$defaultForFilePath(io.ktor.http.ContentType.Companion, kotlin.String)/path">path</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../from-file-extension.html">fromFileExtension</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">fromFileExtension</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$fromFileExtension(io.ktor.http.ContentType.Companion, kotlin.String)/ext">ext</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">ContentType</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Recommended content type by file name extension</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../from-file-path.html">fromFilePath</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">ContentType.Companion</span><span class="symbol">.</span><span class="identifier">fromFilePath</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http$fromFilePath(io.ktor.http.ContentType.Companion, kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">ContentType</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Recommended content types by file <a href="../from-file-path.html#io.ktor.http$fromFilePath(io.ktor.http.ContentType.Companion, kotlin.String)/path">path</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

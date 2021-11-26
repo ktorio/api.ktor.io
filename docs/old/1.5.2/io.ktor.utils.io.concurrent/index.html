@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.utils.io.concurrent -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.2/io.ktor.utils.io.concurrent/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.2/">Ktor 1.5.2</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktorutilsioconcurrent">Package io.ktor.utils.io.concurrent</h2>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="shared.html">shared</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">shared</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.utils.io.concurrent$shared(io.ktor.utils.io.concurrent.shared.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="shared.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="shared.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Allows to create mutate property with frozen value.
+Please note that any assigned value will be frozen.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="thread-local.html">threadLocal</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">expect</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">threadLocal</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.utils.io.concurrent$threadLocal(io.ktor.utils.io.concurrent.threadLocal.T)/value">value</span><span class="symbol">:</span>&nbsp;<a href="thread-local.html#T"><span class="identifier">T</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-only-property/index.html"><span class="identifier">ReadOnlyProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="thread-local.html#T"><span class="identifier">T</span></a><span class="symbol">?</span><span class="symbol">&gt;</span></code></div>
+
+        <p>Allow to create thread local reference without freezing.
+Please note that reference is thread-local only in kotlin-native. Otherwise it will be simple <a href="thread-local.html#io.ktor.utils.io.concurrent$threadLocal(io.ktor.utils.io.concurrent.threadLocal.T)/value">value</a> reference.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebSocketExtensionFactory -</title>
+  <meta name="description" content="Ktor is an asynchronous framework for creating microservices, web applications, and more.">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.5.0/io.ktor.http.cio.websocket/-web-socket-extension-factory/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.5.0/">Ktor 1.5.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http.cio.websocket</a> / <a href="./index.html">WebSocketExtensionFactory</a></div>
+
+<h1 id="websocketextensionfactory">WebSocketExtensionFactory</h1>
+
+<div class="signature"><code><span class="keyword">interface </span><span class="identifier">WebSocketExtensionFactory</span><span class="symbol">&lt;</span><span class="identifier">ConfigType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">ExtensionType</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-web-socket-extension/index.html"><span class="identifier">WebSocketExtension</span></a><span class="symbol">&lt;</span><a href="index.html#ConfigType"><span class="identifier">ConfigType</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></div>
+
+<p>Factory that defines WebSocket extension. The factory is used in pair with <a href="../-web-socket-extensions-config/install.html">WebSocketExtensionsConfig.install</a>
+method to install WebSocket extension in client or server.</p>
+
+<p>Usually this interface implemented in <code>companion object</code> of the origin <a href="../-web-socket-extension/index.html">WebSocketExtension</a>.</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="key.html">key</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="index.html#ExtensionType"><span class="identifier">ExtensionType</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Key is used to locate extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv1.html">rsv1</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">rsv1</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>First extension bit used by current extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv2.html">rsv2</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">rsv2</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Second extension bit used by current extension.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="rsv3.html">rsv3</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">rsv3</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>Third extension bit used by current extension.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="install.html">install</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">install</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.http.cio.websocket.WebSocketExtensionFactory$install(kotlin.Function1((io.ktor.http.cio.websocket.WebSocketExtensionFactory.ConfigType, kotlin.Unit)))/config">config</span><span class="symbol">:</span>&nbsp;<a href="index.html#ConfigType"><span class="identifier">ConfigType</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#ExtensionType"><span class="identifier">ExtensionType</span></a></code></div>
+
+        <p>Create extension instance using <a href="install.html#io.ktor.http.cio.websocket.WebSocketExtensionFactory$install(kotlin.Function1((io.ktor.http.cio.websocket.WebSocketExtensionFactory.ConfigType, kotlin.Unit)))/config">config</a> block. The extension instance is created for each WebSocket request.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-web-socket-deflate-extension/-companion/index.html">Companion</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">companion</span> <span class="keyword">object </span><span class="identifier">Companion</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="./index.html"><span class="identifier">WebSocketExtensionFactory</span></a><span class="symbol">&lt;</span><a href="../-web-socket-deflate-extension/-config/index.html"><span class="identifier">Config</span></a><span class="symbol">,</span>&nbsp;<a href="../-web-socket-deflate-extension/index.html"><span class="identifier">WebSocketDeflateExtension</span></a><span class="symbol">&gt;</span></code></div>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

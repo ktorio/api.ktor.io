@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HttpMessage -</title>
+  <meta name="description" content="io.ktor.http.cio / HttpMessage">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.4.0/io.ktor.http.cio/-http-message/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.4.0/">Ktor 1.4.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="../index.html">io.ktor.http.cio</a> / <a href="./index.html">HttpMessage</a></div>
+
+<h1 id="httpmessage">HttpMessage</h1>
+
+<div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">HttpMessage</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../io.ktor.utils.io.core/-closeable/index.html"><span class="identifier">Closeable</span></a></code></div>
+
+<p>Represents a base HTTP message type for request and response</p>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="headers.html">headers</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">headers</span><span class="symbol">: </span><a href="../-http-headers-map/index.html"><span class="identifier">HttpHeadersMap</span></a></code></div>
+
+        <p>request/response headers</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="close.html">close</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Release all memory resources hold by this message</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="release.html">release</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><span class="identifier">release</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Release all memory resources hold by this message</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="inheritors">Inheritors</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="../-request/index.html">Request</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Request</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpMessage</span></a></code></div>
+
+        <p>Represents an HTTP request</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="../-response/index.html">Response</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Response</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">HttpMessage</span></a></code></div>
+
+        <p>Represents an HTTP response</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
