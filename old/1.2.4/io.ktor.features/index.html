@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.features -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.2.4/io.ktor.features/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.2.4/">Ktor 1.2.4</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktorfeatures">Package io.ktor.features</h2>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-auto-head-response/index.html">AutoHeadResponse</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">AutoHeadResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>A feature that automatically respond to HEAD requests</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-c-o-r-s/index.html">CORS</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CORS</span></code></div>
+
+        <p>CORS feature. Please read http://ktor.io/servers/features/cors.html first before using it.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-cached-transformation-result/index.html">CachedTransformationResult</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">CachedTransformationResult</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Represents a cached transformation result from a previous <a href="../io.ktor.request/receive.html">ApplicationCall.receive</a> invocation.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-caching-headers/index.html">CachingHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CachingHeaders</span></code></div>
+
+        <p>Feature that set <a href="../io.ktor.http.content/-caching-options/index.html">CachingOptions</a> headers for every response.
+It invokes <a href="#">optionsProviders</a> for every response and use first non null caching options</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-call-id/index.html">CallId</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CallId</span></code></div>
+
+        <p>Retrieves and generates if necessary a call id. A call id (or correlation id) could be retrieved_ from a call
+via <a href="-call-id/-configuration/retrieve.html">CallId.Configuration.retrieve</a> function. Multiple retrieve functions could be configured that will be invoked
+one by one until one of them return non-null value. If no value has been provided by retrievers then a generator
+could be applied to generate a new call id. Generators could be provided via <a href="-call-id/-configuration/generate.html">CallId.Configuration.generate</a> function.
+Similar to retrieve, multiple generators could be configured so they will be invoked one by one.
+Usually call id is passed via <a href="../io.ktor.http/-http-headers/-x-request-id.html">io.ktor.http.HttpHeaders.XRequestId</a> so
+one could use <a href="-call-id/-configuration/retrieve-from-header.html">CallId.Configuration.retrieveFromHeader</a> function to retrieve call id from a header.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-call-logging/index.html">CallLogging</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CallLogging</span></code></div>
+
+        <p>Logs application lifecycle and call events.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-compression/index.html">Compression</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">Compression</span></code></div>
+
+        <p>Feature to compress a response based on conditions and ability of client to decompress it</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-compression-encoder/index.html">CompressionEncoder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">CompressionEncoder</span></code></div>
+
+        <p>Represents a Compression encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-compression-encoder-builder/index.html">CompressionEncoderBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">CompressionEncoderBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a></code></div>
+
+        <p>Builder for compression encoder configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-compression-encoder-config/index.html">CompressionEncoderConfig</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CompressionEncoderConfig</span></code></div>
+
+        <p>Configuration for an encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-compression-options/index.html">CompressionOptions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CompressionOptions</span></code></div>
+
+        <p>Compression feature configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-conditional-headers/index.html">ConditionalHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ConditionalHeaders</span></code></div>
+
+        <p>Feature to check modified/match conditional headers and avoid sending contents if it was not changed</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-conditions-holder-builder/index.html">ConditionsHolderBuilder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">ConditionsHolderBuilder</span></code></div>
+
+        <p>Represents a builder for conditions</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-content-converter/index.html">ContentConverter</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">interface </span><span class="identifier">ContentConverter</span></code></div>
+
+        <p>A custom content converted that could be registered in <a href="-content-negotiation/index.html">ContentNegotiation</a> feature for any particular content type
+Could provide bi-directional conversion implementation.
+One of the most typical examples of content converter is a json content converter that provides both serialization and deserialization</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-content-negotiation/index.html">ContentNegotiation</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ContentNegotiation</span></code></div>
+
+        <p>This feature provides automatic content conversion according to Content-Type and Accept headers</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-content-type-with-quality/index.html">ContentTypeWithQuality</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ContentTypeWithQuality</span></code></div>
+
+        <p>Pair of <a href="../io.ktor.http/-content-type/index.html">ContentType</a> and <a href="-content-type-with-quality/quality.html">quality</a> usually parsed from <a href="../io.ktor.http/-http-headers/-accept.html">HttpHeaders.Accept</a> headers.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-data-conversion/index.html">DataConversion</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">DataConversion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code></div>
+
+        <p>Data conversion feature to serialize and deserialize types using <a href="#">converters</a> registry</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-default-headers/index.html">DefaultHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">DefaultHeaders</span></code></div>
+
+        <p>Adds standard HTTP headers <code>Date</code> and <code>Server</code> and provides ability to specify other headers
+that are included in responses.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-deflate-encoder/index.html">DeflateEncoder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">DeflateEncoder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compression-encoder/index.html"><span class="identifier">CompressionEncoder</span></a></code></div>
+
+        <p>Implementation of the deflate encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-delegating-conversion-service/index.html">DelegatingConversionService</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">DelegatingConversionService</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code></div>
+
+        <p>Custom convertor builder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-double-receive/index.html">DoubleReceive</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">DoubleReceive</span></code></div>
+
+        <p>This feature provides ability to invoke <a href="../io.ktor.request/receive.html">ApplicationCall.receive</a> several times.
+Please note that not every type could be received twice. For example, even with this feature installed you can’t
+receive a channel twice (unless <a href="-double-receive/-configuration/receive-entire-content.html">Configuration.receiveEntireContent</a> is enabled).
+Types that always can be received twice or more: <code>ByteArray</code>, <code>String</code> and <code>Parameters</code>.
+Also some of content transformation features (such as <a href="-content-negotiation/index.html">ContentNegotiation</a>) could support it as well.
+If not specified, a transformation result is not considered as reusable. So a transformation feature may
+mark a result as reusable by proceeding with a <a href="../io.ktor.request/-application-receive-request/index.html">ApplicationReceiveRequest</a> instance having
+<a href="../io.ktor.request/-application-receive-request/reusable-value.html">ApplicationReceiveRequest.reusableValue</a> <code>= true</code>.
+So installing <a href="-double-receive/index.html">DoubleReceive</a> with <a href="-content-negotiation/index.html">ContentNegotiation</a> provides ability to receive a user type that will be
+deserialized at first receive and then the same instance will be returned for every further receive invocation.
+When the same receive type requested as the firstly received, the receive pipeline and content transformation are
+not triggered (except when <a href="-double-receive/-configuration/receive-entire-content.html">Configuration.receiveEntireContent</a> = <code>true</code>).</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-forwarded-header-support/index.html">ForwardedHeaderSupport</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">ForwardedHeaderSupport</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Forwarded header support. See RFC 7239 https://tools.ietf.org/html/rfc7239</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-gzip-encoder/index.html">GzipEncoder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">GzipEncoder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compression-encoder/index.html"><span class="identifier">CompressionEncoder</span></a></code></div>
+
+        <p>Implementation of the gzip encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-h-s-t-s/index.html">HSTS</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HSTS</span></code></div>
+
+        <p>HSTS feature that appends <code>Strict-Transport-Security</code> HTTP header to every response.
+See http://ktor.io/servers/features/hsts.html for details
+See RFC 6797 https://tools.ietf.org/html/rfc6797</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-https-redirect/index.html">HttpsRedirect</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">HttpsRedirect</span></code></div>
+
+        <p>Redirect non-secure requests to HTTPS</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-identity-encoder/index.html">IdentityEncoder</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">IdentityEncoder</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-compression-encoder/index.html"><span class="identifier">CompressionEncoder</span></a></code></div>
+
+        <p>Implementation of the identity encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-mutable-origin-connection-point/index.html">MutableOriginConnectionPoint</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">MutableOriginConnectionPoint</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-request-connection-point/index.html"><span class="identifier">RequestConnectionPoint</span></a></code></div>
+
+        <p>Represents a <a href="../io.ktor.http/-request-connection-point/index.html">RequestConnectionPoint</a>. Every it’s component is mutable so application features could provide them</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-partial-content/index.html">PartialContent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">PartialContent</span></code></div>
+
+        <p>Feature to support requests to specific content ranges.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-status-pages/index.html">StatusPages</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">StatusPages</span></code></div>
+
+        <p>Status pages feature that handles exceptions and status codes. Useful to configure default error pages.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-x-forwarded-header-support/index.html">XForwardedHeaderSupport</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">XForwardedHeaderSupport</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.application/-application-feature/index.html"><span class="identifier">ApplicationFeature</span></a><span class="symbol">&lt;</span><a href="../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">,</span>&nbsp;<a href="-x-forwarded-header-support/-config/index.html"><span class="identifier">Config</span></a><span class="symbol">,</span>&nbsp;<a href="-x-forwarded-header-support/-config/index.html"><span class="identifier">Config</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p><code>X-Forwarded-*</code> headers support
+See http://ktor.io/servers/features/forward-headers.html for details</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="exceptions">Exceptions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-bad-request-exception/index.html">BadRequestException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BadRequestException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>Base exception to indicate that the request is not correct due to
+wrong/missing request parameters, body content or header values.
+Throwing this exception in a handler will lead to 400 Bad Request response
+unless a custom <a href="-status-pages/index.html">io.ktor.features.StatusPages</a> handler registered.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-content-transformation-exception/index.html">ContentTransformationException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ContentTransformationException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>Thrown when content cannot be transformed to the desired type.
+It is not defined which status code will be replied when an exception of this type is thrown and not caught.
+Depending on child type it could be 4xx or 5xx status code. By default it will be 500 Internal Server Error.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-missing-request-parameter-exception/index.html">MissingRequestParameterException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">MissingRequestParameterException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-bad-request-exception/index.html"><span class="identifier">BadRequestException</span></a></code></div>
+
+        <p>This exception is thrown when a required parameter with name <a href="-missing-request-parameter-exception/parameter-name.html">parameterName</a> is missing</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-not-found-exception/index.html">NotFoundException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NotFoundException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>This exception means that the requested resource is not found.
+HTTP status 404 Not found will be replied when this exception is thrown and not caught.
+404 status page could be configured by registering a custom <a href="-status-pages/index.html">io.ktor.features.StatusPages</a> handler.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-parameter-conversion-exception/index.html">ParameterConversionException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">ParameterConversionException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-bad-request-exception/index.html"><span class="identifier">BadRequestException</span></a></code></div>
+
+        <p>This exception is thrown when a required parameter with name <a href="-parameter-conversion-exception/parameter-name.html">parameterName</a> couldn’t be converted to the <a href="-parameter-conversion-exception/type.html">type</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">RejectedCallIdException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html"><span class="identifier">IllegalArgumentException</span></a></code></div>
+
+        <p>An exception that could be thrown to reject a call due to illegal call id</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-request-receive-already-failed-exception.html">RequestReceiveAlreadyFailedException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">RequestReceiveAlreadyFailedException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a></code></div>
+
+        <p>Thrown when a request receive was failed during the previous <a href="../io.ktor.request/receive.html">ApplicationCall.receive</a> invocation so this
+receive attempt is simply replaying the previous exception cause.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-unsupported-media-type-exception/index.html">UnsupportedMediaTypeException</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">UnsupportedMediaTypeException</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-content-transformation-exception/index.html"><span class="identifier">ContentTransformationException</span></a></code></div>
+
+        <p>Thrown when there is no conversion for a content type configured.
+HTTP status 415 Unsupported Media Type will be replied when this exception is thrown and not caught.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="type-aliases">Type Aliases</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-accept-header-contributor.html">AcceptHeaderContributor</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">AcceptHeaderContributor</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="parameterName">call</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">,</span>&nbsp;<span class="parameterName">acceptedContentTypes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-content-type-with-quality/index.html"><span class="identifier">ContentTypeWithQuality</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-content-type-with-quality/index.html"><span class="identifier">ContentTypeWithQuality</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Functional type for accepted content types contributor</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-call-id-provider.html">CallIdProvider</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">CallIdProvider</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="parameterName">call</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>A function that retrieves or generates call id using provided call</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-call-id-verifier.html">CallIdVerifier</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">typealias </span><span class="identifier">CallIdVerifier</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></div>
+
+        <p>A function that verifies retrieved or generated call id. Should return <code>true</code> for a valid call id.
+Also it could throw a <a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a> to reject an <a href="../io.ktor.application/-application-call/index.html">ApplicationCall</a> otherwise an illegal call id
+will be ignored or replaced with generated one.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extensions-for-external-classes">Extensions for External Classes</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="kotlin.collections.-list/index.html">kotlin.collections.List</a></p>
+
+      </td>
+<td>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="kotlinx.coroutines.-coroutine-scope/index.html">kotlinx.coroutines.CoroutineScope</a></p>
+
+      </td>
+<td>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="properties">Properties</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-c-a-l-l_-i-d_-d-e-f-a-u-l-t_-d-i-c-t-i-o-n-a-r-y.html">CALL_ID_DEFAULT_DICTIONARY</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">CALL_ID_DEFAULT_DICTIONARY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>The default call id’s generator dictionary</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-mutable-origin-connection-point-key.html">MutableOriginConnectionPointKey</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><span class="identifier">MutableOriginConnectionPointKey</span><span class="symbol">: </span><a href="../io.ktor.util/-attribute-key/index.html"><span class="identifier">AttributeKey</span></a><span class="symbol">&lt;</span><a href="-mutable-origin-connection-point/index.html"><span class="identifier">MutableOriginConnectionPoint</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>A key to install a mutable <a href="../io.ktor.http/-request-connection-point/index.html">RequestConnectionPoint</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="call-id.html">callId</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">callId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></div>
+
+        <p>A call id that is retrieved or generated by <a href="-call-id/index.html">CallId</a> feature or <code>null</code> (this is possible if there is no
+call id provided and no generators configured or <a href="-call-id/index.html">CallId</a> feature is not installed)</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="conversion-service.html">conversionService</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.application/-application-call-pipeline/index.html"><span class="identifier">ApplicationCallPipeline</span></a><span class="symbol">.</span><span class="identifier">conversionService</span><span class="symbol">: </span><a href="../io.ktor.util/-conversion-service/index.html"><span class="identifier">ConversionService</span></a></code></div>
+
+        <p>Lookup for a conversion service. Returns the default one if the feature wasn’t installed</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="default-versions.html">defaultVersions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.http.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">.</span><s><span class="identifier">defaultVersions</span></s><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../io.ktor.http.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Retrieves LastModified and ETag versions from this <a href="../io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a> headers</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="origin.html">origin</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">val </span><a href="../io.ktor.request/-application-request/index.html"><span class="identifier">ApplicationRequest</span></a><span class="symbol">.</span><span class="identifier">origin</span><span class="symbol">: </span><a href="../io.ktor.http/-request-connection-point/index.html"><span class="identifier">RequestConnectionPoint</span></a></code></div>
+
+        <p>Represents request and connection parameters possibly overridden via https headers.
+By default it fallbacks to <a href="../io.ktor.request/-application-request/local.html">ApplicationRequest.local</a></p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="functions">Functions</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="call-id-mdc.html">callIdMdc</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-call-logging/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">callIdMdc</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features$callIdMdc(io.ktor.features.CallLogging.Configuration, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"CallId"<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Put call id into MDC (diagnostic context value) with <a href="call-id-mdc.html#io.ktor.features$callIdMdc(io.ktor.features.CallLogging.Configuration, kotlin.String)/name">name</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="condition.html">condition</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">condition</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$condition(io.ktor.features.ConditionsHolderBuilder, kotlin.Function2((io.ktor.application.ApplicationCall, io.ktor.http.content.OutgoingContent, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="../io.ktor.http.content/-outgoing-content/index.html"><span class="identifier">OutgoingContent</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends a custom condition to the encoder or Compression configuration.
+A predicate returns <code>true</code> when a response need to be compressed.
+If at least one condition is not met then the response compression is skipped.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="deflate.html">deflate</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-compression/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">deflate</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$deflate(io.ktor.features.Compression.Configuration, kotlin.Function1((io.ktor.features.CompressionEncoderBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-compression-encoder-builder/index.html"><span class="identifier">CompressionEncoderBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends <code>deflate</code> encoder with default priority of 0.9</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="exclude-content-type.html">excludeContentType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">excludeContentType</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">vararg</span> <span class="parameterName" id="io.ktor.features$excludeContentType(io.ktor.features.ConditionsHolderBuilder, kotlin.Array((io.ktor.http.ContentType)))/mimeTypes">mimeTypes</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends a content type exclusion condition to the encoder or Compression configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="generate.html">generate</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-call-id/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">generate</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$generate(io.ktor.features.CallId.Configuration, kotlin.Int, kotlin.String)/length">length</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;64<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$generate(io.ktor.features.CallId.Configuration, kotlin.Int, kotlin.String)/dictionary">dictionary</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;CALL_ID_DEFAULT_DICTIONARY<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Generates fixed <a href="generate.html#io.ktor.features$generate(io.ktor.features.CallId.Configuration, kotlin.Int, kotlin.String)/length">length</a> call ids using the specified <a href="generate.html#io.ktor.features$generate(io.ktor.features.CallId.Configuration, kotlin.Int, kotlin.String)/dictionary">dictionary</a>.
+Please note that this function generates pseudo-random identifiers via regular <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Random.html">java.util.Random</a>
+and should not be considered as cryptographically secure.
+Also note that you should use the same dictionary for <a href="-call-id-verifier.html">CallIdVerifier</a> otherwise a generated call id could be
+discarded or may lead to complete call rejection.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="gzip.html">gzip</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-compression/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">gzip</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$gzip(io.ktor.features.Compression.Configuration, kotlin.Function1((io.ktor.features.CompressionEncoderBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-compression-encoder-builder/index.html"><span class="identifier">CompressionEncoderBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends <code>gzip</code> encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="identity.html">identity</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-compression/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">identity</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$identity(io.ktor.features.Compression.Configuration, kotlin.Function1((io.ktor.features.CompressionEncoderBuilder, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-compression-encoder-builder/index.html"><span class="identifier">CompressionEncoderBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends <code>identity</code> encoder</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="match-content-type.html">matchContentType</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">matchContentType</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">vararg</span> <span class="parameterName" id="io.ktor.features$matchContentType(io.ktor.features.ConditionsHolderBuilder, kotlin.Array((io.ktor.http.ContentType)))/mimeTypes">mimeTypes</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-content-type/index.html"><span class="identifier">ContentType</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends a content type condition to the encoder or Compression configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="minimum-size.html">minimumSize</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-conditions-holder-builder/index.html"><span class="identifier">ConditionsHolderBuilder</span></a><span class="symbol">.</span><span class="identifier">minimumSize</span><span class="symbol">(</span><span class="parameterName" id="io.ktor.features$minimumSize(io.ktor.features.ConditionsHolderBuilder, kotlin.Long)/minSize">minSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Appends a minimum size condition to the encoder or Compression configuration</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="parse-versions.html">parseVersions</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a><span class="symbol">.</span><span class="identifier">parseVersions</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../io.ktor.http.content/-version/index.html"><span class="identifier">Version</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>Retrieves LastModified and ETag versions from headers.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="status-file.html">statusFile</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="-status-pages/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">.</span><span class="identifier">statusFile</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">vararg</span> <span class="parameterName" id="io.ktor.features$statusFile(io.ktor.features.StatusPages.Configuration, kotlin.Array((io.ktor.http.HttpStatusCode)), kotlin.String)/code">code</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-http-status-code/index.html"><span class="identifier">HttpStatusCode</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$statusFile(io.ktor.features.StatusPages.Configuration, kotlin.Array((io.ktor.http.HttpStatusCode)), kotlin.String)/filePattern">filePattern</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Register a status page file(s) using <a href="status-file.html#io.ktor.features$statusFile(io.ktor.features.StatusPages.Configuration, kotlin.Array((io.ktor.http.HttpStatusCode)), kotlin.String)/filePattern">filePattern</a> for multiple status <a href="status-file.html#io.ktor.features$statusFile(io.ktor.features.StatusPages.Configuration, kotlin.Array((io.ktor.http.HttpStatusCode)), kotlin.String)/code">code</a> list</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="suitable-charset.html">suitableCharset</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><span class="identifier">suitableCharset</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$suitableCharset(io.ktor.application.ApplicationCall, java.nio.charset.Charset)/defaultCharset">defaultCharset</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Charsets.UTF_8<br /><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a></code></div>
+
+        <p>Detect suitable charset for an application call by <code>Accept</code> header or fallback to <a href="suitable-charset.html#io.ktor.features$suitableCharset(io.ktor.application.ApplicationCall, java.nio.charset.Charset)/defaultCharset">defaultCharset</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="to-log-string.html">toLogString</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">fun </span><a href="../io.ktor.request/-application-request/index.html"><span class="identifier">ApplicationRequest</span></a><span class="symbol">.</span><span class="identifier">toLogString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></div>
+
+        <p>Generates a string representing this <a href="../io.ktor.request/-application-request/index.html">ApplicationRequest</a> suitable for logging</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="with-e-tag.html">withETag</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.application/-application-call/index.html"><span class="identifier">ApplicationCall</span></a><span class="symbol">.</span><s><span class="identifier">withETag</span></s><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/etag">etag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/putHeader">putHeader</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+        <p>Checks current <a href="with-e-tag.html#io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/etag">etag</a> value and pass it through conditions supplied by the remote client. Depends on conditions it
+produces 410 Precondition Failed or 304 Not modified responses when necessary.
+Otherwise sets ETag header and delegates to the <a href="with-e-tag.html#io.ktor.features$withETag(io.ktor.application.ApplicationCall, kotlin.String, kotlin.Boolean, kotlin.SuspendFunction0((kotlin.Unit)))/block">block</a> function</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

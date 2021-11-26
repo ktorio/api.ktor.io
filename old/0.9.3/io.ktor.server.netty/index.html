@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.server.netty -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//0.9.3/io.ktor.server.netty/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/0.9.3/">Ktor 0.9.3</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktorservernetty">Package io.ktor.server.netty</h2>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-development-engine/index.html">DevelopmentEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">DevelopmentEngine</span></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty/index.html">Netty</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">object </span><span class="identifier">Netty</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.server.engine/-application-engine-factory/index.html"><span class="identifier">ApplicationEngineFactory</span></a><span class="symbol">&lt;</span><a href="-netty-application-engine/index.html"><span class="identifier">NettyApplicationEngine</span></a><span class="symbol">,</span>&nbsp;<a href="-netty-application-engine/-configuration/index.html"><span class="identifier">Configuration</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>An <a href="../io.ktor.server.engine/-application-engine-factory/index.html">ApplicationEngineFactory</a> providing a Netty-based <a href="../io.ktor.server.engine/-application-engine/index.html">ApplicationEngine</a></p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-application-call/index.html">NettyApplicationCall</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NettyApplicationCall</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-call/index.html"><span class="identifier">BaseApplicationCall</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-application-engine/index.html">NettyApplicationEngine</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyApplicationEngine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.server.engine/-base-application-engine/index.html"><span class="identifier">BaseApplicationEngine</span></a></code></div>
+
+        <p><a href="../io.ktor.server.engine/-application-engine/index.html">ApplicationEngine</a> implementation for running in a standalone Netty</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-application-request/index.html">NettyApplicationRequest</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NettyApplicationRequest</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.server.engine/-base-application-request/index.html"><span class="identifier">BaseApplicationRequest</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-application-request-headers/index.html">NettyApplicationRequestHeaders</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyApplicationRequestHeaders</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-headers/index.html"><span class="identifier">Headers</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-application-response/index.html">NettyApplicationResponse</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">NettyApplicationResponse</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="../io.ktor.server.engine/-base-application-response/index.html"><span class="identifier">BaseApplicationResponse</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-call-pool/index.html">NettyCallPool</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyCallPool</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">NioEventLoopGroup</span></code></div>
+
+        <p><a href="#">NioEventLoopGroup</a> for processing <a href="../io.ktor.application/-application-call/index.html">ApplicationCall</a> instances</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-connection-pool/index.html">NettyConnectionPool</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyConnectionPool</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">NioEventLoopGroup</span></code></div>
+
+        <p><a href="#">NioEventLoopGroup</a> for accepting connections</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-http-incoming-content/index.html">NettyHttpIncomingContent</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyHttpIncomingContent</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../io.ktor.content/-incoming-content/index.html"><span class="identifier">IncomingContent</span></a></code></div>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-netty-worker-pool/index.html">NettyWorkerPool</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">class </span><span class="identifier">NettyWorkerPool</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">NioEventLoopGroup</span></code></div>
+
+        <p><a href="#">NioEventLoopGroup</a> for processing incoming requests and doing engine’s internal work</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="extensions-for-external-classes">Extensions for External Classes</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="io.netty.util.concurrent.-future/index.html">io.netty.util.concurrent.Future</a></p>
+
+      </td>
+<td>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

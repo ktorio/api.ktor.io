@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wsRaw -</title>
+  <meta name="description" content="io.ktor.client.features.websocket / wsRaw">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io/1.4.0/io.ktor.client.features.websocket/ws-raw.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/1.4.0/">Ktor 1.4.0</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="api-docs-breadcrumbs"><a href="index.html">io.ktor.client.features.websocket</a> / <a href="./ws-raw.html">wsRaw</a></div>
+
+<h1 id="wsraw">wsRaw</h1>
+
+<div class="signature"><code><span class="keyword">suspend</span> <span class="keyword">fun </span><a href="../io.ktor.client/-http-client/index.html"><span class="identifier">HttpClient</span></a><span class="symbol">.</span><span class="identifier">wsRaw</span><span class="symbol">(</span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/method">method</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.http/-http-method/index.html"><span class="identifier">HttpMethod</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HttpMethod.Get<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"localhost"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_PORT<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"/"<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/request">request</span><span class="symbol">:</span>&nbsp;<a href="../io.ktor.client.request/-http-request-builder/index.html"><span class="identifier">HttpRequestBuilder</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{}<span class="symbol">, </span><br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="parameterName" id="io.ktor.client.features.websocket$wsRaw(io.ktor.client.HttpClient, io.ktor.http.HttpMethod, kotlin.String, kotlin.Int, kotlin.String, kotlin.Function1((io.ktor.client.request.HttpRequestBuilder, kotlin.Unit)), kotlin.SuspendFunction1((io.ktor.client.features.websocket.ClientWebSocketSession, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<span class="keyword">suspend </span><a href="-client-web-socket-session/index.html"><span class="identifier">ClientWebSocketSession</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><br /><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></div>
+
+<p>Create raw <a href="-client-web-socket-session/index.html">ClientWebSocketSession</a>: no ping-pong and other service messages are used.</p>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+

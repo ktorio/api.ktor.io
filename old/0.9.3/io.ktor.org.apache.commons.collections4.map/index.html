@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>io.ktor.org.apache.commons.collections4.map -</title>
+  <meta name="description" content="Asynchronous framework for web applications">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/common.css">
+  <link rel="canonical" href="https://api.ktor.io//0.9.3/io.ktor.org.apache.commons.collections4.map/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/common.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-47631155-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+  <body>
+    <header class="site-header" role="banner">
+  <div class="wrapper">
+    <div class="site-header-title">
+      <a class="site-title" href="/0.9.3/">Ktor 0.9.3</a>
+    </div>
+    <div id="version-placeholder"></div>
+    <script src="/assets/versions.js"></script>
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h2 id="package-ioktororgapachecommonscollections4map">Package io.ktor.org.apache.commons.collections4.map</h2>
+
+<h3 id="types">Types</h3>
+
+<table class="api-docs-table">
+<tbody>
+<tr>
+<td>
+
+        <p><a href="-abstract-hashed-map/index.html">AbstractHashedMap</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">AbstractHashedMap</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/AbstractMap.html"><span class="identifier">AbstractMap</span></a><span class="symbol">&lt;</span><a href="-abstract-hashed-map/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="-abstract-hashed-map/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>An abstract implementation of a hash-based map which provides numerous points for subclasses to override.</p>
+
+        <p>This class implements all the features necessary for a subclass hash-based map. Key-value entries are stored in instances of the <code>HashEntry</code> class, which can be overridden and replaced. The iterators can similarly be replaced, without the need to replace the KeySet, EntrySet and Values view classes.</p>
+
+        <p>Overridable methods are provided to change the default hashing behaviour, and to change how entries are added to and removed from the map. Hopefully, all you need for unusual subclasses is here.</p>
+
+        <p>NOTE: From Commons Collections 3.1 this class extends AbstractMap. This is to provide backwards compatibility for ReferenceMap between v3.0 and v3.1. This extends clause will be removed in v5.0.</p>
+
+      </td>
+</tr>
+<tr>
+<td>
+
+        <p><a href="-abstract-linked-map/index.html">AbstractLinkedMap</a></p>
+
+      </td>
+<td>
+        <div class="signature"><code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractLinkedMap</span><span class="symbol">&lt;</span><span class="identifier">K</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">V</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="-abstract-hashed-map/index.html"><span class="identifier">AbstractHashedMap</span></a><span class="symbol">&lt;</span><a href="-abstract-linked-map/index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="-abstract-linked-map/index.html#V"><span class="identifier">V</span></a><span class="symbol">&gt;</span></code></div>
+
+        <p>An abstract implementation of a hash-based map that links entries to create an ordered map and which provides numerous points for subclasses to override.</p>
+
+        <p>This class implements all the features necessary for a subclass linked hash-based map. Key-value entries are stored in instances of the <code>LinkEntry</code> class which can be overridden and replaced. The iterators can similarly be replaced, without the need to replace the KeySet, EntrySet and Values view classes.</p>
+
+        <p>Overridable methods are provided to change the default hashing behaviour, and to change how entries are added to and removed from the map. Hopefully, all you need for unusual subclasses is here.</p>
+
+        <p>This implementation maintains order by original insertion, but subclasses may work differently. The <code>OrderedMap</code> interface is implemented to provide access to bidirectional iteration and extra convenience methods.</p>
+
+        <p>The <code>orderedMapIterator()</code> method provides direct access to a bidirectional iterator. The iterators from the other views can also be cast to <code>OrderedIterator</code> if required.</p>
+
+        <p>All the available iterators can be reset back to the start by casting to <code>ResettableIterator</code> and calling <code>reset()</code>.</p>
+
+        <p>The implementation is also designed to be subclassed, with lots of useful methods exposed.</p>
+
+      </td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <!-- empty -->
+</footer>
+
+  </body>
+</html>
+
