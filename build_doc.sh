@@ -9,7 +9,7 @@ if [ -z "${KTOR_VERSION}" ]; then
 fi
 
 # Build docs
-git clone https://github.com/ktorio/ktor/ ktor
+# git clone https://github.com/ktorio/ktor/ ktor
 cd ktor
 ./gradlew dokkaHtmlMultiModule -PreleaseVersion=${KTOR_VERSION} --no-parallel
 cd ..
