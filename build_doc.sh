@@ -11,7 +11,7 @@ fi
 # Build docs
 git clone https://github.com/ktorio/ktor/ ktor
 cd ktor
-./gradlew dokkaHtmlMultiModule -PreleaseVersion=${KTOR_VERSION} --no-parallel
+./gradlew :dokkaHtmlMultiModule -PreleaseVersion=${KTOR_VERSION} --no-parallel
 cd ..
 rm -rf docs
 cp -R ./versions/${KTOR_VERSION} ./docs
