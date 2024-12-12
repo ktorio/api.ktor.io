@@ -18,3 +18,6 @@ cp -R ./versions/${KTOR_VERSION} ./docs
 echo api.ktor.io > ./docs/CNAME
 cp -R ./old/ ./docs/old
 rm -rf ktor
+
+# Add Google Tag Manager script to the files
+./inject_gtm_script.sh docs
