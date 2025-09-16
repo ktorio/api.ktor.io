@@ -27,8 +27,11 @@ mkdir -p "${SCRIPTS_DIR}"
 cp "${GTM_SCRIPT}" "${SCRIPTS_DIR}/"
 echo "Copied ${GTM_SCRIPT} to ${SCRIPTS_DIR}/"
 
-# Process HTML files
-find "${VERSION_DIR}" -name "*.html" | while read -r FILE; do
+# Function to process a single HTML file
+patch_html_file() {
+  local FILE="$1"
+  local VERSION_DIR="$2"
+
   # Calculate the depth of the HTML file relative to VERSION_DIR
   if [ "$(dirname "${FILE}")" = "${VERSION_DIR}" ]; then
     # If the file is directly under VERSION_DIR, no "../" needed
@@ -38,8 +41,11 @@ find "${VERSION_DIR}" -name "*.html" | while read -r FILE; do
     RELATIVE_PATH=$(printf '../%.0s' $(seq 1 "${DEPTH}"))scripts/gtm.js
   fi
 
+  # Check if already patched
+  if grep -qF "src=\"${RELATIVE_PATH}\"" "${FILE}"; then
+    echo "Skipped ${FILE} (already patched)"
   # Check if <head> exists
-  if grep -q "<head>" "${FILE}"; then
+  elif grep -q "<head>" "${FILE}"; then
     sed -i '' -e "/<head>/a\\
 <script type=\"text/javascript\" src=\"${RELATIVE_PATH}\" async></script>\\
 " "${FILE}"
@@ -47,6 +53,12 @@ find "${VERSION_DIR}" -name "*.html" | while read -r FILE; do
   else
     echo "Skipped ${FILE} (no <head> tag found)"
   fi
-done
+}
+
+# Export the function so it's available to subshells
+export -f patch_html_file
+
+# Process HTML files in parallel
+find "${VERSION_DIR}" -name "*.html" | parallel -j+0 patch_html_file {} "${VERSION_DIR}"
 
 echo "Injection completed for directory: ${VERSION_DIR}"
