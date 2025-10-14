@@ -1,0 +1,210 @@
+FLATTEN-DOCS.PY LOGIC EXPLANATION
+===================================
+
+PURPOSE:
+--------
+Flatten nested ktor-* module directories in documentation by moving deeply nested
+directories (e.g., ktor-client/ktor-client-plugins/ktor-client-auth/) to the root
+level (e.g., ktor-client-auth/), while preserving all links between documents.
+
+Examples of flattening:
+- Root directory: `ktor-client/ktor-client-plugins/ktor-client-auth/` -> `ktor-client-auth/`
+- Version directory: `older/3.0.3/ktor-client/ktor-client-plugins/ktor-client-auth/` -> `older/3.0.3/ktor-client-auth/`
+
+The script not only flattens the structure but also fixes internal links in HTML files:
+- Links from moved files to other moved files (e.g., ktor-client-auth/index.html linking to ktor-client-core/index.html)
+- Links from root files (index.html, navigation.html) to moved module files
+- Links to resources (CSS, JS, images) that may be in different relative locations after moving
+- JavaScript pathToRoot variable that controls relative path navigation depth
+- All internal links are relative (e.g., ../../other-module/), no absolute links (/path) are used
+
+MAIN WORKFLOW (main function):
+-------------------------------
+1. Verify docs/ directory exists
+2. Flatten main docs/ directory
+3. Flatten all version directories in docs/older/
+4. Complete
+
+
+DIRECTORY FLATTENING PROCESS (flatten_directory function):
+----------------------------------------------------------
+IMPORTANT: Process HTML files in parallel for efficiency.
+
+1. Find all nested ktor-* directories
+   - Look for ktor-* directories within other ktor-* directories
+   - Sort by depth (deepest first) to avoid conflicts during moving
+
+2. For each nested ktor-* module directory (process deepest first):
+   a. Rewrite links in all HTML files within this module
+      - Update href/src attributes to point to flattened locations
+      - Fix JavaScript pathToRoot variable
+      - Track the number of link changes
+
+   b. Move the module directory to version root
+      - Move to flattened location (e.g., ktor-client-auth/ at root)
+      - Skip if target already exists (print warning)
+
+   c. Continue to next module
+
+   IMPORTANT: Rewrite and move must happen for each module before processing the next one.
+   This prevents files from being rewritten multiple times incorrectly.
+
+3. Rewrite links in root HTML files (after all modules are processed)
+   - Process index.html and navigation.html
+   - Update links to point to moved module locations
+
+4. Clean up empty ktor-* parent directories
+   - Remove any ktor-* directories that are now empty
+   - Ignore errors if directory is not empty
+
+
+PATH FLATTENING LOGIC (flatten_ktor_path function):
+---------------------------------------------------
+Given a path with multiple nested ktor-* directories, keep only the LAST ktor-*
+directory in each sequence.
+
+Examples:
+- ktor-client/ktor-client-plugins/ktor-client-auth/ → ktor-client-auth/
+- ktor-client/ktor-client-plugins/ktor-client-auth/index.html → ktor-client-auth/index.html
+
+Algorithm using regex:
+- Pattern: `(?:ktor-[^/]+/)+(ktor-[^/]+/)` (matches consecutive ktor-*/ directory segments)
+- Replacement: Keep only the last ktor-* directory (group 1)
+- Example: `ktor-client/ktor-client-plugins/ktor-client-auth/` → `ktor-client-auth/`
+- Note: Only directories follow the ktor-* naming pattern, not individual files
+- Non-capturing group (?:...) used for segments to be removed
+
+
+LINK REWRITING LOGIC (rewrite_links_in_html function):
+------------------------------------------------------
+Updates all href and src attributes in HTML files to work after flattening.
+
+Parameters:
+- html_file: Current location of the HTML file
+- version_dir: Version directory being processed
+- new_file_path: Future location of file relative to version_dir
+
+Process:
+1. Read HTML file content
+
+2. For each href/src attribute found by regex pattern:
+   - Apply link transformation logic (see below)
+   - Replace with new URL if different from original
+   - Track number of changes
+
+3. Fix JavaScript pathToRoot variable
+   - Calculate correct number of "../" based on new file depth
+   - Pattern: var pathToRoot = "(?:\.\./)*)";
+   - Replacement: var pathToRoot = "{calculated_path}";
+
+4. Write file only if changes were made
+   - Return number of changes made
+
+
+LINK TRANSFORMATION LOGIC:
+-------------------------
+For each link URL, transform it to work after flattening:
+
+1. Skip external links and anchors
+   - External links (http/https URLs) remain unchanged
+   - Anchor links (#section) remain unchanged
+
+2. Resolve link to absolute filesystem path
+   - All internal links are relative (../../path/to/file)
+   - Resolve relative to current file's directory
+
+3. Apply path flattening to resolved target path
+   - Apply path flattening using regex (see PATH FLATTENING LOGIC section)
+   - Non-ktor paths remain unchanged
+
+4. Calculate new relative path
+   - Compute path from new file location to flattened target location
+   - Normalize path separators
+   - New file location is also flattened
+
+5. Memoization mechanism
+   - Use dictionary to cache: original URL → transformed URL
+   - Check cache before processing each link
+   - Return cached result immediately if found
+   - Store result after calculation for future reuse
+   - Cache is per-file (not shared across files)
+
+Simplification assumptions:
+- All internal links are relative (no absolute /path links)
+- Link targets are always within docs tree (no validation needed for links outside)
+- Path flattening can be done with simple regex on string representation
+- Only ktor-* directories need flattening, other paths pass through unchanged
+
+Example transformations:
+
+Case 1: Internal link inside the moved module
+  Current file: docs/ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  New file location: docs/ktor-client-auth/index.html
+  Original link: providers.html
+  Link resolves to: docs/ktor-client/ktor-client-plugins/ktor-client-auth/providers.html
+  After flattening: docs/ktor-client-auth/providers.html
+  New relative link: providers.html (unchanged)
+
+Case 2: Link from moved module to another moved module
+  Current file: docs/ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  New file location: docs/ktor-client-auth/index.html
+  Original link: ../../ktor-client-core/index.html
+  Link resolves to: docs/ktor-client/ktor-client-core/index.html
+  After flattening: docs/ktor-client-core/index.html
+  New relative link: ../ktor-client-core/index.html
+
+Case 3: Link from moved module to upper-level module
+  Current file: docs/ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  New file location: docs/ktor-client-auth/index.html
+  Original link: ../../index.html
+  Link resolves to: docs/ktor-client/index.html
+  After flattening: docs/ktor-client/index.html (no ktor nesting, unchanged)
+  New relative link: ../ktor-client/index.html
+
+Case 4: Link from root file to moved module
+  Current file: docs/index.html
+  New file location: docs/index.html (unchanged)
+  Original link: ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  Link resolves to: docs/ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  After flattening: docs/ktor-client-auth/index.html
+  New relative link: ktor-client-auth/index.html
+
+Case 5: Link to shared resources at version root
+  Current file: docs/ktor-client/ktor-client-plugins/ktor-client-auth/page.html
+  New file location: docs/ktor-client-auth/page.html
+  Original link: ../../../scripts/main.js
+  Link resolves to: docs/scripts/main.js
+  After flattening: docs/scripts/main.js (no ktor nesting, unchanged)
+  New relative link: ../scripts/main.js
+
+Case 6: Link from one version to another version
+  Current file: docs/ktor-client/ktor-client-plugins/ktor-client-auth/index.html
+  New file location: docs/ktor-client-auth/index.html
+  Original link: ../../../older/3.0.3/ktor-server/ktor-server-plugins/index.html
+  Link resolves to: docs/older/3.0.3/ktor-server/ktor-server-plugins/index.html
+  After flattening: docs/older/3.0.3/ktor-server-plugins/index.html
+  New relative link: ../older/3.0.3/ktor-server-plugins/index.html
+
+
+EXTERNAL LINK DETECTION (is_external_link function):
+----------------------------------------------------
+A link is external if:
+- It starts with "#" (anchor)
+- It has a URL scheme (http://, https://, etc.)
+- It has a network location (domain name)
+
+
+CONSTANTS AND CONFIGURATION:
+----------------------------
+- DOCS_ROOT = Path('docs')
+- DOCS_ROOT_RESOLVED = DOCS_ROOT.resolve()
+- LINK_PATTERN = re.compile(r'(href|src)="([^"]*)"')
+- PATH_TO_ROOT_PATTERN = re.compile(r'var pathToRoot = "((?:\.\./)*)";')
+
+
+ERROR HANDLING:
+--------------
+- Non-fatal warnings for read/write errors on individual files
+- Skip moving if target directory already exists (print warning)
+- Continue processing even if individual files fail
+- Print warnings with context (file path, error message)
