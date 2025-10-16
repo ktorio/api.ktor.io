@@ -48,7 +48,7 @@ cp -R ${versionsDir}/${KTOR_VERSION} ./docs
 echo api.ktor.io > ./docs/CNAME
 
 # Add Google Tag Manager script to the files
-./inject_gtm_script.sh docs
+./inject-gtm-script.py docs
 
 # Generate 404.html page which is responsible for redirects from old URLs
 ./generate-404.py
