@@ -1,0 +1,758 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.request</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.request/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.0.3</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-server-core/io.ktor.server.request/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.3</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.3</a></div>
+    <div><a href="../../../2.3.12/ktor-server-core/io.ktor.server.request/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.12</a></div>
+    <div><a href="../../../2.2.4/ktor-server-core/io.ktor.server.request/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.4</a></div>
+    <div><a href="../../../2.0.3/ktor-server-core/io.ktor.server.request/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.3</a></div>
+    <div><a href="../../../../not-found-version.html?v=1.6.8" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.8</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-server-core::io.ktor.server.request////PointingToDeclaration//1052829642">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-core</a><span class="delimiter">/</span><span class="current">io.ktor.server.request</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-414225365%2FClasslikes%2F-397921451" anchor-label="ApplicationReceivePipeline" id="-414225365%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-receive-pipeline/index.html"><span>Application</span><wbr><span>Receive</span><wbr><span><span>Pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-414225365%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-application-receive-pipeline/index.html">ApplicationReceivePipeline</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>developmentMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../../ktor-utils/io.ktor.util.pipeline/-pipeline/index.html">Pipeline</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A pipeline for processing incoming content. When executed, this pipeline starts with an instance of <a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1269838465%2FClasslikes%2F-397921451" anchor-label="ApplicationRequest" id="1269838465%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-request/index.html"><span>Application</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1269838465%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-application-request/index.html">ApplicationRequest</a></div><div class="brief "><p class="paragraph">A client's request. To learn how to handle incoming requests, see <a href="https://ktor.io/docs/requests.html">Handling requests</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354913197%2FClasslikes%2F-397921451" anchor-label="ContentTransformationException" id="-354913197%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-content-transformation-exception/index.html"><span>Content</span><wbr><span>Transformation</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354913197%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-content-transformation-exception/index.html">ContentTransformationException</a><span class="token operator"> = </span><a href="../io.ktor.server.plugins/-content-transformation-exception/index.html">io.ktor.server.plugins.ContentTransformationException</a></div><div class="brief "><p class="paragraph">Thrown when content cannot be transformed to the desired type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1933867755%2FClasslikes%2F-397921451" anchor-label="PipelineRequest" id="-1933867755%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pipeline-request/index.html"><span>Pipeline</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1933867755%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-pipeline-request/index.html">PipelineRequest</a> : <a href="-application-request/index.html">ApplicationRequest</a></div><div class="brief "><p class="paragraph">A client's request that is used in <a href="../io.ktor.server.application/-application-plugin/index.html">ApplicationPlugin</a>. To learn how to handle incoming requests, see <a href="https://ktor.io/docs/requests.html">Handling requests</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="948843588%2FClasslikes%2F-397921451" anchor-label="RequestAlreadyConsumedException" id="948843588%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-request-already-consumed-exception/index.html"><span>Request</span><wbr><span>Already</span><wbr><span>Consumed</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="948843588%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-request-already-consumed-exception/index.html">RequestAlreadyConsumedException</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Thrown when a request body has already been received. Usually it is caused by double <a href="receive.html">ApplicationCall.receive</a> invocation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-60968128%2FClasslikes%2F-397921451" anchor-label="RequestCookies" id="-60968128%2FClasslikes%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-request-cookies/index.html"><span>Request</span><wbr><span><span>Cookies</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-60968128%2FClasslikes%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-request-cookies/index.html">RequestCookies</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><a href="-application-request/index.html">ApplicationRequest</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Server request's cookies.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1566822535%2FProperties%2F-397921451" anchor-label="formFieldLimit" id="-1566822535%2FProperties%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="form-field-limit.html"><span>form</span><wbr><span>Field</span><wbr><span><span>Limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1566822535%2FProperties%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="form-field-limit.html">formFieldLimit</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Represents the limit for form field size in bytes for an <a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a>. This limit determines the maximum size allowed for form field data in a request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-809820395%2FProperties%2F-397921451" anchor-label="httpMethod" id="-809820395%2FProperties%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="http-method.html"><span>http</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-809820395%2FProperties%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="http-method.html">httpMethod</a><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a></div><div class="brief "><p class="paragraph">Gets a request HTTP method possibly overridden using the <code class="lang-kotlin">X-Http-Method-Override</code> header.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="404092800%2FProperties%2F-397921451" anchor-label="httpVersion" id="404092800%2FProperties%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="http-version.html"><span>http</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="404092800%2FProperties%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="http-version.html">httpVersion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets a request's HTTP version.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-221840196%2FProperties%2F-397921451" anchor-label="uri" id="-221840196%2FProperties%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="uri.html"><span><span>uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-221840196%2FProperties%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="uri.html">uri</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets a request's URI, including a query string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2129377236%2FFunctions%2F-397921451" anchor-label="accept" id="2129377236%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129377236%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get a request's <code class="lang-kotlin">Accept</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-577277452%2FFunctions%2F-397921451" anchor-label="acceptCharset" id="-577277452%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-charset.html"><span>accept</span><wbr><span><span>Charset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-577277452%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-charset.html"><span class="token function">acceptCharset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">Accept-Charset</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-892699704%2FFunctions%2F-397921451" anchor-label="acceptCharsetItems" id="-892699704%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-charset-items.html"><span>accept</span><wbr><span>Charset</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-892699704%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-charset-items.html"><span class="token function">acceptCharsetItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ktor-http/io.ktor.http/-header-value/index.html">HeaderValue</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Gets the <code class="lang-kotlin">Accept-Charset</code> header charsets sorted according to their qualities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="129604231%2FFunctions%2F-397921451" anchor-label="acceptEncoding" id="129604231%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-encoding.html"><span>accept</span><wbr><span><span>Encoding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="129604231%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-encoding.html"><span class="token function">acceptEncoding</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">Accept-Encoding</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-493242603%2FFunctions%2F-397921451" anchor-label="acceptEncodingItems" id="-493242603%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-encoding-items.html"><span>accept</span><wbr><span>Encoding</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-493242603%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-encoding-items.html"><span class="token function">acceptEncodingItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ktor-http/io.ktor.http/-header-value/index.html">HeaderValue</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Gets the <code class="lang-kotlin">Accept-Encoding</code> header encoding types sorted according to their qualities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="446095848%2FFunctions%2F-397921451" anchor-label="acceptItems" id="446095848%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-items.html"><span>accept</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="446095848%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-items.html"><span class="token function">acceptItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ktor-http/io.ktor.http/-header-value/index.html">HeaderValue</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Gets the <code class="lang-kotlin">Accept</code> header content types sorted according to their qualities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1659038540%2FFunctions%2F-397921451" anchor-label="acceptLanguage" id="1659038540%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-language.html"><span>accept</span><wbr><span><span>Language</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1659038540%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-language.html"><span class="token function">acceptLanguage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">Accept-Language</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-320005776%2FFunctions%2F-397921451" anchor-label="acceptLanguageItems" id="-320005776%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="accept-language-items.html"><span>accept</span><wbr><span>Language</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-320005776%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="accept-language-items.html"><span class="token function">acceptLanguageItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ktor-http/io.ktor.http/-header-value/index.html">HeaderValue</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Gets the <code class="lang-kotlin">Accept-Language</code> header languages sorted according to their qualities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1166795255%2FFunctions%2F-397921451" anchor-label="authorization" id="-1166795255%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="authorization.html"><span><span>authorization</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1166795255%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="authorization.html"><span class="token function">authorization</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get a request's <code class="lang-kotlin">Authorization</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-485776633%2FFunctions%2F-397921451" anchor-label="cacheControl" id="-485776633%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cache-control.html"><span>cache</span><wbr><span><span>Control</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-485776633%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="cache-control.html"><span class="token function">cacheControl</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">Cache-Control</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-388435809%2FFunctions%2F-397921451" anchor-label="contentCharset" id="-388435809%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content-charset.html"><span>content</span><wbr><span><span>Charset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-388435809%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="content-charset.html"><span class="token function">contentCharset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's charset.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="954757327%2FFunctions%2F-397921451" anchor-label="contentLength" id="954757327%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content-length.html"><span>content</span><wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="954757327%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="content-length.html"><span class="token function">contentLength</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">Content-Length</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="377533155%2FFunctions%2F-397921451" anchor-label="contentType" id="377533155%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content-type.html"><span>content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="377533155%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="content-type.html"><span class="token function">contentType</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-content-type/index.html">ContentType</a></div><div class="brief "><p class="paragraph">Gets a request's content type or returns <code class="lang-kotlin">ContentType.Any</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1043698599%2FFunctions%2F-397921451" anchor-label="document" id="1043698599%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document.html"><span><span>document</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1043698599%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="document.html"><span class="token function">document</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A document name is a substring after the last slash but before a query string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1852287744%2FFunctions%2F-397921451" anchor-label="encodeParameters" id="1852287744%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encode-parameters.html"><span>encode</span><wbr><span><span>Parameters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1852287744%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="encode-parameters.html"><span class="token function">encodeParameters</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">parameters<span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-parameters/index.html">Parameters</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-parameters/index.html">Parameters</a></div><div class="brief "><p class="paragraph">Internal helper function to encode raw parameters. Should not be used directly.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1032573323%2FFunctions%2F-397921451" anchor-label="header" id="1032573323%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1032573323%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets the first value of a <a href="header.html">name</a> header or returns <code class="lang-kotlin">null</code> if missing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="645439476%2FFunctions%2F-397921451" anchor-label="host" id="645439476%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="host.html"><span><span>host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="645439476%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="host.html"><span class="token function">host</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets a request's host value without a port.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="797972370%2FFunctions%2F-397921451" anchor-label="isChunked" id="797972370%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-chunked.html"><span>is</span><wbr><span><span>Chunked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="797972370%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="is-chunked.html"><span class="token function">isChunked</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks whether a request's body is chunk-encoded.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="50071154%2FFunctions%2F-397921451" anchor-label="isMultipart" id="50071154%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-multipart.html"><span>is</span><wbr><span><span>Multipart</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="50071154%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="is-multipart.html"><span class="token function">isMultipart</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks whether a request body is multipart-encoded.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="463557569%2FFunctions%2F-397921451" anchor-label="location" id="463557569%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="location.html"><span><span>location</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="463557569%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="location.html"><span class="token function">location</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get a request's <code class="lang-kotlin">Location</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="174193457%2FFunctions%2F-397921451" anchor-label="path" id="174193457%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="path.html"><span><span>path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="174193457%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="path.html"><span class="token function">path</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Get a request's URL path without a query string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1359849613%2FFunctions%2F-397921451" anchor-label="port" id="1359849613%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="port.html"><span><span>port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1359849613%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="port.html"><span class="token function">port</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Gets a request's port extracted from the <code class="lang-kotlin">Host</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1959031543%2FFunctions%2F-397921451" anchor-label="queryString" id="-1959031543%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="query-string.html"><span>query</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1959031543%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="query-string.html"><span class="token function">queryString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets a request's query string or returns an empty string if missing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="525747746%2FFunctions%2F-397921451" anchor-label="ranges" id="525747746%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ranges.html"><span><span>ranges</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="525747746%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="ranges.html"><span class="token function">ranges</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-ranges-specifier/index.html">RangesSpecifier</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets ranges parsed from a request's <code class="lang-kotlin">Range</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="117797672%2FFunctions%2F-397921451" anchor-label="receive" id="117797672%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive.html"><span><span>receive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="117797672%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive.html"><span class="token function">receive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive.html">T</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive.html">T</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive.html"><span class="token function">receive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive.html">T</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive.html"><span class="token function">receive</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><a href="receive.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive.html">T</a></div><div class="brief "><p class="paragraph">Receives content for this request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1358975934%2FFunctions%2F-397921451" anchor-label="receiveChannel" id="1358975934%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-channel.html"><span>receive</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1358975934%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-channel.html"><span class="token function">receiveChannel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a></div><div class="brief "><p class="paragraph">Receives channel content for this call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1212873244%2FFunctions%2F-397921451" anchor-label="receiveMultipart" id="-1212873244%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-multipart.html"><span>receive</span><wbr><span><span>Multipart</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1212873244%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-multipart.html"><span class="token function">receiveMultipart</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">formFieldLimit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>-1L</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http.content/-multi-part-data/index.html">MultiPartData</a></div><div class="brief "><p class="paragraph">Receives multipart data for this call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1452658294%2FFunctions%2F-397921451" anchor-label="receiveNullable" id="1452658294%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-nullable.html"><span>receive</span><wbr><span><span>Nullable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1452658294%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive-nullable.html">T</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-nullable.html"><span class="token function">receiveNullable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive-nullable.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Receives content for this request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1507673282%2FFunctions%2F-397921451" anchor-label="receiveOrNull" id="-1507673282%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-or-null.html"><span>receive</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1507673282%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive-or-null.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-or-null.html"><span class="token function"><strike>receiveOrNull</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive-or-null.html">T</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive-or-null.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-or-null.html"><span class="token function"><strike>receiveOrNull</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive-or-null.html">T</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive-or-null.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-or-null.html"><span class="token function"><strike>receiveOrNull</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><a href="receive-or-null.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="receive-or-null.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Receives content for this request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-13289331%2FFunctions%2F-397921451" anchor-label="receiveParameters" id="-13289331%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-parameters.html"><span>receive</span><wbr><span><span>Parameters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-13289331%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-parameters.html"><span class="token function">receiveParameters</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-parameters/index.html">Parameters</a></div><div class="brief "><p class="paragraph">Receives form parameters for this call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-922300876%2FFunctions%2F228467713" anchor-label="receiveStream" id="-922300876%2FFunctions%2F228467713" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-stream.html"><span>receive</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-922300876%2FFunctions%2F228467713"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="receive-stream.html"><span class="token function">receiveStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html">InputStream</a></div><div class="brief "><p class="paragraph">Receives stream content for this call.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1985387178%2FFunctions%2F-397921451" anchor-label="receiveText" id="1985387178%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-text.html"><span>receive</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985387178%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-text.html"><span class="token function">receiveText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Receives incoming content for this call as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="54724682%2FFunctions%2F-397921451" anchor-label="userAgent" id="54724682%2FFunctions%2F-397921451" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-agent.html"><span>user</span><wbr><span><span>Agent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="54724682%2FFunctions%2F-397921451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="user-agent.html"><span class="token function">userAgent</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a request's <code class="lang-kotlin">User-Agent</code> header value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

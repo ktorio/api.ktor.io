@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.client.call</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.call/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.0.3</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-client-core/io.ktor.client.call/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.3</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.3</a></div>
+    <div><a href="../../../2.3.12/ktor-client-core/io.ktor.client.call/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.12</a></div>
+    <div><a href="../../../2.2.4/ktor-client-core/io.ktor.client.call/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.4</a></div>
+    <div><a href="../../../2.0.3/ktor-client-core/io.ktor.client.call/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.3</a></div>
+    <div><a href="../../../1.6.8/ktor-client-core/io.ktor.client.call/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.8</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-client-core::io.ktor.client.call////PointingToDeclaration//-1897681819">
+  <div class="breadcrumbs"><a href="../index.html">ktor-client-core</a><span class="delimiter">/</span><span class="current">io.ktor.client.call</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-2137717620%2FClasslikes%2F-1897681819" anchor-label="DoubleReceiveException" id="-2137717620%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-double-receive-exception/index.html"><span>Double</span><wbr><span>Receive</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2137717620%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-double-receive-exception/index.html">DoubleReceiveException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="-http-client-call/index.html">HttpClientCall</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Exception representing that the response payload has already been received.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="73489976%2FClasslikes%2F-1897681819" anchor-label="HttpClientCall" id="73489976%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-http-client-call/index.html"><span>Http</span><wbr><span>Client</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="73489976%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-http-client-call/index.html">HttpClientCall</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>client<span class="token operator">: </span><a href="../io.ktor.client/-http-client/index.html">HttpClient</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div><div class="brief "><p class="paragraph">A pair of a <a href="-http-client-call/request.html">request</a> and <a href="-http-client-call/response.html">response</a> for a specific <a href="../io.ktor.client/-http-client/index.html">HttpClient</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-663422030%2FClasslikes%2F-1897681819" anchor-label="NoTransformationFoundException" id="-663422030%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-no-transformation-found-exception/index.html"><span>No</span><wbr><span>Transformation</span><wbr><span>Found</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-663422030%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-no-transformation-found-exception/index.html">NoTransformationFoundException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="../io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token punctuation">, </span></span><span class="parameter ">from<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">to<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unsupported-operation-exception/index.html">UnsupportedOperationException</a></div><div class="brief "><p class="paragraph">Exception represents the inability to find a suitable transformation for the received body from the resulted type to the expected by the client type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-573507937%2FClasslikes%2F-1897681819" anchor-label="ReceivePipelineException" id="-573507937%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-receive-pipeline-exception/index.html"><span>Receive</span><wbr><span>Pipeline</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-573507937%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-receive-pipeline-exception/index.html">ReceivePipelineException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>request<span class="token operator">: </span><a href="-http-client-call/index.html">HttpClientCall</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>info<span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Exception representing fail of the response pipeline <a href="-receive-pipeline-exception/cause.html">cause</a> contains origin pipeline exception</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1392749544%2FClasslikes%2F-1897681819" anchor-label="UnsupportedContentTypeException" id="1392749544%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unsupported-content-type-exception/index.html"><span>Unsupported</span><wbr><span>Content</span><wbr><span>Type</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1392749544%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-unsupported-content-type-exception/index.html">UnsupportedContentTypeException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="../../ktor-http/io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Exception thrown when the engine does not support the content type of the HTTP request body. For instance, some engines do not support upgrade requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-716638295%2FClasslikes%2F-1897681819" anchor-label="UnsupportedUpgradeProtocolException" id="-716638295%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unsupported-upgrade-protocol-exception/index.html"><span>Unsupported</span><wbr><span>Upgrade</span><wbr><span>Protocol</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-716638295%2FClasslikes%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-unsupported-upgrade-protocol-exception/index.html"><strike>UnsupportedUpgradeProtocolException</strike></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-url/index.html">Url</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html">IllegalArgumentException</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2056930187%2FFunctions%2F-1897681819" anchor-label="body" id="2056930187%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="body.html"><span><span>body</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2056930187%2FFunctions%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="body.html">T</a><span class="token operator">&gt; </span><a href="-http-client-call/index.html">HttpClientCall</a><span class="token punctuation">.</span><a href="body.html"><span class="token function">body</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="body.html">T</a></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="body.html">T</a><span class="token operator">&gt; </span><a href="../io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token punctuation">.</span><a href="body.html"><span class="token function">body</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="body.html">T</a></div><div class="brief "><p class="paragraph">Tries to receive the payload of the response as a specific type <a href="body.html">T</a>.</p></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="body.html">T</a><span class="token operator">&gt; </span><a href="../io.ktor.client.statement/-http-response/index.html">HttpResponse</a><span class="token punctuation">.</span><a href="body.html"><span class="token function">body</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="body.html">T</a></div><div class="brief "><p class="paragraph">Tries to receive the payload of the response as a specific type <a href="body.html">T</a> described in <a href="body.html">typeInfo</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1116772017%2FFunctions%2F-1897681819" anchor-label="save" id="1116772017%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="save.html"><span><span>save</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1116772017%2FFunctions%2F-1897681819"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-http-client-call/index.html">HttpClientCall</a><span class="token punctuation">.</span><a href="save.html"><span class="token function">save</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-http-client-call/index.html">HttpClientCall</a></div><div class="brief "><p class="paragraph">Saves the entire content of this <a href="-http-client-call/index.html">HttpClientCall</a> to memory and returns a new <a href="-http-client-call/index.html">HttpClientCall</a> with the content cached in memory. This can be particularly useful for caching, debugging, or processing responses without relying on the original network stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

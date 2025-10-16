@@ -1,0 +1,334 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DigestCredential</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.auth/-digest-credential/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.0.3</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-server-auth/io.ktor.server.auth/-digest-credential/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.3</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.3</a></div>
+    <div><a href="../../../../2.3.12/ktor-server-auth/io.ktor.server.auth/-digest-credential/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.12</a></div>
+    <div><a href="../../../../2.2.4/ktor-server-auth/io.ktor.server.auth/-digest-credential/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.4</a></div>
+    <div><a href="../../../../2.0.3/ktor-server-auth/io.ktor.server.auth/-digest-credential/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.3</a></div>
+    <div><a href="../../../../../not-found-version.html?v=1.6.8" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.8</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-auth::io.ktor.server.auth/DigestCredential///PointingToDeclaration//1308662189">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-auth</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.auth</a><span class="delimiter">/</span><span class="current">DigestCredential</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Digest</span><wbr><span><span>Credential</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">DigestCredential</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>realm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>digestUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nonce<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opaque<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nonceCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>algorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>response<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cnonce<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>qop<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><p class="paragraph">Digest credentials.</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../digest.html"><span><span>digest</span></span></a></div></span></div><div></div></div></div></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="2022010420%2FConstructors%2F1308662189" anchor-label="DigestCredential" id="2022010420%2FConstructors%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-digest-credential.html"><span>Digest</span><wbr><span><span>Credential</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2022010420%2FConstructors%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">realm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">userName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">digestUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">nonce<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">opaque<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">nonceCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">algorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cnonce<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">qop<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1656729684%2FProperties%2F1308662189" anchor-label="algorithm" id="-1656729684%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="algorithm.html"><span><span>algorithm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1656729684%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="algorithm.html">algorithm</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">a digest algorithm name</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1855610093%2FProperties%2F1308662189" anchor-label="cnonce" id="-1855610093%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cnonce.html"><span><span>cnonce</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855610093%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="cnonce.html">cnonce</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">must be sent if <a href="qop.html">qop</a> is specified and must be <code class="lang-kotlin">null</code> otherwise. Should be passed through unchanged.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-577664717%2FProperties%2F1308662189" anchor-label="digestUri" id="-577664717%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="digest-uri.html"><span>digest</span><wbr><span><span>Uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-577664717%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="digest-uri.html">digestUri</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">may be an absolute URI or <code class="lang-kotlin">*</code></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1919669460%2FProperties%2F1308662189" anchor-label="nonce" id="-1919669460%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nonce.html"><span><span>nonce</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1919669460%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="nonce.html">nonce</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-454188129%2FProperties%2F1308662189" anchor-label="nonceCount" id="-454188129%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nonce-count.html"><span>nonce</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-454188129%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="nonce-count.html">nonceCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">must be sent if <a href="qop.html">qop</a> is specified and must be <code class="lang-kotlin">null</code> otherwise</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="628105726%2FProperties%2F1308662189" anchor-label="opaque" id="628105726%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="opaque.html"><span><span>opaque</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="628105726%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="opaque.html">opaque</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">a string of data which should be returned by the client unchanged</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1937232361%2FProperties%2F1308662189" anchor-label="qop" id="1937232361%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="qop.html"><span><span>qop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1937232361%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="qop.html">qop</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">a quality of protection sign</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-886129524%2FProperties%2F1308662189" anchor-label="realm" id="-886129524%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="realm.html"><span><span>realm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-886129524%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="realm.html">realm</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">a digest authentication realm</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1307464354%2FProperties%2F1308662189" anchor-label="response" id="-1307464354%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="response.html"><span><span>response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1307464354%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="response.html">response</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">consist of 32 hex digits (digested password and other fields as per RFC)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1794471351%2FProperties%2F1308662189" anchor-label="userName" id="-1794471351%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-name.html"><span>user</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1794471351%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="user-name.html">userName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="121245644%2FFunctions%2F1308662189" anchor-label="expectedDigest" id="121245644%2FFunctions%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../expected-digest.html"><span>expected</span><wbr><span><span>Digest</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="121245644%2FFunctions%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">DigestCredential</a><span class="token punctuation">.</span><a href="../expected-digest.html"><span class="token function">expectedDigest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">method<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a><span class="token punctuation">, </span></span><span class="parameter ">digester<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/security/MessageDigest.html">MessageDigest</a><span class="token punctuation">, </span></span><span class="parameter ">userNameRealmPasswordDigest<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div><div class="brief "><p class="paragraph">Calculates the expected digest bytes for this <a href="index.html">DigestCredential</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1500766583%2FFunctions%2F1308662189" anchor-label="verifier" id="1500766583%2FFunctions%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../verifier.html"><span><span>verifier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1500766583%2FFunctions%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html">DigestCredential</a><span class="token punctuation">.</span><a href="../verifier.html"><span class="token function">verifier</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">method<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a><span class="token punctuation">, </span></span><span class="parameter ">digester<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/security/MessageDigest.html">MessageDigest</a><span class="token punctuation">, </span></span><span class="parameter ">userNameRealmPasswordDigest<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Verifies that credentials are valid for a given <a href="../verifier.html">method</a>, <a href="../verifier.html">digester</a>, and <a href="../verifier.html">userNameRealmPasswordDigest</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

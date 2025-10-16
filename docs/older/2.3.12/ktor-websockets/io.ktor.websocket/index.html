@@ -1,0 +1,575 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.websocket</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.websocket/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.3.12</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-websockets/io.ktor.websocket/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.3</a></div>
+    <div><a href="../../../3.0.3/ktor-websockets/io.ktor.websocket/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.3</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.12</a></div>
+    <div><a href="../../../2.2.4/ktor-websockets/io.ktor.websocket/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.4</a></div>
+    <div><a href="../../../2.0.3/ktor-websockets/io.ktor.websocket/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.3</a></div>
+    <div><a href="../../../../not-found-version.html?v=1.6.8" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.8</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain">jsAndWasmShared</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain">posix</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-websockets::io.ktor.websocket////PointingToDeclaration//834274370">
+  <div class="breadcrumbs"><a href="../index.html">ktor-websockets</a><span class="delimiter">/</span><span class="current">io.ktor.websocket</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1671310057%2FClasslikes%2F1763642572" anchor-label="CloseReason" id="-1671310057%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-close-reason/index.html"><span>Close</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1671310057%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-close-reason/index.html">CloseReason</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>code<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A WebSocket close reason.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2092846563%2FClasslikes%2F1763642572" anchor-label="DefaultWebSocketSession" id="2092846563%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-default-web-socket-session/index.html"><span>Default</span><wbr><span>Web</span><wbr><span>Socket</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2092846563%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-default-web-socket-session/index.html">DefaultWebSocketSession</a> : <a href="-web-socket-session/index.html">WebSocketSession</a></div><div class="brief "><p class="paragraph">A default WebSocket session with ping-pong and timeout processing and built-in <a href="-default-web-socket-session/close-reason.html">closeReason</a> population.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-640906074%2FClasslikes%2F834274370" anchor-label="Frame" id="-640906074%2FClasslikes%2F834274370" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-frame/index.html"><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-640906074%2FClasslikes%2F834274370"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain">jsAndWasmShared</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain">posix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-frame/index.html">Frame</a></div><div class="brief "><p class="paragraph">A frame received or ready to be sent. It is not reusable and not thread-safe.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-frame/index.html">Frame</a></div><div class="brief "><p class="paragraph">A frame received or ready to be sent. It is not reusable and not thread-safe</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-frame/index.html">Frame</a></div><div class="brief "><p class="paragraph">A frame received or ready to be sent. It is not reusable and not thread-safe</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-frame/index.html">Frame</a></div><div class="brief "><p class="paragraph">A frame received or ready to be sent. It is not reusable and not thread-safe</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1936551303%2FClasslikes%2F-507414358" anchor-label="FrameParser" id="1936551303%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-frame-parser/index.html"><span>Frame</span><wbr><span><span>Parser</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1936551303%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-frame-parser/index.html">FrameParser</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1189744121%2FClasslikes%2F1763642572" anchor-label="FrameTooBigException" id="1189744121%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-frame-too-big-exception/index.html"><span>Frame</span><wbr><span>Too</span><wbr><span>Big</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1189744121%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-frame-too-big-exception/index.html">FrameTooBigException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>frameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, <span data-unresolved-link="kotlinx.coroutines/CopyableThrowable///PointingToDeclaration/">CopyableThrowable</span><span class="token operator">&lt;</span><a href="-frame-too-big-exception/index.html">FrameTooBigException</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Raised when the frame is bigger than allowed in a current WebSocket session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1198186508%2FClasslikes%2F1763642572" anchor-label="FrameType" id="1198186508%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-frame-type/index.html"><span>Frame</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1198186508%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-frame-type/index.html">FrameType</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-frame-type/index.html">FrameType</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A WebSocket frame type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1498870515%2FClasslikes%2F1763642572" anchor-label="ProtocolViolationException" id="-1498870515%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-protocol-violation-exception/index.html"><span>Protocol</span><wbr><span>Violation</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1498870515%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-protocol-violation-exception/index.html">ProtocolViolationException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>violation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, <span data-unresolved-link="kotlinx.coroutines/CopyableThrowable///PointingToDeclaration/">CopyableThrowable</span><span class="token operator">&lt;</span><a href="-protocol-violation-exception/index.html">ProtocolViolationException</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Raised when peers send frames which violate the Websocket RFC</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2014165283%2FClasslikes%2F-507414358" anchor-label="Serializer" id="-2014165283%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-serializer/index.html"><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2014165283%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-serializer/index.html">Serializer</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="615716605%2FClasslikes%2F-507414358" anchor-label="SimpleFrameCollector" id="615716605%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-simple-frame-collector/index.html"><span>Simple</span><wbr><span>Frame</span><wbr><span><span>Collector</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="615716605%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-simple-frame-collector/index.html">SimpleFrameCollector</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="177273464%2FClasslikes%2F-507414358" anchor-label="WebSocketDeflateExtension" id="177273464%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-deflate-extension/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span>Deflate</span><wbr><span><span>Extension</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="177273464%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-socket-deflate-extension/index.html">WebSocketDeflateExtension</a></div><div class="brief "><p class="paragraph">Compress and decompress WebSocket frames to reduce amount of transferred bytes.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1425963287%2FClasslikes%2F1763642572" anchor-label="WebSocketExtension" id="1425963287%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-extension/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span><span>Extension</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1425963287%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-web-socket-extension/index.html">WebSocketExtension</a><span class="token operator">&lt;</span><a href="-web-socket-extension/index.html">ConfigType</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A WebSocket extension instance. This instance is created for each WebSocket request, for every installed extension by <a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1634563809%2FClasslikes%2F1763642572" anchor-label="WebSocketExtensionFactory" id="1634563809%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-extension-factory/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span>Extension</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1634563809%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a><span class="token operator">&lt;</span><a href="-web-socket-extension-factory/index.html">ConfigType</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="-web-socket-extension-factory/index.html">ExtensionType</a><span class="token operator"> : </span><a href="-web-socket-extension/index.html">WebSocketExtension</a><span class="token operator">&lt;</span><a href="-web-socket-extension-factory/index.html">ConfigType</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A factory that defines a WebSocket extension. The factory is used in pair with the <a href="-web-socket-extensions-config/install.html">WebSocketExtensionsConfig.install</a> method to install the WebSocket extension in client or server.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519918218%2FClasslikes%2F1763642572" anchor-label="WebSocketExtensionHeader" id="519918218%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-extension-header/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span>Extension</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519918218%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-socket-extension-header/index.html">WebSocketExtensionHeader</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>parameters<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A parsed <code class="lang-kotlin">Sec-WebSocket-Accept</code> header item representation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1381972118%2FClasslikes%2F1763642572" anchor-label="WebSocketExtensionsConfig" id="1381972118%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-extensions-config/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span>Extensions</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1381972118%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-socket-extensions-config/index.html">WebSocketExtensionsConfig</a></div><div class="brief "><p class="paragraph">Extensions configuration for the WebSocket client and server plugins.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2141762217%2FClasslikes%2F-507414358" anchor-label="WebSocketReader" id="2141762217%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-reader/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span><span>Reader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2141762217%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-socket-reader/index.html">WebSocketReader</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteChannel<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">pool<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io.pool/-object-pool/index.html">ObjectPool</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a><span class="token operator">&gt;</span><span class="token operator"> = </span>KtorDefaultPool</span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div><div class="brief "><p class="paragraph">Class that continuously reads a <a href="-web-socket-reader/byte-channel.html">byteChannel</a> and converts into Websocket <a href="-frame/index.html">Frame</a> exposing them in <a href="-web-socket-reader/incoming.html">incoming</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2125258720%2FClasslikes%2F1763642572" anchor-label="WebSocketSession" id="2125258720%2FClasslikes%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-session/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2125258720%2FClasslikes%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-web-socket-session/index.html">WebSocketSession</a> : <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div><div class="brief "><p class="paragraph">A WebSocket session between two peers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1216933113%2FClasslikes%2F-507414358" anchor-label="WebSocketWriter" id="1216933113%2FClasslikes%2F-507414358" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-socket-writer/index.html"><span>Web</span><wbr><span>Socket</span><wbr><span><span>Writer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1216933113%2FClasslikes%2F-507414358"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-socket-writer/index.html">WebSocketWriter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">writeChannel<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pool<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io.pool/-object-pool/index.html">ObjectPool</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a><span class="token operator">&gt;</span><span class="token operator"> = </span>KtorDefaultPool</span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div><div class="brief "><p class="paragraph">Class that processes written <a href="-web-socket-writer/outgoing.html">outgoing</a> Websocket <a href="-frame/index.html">Frame</a>, serializes them and writes the bits into the <a href="-web-socket-writer/write-channel.html">writeChannel</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2118258221%2FFunctions%2F1763642572" anchor-label="close" id="2118258221%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2118258221%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reason<span class="token operator">: </span><a href="-close-reason/index.html">CloseReason</a><span class="token operator"> = </span>CloseReason(CloseReason.Codes.NORMAL, "")</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sends a close frame with the specified <a href="close.html">reason</a>. May suspend if the outgoing channel is full. The specified <a href="close.html">reason</a> could be ignored if there was already close frame sent (for example in reply to a peer close frame). It also may do nothing when a session or an outgoing channel is already closed due to any reason.</p></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="close.html"><span class="token function"><strike>close</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes with the reason depending on <a href="close.html">cause</a> or normally if the <a href="close.html">cause</a> is <code class="lang-kotlin">null</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2046835934%2FFunctions%2F1763642572" anchor-label="closeExceptionally" id="2046835934%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close-exceptionally.html"><span>close</span><wbr><span><span>Exceptionally</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2046835934%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="close-exceptionally.html"><span class="token function">closeExceptionally</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes a session with normal or error close reason, depending on whether <a href="close-exceptionally.html">cause</a> is cancellation or not.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="271351966%2FFunctions%2F1763642572" anchor-label="DefaultWebSocketSession" id="271351966%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-default-web-socket-session.html"><span>Default</span><wbr><span>Web</span><wbr><span>Socket</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="271351966%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-default-web-socket-session.html"><span class="token function">DefaultWebSocketSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">session<span class="token operator">: </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">, </span></span><span class="parameter ">pingInterval<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>-1L<span class="token punctuation">, </span></span><span class="parameter ">timeoutMillis<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">15000</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-default-web-socket-session/index.html">DefaultWebSocketSession</a></div><div class="brief "><p class="paragraph">Creates <a href="-default-web-socket-session/index.html">DefaultWebSocketSession</a> from a session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1913716821%2FFunctions%2F1763642572" anchor-label="extension" id="-1913716821%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension.html"><span><span>extension</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1913716821%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="extension.html">T</a><span class="token operator"> : </span><a href="-web-socket-extension/index.html">WebSocketExtension</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="extension.html"><span class="token function">extension</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extension<span class="token operator">: </span><a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="extension.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="extension.html">T</a></div><div class="brief "><p class="paragraph">Finds the extensions using <a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1688022337%2FFunctions%2F1763642572" anchor-label="extensionOrNull" id="1688022337%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-or-null.html"><span>extension</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1688022337%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="extension-or-null.html">T</a><span class="token operator"> : </span><a href="-web-socket-extension/index.html">WebSocketExtension</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="extension-or-null.html"><span class="token function">extensionOrNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extension<span class="token operator">: </span><a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="extension-or-null.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="extension-or-null.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Searches the extensions using <a href="-web-socket-extension-factory/index.html">WebSocketExtensionFactory</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1048953572%2FFunctions%2F1763642572" anchor-label="parseWebSocketExtensions" id="-1048953572%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parse-web-socket-extensions.html"><span>parse</span><wbr><span>Web</span><wbr><span>Socket</span><wbr><span><span>Extensions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1048953572%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="parse-web-socket-extensions.html"><span class="token function">parseWebSocketExtensions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-web-socket-extension-header/index.html">WebSocketExtensionHeader</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Parses the <code class="lang-kotlin">Sec-WebSocket-Accept</code> header.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1395293243%2FFunctions%2F834274370" anchor-label="RawWebSocket" id="1395293243%2FFunctions%2F834274370" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain,:ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-raw-web-socket.html"><span>Raw</span><wbr><span>Web</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1395293243%2FFunctions%2F834274370"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain">jsAndWasmShared</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain" data-toggle=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain">posix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="-raw-web-socket.html"><span class="token function">RawWebSocket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter ">maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>Int.MAX_VALUE.toLong()<span class="token punctuation">, </span></span><span class="parameter ">masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-web-socket-session/index.html">WebSocketSession</a></div><div class="brief "><p class="paragraph">Creates a RAW web socket session from connection.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-raw-web-socket.html"><span class="token function">RawWebSocket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter ">maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-web-socket-session/index.html">WebSocketSession</a></div><div class="brief "><p class="paragraph">Creates a RAW web socket session from connection</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-raw-web-socket.html"><span class="token function">RawWebSocket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter ">maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-web-socket-session/index.html">WebSocketSession</a></div><div class="brief "><p class="paragraph">Creates a RAW web socket session from connection</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-raw-web-socket.html"><span class="token function">RawWebSocket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">, </span></span><span class="parameter ">output<span class="token operator">: </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">, </span></span><span class="parameter ">maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-web-socket-session/index.html">WebSocketSession</a></div><div class="brief "><p class="paragraph">Creates a RAW web socket session from connection</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1621917421%2FFunctions%2F1763642572" anchor-label="readBytes" id="-1621917421%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-bytes.html"><span>read</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1621917421%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-frame/index.html">Frame</a><span class="token punctuation">.</span><a href="read-bytes.html"><span class="token function">readBytes</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div><div class="brief "><p class="paragraph">Reads binary content from the frame. For fragmented frames only returns this fragment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1033735595%2FFunctions%2F1763642572" anchor-label="readFrame" id="1033735595%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-frame.html"><span>read</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1033735595%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a><span class="token punctuation">.</span><a href="read-frame.html"><span class="token function">readFrame</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxFrameSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">lastOpcode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-frame/index.html">Frame</a></div><div class="brief "><p class="paragraph">Reads bits from <a href="../../ktor-io/io.ktor.utils.io/-byte-read-channel/index.html">ByteReadChannel</a> and converts into a WebSocket <a href="-frame/index.html">Frame</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="550523964%2FFunctions%2F1763642572" anchor-label="readReason" id="550523964%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-reason.html"><span>read</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="550523964%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-frame/-close/index.html">Frame.Close</a><span class="token punctuation">.</span><a href="read-reason.html"><span class="token function">readReason</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-close-reason/index.html">CloseReason</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Reads the close reason from the close frame or null if no close reason is provided.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1962988092%2FFunctions%2F1763642572" anchor-label="readText" id="1962988092%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="read-text.html"><span>read</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1962988092%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-frame/-text/index.html">Frame.Text</a><span class="token punctuation">.</span><a href="read-text.html"><span class="token function">readText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Reads text content from the text frame. Shouldn't be used for fragmented frames: such frames need to be reassembled first.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="205828996%2FFunctions%2F1763642572" anchor-label="send" id="205828996%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="send.html"><span><span>send</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="205828996%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Enqueues a final binary frame for sending with the specified <a href="send.html">content</a>.</p></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-web-socket-session/index.html">WebSocketSession</a><span class="token punctuation">.</span><a href="send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Enqueues a text frame for sending with the specified <a href="send.html">content</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1369820219%2FFunctions%2F1763642572" anchor-label="writeFrame" id="-1369820219%2FFunctions%2F1763642572" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write-frame.html"><span>write</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1369820219%2FFunctions%2F1763642572"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-shared:ktor-websockets:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="write-frame.html"><span class="token function">writeFrame</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">frame<span class="token operator">: </span><a href="-frame/index.html">Frame</a><span class="token punctuation">, </span></span><span class="parameter ">masking<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Serializes WebSocket <a href="-frame/index.html">Frame</a> and writes the bits into the <a href="../../ktor-io/io.ktor.utils.io/-byte-write-channel/index.html">ByteWriteChannel</a>. If <a href="write-frame.html">masking</a> is true, then data will be masked with random mask</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

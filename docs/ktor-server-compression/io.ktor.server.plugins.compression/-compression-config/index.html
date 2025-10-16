@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CompressionConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.plugins.compression/-compression-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.1.3</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.3</a></div>
+    <div><a href="../../../older/3.0.3/ktor-server-compression/io.ktor.server.plugins.compression/-compression-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.3</a></div>
+    <div><a href="../../../older/2.3.12/ktor-server-compression/io.ktor.server.plugins.compression/-compression-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.12</a></div>
+    <div><a href="../../../older/2.2.4/ktor-server-compression/io.ktor.server.plugins.compression/-compression-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.4</a></div>
+    <div><a href="../../../older/2.0.3/ktor-server-compression/io.ktor.server.plugins.compression/-compression-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.3</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.8" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.8</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filter=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-compression::io.ktor.server.plugins.compression/CompressionConfig///PointingToDeclaration//-940895239">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-compression</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.plugins.compression</a><span class="delimiter">/</span><span class="current">CompressionConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Compression</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">CompressionConfig</a> : <a href="../-conditions-holder-builder/index.html">ConditionsHolderBuilder</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.1.3/ktor-server/ktor-server-plugins/ktor-server-compression/jvm/src/io/ktor/server/plugins/compression/Config.kt#L55">source</a>)</span></span></div><p class="paragraph">A configuration for the <a href="../-compression.html">Compression</a> plugin.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.server.plugins.compression.CompressionConfig">Report a problem</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="2018803620%2FConstructors%2F-940895239" anchor-label="CompressionConfig" id="2018803620%2FConstructors%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-compression-config.html"><span>Compression</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2018803620%2FConstructors%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="232644288%2FClasslikes%2F-940895239" anchor-label="Mode" id="232644288%2FClasslikes%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mode/index.html"><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="232644288%2FClasslikes%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-mode/index.html">Mode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-mode/index.html">CompressionConfig.Mode</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2018601942%2FProperties%2F-940895239" anchor-label="conditions" id="2018601942%2FProperties%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="conditions.html"><span><span>conditions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2018601942%2FProperties%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="conditions.html">conditions</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="../../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><span class="token punctuation">(</span><a href="../../../ktor-http/io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Preconditions applied to every response object to check if it should be compressed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2079566633%2FProperties%2F-940895239" anchor-label="encoders" id="-2079566633%2FProperties%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoders.html"><span><span>encoders</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2079566633%2FProperties%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="encoders.html">encoders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Provides access to a map of encoders.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1752459275%2FProperties%2F-940895239" anchor-label="mode" id="1752459275%2FProperties%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mode.html"><span><span>mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1752459275%2FProperties%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="mode.html">mode</a><span class="token operator">: </span><a href="-mode/index.html">CompressionConfig.Mode</a></div><div class="brief "><p class="paragraph">Specifies if the plugin should compress response, decompress request, or both.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1602916120%2FFunctions%2F-940895239" anchor-label="condition" id="1602916120%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../condition.html"><span><span>condition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1602916120%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-conditions-holder-builder/index.html">ConditionsHolderBuilder</a><span class="token punctuation">.</span><a href="../condition.html"><span class="token function">condition</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><a href="../../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><span class="token punctuation">(</span><a href="../../../ktor-http/io.ktor.http.content/-outgoing-content/index.html">OutgoingContent</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a custom condition to the encoder or the <a href="../-compression.html">Compression</a> configuration. A predicate returns <code class="lang-kotlin">true</code> when a response need to be compressed. If at least one condition is not met, a response isn't compressed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1266900373%2FFunctions%2F-940895239" anchor-label="default" id="-1266900373%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="default.html"><span><span>default</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1266900373%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="default.html"><span class="token function">default</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the default configuration with the <code class="lang-kotlin">gzip</code>, <code class="lang-kotlin">deflate</code>, and <code class="lang-kotlin">identity</code> encoders.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="352890063%2FFunctions%2F-940895239" anchor-label="deflate" id="352890063%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../deflate.html"><span><span>deflate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="352890063%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">CompressionConfig</a><span class="token punctuation">.</span><a href="../deflate.html"><span class="token function">deflate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">deflate</code> encoder with the <a href="../deflate.html">block</a> configuration and the 0.9 priority.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-990772361%2FFunctions%2F-940895239" anchor-label="encoder" id="-990772361%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoder.html"><span><span>encoder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-990772361%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="encoder.html"><span class="token function">encoder</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">encoder<span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util/-content-encoder/index.html">ContentEncoder</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends an <a href="encoder.html">encoder</a> with the <a href="encoder.html">block</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="583884646%2FFunctions%2F-940895239" anchor-label="excludeContentType" id="583884646%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../exclude-content-type.html"><span>exclude</span><wbr><span>Content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="583884646%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-conditions-holder-builder/index.html">ConditionsHolderBuilder</a><span class="token punctuation">.</span><a href="../exclude-content-type.html"><span class="token function">excludeContentType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>mimeTypes<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-content-type/index.html">ContentType</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a content type exclusion condition to the encoder or the <a href="../-compression.html">Compression</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1906936366%2FFunctions%2F-940895239" anchor-label="gzip" id="-1906936366%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../gzip.html"><span><span>gzip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1906936366%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">CompressionConfig</a><span class="token punctuation">.</span><a href="../gzip.html"><span class="token function">gzip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">gzip</code> encoder with the <a href="../gzip.html">block</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1025318546%2FFunctions%2F-940895239" anchor-label="identity" id="-1025318546%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../identity.html"><span><span>identity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1025318546%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">CompressionConfig</a><span class="token punctuation">.</span><a href="../identity.html"><span class="token function">identity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../-compression-encoder-builder/index.html">CompressionEncoderBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">identity</code> encoder with the <a href="../identity.html">block</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="496056337%2FFunctions%2F-940895239" anchor-label="matchContentType" id="496056337%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../match-content-type.html"><span>match</span><wbr><span>Content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="496056337%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-conditions-holder-builder/index.html">ConditionsHolderBuilder</a><span class="token punctuation">.</span><a href="../match-content-type.html"><span class="token function">matchContentType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>mimeTypes<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-content-type/index.html">ContentType</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a content type condition to the encoder or the <a href="../-compression.html">Compression</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="885410516%2FFunctions%2F-940895239" anchor-label="minimumSize" id="885410516%2FFunctions%2F-940895239" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../minimum-size.html"><span>minimum</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="885410516%2FFunctions%2F-940895239"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-compression/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-conditions-holder-builder/index.html">ConditionsHolderBuilder</a><span class="token punctuation">.</span><a href="../minimum-size.html"><span class="token function">minimumSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">minSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a minimum size condition to the encoder or the <a href="../-compression.html">Compression</a> configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
