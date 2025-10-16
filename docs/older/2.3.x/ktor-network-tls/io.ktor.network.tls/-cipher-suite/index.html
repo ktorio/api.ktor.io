@@ -1,0 +1,398 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CipherSuite</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.network.tls/-cipher-suite/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-network-tls/io.ktor.network.tls/-cipher-suite/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.3/ktor-network-tls/io.ktor.network.tls/-cipher-suite/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.4/ktor-network-tls/io.ktor.network.tls/-cipher-suite/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.3/ktor-network-tls/io.ktor.network.tls/-cipher-suite/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../1.6.8/ktor-network-tls/io.ktor.network.tls/-cipher-suite/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-network-tls::io.ktor.network.tls/CipherSuite///PointingToDeclaration//1017354169">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-network-tls</a><span class="delimiter">/</span><a href="../index.html">io.ktor.network.tls</a><span class="delimiter">/</span><span class="current">CipherSuite</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Cipher</span><wbr><span><span>Suite</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">CipherSuite</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>code<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>openSSLName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>exchangeType<span class="token operator">: </span><a href="../-secret-exchange-type/index.html">SecretExchangeType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>jdkCipherName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>keyStrength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fixedIvLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>ivLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cipherTagSizeInBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>macName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>macStrength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hash<span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-hash-algorithm/index.html">HashAlgorithm</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>signatureAlgorithm<span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-signature-algorithm/index.html">SignatureAlgorithm</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cipherType<span class="token operator">: </span><a href="../-cipher-type/index.html">CipherType</a><span class="token operator"> = </span>CipherType.GCM</span></span><span class="token punctuation">)</span></div><p class="paragraph">Represents a TLS cipher suite</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-2014665620%2FConstructors%2F1017354169" anchor-label="CipherSuite" id="-2014665620%2FConstructors%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cipher-suite.html"><span>Cipher</span><wbr><span><span>Suite</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2014665620%2FConstructors%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">openSSLName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">exchangeType<span class="token operator">: </span><a href="../-secret-exchange-type/index.html">SecretExchangeType</a><span class="token punctuation">, </span></span><span class="parameter ">jdkCipherName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">keyStrength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">fixedIvLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">ivLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">cipherTagSizeInBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">macName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">macStrength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-hash-algorithm/index.html">HashAlgorithm</a><span class="token punctuation">, </span></span><span class="parameter ">signatureAlgorithm<span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-signature-algorithm/index.html">SignatureAlgorithm</a><span class="token punctuation">, </span></span><span class="parameter ">cipherType<span class="token operator">: </span><a href="../-cipher-type/index.html">CipherType</a><span class="token operator"> = </span>CipherType.GCM</span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1497996777%2FProperties%2F1017354169" anchor-label="cipherTagSizeInBytes" id="-1497996777%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cipher-tag-size-in-bytes.html"><span>cipher</span><wbr><span>Tag</span><wbr><span>Size</span><wbr><span>In</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1497996777%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="cipher-tag-size-in-bytes.html">cipherTagSizeInBytes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">tag size in bytes</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1491221752%2FProperties%2F1017354169" anchor-label="cipherType" id="-1491221752%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cipher-type.html"><span>cipher</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1491221752%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="cipher-type.html">cipherType</a><span class="token operator">: </span><a href="../-cipher-type/index.html">CipherType</a></div><div class="brief "><p class="paragraph">type of cipher to use</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1566230016%2FProperties%2F1017354169" anchor-label="code" id="1566230016%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="code.html"><span><span>code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1566230016%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="code.html">code</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></div><div class="brief "><p class="paragraph">numeric cipher suite code</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1383363088%2FProperties%2F1017354169" anchor-label="exchangeType" id="-1383363088%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exchange-type.html"><span>exchange</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1383363088%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="exchange-type.html">exchangeType</a><span class="token operator">: </span><a href="../-secret-exchange-type/index.html">SecretExchangeType</a></div><div class="brief "><p class="paragraph">secret exchange type (ECDHE or RSA)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2093349382%2FProperties%2F1017354169" anchor-label="fixedIvLength" id="2093349382%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fixed-iv-length.html"><span>fixed</span><wbr><span>Iv</span><wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2093349382%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="fixed-iv-length.html">fixedIvLength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">fixed input vector length in bytes</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1640483327%2FProperties%2F1017354169" anchor-label="hash" id="1640483327%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hash.html"><span><span>hash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1640483327%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="hash.html">hash</a><span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-hash-algorithm/index.html">HashAlgorithm</a></div><div class="brief "><p class="paragraph">algorithm</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-626339782%2FProperties%2F1017354169" anchor-label="ivLength" id="-626339782%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="iv-length.html"><span>iv</span><wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-626339782%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="iv-length.html">ivLength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">input vector length in bytes</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1468200058%2FProperties%2F1017354169" anchor-label="jdkCipherName" id="-1468200058%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jdk-cipher-name.html"><span>jdk</span><wbr><span>Cipher</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1468200058%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="jdk-cipher-name.html">jdkCipherName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">for this suite that is used in JDK</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2082178451%2FProperties%2F1017354169" anchor-label="keyStrength" id="-2082178451%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="key-strength.html"><span>key</span><wbr><span><span>Strength</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2082178451%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="key-strength.html">keyStrength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">in bits</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-704662617%2FProperties%2F1017354169" anchor-label="keyStrengthInBytes" id="-704662617%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="key-strength-in-bytes.html"><span>key</span><wbr><span>Strength</span><wbr><span>In</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-704662617%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="key-strength-in-bytes.html">keyStrengthInBytes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">key strength in bytes ( = <code class="lang-kotlin">[keyStrength] / 8</code>)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-87374093%2FProperties%2F1017354169" anchor-label="macName" id="-87374093%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mac-name.html"><span>mac</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-87374093%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="mac-name.html">macName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">message authentication algorithm name</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1874521731%2FProperties%2F1017354169" anchor-label="macStrength" id="-1874521731%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mac-strength.html"><span>mac</span><wbr><span><span>Strength</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1874521731%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="mac-strength.html">macStrength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">message authentication algorithm strength in bits</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1831471767%2FProperties%2F1017354169" anchor-label="macStrengthInBytes" id="1831471767%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mac-strength-in-bytes.html"><span>mac</span><wbr><span>Strength</span><wbr><span>In</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1831471767%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="mac-strength-in-bytes.html">macStrengthInBytes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">message authentication algorithm strength in bytes ( = <code class="lang-kotlin">[macStrength] / 8</code>)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-63650014%2FProperties%2F1017354169" anchor-label="name" id="-63650014%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-63650014%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">cipher suite name</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1299467840%2FProperties%2F1017354169" anchor-label="openSSLName" id="-1299467840%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-s-s-l-name.html"><span>open</span><wbr><span><span>SSLName</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299467840%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="open-s-s-l-name.html">openSSLName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">for this suite that is used in openssl</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2135351146%2FProperties%2F1017354169" anchor-label="signatureAlgorithm" id="-2135351146%2FProperties%2F1017354169" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="signature-algorithm.html"><span>signature</span><wbr><span><span>Algorithm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2135351146%2FProperties%2F1017354169"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="signature-algorithm.html">signatureAlgorithm</a><span class="token operator">: </span><a href="../../io.ktor.network.tls.extensions/-signature-algorithm/index.html">SignatureAlgorithm</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

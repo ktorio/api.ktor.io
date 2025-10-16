@@ -1,0 +1,551 @@
+<html>
+  <head>
+<script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>HttpRequestBuilder</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" defer></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><link href="../../../styles/multimodule.css" rel="Stylesheet"><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>ktor</span></a></div>
+      <div><dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.request/-http-request-builder/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">1.6.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.3/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../2.3.12/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.4/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.3/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command></div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageids="ktor-client-core::io.ktor.client.request/HttpRequestBuilder///PointingToDeclaration//-1897681819">
+          <div class="breadcrumbs"><a href="../../index.html">ktor-client-core</a>/<a href="../index.html">io.ktor.client.request</a>/<a href="index.html">HttpRequestBuilder</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Http</span><wbr><span>Request</span><wbr><span><span>Builder</span></span></h1>
+            <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+              <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">HttpRequestBuilder</a> : <a href="../../../ktor-http/io.ktor.http/-http-message-builder/index.html">HttpMessageBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Class for building <a href="../-http-request-data/index.html">HttpRequestData</a>.</p></div>            </div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="1630360599%2FConstructors%2F-1897681819" anchor-label="HttpRequestBuilder" id="1630360599%2FConstructors%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-http-request-builder.html"><span>Http</span><wbr><span>Request</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1630360599%2FConstructors%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-http-request-builder.html"><span class="token function">HttpRequestBuilder</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="417126038%2FClasslikes%2F-1897681819" anchor-label="Companion" id="417126038%2FClasslikes%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="417126038%2FClasslikes%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="324292513%2FFunctions%2F-1897681819" anchor-label="build" id="324292513%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="324292513%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-http-request-data/index.html">HttpRequestData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Create immutable <a href="../-http-request-data/index.html">HttpRequestData</a></p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="492230744%2FFunctions%2F-1897681819" anchor-label="getCapabilityOrNull" id="492230744%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get-capability-or-null.html"><span>get</span><wbr><span>Capability</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="492230744%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-capability-or-null.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-capability-or-null.html"><span class="token function">getCapabilityOrNull</span></a><span class="token punctuation">(</span>key<span class="token operator">: </span><a href="../../io.ktor.client.engine/-http-client-engine-capability/index.html">HttpClientEngineCapability</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-capability-or-null.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-capability-or-null.html">T</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Retrieve capability by key.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="757003662%2FFunctions%2F-1897681819" anchor-label="setAttributes" id="757003662%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set-attributes.html"><span>set</span><wbr><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="757003662%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-attributes.html"><span class="token function">setAttributes</span></a><span class="token punctuation">(</span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../../ktor-utils/io.ktor.util/-attributes/index.html">Attributes</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Set request specific attributes specified by <a href="set-attributes.html">block</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="319520694%2FFunctions%2F-1897681819" anchor-label="setCapability" id="319520694%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set-capability.html"><span>set</span><wbr><span><span>Capability</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="319520694%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="set-capability.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="set-capability.html"><span class="token function">setCapability</span></a><span class="token punctuation">(</span>key<span class="token operator">: </span><a href="../../io.ktor.client.engine/-http-client-engine-capability/index.html">HttpClientEngineCapability</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="set-capability.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>capability<span class="token operator">: </span><a href="set-capability.html">T</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Set capability configuration.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1196439924%2FFunctions%2F-1897681819" anchor-label="takeFrom" id="-1196439924%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="take-from.html"><span>take</span><wbr><span><span>From</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1196439924%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span>builder<span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Mutates this copying all the data but execution context from another <a href="take-from.html">builder</a> using it as base.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1313392567%2FFunctions%2F-1897681819" anchor-label="takeFromWithExecutionContext" id="-1313392567%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="take-from-with-execution-context.html"><span>take</span><wbr><span>From</span><wbr><span>With</span><wbr><span>Execution</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1313392567%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="take-from-with-execution-context.html"><span class="token function">takeFromWithExecutionContext</span></a><span class="token punctuation">(</span>builder<span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Mutates this copying all the data from another <a href="take-from-with-execution-context.html">builder</a> using it as base.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="430640096%2FFunctions%2F-1897681819" anchor-label="url" id="430640096%2FFunctions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="url.html"><span><span>url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="430640096%2FFunctions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Executes a <a href="url.html">block</a> that configures the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-1584846092%2FProperties%2F-1897681819" anchor-label="attributes" id="-1584846092%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="attributes.html">attributes</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1584846092%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="-1584846092%2FProperties%2F-1897681819" anchor-label="attributes" id="-1584846092%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="attributes.html">attributes</a><span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util/-attributes/index.html">Attributes</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1584846092%2FProperties%2F-1897681819" anchor-label="attributes" id="-1584846092%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Call specific attributes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1670614921%2FProperties%2F-1897681819" anchor-label="body" id="1670614921%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="body.html">body</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1670614921%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="1670614921%2FProperties%2F-1897681819" anchor-label="body" id="1670614921%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="body.html">body</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1670614921%2FProperties%2F-1897681819" anchor-label="body" id="1670614921%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="body.html">body</a> for this request. Initially <a href="../../io.ktor.client.utils/-empty-content/index.html">EmptyContent</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-169302444%2FProperties%2F-1897681819" anchor-label="executionContext" id="-169302444%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="execution-context.html">executionContext</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169302444%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="-169302444%2FProperties%2F-1897681819" anchor-label="executionContext" id="-169302444%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="execution-context.html">executionContext</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-169302444%2FProperties%2F-1897681819" anchor-label="executionContext" id="-169302444%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph">A deferred used to control the execution of this request.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2062273271%2FProperties%2F-1897681819" anchor-label="headers" id="-2062273271%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="headers.html">headers</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2062273271%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="-2062273271%2FProperties%2F-1897681819" anchor-label="headers" id="-2062273271%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="headers.html">headers</a><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-headers-builder/index.html">HeadersBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-2062273271%2FProperties%2F-1897681819" anchor-label="headers" id="-2062273271%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph"><a href="../../../ktor-http/io.ktor.http/-headers-builder/index.html">HeadersBuilder</a> to configure the headers for this request.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-307152470%2FProperties%2F-1897681819" anchor-label="method" id="-307152470%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="method.html">method</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-307152470%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="-307152470%2FProperties%2F-1897681819" anchor-label="method" id="-307152470%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="method.html">method</a><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-307152470%2FProperties%2F-1897681819" anchor-label="method" id="-307152470%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph"><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a> used by this request. <a href="../../../ktor-http/io.ktor.http/-http-method/-companion/-get.html">HttpMethod.Get</a> by default.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="230031424%2FProperties%2F-1897681819" anchor-label="url" id="230031424%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="url.html">url</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="230031424%2FProperties%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><a data-name="230031424%2FProperties%2F-1897681819" anchor-label="url" id="230031424%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="url.html">url</a><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="230031424%2FProperties%2F-1897681819" anchor-label="url" id="230031424%2FProperties%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a><p class="paragraph"><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> to configure the URL for this request.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="tabbedcontent">Extensions</h2>
+              <div class="table" data-togglable="Extensions"><a data-name="949889762%2FExtensions%2F-1897681819" anchor-label="accept" id="949889762%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../accept.html"><span><span>accept</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="949889762%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../accept.html"><span class="token function">accept</span></a><span class="token punctuation">(</span>contentType<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-content-type/index.html">ContentType</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <code class="lang-kotlin">Accept</code> header with a specific <a href="../accept.html">contentType</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="986741889%2FExtensions%2F-1897681819" anchor-label="cookie" id="986741889%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../cookie.html"><span><span>cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="986741889%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>maxAge<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span>expires<span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util.date/-g-m-t-date/index.html">GMTDate</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>domain<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span>secure<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span>httpOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span>extensions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()<span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets a single header of key with a specific <a href="../cookie.html">value</a> if the value is not null.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1531466209%2FExtensions%2F-1897681819" anchor-label="expectSuccess" id="-1531466209%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../../io.ktor.client.features/expect-success.html"><span>expect</span><wbr><span><span>Success</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1531466209%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../../io.ktor.client.features/expect-success.html">expectSuccess</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Terminate <a href="../../io.ktor.client/-http-client/receive-pipeline.html">HttpClient.receivePipeline</a> if status code is not successful (&gt;=300).</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1657599801%2FExtensions%2F-1897681819" anchor-label="header" id="1657599801%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1657599801%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../header.html"><span class="token function">header</span></a><span class="token punctuation">(</span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets a single header of <a href="../header.html">key</a> with a specific <a href="../header.html">value</a> if the value is not null.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="979347713%2FExtensions%2F-1897681819" anchor-label="headers" id="979347713%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../headers.html"><span><span>headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="979347713%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../headers.html"><span class="token function">headers</span></a><span class="token punctuation">(</span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../../ktor-http/io.ktor.http/-headers-builder/index.html">HeadersBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-headers-builder/index.html">HeadersBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Executes a <a href="../headers.html">block</a> that configures the <a href="../../../ktor-http/io.ktor.http/-headers-builder/index.html">HeadersBuilder</a> associated to this request.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="827155849%2FExtensions%2F-1897681819" anchor-label="host" id="827155849%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../host.html"><span><span>host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="827155849%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../host.html">host</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Gets the associated URL's host.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-544706638%2FExtensions%2F-1897681819" anchor-label="onDownload" id="-544706638%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../../io.ktor.client.features/on-download.html"><span>on</span><wbr><span><span>Download</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-544706638%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../../io.ktor.client.features/on-download.html"><span class="token function">onDownload</span></a><span class="token punctuation">(</span>listener<span class="token operator">: </span><a href="../../io.ktor.client.content/index.html#-1715832431%2FClasslikes%2F-1897681819">ProgressListener</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Registers listener to observe download progress.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="63602475%2FExtensions%2F-1897681819" anchor-label="onUpload" id="63602475%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../../io.ktor.client.features/on-upload.html"><span>on</span><wbr><span><span>Upload</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="63602475%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../../io.ktor.client.features/on-upload.html"><span class="token function">onUpload</span></a><span class="token punctuation">(</span>listener<span class="token operator">: </span><a href="../../io.ktor.client.content/index.html#-1715832431%2FClasslikes%2F-1897681819">ProgressListener</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Registers listener to observe upload progress.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="411297065%2FExtensions%2F-1897681819" anchor-label="parameter" id="411297065%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../parameter.html"><span><span>parameter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="411297065%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../parameter.html"><span class="token function">parameter</span></a><span class="token punctuation">(</span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets a single URL query parameter of <a href="../parameter.html">key</a> with a specific <a href="../parameter.html">value</a> if the value is not null. Can not be used to set form parameters in the body.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1541565986%2FExtensions%2F-1897681819" anchor-label="port" id="1541565986%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../port.html"><span><span>port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1541565986%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../port.html">port</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Gets the associated URL's port.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="699865360%2FExtensions%2F-1897681819" anchor-label="takeFrom" id="699865360%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../take-from.html"><span>take</span><wbr><span><span>From</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="699865360%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span>request<span class="token operator">: </span><a href="../-http-request/index.html">HttpRequest</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Mutates <a href="../index.html">this</a> copying all the data from another <a href="../take-from.html">request</a> using it as base.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span>request<span class="token operator">: </span><a href="../-http-request-data/index.html">HttpRequestData</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <a href="index.html">HttpRequestBuilder</a> from <a href="../take-from.html">request</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1110522353%2FExtensions%2F-1897681819" anchor-label="timeout" id="-1110522353%2FExtensions%2F-1897681819" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../../io.ktor.client.features/timeout.html"><span><span>timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1110522353%2FExtensions%2F-1897681819"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../../io.ktor.client.features/timeout.html"><span class="token function">timeout</span></a><span class="token punctuation">(</span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../io.ktor.client.features/-http-timeout/-http-timeout-capability-configuration/index.html">HttpTimeout.HttpTimeoutCapabilityConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds timeout boundaries to the request. Requires <a href="../../io.ktor.client.features/-http-timeout/index.html">HttpTimeout</a> feature to be installed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-345864367%2FExtensions%2F-1476635190" anchor-label="url" id="-345864367%2FExtensions%2F-1476635190" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain :ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain :ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain :ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../url.html"><span><span>url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-345864367%2FExtensions%2F-1476635190"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Executes a <a href="../url.html">block</a> that configures the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>scheme<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"http"</span><span class="token punctuation">, </span>host<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"localhost"</span><span class="token punctuation">, </span>port<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_PORT<span class="token punctuation">, </span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"/"</span><span class="token punctuation">, </span>block<span class="token operator">: </span><span class="token keyword"></span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <a href="../url.html">url</a> using the specified <a href="../url.html">scheme</a>, <a href="../url.html">host</a>, <a href="../url.html">port</a> and <a href="../url.html">path</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>urlString<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">urlString</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>url<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-url/index.html">Url</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">url</a>.</p></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-client:ktor-client-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1694235884%2FExtensions%2F-464307983">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span>url<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html">URL</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">url</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
+
+

@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>UDPSocketOptions</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../../ktor-network/io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../../3.0.3/ktor-network/io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../../2.2.4/ktor-network/io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../../2.0.3/ktor-network/io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../../1.6.8/ktor-network/io.ktor.network.sockets/-socket-options/-u-d-p-socket-options/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-network::io.ktor.network.sockets/SocketOptions.UDPSocketOptions///PointingToDeclaration//-1449200414">
+  <div class="breadcrumbs"><a href="../../../index.html">ktor-network</a><span class="delimiter">/</span><a href="../../index.html">io.ktor.network.sockets</a><span class="delimiter">/</span><a href="../index.html">SocketOptions</a><span class="delimiter">/</span><span class="current">UDPSocketOptions</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>UDPSocket</span><wbr><span><span>Options</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">UDPSocketOptions</a> : <a href="../-peer-socket-options/index.html">SocketOptions.PeerSocketOptions</a></div><p class="paragraph">Represents UDP socket options</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-862481259%2FProperties%2F-1449200414" anchor-label="broadcast" id="-862481259%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="broadcast.html"><span><span>broadcast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-862481259%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="broadcast.html">broadcast</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">SO_BROADCAST socket option</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="99275723%2FProperties%2F-1449200414" anchor-label="receiveBufferSize" id="99275723%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-peer-socket-options/receive-buffer-size.html"><span>receive</span><wbr><span>Buffer</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="99275723%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-peer-socket-options/receive-buffer-size.html">receiveBufferSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Socket incoming buffer size (SO_RCVBUF), <code class="lang-kotlin">-1</code> or <code class="lang-kotlin">0</code> to make system decide</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1134112848%2FProperties%2F-1449200414" anchor-label="reuseAddress" id="1134112848%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../reuse-address.html"><span>reuse</span><wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1134112848%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../reuse-address.html">reuseAddress</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">SO_REUSEADDR option</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1181119925%2FProperties%2F-1449200414" anchor-label="reusePort" id="1181119925%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../reuse-port.html"><span>reuse</span><wbr><span><span>Port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1181119925%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../reuse-port.html">reusePort</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">SO_REUSEPORT option, may not work with old JDK (will be silently ignored)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-877552670%2FProperties%2F-1449200414" anchor-label="sendBufferSize" id="-877552670%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-peer-socket-options/send-buffer-size.html"><span>send</span><wbr><span>Buffer</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-877552670%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-peer-socket-options/send-buffer-size.html">sendBufferSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Socket ougoing buffer size (SO_SNDBUF), <code class="lang-kotlin">-1</code> or <code class="lang-kotlin">0</code> to make system decide</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1813295002%2FProperties%2F-1449200414" anchor-label="typeOfService" id="-1813295002%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../type-of-service.html"><span>type</span><wbr><span>Of</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1813295002%2FProperties%2F-1449200414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../type-of-service.html">typeOfService</a><span class="token operator">: </span><a href="../../-type-of-service/index.html">TypeOfService</a></div><div class="brief "><p class="paragraph">ToS value, <a href="../../-type-of-service/-companion/-u-n-d-e-f-i-n-e-d.html">TypeOfService.UNDEFINED</a> by default, may not work with old JDK (will be silently ignored)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,263 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AuthenticationConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.auth/-authentication-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-server-auth/io.ktor.server.auth/-authentication-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.3/ktor-server-auth/io.ktor.server.auth/-authentication-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.4/ktor-server-auth/io.ktor.server.auth/-authentication-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.3/ktor-server-auth/io.ktor.server.auth/-authentication-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-auth::io.ktor.server.auth/AuthenticationConfig///PointingToDeclaration//-1036434875">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-auth</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.auth</a><span class="delimiter">/</span><span class="current">AuthenticationConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Authentication</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">providers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span><a href="../-authentication-provider/index.html">AuthenticationProvider</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div><p class="paragraph">A configuration for the <a href="../-authentication/index.html">Authentication</a> plugin.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1631105147%2FConstructors%2F-1036434875" anchor-label="AuthenticationConfig" id="-1631105147%2FConstructors%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-authentication-config.html"><span>Authentication</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1631105147%2FConstructors%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">providers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span><a href="../-authentication-provider/index.html">AuthenticationProvider</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyMap()</span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-683229650%2FFunctions%2F-1036434875" anchor-label="basic" id="-683229650%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../basic.html"><span><span>basic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-683229650%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../basic.html"><span class="token function">basic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-basic-authentication-provider/-config/index.html">BasicAuthenticationProvider.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the basic <a href="../-authentication/index.html">Authentication</a> provider. You can use basic authentication for logging in users and protecting specific routes. To learn how to configure it, see <a href="https://ktor.io/docs/basic.html">Basic authentication</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1406677186%2FFunctions%2F-1036434875" anchor-label="bearer" id="-1406677186%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../bearer.html"><span><span>bearer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1406677186%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../bearer.html"><span class="token function">bearer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-bearer-authentication-provider/-config/index.html">BearerAuthenticationProvider.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the Bearer <a href="../-authentication/index.html">Authentication</a> provider. Bearer auth requires the developer to provide a custom 'authenticate' function to authorize the token, and return the associated principal.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1192853688%2FFunctions%2F1308662189" anchor-label="digest" id="1192853688%2FFunctions%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../digest.html"><span><span>digest</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1192853688%2FFunctions%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../digest.html"><span class="token function">digest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-digest-authentication-provider/-config/index.html">DigestAuthenticationProvider.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the digest <a href="../-authentication/index.html">Authentication</a> provider. To learn how to configure it, see <a href="https://ktor.io/docs/digest.html">Digest authentication</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-403232904%2FFunctions%2F-1036434875" anchor-label="form" id="-403232904%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../form.html"><span><span>form</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-403232904%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../form.html"><span class="token function">form</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-form-authentication-provider/-config/index.html">FormAuthenticationProvider.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the form-based <a href="../-authentication/index.html">Authentication</a> provider. Form-based authentication uses a web form to collect credential information and authenticate a user. To learn how to configure it, see <a href="https://ktor.io/docs/form.html">Form-based authentication</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="616829614%2FFunctions%2F-1036434875" anchor-label="oauth" id="616829614%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../oauth.html"><span><span>oauth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="616829614%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../oauth.html"><span class="token function">oauth</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-o-auth-authentication-provider/-config/index.html">OAuthAuthenticationProvider.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the OAuth <a href="../-authentication/index.html">Authentication</a> provider. OAuth can be used to authorize users of your application by using external providers, such as Google, Facebook, Twitter, and so on. To learn how to configure it, see <a href="https://ktor.io/docs/oauth.html">OAuth</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-832763355%2FFunctions%2F-1036434875" anchor-label="provider" id="-832763355%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="provider.html"><span><span>provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-832763355%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="provider.html"><span class="token function">provider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-dynamic-provider-config/index.html">DynamicProviderConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Registers a provider with the specified <a href="provider.html">name</a> and allows you to <a href="provider.html">configure</a> it.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1323068413%2FFunctions%2F-1036434875" anchor-label="register" id="1323068413%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="register.html"><span><span>register</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1323068413%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="register.html"><span class="token function">register</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">provider<span class="token operator">: </span><a href="../-authentication-provider/index.html">AuthenticationProvider</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Registers the specified <a href="register.html">provider</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1774383904%2FFunctions%2F-1036434875" anchor-label="session" id="1774383904%2FFunctions%2F-1036434875" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../session.html"><span><span>session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1774383904%2FFunctions%2F-1036434875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator"> : </span><a href="../-principal/index.html">Principal</a><span class="token operator">&gt; </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>configure<span class="token operator">: </span><a href="../-session-authentication-provider/-config/index.html">SessionAuthenticationProvider.Config</a><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator"> : </span><a href="../-principal/index.html">Principal</a><span class="token operator">&gt; </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">kClass<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="index.html">AuthenticationConfig</a><span class="token punctuation">.</span><a href="../session.html"><span class="token function">session</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">kClass<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="../-session-authentication-provider/-config/index.html">SessionAuthenticationProvider.Config</a><span class="token operator">&lt;</span><a href="../session.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the session <a href="../-authentication/index.html">Authentication</a> provider. This provider provides the ability to authenticate a user that already has an associated session.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
