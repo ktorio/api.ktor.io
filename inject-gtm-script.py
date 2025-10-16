@@ -44,7 +44,7 @@ def patch_html_file(file_path: Path, version_dir: Path) -> bool:
     content = GTM_SCRIPT_PATTERN.sub('', content)
 
     # Inject the new script tag after <head>
-    new_content = content.replace('<head>', f'<head>\n{script_tag}\n', 1)
+    new_content = content.replace('<head>', f'<head>\n    {script_tag}', 1)
 
     try:
         file_path.write_text(new_content, encoding='utf-8')
