@@ -1,0 +1,446 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.network.tls/-o-i-d/-companion/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.0.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../../3.1.x/ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../../2.3.x/ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../../2.2.x/ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../../2.0.x/ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../../1.6.x/ktor-network-tls/io.ktor.network.tls/-o-i-d/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-network-tls::io.ktor.network.tls/OID.Companion///PointingToDeclaration//1151173893">
+  <div class="breadcrumbs"><a href="../../../index.html">ktor-network-tls</a><span class="delimiter">/</span><a href="../../index.html">io.ktor.network.tls</a><span class="delimiter">/</span><a href="../index.html">OID</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1703143648%2FProperties%2F1151173893" anchor-label="BasicConstraints" id="1703143648%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-basic-constraints.html"><span>Basic</span><wbr><span><span>Constraints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1703143648%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-basic-constraints.html">BasicConstraints</a><span class="token operator">: </span><a href="../index.html">OID</a></div><div class="brief "><p class="paragraph">CA OID</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="260297877%2FProperties%2F1151173893" anchor-label="ClientAuth" id="260297877%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-client-auth.html"><span>Client</span><wbr><span><span>Auth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="260297877%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-client-auth.html">ClientAuth</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1030264078%2FProperties%2F1151173893" anchor-label="CommonName" id="-1030264078%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-common-name.html"><span>Common</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030264078%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-common-name.html">CommonName</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1006119055%2FProperties%2F1151173893" anchor-label="CountryName" id="-1006119055%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-country-name.html"><span>Country</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1006119055%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-country-name.html">CountryName</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-799750386%2FProperties%2F1151173893" anchor-label="ECDSAwithSHA256Encryption" id="-799750386%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-c-d-s-awith-s-h-a256-encryption.html"><span>ECDSAwith</span><wbr><span><span>SHA256Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-799750386%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-c-d-s-awith-s-h-a256-encryption.html">ECDSAwithSHA256Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2078249614%2FProperties%2F1151173893" anchor-label="ECDSAwithSHA384Encryption" id="-2078249614%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-c-d-s-awith-s-h-a384-encryption.html"><span>ECDSAwith</span><wbr><span><span>SHA384Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2078249614%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-c-d-s-awith-s-h-a384-encryption.html">ECDSAwithSHA384Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div><div class="brief "><p class="paragraph">Algorithm OID</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="994930439%2FProperties%2F1151173893" anchor-label="ECEncryption" id="994930439%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-e-c-encryption.html"><span><span>ECEncryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="994930439%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-c-encryption.html">ECEncryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-127022801%2FProperties%2F1151173893" anchor-label="ExtKeyUsage" id="-127022801%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ext-key-usage.html"><span>Ext</span><wbr><span>Key</span><wbr><span><span>Usage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-127022801%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-ext-key-usage.html">ExtKeyUsage</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-667788346%2FProperties%2F1151173893" anchor-label="KeyUsage" id="-667788346%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-key-usage.html"><span>Key</span><wbr><span><span>Usage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-667788346%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-key-usage.html">KeyUsage</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1233242235%2FProperties%2F1151173893" anchor-label="OrganizationalUnitName" id="1233242235%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-organizational-unit-name.html"><span>Organizational</span><wbr><span>Unit</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1233242235%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-organizational-unit-name.html">OrganizationalUnitName</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1928935530%2FProperties%2F1151173893" anchor-label="OrganizationName" id="1928935530%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-organization-name.html"><span>Organization</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1928935530%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-organization-name.html">OrganizationName</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="3557839%2FProperties%2F1151173893" anchor-label="RSAEncryption" id="3557839%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-s-a-encryption.html"><span><span>RSAEncryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="3557839%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-s-a-encryption.html">RSAEncryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div><div class="brief "><p class="paragraph">Encryption OID</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2119726596%2FProperties%2F1151173893" anchor-label="RSAwithSHA1Encryption" id="2119726596%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-s-awith-s-h-a1-encryption.html"><span>RSAwith</span><wbr><span><span>SHA1Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2119726596%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-s-awith-s-h-a1-encryption.html">RSAwithSHA1Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2052733470%2FProperties%2F1151173893" anchor-label="RSAwithSHA256Encryption" id="-2052733470%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-s-awith-s-h-a256-encryption.html"><span>RSAwith</span><wbr><span><span>SHA256Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2052733470%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-s-awith-s-h-a256-encryption.html">RSAwithSHA256Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="963734598%2FProperties%2F1151173893" anchor-label="RSAwithSHA384Encryption" id="963734598%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-s-awith-s-h-a384-encryption.html"><span>RSAwith</span><wbr><span><span>SHA384Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="963734598%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-s-awith-s-h-a384-encryption.html">RSAwithSHA384Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1979618241%2FProperties%2F1151173893" anchor-label="RSAwithSHA512Encryption" id="-1979618241%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-s-awith-s-h-a512-encryption.html"><span>RSAwith</span><wbr><span><span>SHA512Encryption</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1979618241%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-s-awith-s-h-a512-encryption.html">RSAwithSHA512Encryption</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1437355169%2FProperties%2F1151173893" anchor-label="secp256r1" id="-1437355169%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="secp256r1.html"><span><span>secp256r1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1437355169%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="secp256r1.html">secp256r1</a><span class="token operator">: </span><a href="../index.html">OID</a></div><div class="brief "><p class="paragraph">EC curves</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1955402723%2FProperties%2F1151173893" anchor-label="ServerAuth" id="-1955402723%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-server-auth.html"><span>Server</span><wbr><span><span>Auth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1955402723%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-server-auth.html">ServerAuth</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-713177152%2FProperties%2F1151173893" anchor-label="SubjectAltName" id="-713177152%2FProperties%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-subject-alt-name.html"><span>Subject</span><wbr><span>Alt</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-713177152%2FProperties%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-subject-alt-name.html">SubjectAltName</a><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1914077239%2FFunctions%2F1151173893" anchor-label="fromAlgorithm" id="1914077239%2FFunctions%2F1151173893" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-algorithm.html"><span>from</span><wbr><span><span>Algorithm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1914077239%2FFunctions%2F1151173893"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-filterable-set=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain" data-active="" data-toggle=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain">jvmAndPosix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-network:ktor-network-tls:dokkaHtmlPartial/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="from-algorithm.html"><span class="token function">fromAlgorithm</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">algorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">OID</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

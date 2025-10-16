@@ -1,0 +1,731 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.engine</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.engine/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.1.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-server-core/io.ktor.server.engine/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-server-core/io.ktor.server.engine/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-server-core/io.ktor.server.engine/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core/jsAndWasmSharedMain">jsAndWasmShared</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-core/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core/nonJvmMain">nonJvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core/posixMain">posix</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-core/commonMain" data-filter=":ktor-server:ktor-server-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-core/jsAndWasmSharedMain" data-filter=":ktor-server:ktor-server-core/jsAndWasmSharedMain">
+                                <span class="checkbox--icon"></span>
+                                jsAndWasmShared
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-core/jvmMain" data-filter=":ktor-server:ktor-server-core/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-core/nonJvmMain" data-filter=":ktor-server:ktor-server-core/nonJvmMain">
+                                <span class="checkbox--icon"></span>
+                                nonJvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server:ktor-server-core/posixMain" data-filter=":ktor-server:ktor-server-core/posixMain">
+                                <span class="checkbox--icon"></span>
+                                posix
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-server-core::io.ktor.server.engine////PointingToDeclaration//2120222213">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-core</a><span class="delimiter">/</span><span class="current">io.ktor.server.engine</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1782910277%2FClasslikes%2F1753714441" anchor-label="ApplicationEngine" id="-1782910277%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-engine/index.html"><span>Application</span><wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1782910277%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-application-engine/index.html">ApplicationEngine</a></div><div class="brief "><p class="paragraph">An engine which runs an application.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="262642877%2FClasslikes%2F1753714441" anchor-label="ApplicationEngineFactory" id="262642877%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-engine-factory/index.html"><span>Application</span><wbr><span>Engine</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262642877%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-application-engine-factory/index.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="-application-engine-factory/index.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Factory interface for creating <a href="-application-engine/index.html">ApplicationEngine</a> instances.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1515570251%2FClasslikes%2F1616085901" anchor-label="ApplicationEnvironmentBuilder" id="-1515570251%2FClasslikes%2F1616085901" data-filterable-set=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/nonJvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/nonJvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-environment-builder/index.html"><span>Application</span><wbr><span>Environment</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1515570251%2FClasslikes%2F1616085901"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain" data-active="" data-toggle=":ktor-server:ktor-server-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/nonJvmMain" data-toggle=":ktor-server:ktor-server-core/nonJvmMain">nonJvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-application-environment-builder/index.html">ApplicationEnvironmentBuilder</a></div><div class="brief "><p class="paragraph">Engine environment configuration builder</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-application-environment-builder/index.html">ApplicationEnvironmentBuilder</a></div><div class="brief "><p class="paragraph">Builder for configuring the environment of the Ktor application.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/nonJvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-application-environment-builder/index.html">ApplicationEnvironmentBuilder</a></div><div class="brief "><p class="paragraph">Engine environment configuration builder</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-86770253%2FClasslikes%2F755203177" anchor-label="ApplicationEnvironmentImplNix" id="-86770253%2FClasslikes%2F755203177" data-filterable-set=":ktor-server:ktor-server-core/nonJvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/nonJvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-application-environment-impl-nix/index.html"><span>Application</span><wbr><span>Environment</span><wbr><span>Impl</span><wbr><span><span>Nix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-86770253%2FClasslikes%2F755203177"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/nonJvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/nonJvmMain">nonJvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/nonJvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-application-environment-impl-nix/index.html">ApplicationEnvironmentImplNix</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>log<span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util.logging/-logger/index.html">Logger</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>monitor<span class="token operator">: </span><a href="../../ktor-events/io.ktor.events/-events/index.html">Events</a><span class="token operator"> = </span>Events()</span></span><span class="token punctuation">)</span> : <a href="../io.ktor.server.application/-application-environment/index.html">ApplicationEnvironment</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1767938800%2FClasslikes%2F1753714441" anchor-label="BaseApplicationCall" id="-1767938800%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-application-call/index.html"><span>Base</span><wbr><span>Application</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1767938800%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-application-call/index.html">BaseApplicationCall</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>application<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a></span></span><span class="token punctuation">)</span> : <a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a></div><div class="brief "><p class="paragraph">Base class for implementing an <a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="717087340%2FClasslikes%2F1753714441" anchor-label="BaseApplicationEngine" id="717087340%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-application-engine/index.html"><span>Base</span><wbr><span>Application</span><wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="717087340%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-application-engine/index.html">BaseApplicationEngine</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>environment<span class="token operator">: </span><a href="../io.ktor.server.application/-application-environment/index.html">ApplicationEnvironment</a><span class="token punctuation">, </span></span><span class="parameter ">monitor<span class="token operator">: </span><a href="../../ktor-events/io.ktor.events/-events/index.html">Events</a><span class="token punctuation">, </span></span><span class="parameter ">developmentMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pipeline<span class="token operator">: </span><a href="-engine-pipeline/index.html">EnginePipeline</a><span class="token operator"> = </span>defaultEnginePipeline(environment.config, developmentMode)</span></span><span class="token punctuation">)</span> : <a href="-application-engine/index.html">ApplicationEngine</a></div><div class="brief "><p class="paragraph">Base class for implementing <a href="-application-engine/index.html">ApplicationEngine</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-103202331%2FClasslikes%2F1753714441" anchor-label="BaseApplicationRequest" id="-103202331%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-application-request/index.html"><span>Base</span><wbr><span>Application</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-103202331%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-application-request/index.html">BaseApplicationRequest</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>call<span class="token operator">: </span><a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a></span></span><span class="token punctuation">)</span> : <a href="../io.ktor.server.request/-pipeline-request/index.html">PipelineRequest</a></div><div class="brief "><p class="paragraph">Base class for implementing <a href="../io.ktor.server.request/-pipeline-request/index.html">PipelineRequest</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-121529843%2FClasslikes%2F1753714441" anchor-label="BaseApplicationResponse" id="-121529843%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-application-response/index.html"><span>Base</span><wbr><span>Application</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-121529843%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-application-response/index.html">BaseApplicationResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>call<span class="token operator">: </span><a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a></span></span><span class="token punctuation">)</span> : <a href="../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1221077172%2FClasslikes%2F1753714441" anchor-label="CommandLineConfig" id="-1221077172%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-command-line-config/index.html"><span>Command</span><wbr><span>Line</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1221077172%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-command-line-config/index.html">CommandLineConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>rootConfig<span class="token operator">: </span><a href="../io.ktor.server.application/-server-config/index.html">ServerConfig</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>engineConfig<span class="token operator">: </span><a href="-base-application-engine/-configuration/index.html">BaseApplicationEngine.Configuration</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1573703137%2FClasslikes%2F1753714441" anchor-label="ConfigKeys" id="-1573703137%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-config-keys/index.html"><span>Config</span><wbr><span><span>Keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1573703137%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-config-keys/index.html">ConfigKeys</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1743918310%2FClasslikes%2F1753714441" anchor-label="ConnectorType" id="1743918310%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-connector-type/index.html"><span>Connector</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1743918310%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-connector-type/index.html">ConnectorType</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Represents a type of a connector, e.g HTTP or HTTPS.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1471147132%2FClasslikes%2F1753714441" anchor-label="DefaultUncaughtExceptionHandler" id="1471147132%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-default-uncaught-exception-handler/index.html"><span>Default</span><wbr><span>Uncaught</span><wbr><span>Exception</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1471147132%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-default-uncaught-exception-handler/index.html">DefaultUncaughtExceptionHandler</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">logger<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../ktor-utils/io.ktor.util.logging/-logger/index.html">Logger</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineExceptionHandler///PointingToDeclaration/">CoroutineExceptionHandler</span></div><div class="brief "><p class="paragraph">Handles all uncaught exceptions and logs errors with the specified <a href="-default-uncaught-exception-handler/logger.html">logger</a> ignoring <span data-unresolved-link="kotlinx.coroutines/CancellationException///PointingToDeclaration/">CancellationException</span> and <span data-unresolved-link="kotlinx.io/IOException///PointingToDeclaration/">IOException</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="7706088%2FClasslikes%2F-1756820504" anchor-label="EmbeddedServer" id="7706088%2FClasslikes%2F-1756820504" data-filterable-set=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jsAndWasmSharedMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/posixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jsAndWasmSharedMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/posixMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/jsAndWasmSharedMain,:ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/posixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-embedded-server/index.html"><span>Embedded</span><wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="7706088%2FClasslikes%2F-1756820504"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain" data-active="" data-toggle=":ktor-server:ktor-server-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jsAndWasmSharedMain" data-filterable-set=":ktor-server:ktor-server-core/jsAndWasmSharedMain" data-toggle=":ktor-server:ktor-server-core/jsAndWasmSharedMain">jsAndWasmShared</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/posixMain" data-filterable-set=":ktor-server:ktor-server-core/posixMain" data-toggle=":ktor-server:ktor-server-core/posixMain">posix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="-embedded-server/index.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="-embedded-server/index.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Represents an embedded server that hosts an application. It's an entry point to the application and handles the lifecycle of the application engine.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="-embedded-server/index.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="-embedded-server/index.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="-embedded-server/index.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="-embedded-server/index.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="-embedded-server/index.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="-embedded-server/index.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="703247557%2FClasslikes%2F1753714441" anchor-label="EngineConnectorBuilder" id="703247557%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-engine-connector-builder/index.html"><span>Engine</span><wbr><span>Connector</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="703247557%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-engine-connector-builder/index.html">EngineConnectorBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="-connector-type/index.html">ConnectorType</a><span class="token operator"> = </span>ConnectorType.HTTP</span></span><span class="token punctuation">)</span> : <a href="-engine-connector-config/index.html">EngineConnectorConfig</a></div><div class="brief "><p class="paragraph">Mutable implementation of EngineConnectorConfig for building connectors programmatically</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1998950784%2FClasslikes%2F1753714441" anchor-label="EngineConnectorConfig" id="1998950784%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-engine-connector-config/index.html"><span>Engine</span><wbr><span>Connector</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1998950784%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a></div><div class="brief "><p class="paragraph">Represents a connector configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1150590257%2FClasslikes%2F1753714441" anchor-label="EnginePipeline" id="1150590257%2FClasslikes%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-engine-pipeline/index.html"><span>Engine</span><wbr><span><span>Pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1150590257%2FClasslikes%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-engine-pipeline/index.html">EnginePipeline</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>developmentMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../../ktor-utils/io.ktor.util.pipeline/-pipeline/index.html">Pipeline</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span><a href="../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Application engine pipeline. One usually don't need to install interceptors here unless your are writing your own engine implementation</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1071212011%2FClasslikes%2F-1017442867" anchor-label="EngineSSLConnectorBuilder" id="-1071212011%2FClasslikes%2F-1017442867" data-filterable-set=":ktor-server:ktor-server-core/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-engine-s-s-l-connector-builder/index.html"><span>Engine</span><wbr><span>SSLConnector</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1071212011%2FClasslikes%2F-1017442867"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-engine-s-s-l-connector-builder/index.html">EngineSSLConnectorBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>keyStore<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyStore.html">KeyStore</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>keyAlias<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>keyStorePassword<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-char-array/index.html">CharArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>privateKeyPassword<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-char-array/index.html">CharArray</a></span></span><span class="token punctuation">)</span> : <a href="-engine-s-s-l-connector-config/index.html">EngineSSLConnectorConfig</a></div><div class="brief "><p class="paragraph">Mutable implementation of EngineSSLConnectorConfig for building connectors programmatically</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1110426160%2FClasslikes%2F-1017442867" anchor-label="EngineSSLConnectorConfig" id="1110426160%2FClasslikes%2F-1017442867" data-filterable-set=":ktor-server:ktor-server-core/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-engine-s-s-l-connector-config/index.html"><span>Engine</span><wbr><span>SSLConnector</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1110426160%2FClasslikes%2F-1017442867"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-engine-s-s-l-connector-config/index.html">EngineSSLConnectorConfig</a></div><div class="brief "><p class="paragraph">Represents an SSL connector configuration.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="120613428%2FClasslikes%2F-1017442867" anchor-label="ShutDownUrl" id="120613428%2FClasslikes%2F-1017442867" data-filterable-set=":ktor-server:ktor-server-core/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shut-down-url/index.html"><span>Shut</span><wbr><span>Down</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120613428%2FClasslikes%2F-1017442867"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-shut-down-url/index.html">ShutDownUrl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>exitCode<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A plugin that allows you to configure a URL used to shut down the server. There are two ways to enable this plugin:</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1634442376%2FFunctions%2F1753714441" anchor-label="addShutdownHook" id="-1634442376%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-shutdown-hook.html"><span>add</span><wbr><span>Shutdown</span><wbr><span><span>Hook</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1634442376%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="add-shutdown-hook.html"><span class="token function">addShutdownHook</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stop<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds automatic application shutdown hooks management. Should be used <strong>before</strong> starting the server. Once application termination noticed, <a href="add-shutdown-hook.html">stop</a> block will be executed. Please note that a shutdown hook only registered when the application is running. If the application is already stopped then there will be no hook and no <a href="add-shutdown-hook.html">stop</a> function invocation possible. So <a href="add-shutdown-hook.html">stop</a> block will be called once or never.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2073103343%2FFunctions%2F1753714441" anchor-label="applicationEnvironment" id="-2073103343%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="application-environment.html"><span>application</span><wbr><span><span>Environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2073103343%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="application-environment.html"><span class="token function">applicationEnvironment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="-application-environment-builder/index.html">ApplicationEnvironmentBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../io.ktor.server.application/-application-environment/index.html">ApplicationEnvironment</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="940551333%2FFunctions%2F1753714441" anchor-label="CommandLineConfig" id="940551333%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-command-line-config.html"><span>Command</span><wbr><span>Line</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="940551333%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-command-line-config.html"><span class="token function">CommandLineConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-command-line-config/index.html">CommandLineConfig</a></div><div class="brief "><p class="paragraph">Creates an <a href="../io.ktor.server.application/-application-environment/index.html">ApplicationEnvironment</a> instance from command line arguments</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1627412442%2FFunctions%2F1753714441" anchor-label="connector" id="1627412442%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connector.html"><span><span>connector</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1627412442%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token punctuation">.</span><a href="connector.html"><span class="token function">connector</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="-engine-connector-builder/index.html">EngineConnectorBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a non-secure connector to this engine environment</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2111087076%2FFunctions%2F1753714441" anchor-label="defaultEnginePipeline" id="2111087076%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="default-engine-pipeline.html"><span>default</span><wbr><span>Engine</span><wbr><span><span>Pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2111087076%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-engine-pipeline.html"><span class="token function">defaultEnginePipeline</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a><span class="token punctuation">, </span></span><span class="parameter ">developmentMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-engine-pipeline/index.html">EnginePipeline</a></div><div class="brief "><p class="paragraph">Default engine pipeline for all engines. Use it only if you are writing your own application engine implementation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2145937450%2FFunctions%2F1753714441" anchor-label="defaultExceptionStatusCode" id="2145937450%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="default-exception-status-code.html"><span>default</span><wbr><span>Exception</span><wbr><span>Status</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2145937450%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-exception-status-code.html"><span class="token function">defaultExceptionStatusCode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-http/io.ktor.http/-http-status-code/index.html">HttpStatusCode</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Map <a href="default-exception-status-code.html">cause</a> to the corresponding status code or <code class="lang-kotlin">null</code> if no default exception mapping for this <a href="default-exception-status-code.html">cause</a> type</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1938949993%2FFunctions%2F1753714441" anchor-label="embeddedServer" id="1938949993%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="embedded-server.html"><span>embedded</span><wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1938949993%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt; </span><a href="embedded-server.html"><span class="token function">embeddedServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factory<span class="token operator">: </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">rootConfig<span class="token operator">: </span><a href="../io.ktor.server.application/-server-config/index.html">ServerConfig</a><span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="embedded-server.html">TConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an embedded server with the given <a href="embedded-server.html">factory</a>, environment and <a href="embedded-server.html">configure</a> script.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt; </span><a href="embedded-server.html"><span class="token function">embeddedServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factory<span class="token operator">: </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">environment<span class="token operator">: </span><a href="../io.ktor.server.application/-application-environment/index.html">ApplicationEnvironment</a><span class="token operator"> = </span>applicationEnvironment()<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="embedded-server.html">TConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">, </span></span><span class="parameter ">module<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an embedded server with the given <a href="embedded-server.html">factory</a>, <a href="embedded-server.html">environment</a> and <a href="embedded-server.html">configure</a> script.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt; </span><a href="embedded-server.html"><span class="token function">embeddedServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factory<span class="token operator">: </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">80</span><span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"0.0.0.0"</span><span class="token punctuation">, </span></span><span class="parameter ">watchPaths<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(WORKING_DIRECTORY_PATH)<span class="token punctuation">, </span></span><span class="parameter ">module<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an embedded server with the given <a href="embedded-server.html">factory</a>, listening on <a href="embedded-server.html">host</a>:<a href="embedded-server.html">port</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="774171685%2FFunctions%2F1753714441" anchor-label="embeddedServer" id="774171685%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="embedded-server.html"><span>embedded</span><wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="774171685%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt; </span><span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span><span class="token punctuation">.</span><a href="embedded-server.html"><span class="token function">embeddedServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factory<span class="token operator">: </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>connectors<span class="token operator">: </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a><span class="token operator"> = </span>arrayOf()<span class="token punctuation">, </span></span><span class="parameter ">watchPaths<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(WORKING_DIRECTORY_PATH)<span class="token punctuation">, </span></span><span class="parameter ">parentCoroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token operator"> = </span>EmptyCoroutineContext<span class="token punctuation">, </span></span><span class="parameter ">module<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an embedded server with the given <a href="embedded-server.html">factory</a>, listening on given <a href="embedded-server.html">connectors</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token operator"> : </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator"> : </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt; </span><span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span><span class="token punctuation">.</span><a href="embedded-server.html"><span class="token function">embeddedServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">factory<span class="token operator">: </span><a href="-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">80</span><span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"0.0.0.0"</span><span class="token punctuation">, </span></span><span class="parameter ">watchPaths<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf(WORKING_DIRECTORY_PATH)<span class="token punctuation">, </span></span><span class="parameter ">parentCoroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token operator"> = </span>EmptyCoroutineContext<span class="token punctuation">, </span></span><span class="parameter ">module<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-embedded-server/index.html">EmbeddedServer</a><span class="token operator">&lt;</span><a href="embedded-server.html">TEngine</a><span class="token punctuation">, </span><a href="embedded-server.html">TConfiguration</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an embedded server with the given <a href="embedded-server.html">factory</a>, listening on <a href="embedded-server.html">host</a>:<a href="embedded-server.html">port</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="152641437%2FFunctions%2F1753714441" anchor-label="handleFailure" id="152641437%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-failure.html"><span>handle</span><wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="152641437%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="handle-failure.html"><span class="token function">handleFailure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">, </span></span><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Logs the <a href="handle-failure.html">error</a> and responds with an appropriate error status code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1876092535%2FFunctions%2F1753714441" anchor-label="installDefaultTransformations" id="1876092535%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="install-default-transformations.html"><span>install</span><wbr><span>Default</span><wbr><span><span>Transformations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1876092535%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../io.ktor.server.request/-application-receive-pipeline/index.html">ApplicationReceivePipeline</a><span class="token punctuation">.</span><a href="install-default-transformations.html"><span class="token function">installDefaultTransformations</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Default receive transformation</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../io.ktor.server.response/-application-send-pipeline/index.html">ApplicationSendPipeline</a><span class="token punctuation">.</span><a href="install-default-transformations.html"><span class="token function">installDefaultTransformations</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Default send transformation</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="233168839%2FFunctions%2F1753714441" anchor-label="launchOnCancellation" id="233168839%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="launch-on-cancellation.html"><span>launch</span><wbr><span>On</span><wbr><span><span>Cancellation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="233168839%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="token punctuation">.</span><a href="launch-on-cancellation.html"><span class="token function">launchOnCancellation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CompletableJob///PointingToDeclaration/">CompletableJob</span></div><div class="brief "><p class="paragraph">Launch a coroutine with <a href="launch-on-cancellation.html">block</a> body when either the parent job or the returned job is cancelled. It is important to complete or cancel the returned <span data-unresolved-link="kotlinx.coroutines/CompletableJob///PointingToDeclaration/">CompletableJob</span> otherwise the parent job will be unable to complete successfully.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2037286907%2FFunctions%2F1753714441" anchor-label="loadCommonConfiguration" id="2037286907%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-common-configuration.html"><span>load</span><wbr><span>Common</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2037286907%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token punctuation">.</span><a href="load-common-configuration.html"><span class="token function">loadCommonConfiguration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">deploymentConfig<span class="token operator">: </span><a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Loads common engine configuration parameters applicable to all engine types from the specified <a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="494820933%2FFunctions%2F1753714441" anchor-label="logError" id="494820933%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-error.html"><span>log</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="494820933%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="log-error.html"><span class="token function">logError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">, </span></span><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Logs the <a href="log-error.html">error</a> with MDC setup.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="513549521%2FFunctions%2F-1017442867" anchor-label="sslConnector" id="513549521%2FFunctions%2F-1017442867" data-filterable-set=":ktor-server:ktor-server-core/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ssl-connector.html"><span>ssl</span><wbr><span><span>Connector</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="513549521%2FFunctions%2F-1017442867"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="ssl-connector.html"><span class="token function">sslConnector</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">keyStore<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/security/KeyStore.html">KeyStore</a><span class="token punctuation">, </span></span><span class="parameter ">keyAlias<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>keyStorePassword<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-char-array/index.html">CharArray</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>privateKeyPassword<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-char-array/index.html">CharArray</a><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-engine-s-s-l-connector-builder/index.html">EngineSSLConnectorBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a secure connector to this engine environment</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519658862%2FFunctions%2F-1017442867" anchor-label="stop" id="519658862%2FFunctions%2F-1017442867" data-filterable-set=":ktor-server:ktor-server-core/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop.html"><span><span>stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519658862%2FFunctions%2F-1017442867"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="stop.html"><span class="token function">stop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gracePeriod<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">timeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">timeUnit<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stops this ApplicationEngine</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-874282173%2FFunctions%2F1753714441" anchor-label="stopServerOnCancellation" id="-874282173%2FFunctions%2F1753714441" data-filterable-set=":ktor-server:ktor-server-core/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-server-on-cancellation.html"><span>stop</span><wbr><span>Server</span><wbr><span>On</span><wbr><span><span>Cancellation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-874282173%2FFunctions%2F1753714441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">.</span><a href="stop-server-on-cancellation.html"><span class="token function">stopServerOnCancellation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="../io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">gracePeriodMillis<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">50</span><span class="token punctuation">, </span></span><span class="parameter ">timeoutMillis<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">5000</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CompletableJob///PointingToDeclaration/">CompletableJob</span></div><div class="brief "><p class="paragraph">Stop server on job cancellation. The returned <span data-unresolved-link="kotlinx.coroutines/CompletableJob///PointingToDeclaration/">CompletableJob</span> needs to be completed or cancelled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1564039693%2FFunctions%2F1616085901" anchor-label="withPort" id="1564039693%2FFunctions%2F1616085901" data-filterable-set=":ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/nonJvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain,:ktor-server:ktor-server-core/commonMain,:ktor-server:ktor-server-core/nonJvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-port.html"><span>with</span><wbr><span><span>Port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1564039693%2FFunctions%2F1616085901"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/commonMain" data-filterable-set=":ktor-server:ktor-server-core/commonMain" data-active="" data-toggle=":ktor-server:ktor-server-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/jvmMain" data-filterable-set=":ktor-server:ktor-server-core/jvmMain" data-toggle=":ktor-server:ktor-server-core/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core/nonJvmMain" data-filterable-set=":ktor-server:ktor-server-core/nonJvmMain" data-toggle=":ktor-server:ktor-server-core/nonJvmMain">nonJvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a><span class="token punctuation">.</span><a href="with-port.html"><span class="token function">withPort</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">otherPort<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a></div><div class="brief "><p class="paragraph">Returns new instance of <a href="-engine-connector-config/index.html">EngineConnectorConfig</a> based on <a href="index.html">this</a> with modified port</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token punctuation">.</span><a href="with-port.html"><span class="token function">withPort</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">otherPort<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div><div class="brief "><p class="paragraph">Returns new instance of EngineConnectorConfig based on <a href="index.html">this</a> with modified port</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core/nonJvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a><span class="token punctuation">.</span><a href="with-port.html"><span class="token function">withPort</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">otherPort<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-engine-connector-config/index.html">EngineConnectorConfig</a></div><div class="brief "><p class="paragraph">Returns new instance of <a href="-engine-connector-config/index.html">EngineConnectorConfig</a> based on <a href="index.html">this</a> with modified port</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

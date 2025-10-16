@@ -1,0 +1,824 @@
+<!doctype html>
+<html>
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.sessions</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>ktor</span>            </a>    </div>
+    <div>
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.sessions/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-server-sessions/io.ktor.server.sessions/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../3.1.x/ktor-server-sessions/io.ktor.server.sessions/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-server-sessions/io.ktor.server.sessions/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-server-sessions/io.ktor.server.sessions/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../2.0.x/ktor-server-sessions/io.ktor.server.sessions/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain">nix</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="ktor-server-sessions::io.ktor.server.sessions////PointingToDeclaration//795892450">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-sessions</a><span class="delimiter">/</span><span class="current">io.ktor.server.sessions</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1010054512%2FClasslikes%2F1276931248" anchor-label="Cache" id="1010054512%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-cache/index.html"><span><span>Cache</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1010054512%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-cache/index.html">Cache</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="-cache/index.html">K</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-cache/index.html">V</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A cache for CookieStorage</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-987589609%2FClasslikes%2F1276931248" anchor-label="CacheStorage" id="-987589609%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-cache-storage/index.html"><span>Cache</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-987589609%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-cache-storage/index.html">CacheStorage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>delegate<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter ">idleTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span> : <a href="-session-storage/index.html">SessionStorage</a></div><div class="brief "><p class="paragraph">A caching storage for sessions.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="191287360%2FClasslikes%2F1276931248" anchor-label="CookieConfiguration" id="191287360%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-cookie-configuration/index.html"><span>Cookie</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="191287360%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-cookie-configuration/index.html">CookieConfiguration</a></div><div class="brief "><p class="paragraph">A configuration used to specify cookie attributes for <a href="-sessions.html">Sessions</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-442422356%2FClasslikes%2F1276931248" anchor-label="CookieIdSessionBuilder" id="-442422356%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-cookie-id-session-builder/index.html"><span>Cookie</span><wbr><span>Id</span><wbr><span>Session</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-442422356%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-cookie-id-session-builder/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-cookie-session-builder/index.html">CookieSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-cookie-id-session-builder/index.html">S</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A configuration that allows you to configure additional cookie settings for <a href="-sessions.html">Sessions</a>, for example:</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="268534791%2FClasslikes%2F1276931248" anchor-label="CookieSessionBuilder" id="268534791%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-cookie-session-builder/index.html"><span>Cookie</span><wbr><span>Session</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="268534791%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-cookie-session-builder/index.html">CookieSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-cookie-session-builder/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A configuration that allows you to configure additional cookie settings for <a href="-sessions.html">Sessions</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="96202387%2FClasslikes%2F1276931248" anchor-label="CurrentSession" id="96202387%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-current-session/index.html"><span>Current</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="96202387%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-current-session/index.html">CurrentSession</a></div><div class="brief "><p class="paragraph">A container for all session instances.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-197864029%2FClasslikes%2F1276931248" anchor-label="HeaderIdSessionBuilder" id="-197864029%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-header-id-session-builder/index.html"><span>Header</span><wbr><span>Id</span><wbr><span>Session</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-197864029%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-header-id-session-builder/index.html">HeaderIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-header-id-session-builder/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-header-session-builder/index.html">HeaderSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-header-id-session-builder/index.html">S</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A configuration that allows you to configure header settings for <a href="-sessions.html">Sessions</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-191545410%2FClasslikes%2F1276931248" anchor-label="HeaderSessionBuilder" id="-191545410%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-header-session-builder/index.html"><span>Header</span><wbr><span>Session</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-191545410%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-header-session-builder/index.html">HeaderSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-header-session-builder/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A configuration that allows you to configure header settings for <a href="-sessions.html">Sessions</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1942871190%2FClasslikes%2F1276931248" anchor-label="SessionNotYetConfiguredException" id="-1942871190%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-not-yet-configured-exception/index.html"><span>Session</span><wbr><span>Not</span><wbr><span>Yet</span><wbr><span>Configured</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1942871190%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-not-yet-configured-exception/index.html">SessionNotYetConfiguredException</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Thrown when a session is asked too early before the <a href="-sessions.html">Sessions</a> plugin had chance to configure it. For example, in a phase before <a href="../../ktor-server-core/io.ktor.server.application/-application-call-pipeline/-application-phase/-plugins.html">ApplicationCallPipeline.Plugins</a> or in a plugin installed before <a href="-sessions.html">Sessions</a> into the same phase.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1922177877%2FClasslikes%2F1276931248" anchor-label="SessionProvider" id="-1922177877%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-provider/index.html"><span>Session</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1922177877%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-provider/index.html">SessionProvider</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-provider/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-provider/index.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transport<span class="token operator">: </span><a href="-session-transport/index.html">SessionTransport</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tracker<span class="token operator">: </span><a href="-session-tracker/index.html">SessionTracker</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-provider/index.html">S</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Specifies a provider for a session with the specific <a href="-session-provider/name.html">name</a> and <a href="-session-provider/type.html">type</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="613252465%2FClasslikes%2F1276931248" anchor-label="SessionsConfig" id="613252465%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-sessions-config/index.html"><span>Sessions</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613252465%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sessions-config/index.html">SessionsConfig</a></div><div class="brief "><p class="paragraph">A configuration for the <a href="-sessions.html">Sessions</a> plugin.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1567552874%2FClasslikes%2F1276931248" anchor-label="SessionSerializer" id="1567552874%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-serializer/index.html"><span>Session</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1567552874%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-serializer/index.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Serializes a session data from and to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1203409983%2FClasslikes%2F1019823778" anchor-label="SessionSerializerReflection" id="1203409983%2FClasslikes%2F1019823778" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-serializer-reflection/index.html"><span>Session</span><wbr><span>Serializer</span><wbr><span><span>Reflection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1203409983%2FClasslikes%2F1019823778"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-serializer-reflection/index.html"><strike>SessionSerializerReflection</strike></a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-serializer-reflection/index.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-serializer-reflection/index.html">T</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A default reflection-based session serializer. A serialized format is textual and optimized for size as it could be transferred via HTTP headers or cookies.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1712751765%2FClasslikes%2F1276931248" anchor-label="SessionStorage" id="-1712751765%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-storage/index.html"><span>Session</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1712751765%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-storage/index.html">SessionStorage</a></div><div class="brief "><p class="paragraph">A storage that provides the ability to <a href="-session-storage/write.html">write</a>, <a href="-session-storage/read.html">read</a>, and <a href="-session-storage/invalidate.html">invalidate</a> session data.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1761651222%2FClasslikes%2F1276931248" anchor-label="SessionStorageMemory" id="-1761651222%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-storage-memory/index.html"><span>Session</span><wbr><span>Storage</span><wbr><span><span>Memory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1761651222%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-storage-memory/index.html">SessionStorageMemory</a> : <a href="-session-storage/index.html">SessionStorage</a></div><div class="brief "><p class="paragraph">A storage that keeps session data in memory.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1866873522%2FClasslikes%2F1276931248" anchor-label="SessionTracker" id="-1866873522%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-tracker/index.html"><span>Session</span><wbr><span><span>Tracker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1866873522%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-tracker/index.html">SessionTracker</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">SessionTracker provides the ability to track and extract session from the call context.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="963285788%2FClasslikes%2F1276931248" anchor-label="SessionTrackerById" id="963285788%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-tracker-by-id/index.html"><span>Session</span><wbr><span>Tracker</span><wbr><span>By</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="963285788%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-tracker-by-id/index.html">SessionTrackerById</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-id/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-id/index.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>serializer<span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-id/index.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sessionIdProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-session-tracker/index.html">SessionTracker</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-id/index.html">S</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-session-tracker/index.html">SessionTracker</a> that transfers a Session ID generated by a <a href="-session-tracker-by-id/session-id-provider.html">sessionIdProvider</a> in HTTP Headers/Cookies. It uses a <a href="-session-tracker-by-id/storage.html">storage</a> and a <a href="-session-tracker-by-id/serializer.html">serializer</a> to store/load serialized/deserialized session content of a specific <a href="-session-tracker-by-id/type.html">type</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="669648506%2FClasslikes%2F1276931248" anchor-label="SessionTrackerByValue" id="669648506%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-tracker-by-value/index.html"><span>Session</span><wbr><span>Tracker</span><wbr><span>By</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="669648506%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-tracker-by-value/index.html">SessionTrackerByValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-value/index.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-value/index.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>serializer<span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-value/index.html">S</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-session-tracker/index.html">SessionTracker</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-tracker-by-value/index.html">S</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph"><a href="-session-tracker/index.html">SessionTracker</a> that stores the contents of the session as part of HTTP Cookies/Headers. It uses a specific <a href="-session-tracker-by-value/serializer.html">serializer</a> to serialize and deserialize objects of type <a href="-session-tracker-by-value/type.html">type</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1452229949%2FClasslikes%2F1276931248" anchor-label="SessionTransport" id="1452229949%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport/index.html"><span>Session</span><wbr><span><span>Transport</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1452229949%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-transport/index.html">SessionTransport</a></div><div class="brief "><p class="paragraph">A session transport used to <a href="-session-transport/receive.html">receive</a>, <a href="-session-transport/send.html">send</a>, or <a href="-session-transport/clear.html">clear</a> a session from/to an <a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1232433721%2FClasslikes%2F1276931248" anchor-label="SessionTransportCookie" id="1232433721%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport-cookie/index.html"><span>Session</span><wbr><span>Transport</span><wbr><span><span>Cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1232433721%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-transport-cookie/index.html">SessionTransportCookie</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>configuration<span class="token operator">: </span><a href="-cookie-configuration/index.html">CookieConfiguration</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transformers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-session-transport/index.html">SessionTransport</a></div><div class="brief "><p class="paragraph">A session transport that adds the <code class="lang-kotlin">Set-Cookie</code> header and reads the <code class="lang-kotlin">Cookie</code> header for the specified cookie <a href="-session-transport-cookie/name.html">name</a>, and a specific cookie <a href="-session-transport-cookie/configuration.html">configuration</a> after applying/un-applying the specified transforms defined by <a href="-session-transport-cookie/transformers.html">transformers</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="99740208%2FClasslikes%2F1276931248" anchor-label="SessionTransportHeader" id="99740208%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport-header/index.html"><span>Session</span><wbr><span>Transport</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="99740208%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-transport-header/index.html">SessionTransportHeader</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transformers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-session-transport/index.html">SessionTransport</a></div><div class="brief "><p class="paragraph">A session transport that sets or gets the specific header <a href="-session-transport-header/name.html">name</a>, applying/un-applying the specified transforms defined by <a href="-session-transport-header/transformers.html">transformers</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="220146892%2FClasslikes%2F1276931248" anchor-label="SessionTransportTransformer" id="220146892%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport-transformer/index.html"><span>Session</span><wbr><span>Transport</span><wbr><span><span>Transformer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="220146892%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a></div><div class="brief "><p class="paragraph">A transformer used to sign and encrypt session data.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1261291665%2FClasslikes%2F1019823778" anchor-label="SessionTransportTransformerEncrypt" id="1261291665%2FClasslikes%2F1019823778" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport-transformer-encrypt/index.html"><span>Session</span><wbr><span>Transport</span><wbr><span>Transformer</span><wbr><span><span>Encrypt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1261291665%2FClasslikes%2F1019823778"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-transport-transformer-encrypt/index.html">SessionTransportTransformerEncrypt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>encryptionKeySpec<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/spec/SecretKeySpec.html">SecretKeySpec</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>signKeySpec<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/spec/SecretKeySpec.html">SecretKeySpec</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>ivGenerator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator"> = </span>{ size -&gt; ByteArray(size).apply { SecureRandom().nextBytes(this) } }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>encryptAlgorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>encryptionKeySpec.algorithm<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>signAlgorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>signKeySpec.algorithm</span></span><span class="token punctuation">)</span> : <a href="-session-transport-transformer/index.html">SessionTransportTransformer</a></div><div class="brief "><p class="paragraph">A transformer used to sign and encrypt/decrypt session data. This transformer works as follows:</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1293847831%2FClasslikes%2F1019823778" anchor-label="SessionTransportTransformerMessageAuthentication" id="1293847831%2FClasslikes%2F1019823778" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-session-transport-transformer-message-authentication/index.html"><span>Session</span><wbr><span>Transport</span><wbr><span>Transformer</span><wbr><span>Message</span><wbr><span><span>Authentication</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293847831%2FClasslikes%2F1019823778"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-session-transport-transformer-message-authentication/index.html">SessionTransportTransformerMessageAuthentication</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>keySpec<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/spec/SecretKeySpec.html">SecretKeySpec</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>algorithm<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"HmacSHA256"</span></span></span><span class="token punctuation">)</span> : <a href="-session-transport-transformer/index.html">SessionTransportTransformer</a></div><div class="brief "><p class="paragraph">A transformer used to sign session data. This transformer appends an <a href="-session-transport-transformer-message-authentication/algorithm.html">algorithm</a> MAC (Message Authentication Code) hash of the session data. It uses a specified <a href="-session-transport-transformer-message-authentication/key-spec.html">keySpec</a> when generating the MAC hash.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1209009447%2FClasslikes%2F1276931248" anchor-label="TooLateSessionSetException" id="1209009447%2FClasslikes%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-too-late-session-set-exception/index.html"><span>Too</span><wbr><span>Late</span><wbr><span>Session</span><wbr><span>Set</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1209009447%2FClasslikes%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-too-late-session-set-exception/index.html">TooLateSessionSetException</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a></div><div class="brief "><p class="paragraph">Thrown when an HTTP response has already been sent but an attempt to modify the session is made.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1694576826%2FFunctions%2F1019823778" anchor-label="autoSerializerOf" id="-1694576826%2FFunctions%2F1019823778" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="auto-serializer-of.html"><span>auto</span><wbr><span>Serializer</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1694576826%2FFunctions%2F1019823778"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="auto-serializer-of.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="auto-serializer-of.html"><span class="token function"><strike>autoSerializerOf</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer-reflection/index.html">SessionSerializerReflection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="auto-serializer-of.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> for the type <a href="auto-serializer-of.html">T</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="auto-serializer-of.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="auto-serializer-of.html"><span class="token function"><strike>autoSerializerOf</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="auto-serializer-of.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer-reflection/index.html">SessionSerializerReflection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="auto-serializer-of.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> for the class <a href="auto-serializer-of.html">type</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1252816421%2FFunctions%2F1276931248" anchor-label="clear" id="-1252816421%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="clear.html"><span><span>clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1252816421%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="clear.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-current-session/index.html">CurrentSession</a><span class="token punctuation">.</span><a href="clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears a session instance with the type <a href="clear.html">T</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1568637126%2FFunctions%2F1276931248" anchor-label="cookie" id="-1568637126%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="cookie.html"><span><span>cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1568637126%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function"><strike>cookie</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass the serialized session's data in cookies using the <a href="cookie.html">name</a> <code class="lang-kotlin">Set-Cookie</code> attribute.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function"><strike>cookie</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass a session identifier in cookies using the <a href="cookie.html">name</a> <code class="lang-kotlin">Set-Cookie</code> attribute and store the serialized session's data in the server <a href="cookie.html">storage</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-cookie-session-builder/index.html">CookieSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function"><strike>cookie</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-cookie-session-builder/index.html">CookieSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass the serialized session's data in cookies using the <a href="cookie.html">name</a> <code class="lang-kotlin">Set-Cookie</code> attribute. The <a href="cookie.html">block</a> parameter allows you to configure additional cookie settings, for example:</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function">cookie</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="cookie.html"><span class="token function"><strike>cookie</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-cookie-id-session-builder/index.html">CookieIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="cookie.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass a session identifier in cookies using the <a href="cookie.html">name</a> <code class="lang-kotlin">Set-Cookie</code> attribute and store the serialized session's data in the server <a href="cookie.html">storage</a>. The <a href="cookie.html">block</a> parameter allows you to configure additional cookie settings, for example:</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1055699165%2FFunctions%2F795892450" anchor-label="defaultSessionSerializer" id="1055699165%2FFunctions%2F795892450" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="default-session-serializer.html"><span>default</span><wbr><span>Session</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055699165%2FFunctions%2F795892450"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="default-session-serializer.html"><span class="token function">defaultSessionSerializer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> for the type <a href="default-session-serializer.html">T</a>.</p></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="default-session-serializer.html"><span class="token function">defaultSessionSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> by <a href="default-session-serializer.html">typeInfo</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="default-session-serializer.html"><span class="token function">defaultSessionSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> by <a href="default-session-serializer.html">typeInfo</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="default-session-serializer.html"><span class="token function">defaultSessionSerializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-serializer/index.html">SessionSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="default-session-serializer.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates the default <a href="-session-serializer/index.html">SessionSerializer</a> for the type <a href="default-session-serializer.html">T</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1940949155%2FFunctions%2F1019823778" anchor-label="directorySessionStorage" id="1940949155%2FFunctions%2F1019823778" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="directory-session-storage.html"><span>directory</span><wbr><span>Session</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1940949155%2FFunctions%2F1019823778"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="directory-session-storage.html"><span class="token function">directorySessionStorage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rootDir<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html">File</a><span class="token punctuation">, </span></span><span class="parameter ">cached<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a></div><div class="brief "><p class="paragraph">Creates a storage that serializes a session's data to a file under the <a href="directory-session-storage.html">rootDir</a> directory.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="337098127%2FFunctions%2F1276931248" anchor-label="generateSessionId" id="337098127%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="generate-session-id.html"><span>generate</span><wbr><span>Session</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="337098127%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="generate-session-id.html"><span class="token function">generateSessionId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Generates a secure random session ID</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1921723164%2FFunctions%2F1276931248" anchor-label="get" id="1921723164%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1921723164%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-current-session/index.html">CurrentSession</a><span class="token punctuation">.</span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-current-session/index.html">CurrentSession</a><span class="token punctuation">.</span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">klass<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a session instance with the type <a href="get.html">T</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1266192932%2FFunctions%2F1276931248" anchor-label="getOrSet" id="1266192932%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-or-set.html"><span>get</span><wbr><span>Or</span><wbr><span><span>Set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1266192932%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="get-or-set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-current-session/index.html">CurrentSession</a><span class="token punctuation">.</span><a href="get-or-set.html"><span class="token function">getOrSet</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>findName(T::class)<span class="token punctuation">, </span></span><span class="parameter ">generator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="get-or-set.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-or-set.html">T</a></div><div class="brief "><p class="paragraph">Gets or generates a new session instance using <a href="get-or-set.html">generator</a> with the type <a href="get-or-set.html">T</a> (or <a href="get-or-set.html">name</a> if specified)</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-585087494%2FFunctions%2F1276931248" anchor-label="header" id="-585087494%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-585087494%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function"><strike>header</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass the serialized session's data in a <a href="header.html">name</a> HTTP header.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function"><strike>header</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass a session identifier in a <a href="header.html">name</a> HTTP header and store the serialized session's data in the server <a href="header.html">storage</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-header-session-builder/index.html">HeaderSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function"><strike>header</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-header-session-builder/index.html">HeaderSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass the serialized session's data in a <a href="header.html">name</a> HTTP header. The <a href="header.html">block</a> parameter allows you to configure additional settings, for example, sign and encrypt session data.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-header-id-session-builder/index.html">HeaderIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token punctuation">.</span><a href="header.html"><span class="token function"><strike>header</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">sessionType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-session-storage/index.html">SessionStorage</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="-header-id-session-builder/index.html">HeaderIdSessionBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="header.html">S</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <a href="-sessions.html">Sessions</a> to pass a session identifier in a <a href="header.html">name</a> HTTP header and store the serialized session's data in the server <a href="header.html">storage</a>. The <a href="header.html">block</a> parameter allows you to configure additional settings, for example, sign and encrypt session data.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="56233337%2FFunctions%2F1276931248" anchor-label="sessionId" id="56233337%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="session-id.html"><span>session</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="56233337%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="session-id.html">SessionType</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="session-id.html"><span class="token function">sessionId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the corresponding session ID for the type <a href="session-id.html">SessionType</a> or <code class="lang-kotlin">null</code> if no session provided. It will crash if no session provider for type <a href="session-id.html">SessionType</a> installed or no <a href="-sessions.html">Sessions</a> plugin installed.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1291411760%2FFunctions%2F1276931248" anchor-label="set" id="1291411760%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1291411760%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-current-session/index.html">CurrentSession</a><span class="token punctuation">.</span><a href="set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="set.html">T</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a session instance with the type <a href="set.html">T</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-660040650%2FFunctions%2F1276931248" anchor-label="transformRead" id="-660040650%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="transform-read.html"><span>transform</span><wbr><span><span>Read</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-660040650%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="transform-read.html"><span class="token function">transformRead</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cookieValue<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Un-applies a list of session transformations to a <a href="transform-read.html">cookieValue</a> representing a transformed session string. If any of the unapplication of transformations fail returning a null, this function also returns null.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="431096026%2FFunctions%2F1276931248" anchor-label="transformWrite" id="431096026%2FFunctions%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="transform-write.html"><span>transform</span><wbr><span><span>Write</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="431096026%2FFunctions%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-session-transport-transformer/index.html">SessionTransportTransformer</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="transform-write.html"><span class="token function">transformWrite</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Applies a list of session transformations to a <a href="transform-write.html">value</a> representing session data.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-551483890%2FProperties%2F1276931248" anchor-label="DEFAULT_SESSION_MAX_AGE" id="-551483890%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-d-e-f-a-u-l-t_-s-e-s-s-i-o-n_-m-a-x_-a-g-e.html"><span><span>DEFAULT_SESSION_MAX_AGE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-551483890%2FProperties%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-551483890%2FProperties%2F1276931248" anchor-label="DEFAULT_SESSION_MAX_AGE" id="-551483890%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-s-e-s-s-i-o-n_-m-a-x_-a-g-e.html">DEFAULT_SESSION_MAX_AGE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1408864550%2FProperties%2F1276931248" anchor-label="maxAge" id="-1408864550%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="max-age.html"><span>max</span><wbr><span><span>Age</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1408864550%2FProperties%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-1408864550%2FProperties%2F1276931248" anchor-label="maxAge" id="-1408864550%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="-cookie-configuration/index.html">CookieConfiguration</a><span class="token punctuation">.</span><a href="max-age.html">maxAge</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span></div><div class="brief "><a data-name="-1408864550%2FProperties%2F1276931248" anchor-label="maxAge" id="-1408864550%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Cookie time to live duration or <code class="lang-kotlin">null</code> for session cookies. Session cookies are client-driven. For example, a web browser usually removes session cookies at browser or window close unless the session is restored.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="56233337%2FProperties%2F1276931248" anchor-label="sessionId" id="56233337%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="session-id.html"><span>session</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="56233337%2FProperties%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><a data-name="56233337%2FProperties%2F1276931248" anchor-label="sessionId" id="56233337%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="session-id.html">sessionId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><a data-name="56233337%2FProperties%2F1276931248" anchor-label="sessionId" id="56233337%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Returns a sessionId for a single session identified by ID. This will not work if there are multiple sessions by ID were registered or the <a href="-sessions.html">Sessions</a> plugin is not installed. If you are using multiple sessions, please use <a href="session-id.html">sessionId</a> function instead.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="80593809%2FProperties%2F1276931248" anchor-label="sessions" id="80593809%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="sessions.html"><span><span>sessions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="80593809%2FProperties%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><a data-name="80593809%2FProperties%2F1276931248" anchor-label="sessions" id="80593809%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="sessions.html">sessions</a><span class="token operator">: </span><a href="-current-session/index.html">CurrentSession</a></div><div class="brief "><a data-name="80593809%2FProperties%2F1276931248" anchor-label="sessions" id="80593809%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Gets a current session or fails if the <a href="-sessions.html">Sessions</a> plugin is not installed.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1829166286%2FProperties%2F1276931248" anchor-label="Sessions" id="-1829166286%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a>
+        <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-sessions.html"><span><span>Sessions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1829166286%2FProperties%2F1276931248"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-1829166286%2FProperties%2F1276931248" anchor-label="Sessions" id="-1829166286%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-sessions.html">Sessions</a><span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-route-scoped-plugin/index.html">RouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-sessions-config/index.html">SessionsConfig</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-1829166286%2FProperties%2F1276931248" anchor-label="Sessions" id="-1829166286%2FProperties%2F1276931248" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-sessions:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">A plugin that provides a mechanism to persist data between different HTTP requests. Typical use cases include storing a logged-in user's ID, the contents of a shopping basket, or keeping user preferences on the client. In Ktor, you can implement sessions by using cookies or custom headers, choose whether to store session data on the server or pass it to the client, sign and encrypt session data and more.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>

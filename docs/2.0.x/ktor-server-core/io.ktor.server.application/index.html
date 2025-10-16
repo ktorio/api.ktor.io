@@ -1,0 +1,863 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.application</title>
+</head><body><link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><link href="../../styles/prism.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" defer></script><script type="text/javascript" src="../../scripts/prism.js" async></script><link href="../../styles/multimodule.css" rel="Stylesheet"><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../index.html"><span>ktor</span></a></div>
+      <div><dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.application/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.0.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-server-core/io.ktor.server.application/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../3.1.x/ktor-server-core/io.ktor.server.application/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-server-core/io.ktor.server.application/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-server-core/io.ktor.server.application/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../2.2.x/ktor-server-core/io.ktor.server.application/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command></div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-tag platform-selector native-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain">nix</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageids="ktor-server-core::io.ktor.server.application////PointingToDeclaration//-304907689">
+          <div class="breadcrumbs"><a href="../index.html">ktor-server-core</a>/<a href="index.html">io.ktor.server.application</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Package io.</span><wbr><span>ktor.</span><wbr><span>server.</span><wbr><span><span>application</span></span></h1>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="-514340719%2FClasslikes%2F-629979791" anchor-label="Application" id="-514340719%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application/index.html"><span><span>Application</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-514340719%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-application/index.html">Application</a><span class="token punctuation">(</span>environment<span class="token operator">: </span><a href="-application-environment/index.html">ApplicationEnvironment</a><span class="token punctuation">)</span> : <a href="-application-call-pipeline/index.html">ApplicationCallPipeline</a>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents configured and running web application, capable of handling requests. It is also the application coroutine scope that is cancelled immediately at application stop so useful for launching background coroutines.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1281993773%2FClasslikes%2F-629979791" anchor-label="ApplicationCall" id="-1281993773%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-call/index.html"><span>Application</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1281993773%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-application-call/index.html">ApplicationCall</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A single act of communication between a client and server.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1975992657%2FClasslikes%2F-629979791" anchor-label="ApplicationCallPipeline" id="1975992657%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-call-pipeline/index.html"><span>Application</span><wbr><span>Call</span><wbr><span><span>Pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1975992657%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-application-call-pipeline/index.html">ApplicationCallPipeline</a><span class="token punctuation">(</span>developmentMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span>environment<span class="token operator">: </span><a href="-application-environment/index.html">ApplicationEnvironment</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Pipeline configuration for executing <a href="-application-call/index.html">ApplicationCall</a> instances.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-329984706%2FClasslikes%2F-304907689" anchor-label="ApplicationEnvironment" id="-329984706%2FClasslikes%2F-304907689" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain :ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain :ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-environment/index.html"><span>Application</span><wbr><span><span>Environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-329984706%2FClasslikes%2F-304907689"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">interface </span><a href="-application-environment/index.html">ApplicationEnvironment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents an environment in which <a href="-application/index.html">Application</a> runs</p></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">interface </span><a href="-application-environment/index.html">ApplicationEnvironment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents an environment in which <a href="-application/index.html">Application</a> runs</p></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">interface </span><a href="-application-environment/index.html">ApplicationEnvironment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1101539976%2FClasslikes%2F-629979791" anchor-label="ApplicationEvents" id="-1101539976%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="index.html#-1101539976%2FClasslikes%2F-629979791"><span>Application</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1101539976%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">typealias </span></strike><a href="index.html#-1101539976%2FClasslikes%2F-629979791">ApplicationEvents</a><strike><span class="token operator"> = </span></strike><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Provides events for <a href="-application/index.html">Application</a> lifecycle.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="489060510%2FClasslikes%2F-629979791" anchor-label="ApplicationPlugin" id="489060510%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-plugin/index.html"><span>Application</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="489060510%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-application-plugin/index.html">ApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-application-plugin/index.html">TConfiguration</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-base-application-plugin/index.html">BaseApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-application/index.html">Application</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-application-plugin/index.html">TConfiguration</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-plugin-instance/index.html">PluginInstance</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Defines a <a href="https://ktor.io/docs/plugins.html">Plugin</a> that is installed into Application.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="986541647%2FClasslikes%2F-629979791" anchor-label="BaseApplicationPlugin" id="986541647%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-base-application-plugin/index.html"><span>Base</span><wbr><span>Application</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="986541647%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-base-application-plugin/index.html">BaseApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="-base-application-plugin/index.html">TPipeline</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-base-application-plugin/index.html">TConfiguration</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-application-plugin/index.html">TPlugin</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-base-application-plugin/index.html">TPipeline</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-application-plugin/index.html">TConfiguration</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-application-plugin/index.html">TPlugin</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Defines a <a href="https://ktor.io/docs/plugins.html">Plugin</a> that is installed into Application.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1114847674%2FClasslikes%2F-629979791" anchor-label="BaseRouteScopedPlugin" id="-1114847674%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-base-route-scoped-plugin/index.html"><span>Base</span><wbr><span>Route</span><wbr><span>Scoped</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114847674%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-base-route-scoped-plugin/index.html">BaseRouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-base-route-scoped-plugin/index.html">TConfiguration</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-route-scoped-plugin/index.html">TPlugin</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-application-call-pipeline/index.html">ApplicationCallPipeline</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-route-scoped-plugin/index.html">TConfiguration</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-base-route-scoped-plugin/index.html">TPlugin</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Defines a <a href="https://ktor.io/docs/plugins.html">Plugin</a> that can be installed into a <a href="../io.ktor.server.routing/-route/index.html">Route</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-422185072%2FClasslikes%2F-629979791" anchor-label="CallContext" id="-422185072%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-call-context/index.html"><span>Call</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422185072%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-call-context/index.html">CallContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-call-context/index.html">PluginConfig</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The context associated with the call that is currently being processed by server. Every call handler (<a href="-plugin-builder/on-call.html">PluginBuilder.onCall</a>, <a href="-plugin-builder/on-call-receive.html">PluginBuilder.onCallReceive</a>, <a href="-plugin-builder/on-call-respond.html">PluginBuilder.onCallRespond</a>, and so on) of your plugin has a derivative of <a href="-call-context/index.html">CallContext</a> as a receiver.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-282054806%2FClasslikes%2F-629979791" anchor-label="DuplicateApplicationPluginException" id="-282054806%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-duplicate-application-plugin-exception/index.html"><span>Duplicate</span><wbr><span>Application</span><wbr><span>Plugin</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-282054806%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">open </span></strike><strike><span class="token keyword">class </span></strike><a href="-duplicate-application-plugin-exception/index.html"><strike>DuplicateApplicationPluginException</strike></a><strike><span class="token punctuation">(</span></strike><strike>message</strike><strike><span class="token operator">: </span></strike><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><strike><span class="token punctuation">)</span></strike><strike> : </strike><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><strike>Exception</strike></a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Thrown on an attempt to install the plugin with the same key as for the already installed plugin.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="327906768%2FClasslikes%2F-629979791" anchor-label="DuplicatePluginException" id="327906768%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-duplicate-plugin-exception/index.html"><span>Duplicate</span><wbr><span>Plugin</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="327906768%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-duplicate-plugin-exception/index.html">DuplicatePluginException</a><span class="token punctuation">(</span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span> : <a href="-duplicate-application-plugin-exception/index.html">DuplicateApplicationPluginException</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Thrown on an attempt to install the plugin with the same key as for the already installed plugin.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1647474932%2FClasslikes%2F-629979791" anchor-label="EventDefinition" id="1647474932%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="index.html#1647474932%2FClasslikes%2F-629979791"><span>Event</span><wbr><span><span>Definition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1647474932%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">typealias </span></strike><a href="index.html#1647474932%2FClasslikes%2F-629979791">EventDefinition</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><strike><span class="token operator"> = </span></strike><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Definition of an event. Event is used as a key so both <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/index.html">hashCode</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/index.html">equals</a> need to be implemented properly. Inheriting of this class is an experimental plugin. Instantiate directly if inheritance not necessary.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1136505551%2FClasslikes%2F-629979791" anchor-label="EventHandler" id="-1136505551%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="index.html#-1136505551%2FClasslikes%2F-629979791"><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1136505551%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">typealias </span></strike><a href="index.html#-1136505551%2FClasslikes%2F-629979791">EventHandler</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#-1136505551%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><strike><span class="token operator"> = </span></strike><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#-1136505551%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Specifies signature for the event handler.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-281639234%2FClasslikes%2F-629979791" anchor-label="Hook" id="-281639234%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-hook/index.html"><span><span>Hook</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-281639234%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-hook/index.html">Hook</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-hook/index.html">HookHandler</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A hook that can be registered in <a href="-plugin-builder/index.html">PluginBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-158159061%2FClasslikes%2F-629979791" anchor-label="InvalidBodyException" id="-158159061%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-invalid-body-exception/index.html"><span>Invalid</span><wbr><span>Body</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-158159061%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-invalid-body-exception/index.html">InvalidBodyException</a><span class="token punctuation">(</span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An exception that is thrown when the current body in the HTTP pipeline is invalid.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-282851537%2FClasslikes%2F-629979791" anchor-label="MissingApplicationPluginException" id="-282851537%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-missing-application-plugin-exception/index.html"><span>Missing</span><wbr><span>Application</span><wbr><span>Plugin</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-282851537%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-missing-application-plugin-exception/index.html">MissingApplicationPluginException</a><span class="token punctuation">(</span>key<span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword">out </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-state-exception/index.html">IllegalStateException</a>, <span data-unresolved-link="kotlinx.coroutines/CopyableThrowable///PointingToDeclaration/">CopyableThrowable</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-missing-application-plugin-exception/index.html">MissingApplicationPluginException</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Thrown on an attempt to access the plugin that is not yet installed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-513996273%2FClasslikes%2F-629979791" anchor-label="OnCallContext" id="-513996273%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-on-call-context/index.html"><span>On</span><wbr><span>Call</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-513996273%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-on-call-context/index.html">OnCallContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-context/index.html">PluginConfig</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-call-context/index.html">CallContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-context/index.html">PluginConfig</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A context associated with the call handling by your application. <a href="-on-call-context/index.html">OnCallContext</a> is a receiver for <a href="-plugin-builder/on-call.html">PluginBuilder.onCall</a> handler of your <a href="-plugin-builder/index.html">PluginBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1473455336%2FClasslikes%2F-629979791" anchor-label="OnCallReceiveContext" id="-1473455336%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-on-call-receive-context/index.html"><span>On</span><wbr><span>Call</span><wbr><span>Receive</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1473455336%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-on-call-receive-context/index.html">OnCallReceiveContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-receive-context/index.html">PluginConfig</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-call-context/index.html">CallContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-receive-context/index.html">PluginConfig</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A context associated with the call.receive() action. Allows you to transform the received body. <a href="-on-call-receive-context/index.html">OnCallReceiveContext</a> is a receiver for <a href="-plugin-builder/on-call-receive.html">PluginBuilder.onCallReceive</a> handler of your <a href="-plugin-builder/index.html">PluginBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-476045110%2FClasslikes%2F-629979791" anchor-label="OnCallRespondContext" id="-476045110%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-on-call-respond-context/index.html"><span>On</span><wbr><span>Call</span><wbr><span>Respond</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476045110%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-on-call-respond-context/index.html">OnCallRespondContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-respond-context/index.html">PluginConfig</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-call-context/index.html">CallContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-on-call-respond-context/index.html">PluginConfig</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A context associated with the call.respond() action. Allows you to transform the response body. <a href="-on-call-respond-context/index.html">OnCallRespondContext</a> is a receiver for <a href="-plugin-builder/on-call-respond.html">PluginBuilder.onCallRespond</a> handler of your <a href="-plugin-builder/index.html">PluginBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-194401618%2FClasslikes%2F-629979791" anchor-label="Plugin" id="-194401618%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-plugin/index.html"><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-194401618%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token keyword">in </span><a href="-plugin/index.html">TPipeline</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-plugin/index.html">TConfiguration</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-plugin/index.html">TPlugin</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Defines an installable <a href="https://ktor.io/docs/plugins.html">Plugin</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-285494279%2FClasslikes%2F-629979791" anchor-label="PluginBuilder" id="-285494279%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-plugin-builder/index.html"><span>Plugin</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-285494279%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-plugin-builder/index.html">PluginConfig</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A utility class to build an <a href="-application-plugin/index.html">ApplicationPlugin</a> instance.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-8541543%2FClasslikes%2F-629979791" anchor-label="PluginInstance" id="-8541543%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-plugin-instance/index.html"><span>Plugin</span><wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-8541543%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-plugin-instance/index.html">PluginInstance</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An instance of the plugin installed to your application.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1612328811%2FClasslikes%2F-629979791" anchor-label="RouteScopedPlugin" id="-1612328811%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-route-scoped-plugin/index.html"><span>Route</span><wbr><span>Scoped</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612328811%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-route-scoped-plugin/index.html">RouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-route-scoped-plugin/index.html">TConfiguration</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-base-route-scoped-plugin/index.html">BaseRouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-route-scoped-plugin/index.html">TConfiguration</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-plugin-instance/index.html">PluginInstance</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Defines a Plugin that can be installed into <a href="../io.ktor.server.routing/-route/index.html">Route</a></p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-408196046%2FClasslikes%2F-629979791" anchor-label="RouteScopedPluginBuilder" id="-408196046%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="index.html#-408196046%2FClasslikes%2F-629979791"><span>Route</span><wbr><span>Scoped</span><wbr><span>Plugin</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-408196046%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="index.html#-408196046%2FClasslikes%2F-629979791">RouteScopedPluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#-408196046%2FClasslikes%2F-629979791">PluginConfig</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#-408196046%2FClasslikes%2F-629979791">PluginConfig</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Utility class to build a <a href="-route-scoped-plugin/index.html">RouteScopedPlugin</a> instance.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1281977088%2FClasslikes%2F-629979791" anchor-label="TransformBodyContext" id="1281977088%2FClasslikes%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-transform-body-context/index.html"><span>Transform</span><wbr><span>Body</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1281977088%2FClasslikes%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-transform-body-context/index.html">TransformBodyContext</a><span class="token punctuation">(</span>requestedType<span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Contains type information about the current request or response body when performing a transformation.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-1518229827%2FFunctions%2F-629979791" anchor-label="createApplicationPlugin" id="-1518229827%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="create-application-plugin.html"><span>create</span><wbr><span>Application</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1518229827%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-application-plugin.html"><span class="token function">createApplicationPlugin</span></a><span class="token punctuation">(</span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>body<span class="token operator">: </span><span class="token keyword"></span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="-application-plugin/index.html">ApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-application-plugin.html">PluginConfigT</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="create-application-plugin.html"><span class="token function">createApplicationPlugin</span></a><span class="token punctuation">(</span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>createConfiguration<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="create-application-plugin.html">PluginConfigT</a><span class="token punctuation">, </span>body<span class="token operator">: </span><span class="token keyword"></span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-application-plugin.html">PluginConfigT</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="-application-plugin/index.html">ApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-application-plugin.html">PluginConfigT</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Creates an <a href="-application-plugin/index.html">ApplicationPlugin</a> that can be installed into an <a href="-application/index.html">Application</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="444219421%2FFunctions%2F-629979791" anchor-label="createRouteScopedPlugin" id="444219421%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="create-route-scoped-plugin.html"><span>create</span><wbr><span>Route</span><wbr><span>Scoped</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="444219421%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-route-scoped-plugin.html"><span class="token function">createRouteScopedPlugin</span></a><span class="token punctuation">(</span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>body<span class="token operator">: </span><span class="token keyword"></span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="-route-scoped-plugin/index.html">RouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-route-scoped-plugin.html">PluginConfigT</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="create-route-scoped-plugin.html"><span class="token function">createRouteScopedPlugin</span></a><span class="token punctuation">(</span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>createConfiguration<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="create-route-scoped-plugin.html">PluginConfigT</a><span class="token punctuation">, </span>body<span class="token operator">: </span><span class="token keyword"></span><a href="-plugin-builder/index.html">PluginBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-route-scoped-plugin.html">PluginConfigT</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="-route-scoped-plugin/index.html">RouteScopedPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="create-route-scoped-plugin.html">PluginConfigT</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Creates a <a href="-route-scoped-plugin/index.html">RouteScopedPlugin</a> that can be installed into a <a href="../io.ktor.server.routing/-route/index.html">io.ktor.server.routing.Route</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1806954849%2FFunctions%2F-629979791" anchor-label="findPluginInRoute" id="1806954849%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="find-plugin-in-route.html"><span>find</span><wbr><span>Plugin</span><wbr><span>In</span><wbr><span><span>Route</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1806954849%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="find-plugin-in-route.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../io.ktor.server.routing/-route/index.html">Route</a><span class="token punctuation">.</span><a href="find-plugin-in-route.html"><span class="token function">findPluginInRoute</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="find-plugin-in-route.html">F</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="find-plugin-in-route.html">F</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Finds the plugin <a href="find-plugin-in-route.html">F</a> in the current <a href="../io.ktor.server.routing/-route/index.html">Route</a>. If not found, search in the parent <a href="../io.ktor.server.routing/-route/index.html">Route</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1738759029%2FFunctions%2F-629979791" anchor-label="install" id="1738759029%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="install.html"><span><span>install</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1738759029%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword"></span></strike><strike><span class="token keyword">fun </span></strike><strike><span class="token operator">&lt;</span></strike><span class="token keyword"></span><a href="install.html">P</a><span class="token operator"> : </span><a href="../io.ktor.server.routing/-route/index.html">Route</a><strike><span class="token punctuation">, </span></strike><span class="token keyword"></span><a href="install.html">B</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><strike><span class="token punctuation">, </span></strike><span class="token keyword"></span><a href="install.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><strike><span class="token operator">&gt; </span></strike><a href="install.html"><strike>P</strike></a><strike><span class="token punctuation">.</span></strike><a href="install.html"><strike><span class="token function">install</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>plugin</strike><strike><span class="token operator">: </span></strike><a href="-base-application-plugin/index.html">BaseApplicationPlugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="install.html">P</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">B</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">F</a><span class="token operator">&gt;</span><strike><span class="token punctuation">, </span></strike><strike>configure</strike><strike><span class="token operator">: </span></strike><span class="token keyword"></span><a href="install.html">B</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><strike><span class="token operator"> = </span></strike><strike>{}</strike><strike><span class="token punctuation">)</span></strike><strike><span class="token operator">: </span></strike><a href="install.html"><strike>F</strike></a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="install.html">P</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">B</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="install.html">P</a><span class="token punctuation">.</span><a href="install.html"><span class="token function">install</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="install.html">P</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">B</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="install.html">F</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>configure<span class="token operator">: </span><span class="token keyword"></span><a href="install.html">B</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">)</span><span class="token operator">: </span><a href="install.html">F</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Installs a <a href="install.html">plugin</a> into this pipeline, if it is not yet installed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1193934848%2FFunctions%2F-629979791" anchor-label="plugin" id="1193934848%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="plugin.html"><span><span>plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193934848%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="plugin.html">A</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="plugin.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="plugin.html">A</a><span class="token punctuation">.</span><a href="plugin.html"><span class="token function">plugin</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="plugin.html">F</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="plugin.html">F</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Gets a plugin instance for this pipeline, or fails with <a href="-missing-application-plugin-exception/index.html">MissingApplicationPluginException</a> if the plugin is not installed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2078120854%2FFunctions%2F-629979791" anchor-label="pluginOrNull" id="2078120854%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="plugin-or-null.html"><span>plugin</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2078120854%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="plugin-or-null.html">A</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="plugin-or-null.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="plugin-or-null.html">A</a><span class="token punctuation">.</span><a href="plugin-or-null.html"><span class="token function">pluginOrNull</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="plugin-or-null.html">F</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="plugin-or-null.html">F</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a plugin instance for this pipeline, or null if the plugin is not installed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="698637300%2FFunctions%2F-629979791" anchor-label="uninstall" id="698637300%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="uninstall.html"><span><span>uninstall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="698637300%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword"></span></strike><strike><span class="token keyword">fun </span></strike><strike><span class="token operator">&lt;</span></strike><span class="token keyword"></span><a href="uninstall.html">A</a><strike><span class="token punctuation">, </span></strike><span class="token keyword"></span><a href="uninstall.html">B</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><strike><span class="token punctuation">, </span></strike><span class="token keyword"></span><a href="uninstall.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><strike><span class="token operator">&gt; </span></strike><a href="uninstall.html"><strike>A</strike></a><strike><span class="token punctuation">.</span></strike><a href="uninstall.html"><strike><span class="token function">uninstall</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>plugin</strike><strike><span class="token operator">: </span></strike><a href="-plugin/index.html">Plugin</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="uninstall.html">A</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="uninstall.html">B</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="uninstall.html">F</a><span class="token operator">&gt;</span><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Uninstalls a <a href="uninstall.html">plugin</a> from the pipeline.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2095645819%2FFunctions%2F-629979791" anchor-label="uninstallAllPlugins" id="-2095645819%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="uninstall-all-plugins.html"><span>uninstall</span><wbr><span>All</span><wbr><span><span>Plugins</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2095645819%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword"></span></strike><strike><span class="token keyword">fun </span></strike><strike><span class="token operator">&lt;</span></strike><span class="token keyword"></span><a href="uninstall-all-plugins.html">A</a><strike><span class="token operator">&gt; </span></strike><a href="uninstall-all-plugins.html"><strike>A</strike></a><strike><span class="token punctuation">.</span></strike><a href="uninstall-all-plugins.html"><strike><span class="token function">uninstallAllPlugins</span></strike></a><strike><span class="token punctuation">(</span></strike><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Uninstalls all plugins from the pipeline.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1295161783%2FFunctions%2F-629979791" anchor-label="uninstallPlugin" id="-1295161783%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="uninstall-plugin.html"><span>uninstall</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1295161783%2FFunctions%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword"></span></strike><strike><span class="token keyword">fun </span></strike><strike><span class="token operator">&lt;</span></strike><span class="token keyword"></span><a href="uninstall-plugin.html">A</a><strike><span class="token punctuation">, </span></strike><span class="token keyword"></span><a href="uninstall-plugin.html">F</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><strike><span class="token operator">&gt; </span></strike><a href="uninstall-plugin.html"><strike>A</strike></a><strike><span class="token punctuation">.</span></strike><a href="uninstall-plugin.html"><strike><span class="token function">uninstallPlugin</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>key</strike><strike><span class="token operator">: </span></strike><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="uninstall-plugin.html">F</a><span class="token operator">&gt;</span><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Uninstalls a plugin specified by <a href="uninstall-plugin.html">key</a> from the pipeline.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-465747878%2FProperties%2F-629979791" anchor-label="application" id="-465747878%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="application.html">application</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-465747878%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-465747878%2FProperties%2F-629979791" anchor-label="application" id="-465747878%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword">out </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="-application-call/index.html">ApplicationCall</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="application.html">application</a><span class="token operator">: </span><a href="-application/index.html">Application</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-465747878%2FProperties%2F-629979791" anchor-label="application" id="-465747878%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Current application for the context</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2029513133%2FProperties%2F-629979791" anchor-label="ApplicationStarted" id="2029513133%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-started.html">ApplicationStarted</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2029513133%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="2029513133%2FProperties%2F-629979791" anchor-label="ApplicationStarted" id="2029513133%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-started.html">ApplicationStarted</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2029513133%2FProperties%2F-629979791" anchor-label="ApplicationStarted" id="2029513133%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Event definition for Application Started event</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-308325812%2FProperties%2F-629979791" anchor-label="ApplicationStarting" id="-308325812%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-starting.html">ApplicationStarting</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-308325812%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-308325812%2FProperties%2F-629979791" anchor-label="ApplicationStarting" id="-308325812%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-starting.html">ApplicationStarting</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-308325812%2FProperties%2F-629979791" anchor-label="ApplicationStarting" id="-308325812%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Event definition for Application Starting event</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1820681697%2FProperties%2F-629979791" anchor-label="ApplicationStopped" id="1820681697%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-stopped.html">ApplicationStopped</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1820681697%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="1820681697%2FProperties%2F-629979791" anchor-label="ApplicationStopped" id="1820681697%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-stopped.html">ApplicationStopped</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1820681697%2FProperties%2F-629979791" anchor-label="ApplicationStopped" id="1820681697%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Event definition for Application Stopped event</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1807834264%2FProperties%2F-629979791" anchor-label="ApplicationStopping" id="1807834264%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-stopping.html">ApplicationStopping</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1807834264%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="1807834264%2FProperties%2F-629979791" anchor-label="ApplicationStopping" id="1807834264%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-stopping.html">ApplicationStopping</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1807834264%2FProperties%2F-629979791" anchor-label="ApplicationStopping" id="1807834264%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Event definition for Application Stopping event</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="437424748%2FProperties%2F-629979791" anchor-label="ApplicationStopPreparing" id="437424748%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-application-stop-preparing.html">ApplicationStopPreparing</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="437424748%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="437424748%2FProperties%2F-629979791" anchor-label="ApplicationStopPreparing" id="437424748%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-stop-preparing.html">ApplicationStopPreparing</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html#1647474932%2FClasslikes%2F-629979791">T</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="437424748%2FProperties%2F-629979791" anchor-label="ApplicationStopPreparing" id="437424748%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Event definition for an event that is fired when the application is going to stop</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-183506514%2FProperties%2F-629979791" anchor-label="call" id="-183506514%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="call.html">call</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-183506514%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-183506514%2FProperties%2F-629979791" anchor-label="call" id="-183506514%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token operator">&lt;</span><span class="token keyword">out </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="-application-call/index.html">ApplicationCall</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="call.html">call</a><span class="token operator">: </span><a href="-application-call/index.html">ApplicationCall</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-183506514%2FProperties%2F-629979791" anchor-label="call" id="-183506514%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Current call for the context</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2129980323%2FProperties%2F-629979791" anchor-label="host" id="-2129980323%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="host.html">host</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2129980323%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-2129980323%2FProperties%2F-629979791" anchor-label="host" id="-2129980323%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a><span class="token punctuation">.</span><a href="host.html">host</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-2129980323%2FProperties%2F-629979791" anchor-label="host" id="-2129980323%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">The host address of the currently running application, as defined by the configuration at start-up.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="525368425%2FProperties%2F-629979791" anchor-label="isHandled" id="525368425%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="is-handled.html">isHandled</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="525368425%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="525368425%2FProperties%2F-629979791" anchor-label="isHandled" id="525368425%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="is-handled.html">isHandled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="525368425%2FProperties%2F-629979791" anchor-label="isHandled" id="525368425%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Indicates if a response is sent.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="137818841%2FProperties%2F-629979791" anchor-label="log" id="137818841%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="log.html">log</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="137818841%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="137818841%2FProperties%2F-629979791" anchor-label="log" id="137818841%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-application/index.html">Application</a><span class="token punctuation">.</span><a href="log.html">log</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="137818841%2FProperties%2F-629979791" anchor-label="log" id="137818841%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Convenience property to access log from application</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1652295986%2FProperties%2F-629979791" anchor-label="pluginRegistry" id="1652295986%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="plugin-registry.html">pluginRegistry</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1652295986%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="1652295986%2FProperties%2F-629979791" anchor-label="pluginRegistry" id="1652295986%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="plugin-registry.html">A</a><span class="token operator">&gt; </span><a href="plugin-registry.html">A</a><span class="token punctuation">.</span><a href="plugin-registry.html">pluginRegistry</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1652295986%2FProperties%2F-629979791" anchor-label="pluginRegistry" id="1652295986%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Returns the existing plugin registry or registers and returns a new one.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-95719626%2FProperties%2F-629979791" anchor-label="port" id="-95719626%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="port.html">port</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-95719626%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="-95719626%2FProperties%2F-629979791" anchor-label="port" id="-95719626%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../io.ktor.server.config/-application-config/index.html">ApplicationConfig</a><span class="token punctuation">.</span><a href="port.html">port</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-95719626%2FProperties%2F-629979791" anchor-label="port" id="-95719626%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">The port the current application is running on, as defined by the configuration at start-up.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1334041278%2FProperties%2F-629979791" anchor-label="receiveType" id="1334041278%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="receive-type.html">receiveType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1334041278%2FProperties%2F-629979791"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><a data-name="1334041278%2FProperties%2F-629979791" anchor-label="receiveType" id="1334041278%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="receive-type.html">receiveType</a><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1334041278%2FProperties%2F-629979791" anchor-label="receiveType" id="1334041278%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">The TypeInfo recorded from the last call.receive() call.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>

@@ -1,0 +1,659 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.network.sockets</title>
+</head><body><link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><link href="../../styles/prism.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" defer></script><script type="text/javascript" src="../../scripts/prism.js" async></script><link href="../../styles/multimodule.css" rel="Stylesheet"><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../index.html"><span>ktor</span></a></div>
+      <div><dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.network.sockets/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.0.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../3.1.x/ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../2.2.x/ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../1.6.x/ktor-network/io.ktor.network.sockets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command></div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-tag platform-selector native-like" data-active="" data-filter=":ktor-network:dokkaHtmlPartial/nixMain">nix</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageids="ktor-network::io.ktor.network.sockets////PointingToDeclaration//-221061848">
+          <div class="breadcrumbs"><a href="../index.html">ktor-network</a>/<a href="index.html">io.ktor.network.sockets</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Package io.</span><wbr><span>ktor.</span><wbr><span>network.</span><wbr><span>sockets</span></h1>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="1164544984%2FClasslikes%2F-1449200414" anchor-label="ABoundSocket" id="1164544984%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-a-bound-socket/index.html"><span>ABound</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1164544984%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-a-bound-socket/index.html">ABoundSocket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a bound socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1265880346%2FClasslikes%2F-1449200414" anchor-label="Acceptable" id="-1265880346%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-acceptable/index.html"><span><span>Acceptable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1265880346%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-acceptable/index.html">Acceptable</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-acceptable/index.html">S</a><span class="token operator"> : </span><a href="-a-socket/index.html">ASocket</a><span class="token operator">&gt;</span> : <a href="-a-socket/index.html">ASocket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a socket source, for example server socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-23653139%2FClasslikes%2F-1449200414" anchor-label="AConnectedSocket" id="-23653139%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-a-connected-socket/index.html"><span>AConnected</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-23653139%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-a-connected-socket/index.html">AConnectedSocket</a> : <a href="-a-writable/index.html">AWritable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represent a connected socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1303414743%2FClasslikes%2F-1449200414" anchor-label="AReadable" id="-1303414743%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-a-readable/index.html"><span><span>AReadable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303414743%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-a-readable/index.html">AReadable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represent a readable socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-466857978%2FClasslikes%2F-1449200414" anchor-label="ASocket" id="-466857978%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-a-socket/index.html"><span><span>ASocket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-466857978%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-a-socket/index.html">ASocket</a> : <span data-unresolved-link="kotlinx.coroutines/DisposableHandle///PointingToDeclaration/">DisposableHandle</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base type for all async sockets</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1005953415%2FClasslikes%2F-1449200414" anchor-label="AWritable" id="-1005953415%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-a-writable/index.html"><span><span>AWritable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1005953415%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-a-writable/index.html">AWritable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a writable socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1475997320%2FClasslikes%2F-1449200414" anchor-label="BoundDatagramSocket" id="1475997320%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-bound-datagram-socket/index.html"><span>Bound</span><wbr><span>Datagram</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1475997320%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-bound-datagram-socket/index.html">BoundDatagramSocket</a> : <a href="-a-socket/index.html">ASocket</a>, <a href="-a-bound-socket/index.html">ABoundSocket</a>, <a href="-a-readable/index.html">AReadable</a>, <a href="-datagram-read-write-channel/index.html">DatagramReadWriteChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a bound datagram socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2012092463%2FClasslikes%2F-1449200414" anchor-label="Configurable" id="2012092463%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-configurable/index.html"><span><span>Configurable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2012092463%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-configurable/index.html">T</a><span class="token operator"> : </span><a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-configurable/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-configurable/index.html">Options</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="-configurable/index.html">Options</a><span class="token operator"> : </span><a href="-socket-options/index.html">SocketOptions</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represent a configurable socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1679085027%2FClasslikes%2F-1449200414" anchor-label="ConnectedDatagramSocket" id="-1679085027%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-connected-datagram-socket/index.html"><span>Connected</span><wbr><span>Datagram</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1679085027%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-connected-datagram-socket/index.html">ConnectedDatagramSocket</a> : <a href="-a-socket/index.html">ASocket</a>, <a href="-a-bound-socket/index.html">ABoundSocket</a>, <a href="-a-connected-socket/index.html">AConnectedSocket</a>, <a href="-read-write-socket/index.html">ReadWriteSocket</a>, <a href="-datagram-read-write-channel/index.html">DatagramReadWriteChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a connected datagram socket.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="58097130%2FClasslikes%2F-1449200414" anchor-label="Connection" id="58097130%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-connection/index.html"><span><span>Connection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="58097130%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-connection/index.html">Connection</a><span class="token punctuation">(</span>socket<span class="token operator">: </span><a href="-socket/index.html">Socket</a><span class="token punctuation">, </span>input<span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token punctuation">, </span>output<span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a connected socket with its input and output</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="958844647%2FClasslikes%2F-1449200414" anchor-label="Datagram" id="958844647%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-datagram/index.html"><span><span>Datagram</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="958844647%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-datagram/index.html">Datagram</a><span class="token punctuation">(</span>packet<span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="token punctuation">, </span>address<span class="token operator">: </span><a href="-socket-address/index.html">SocketAddress</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">UDP datagram with <a href="-datagram/packet.html">packet</a> content targeted to <a href="-datagram/address.html">address</a></p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1870661102%2FClasslikes%2F-1449200414" anchor-label="DatagramReadChannel" id="1870661102%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-datagram-read-channel/index.html"><span>Datagram</span><wbr><span>Read</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1870661102%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-datagram-read-channel/index.html">DatagramReadChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A channel for receiving datagrams</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-826074323%2FClasslikes%2F-1449200414" anchor-label="DatagramReadWriteChannel" id="-826074323%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-datagram-read-write-channel/index.html"><span>Datagram</span><wbr><span>Read</span><wbr><span>Write</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-826074323%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-datagram-read-write-channel/index.html">DatagramReadWriteChannel</a> : <a href="-datagram-read-channel/index.html">DatagramReadChannel</a>, <a href="-datagram-write-channel/index.html">DatagramWriteChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A channel for sending and receiving datagrams</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="945895971%2FClasslikes%2F-1449200414" anchor-label="DatagramWriteChannel" id="945895971%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-datagram-write-channel/index.html"><span>Datagram</span><wbr><span>Write</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945895971%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-datagram-write-channel/index.html">DatagramWriteChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A channel for sending datagrams</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="674991437%2FClasslikes%2F-221061848" anchor-label="InetSocketAddress" id="674991437%2FClasslikes%2F-221061848" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-inet-socket-address/index.html"><span>Inet</span><wbr><span>Socket</span><wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="674991437%2FClasslikes%2F-221061848"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/nixMain" data-toggle=":ktor-network:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-inet-socket-address/index.html">InetSocketAddress</a><span class="token punctuation">(</span>hostname<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>port<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-inet-socket-address/index.html">InetSocketAddress</a><span class="token punctuation">(</span>hostname<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>port<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">data </span><span class="token keyword">class </span><a href="-inet-socket-address/index.html">InetSocketAddress</a><span class="token punctuation">(</span>hostname<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>port<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="399747710%2FClasslikes%2F-1449200414" anchor-label="ReadWriteSocket" id="399747710%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-read-write-socket/index.html"><span>Read</span><wbr><span>Write</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="399747710%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-read-write-socket/index.html">ReadWriteSocket</a> : <a href="-a-socket/index.html">ASocket</a>, <a href="-a-readable/index.html">AReadable</a>, <a href="-a-writable/index.html">AWritable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents both readable and writable socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="59966834%2FClasslikes%2F-1449200414" anchor-label="ServerSocket" id="59966834%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-server-socket/index.html"><span>Server</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="59966834%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-server-socket/index.html">ServerSocket</a> : <a href="-a-socket/index.html">ASocket</a>, <a href="-a-bound-socket/index.html">ABoundSocket</a>, <a href="-acceptable/index.html">Acceptable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-socket/index.html">Socket</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a server bound socket ready for accepting connections</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1421589899%2FClasslikes%2F-1449200414" anchor-label="Socket" id="-1421589899%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-socket/index.html"><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1421589899%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-socket/index.html">Socket</a> : <a href="-read-write-socket/index.html">ReadWriteSocket</a>, <a href="-a-bound-socket/index.html">ABoundSocket</a>, <a href="-a-connected-socket/index.html">AConnectedSocket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Represents a connected socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1582749721%2FClasslikes%2F-221061848" anchor-label="SocketAddress" id="1582749721%2FClasslikes%2F-221061848" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-socket-address/index.html"><span>Socket</span><wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1582749721%2FClasslikes%2F-221061848"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/nixMain" data-toggle=":ktor-network:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1080237650%2FClasslikes%2F-1449200414" anchor-label="SocketBuilder" id="1080237650%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-socket-builder/index.html"><span>Socket</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1080237650%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-socket-builder/index.html">SocketBuilder</a> : <a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-socket-builder/index.html">SocketBuilder</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-socket-options/index.html">SocketOptions</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Socket builder</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1401659217%2FClasslikes%2F-1449200414" anchor-label="SocketOptions" id="-1401659217%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-socket-options/index.html"><span>Socket</span><wbr><span><span>Options</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1401659217%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-socket-options/index.html">SocketOptions</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Socket options builder</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-889920985%2FClasslikes%2F-221061848" anchor-label="SocketTimeoutException" id="-889920985%2FClasslikes%2F-221061848" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/nixMain :ktor-network:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/nixMain :ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/nixMain :ktor-network:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-socket-timeout-exception/index.html"><span>Socket</span><wbr><span>Timeout</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-889920985%2FClasslikes%2F-221061848"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/nixMain" data-toggle=":ktor-network:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-socket-timeout-exception/index.html">SocketTimeoutException</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">typealias </span><a href="-socket-timeout-exception/index.html">SocketTimeoutException</a><span class="token operator"> = </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketTimeoutException.html">SocketTimeoutException</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-socket-timeout-exception/index.html">SocketTimeoutException</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1961557663%2FClasslikes%2F-1449200414" anchor-label="TcpSocketBuilder" id="-1961557663%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-tcp-socket-builder/index.html"><span>Tcp</span><wbr><span>Socket</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1961557663%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-tcp-socket-builder/index.html">TcpSocketBuilder</a><span class="token punctuation">(</span>selector<span class="token operator">: </span><a href="../io.ktor.network.selector/-selector-manager/index.html">SelectorManager</a><span class="token punctuation">, </span>options<span class="token operator">: </span><a href="-socket-options/index.html">SocketOptions</a><span class="token punctuation">)</span> : <a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-tcp-socket-builder/index.html">TcpSocketBuilder</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-socket-options/index.html">SocketOptions</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">TCP socket builder</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1260434358%2FClasslikes%2F-1449200414" anchor-label="TypeOfService" id="1260434358%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-type-of-service/index.html"><span>Type</span><wbr><span>Of</span><wbr><span><span>Service</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1260434358%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-inline/index.html"><span class="token annotation">JvmInline</span></a></div></div><span class="token keyword">value </span><span class="token keyword">class </span><a href="-type-of-service/index.html">TypeOfService</a><span class="token punctuation">(</span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-u-byte/index.html">UByte</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An inline class to hold a IP ToS value</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1794513217%2FClasslikes%2F-1449200414" anchor-label="UDPSocketBuilder" id="1794513217%2FClasslikes%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-u-d-p-socket-builder/index.html"><span>UDPSocket</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1794513217%2FClasslikes%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-u-d-p-socket-builder/index.html">UDPSocketBuilder</a><span class="token punctuation">(</span>selector<span class="token operator">: </span><a href="../io.ktor.network.selector/-selector-manager/index.html">SelectorManager</a><span class="token punctuation">, </span>options<span class="token operator">: </span><a href="-socket-options/-u-d-p-socket-options/index.html">SocketOptions.UDPSocketOptions</a><span class="token punctuation">)</span> : <a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-u-d-p-socket-builder/index.html">UDPSocketBuilder</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-socket-options/-u-d-p-socket-options/index.html">SocketOptions.UDPSocketOptions</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">UDP socket builder</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="24488769%2FClasslikes%2F-221061848" anchor-label="UnixSocketAddress" id="24488769%2FClasslikes%2F-221061848" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain :ktor-network:dokkaHtmlPartial/jvmMain :ktor-network:dokkaHtmlPartial/nixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-unix-socket-address/index.html"><span>Unix</span><wbr><span>Socket</span><wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="24488769%2FClasslikes%2F-221061848"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/nixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/nixMain" data-toggle=":ktor-network:dokkaHtmlPartial/nixMain">nix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="-unix-socket-address/index.html">UnixSocketAddress</a><span class="token punctuation">(</span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="-unix-socket-address/index.html">UnixSocketAddress</a><span class="token punctuation">(</span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":ktor-network:dokkaHtmlPartial/nixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unix-socket-address/index.html">UnixSocketAddress</a><span class="token punctuation">(</span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span> : <a href="-socket-address/index.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-1999813738%2FFunctions%2F-1449200414" anchor-label="aSocket" id="-1999813738%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="a-socket.html"><span>a</span><wbr><span><span>Socket</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1999813738%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="a-socket.html"><span class="token function">aSocket</span></a><span class="token punctuation">(</span>selector<span class="token operator">: </span><a href="../io.ktor.network.selector/-selector-manager/index.html">SelectorManager</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="-socket-builder/index.html">SocketBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Start building a socket</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-166521113%2FFunctions%2F-1449200414" anchor-label="awaitClosed" id="-166521113%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="await-closed.html"><span>await</span><wbr><span><span>Closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-166521113%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-a-socket/index.html">ASocket</a><span class="token punctuation">.</span><a href="await-closed.html"><span class="token function">awaitClosed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Await until socket close</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-614724449%2FFunctions%2F1581359280" anchor-label="connect" id="-614724449%2FFunctions%2F1581359280" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="connect.html"><span><span>connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-614724449%2FFunctions%2F1581359280"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-tcp-socket-builder/index.html#-1961557663%2FExtensions%2F1581359280">TcpSocketBuilder</a><span class="token punctuation">.</span><a href="connect.html"><span class="token function">connect</span></a><span class="token punctuation">(</span>remoteAddress<span class="token operator">: </span><a href="-socket-address/index.html">SocketAddress</a><span class="token punctuation">, </span>configure<span class="token operator">: </span><span class="token keyword"></span><a href="../../ktor-network/io.ktor.network.sockets/-socket-options/-t-c-p-client-socket-options/index.html">SocketOptions.TCPClientSocketOptions</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ktor-network/io.ktor.network.sockets/-socket/index.html">Socket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-114733132%2FFunctions%2F-1449200414" anchor-label="connection" id="-114733132%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="connection.html"><span><span>connection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-114733132%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-socket/index.html">Socket</a><span class="token punctuation">.</span><a href="connection.html"><span class="token function">connection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-connection/index.html">Connection</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Opens socket input and output channels and returns connection object</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1912068645%2FFunctions%2F-1449200414" anchor-label="openReadChannel" id="1912068645%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="open-read-channel.html"><span>open</span><wbr><span>Read</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1912068645%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-a-readable/index.html">AReadable</a><span class="token punctuation">.</span><a href="open-read-channel.html"><span class="token function">openReadChannel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Open a read channel, could be done only once</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="29638033%2FFunctions%2F-1449200414" anchor-label="openWriteChannel" id="29638033%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="open-write-channel.html"><span>open</span><wbr><span>Write</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="29638033%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-a-writable/index.html">AWritable</a><span class="token punctuation">.</span><a href="open-write-channel.html"><span class="token function">openWriteChannel</span></a><span class="token punctuation">(</span>autoFlush<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<ERROR CLASS>///PointingToDeclaration/">&lt;ERROR CLASS&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Open a write channel, could be opened only once</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2144325243%2FFunctions%2F-1449200414" anchor-label="tcpNoDelay" id="-2144325243%2FFunctions%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="tcp-no-delay.html"><span>tcp</span><wbr><span>No</span><wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2144325243%2FFunctions%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="tcp-no-delay.html">T</a><span class="token operator"> : </span><a href="-configurable/index.html">Configurable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="tcp-no-delay.html">T</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="tcp-no-delay.html">T</a><span class="token punctuation">.</span><a href="tcp-no-delay.html"><span class="token function">tcpNoDelay</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="tcp-no-delay.html">T</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Set TCP_NODELAY socket option to disable the Nagle algorithm.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="676804681%2FFunctions%2F1581359280" anchor-label="toJavaAddress" id="676804681%2FFunctions%2F1581359280" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="to-java-address.html"><span>to</span><wbr><span>Java</span><wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="676804681%2FFunctions%2F1581359280"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-socket-address/index.html">SocketAddress</a><span class="token punctuation">.</span><a href="to-java-address.html"><span class="token function">toJavaAddress</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/SocketAddress.html">SocketAddress</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="985804615%2FProperties%2F-1449200414" anchor-label="isClosed" id="985804615%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="is-closed.html">isClosed</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985804615%2FProperties%2F-1449200414"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-network:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"><a data-name="985804615%2FProperties%2F-1449200414" anchor-label="isClosed" id="985804615%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-a-socket/index.html">ASocket</a><span class="token punctuation">.</span><a href="is-closed.html">isClosed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="985804615%2FProperties%2F-1449200414" anchor-label="isClosed" id="985804615%2FProperties%2F-1449200414" data-filterable-set=":ktor-network:dokkaHtmlPartial/jvmAndNixMain"></a><p class="paragraph">Check if the socket is closed</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>

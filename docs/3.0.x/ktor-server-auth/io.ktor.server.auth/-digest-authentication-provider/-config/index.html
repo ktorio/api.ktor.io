@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Config</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.auth/-digest-authentication-provider/-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.0.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../ktor-server-auth/io.ktor.server.auth/-digest-authentication-provider/-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../../3.1.x/ktor-server-auth/io.ktor.server.auth/-digest-authentication-provider/-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../../2.3.x/ktor-server-auth/io.ktor.server.auth/-digest-authentication-provider/-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../../2.2.x/ktor-server-auth/io.ktor.server.auth/-digest-authentication-provider/-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../../2.0.x/ktor-server-auth/io.ktor.server.auth/-digest-authentication-provider/-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-auth::io.ktor.server.auth/DigestAuthenticationProvider.Config///PointingToDeclaration//1308662189">
+  <div class="breadcrumbs"><a href="../../../index.html">ktor-server-auth</a><span class="delimiter">/</span><a href="../../index.html">io.ktor.server.auth</a><span class="delimiter">/</span><a href="../index.html">DigestAuthenticationProvider</a><span class="delimiter">/</span><span class="current">Config</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Config</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Config</a></div><p class="paragraph">A configuration for the <a href="../../digest.html">digest</a> authentication provider.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1267063941%2FProperties%2F1308662189" anchor-label="algorithmName" id="1267063941%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="algorithm-name.html"><span>algorithm</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1267063941%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="algorithm-name.html">algorithmName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A message digest algorithm to be used. Usually only <code class="lang-kotlin">MD5</code> is supported by clients.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="687327581%2FProperties%2F1308662189" anchor-label="nonceManager" id="687327581%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nonce-manager.html"><span>nonce</span><wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="687327581%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="nonce-manager.html">nonceManager</a><span class="token operator">: </span><a href="../../../../ktor-utils/io.ktor.util/-nonce-manager/index.html">NonceManager</a></div><div class="brief "><p class="paragraph"><a href="../../../../ktor-utils/io.ktor.util/-nonce-manager/index.html">NonceManager</a> to be used to generate nonce values.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-400726736%2FProperties%2F1308662189" anchor-label="realm" id="-400726736%2FProperties%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="realm.html"><span><span>realm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-400726736%2FProperties%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="realm.html">realm</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Specifies a realm to be passed in the <code class="lang-kotlin">WWW-Authenticate</code> header.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1798427449%2FFunctions%2F1308662189" anchor-label="digestProvider" id="-1798427449%2FFunctions%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="digest-provider.html"><span>digest</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1798427449%2FFunctions%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="digest-provider.html"><span class="token function">digestProvider</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">digest<span class="token operator">: </span><a href="../../-digest-provider-function/index.html">DigestProviderFunction</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures a digest provider function that should fetch or compute message digest for the specified <code class="lang-kotlin">userName</code> and <code class="lang-kotlin">realm</code>. A message digest is usually computed based on username, realm and password concatenated with the colon character ':'. For example, <code class="lang-kotlin">"$userName:$realm:$password"</code>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1875494802%2FFunctions%2F1308662189" anchor-label="validate" id="-1875494802%2FFunctions%2F1308662189" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="validate.html"><span><span>validate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1875494802%2FFunctions%2F1308662189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-plugins:ktor-server-auth:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="validate.html"><span class="token function">validate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">body<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator">&lt;</span><a href="../../-digest-credential/index.html">DigestCredential</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets a validation function that checks a specified <a href="../../-digest-credential/index.html">DigestCredential</a> instance and returns principal <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a> in a case of successful authentication or null if authentication fails.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

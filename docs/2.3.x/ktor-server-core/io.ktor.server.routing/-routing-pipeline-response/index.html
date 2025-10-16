@@ -1,0 +1,417 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RoutingPipelineResponse</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet"></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            ktor
+                    </a>            </div>
+            <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.routing/-routing-pipeline-response/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">2.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-server-core/io.ktor.server.routing/-routing-pipeline-response/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../3.1.x/ktor-server-core/io.ktor.server.routing/-routing-pipeline-response/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.x/ktor-server-core/io.ktor.server.routing/-routing-pipeline-response/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-core::io.ktor.server.routing/RoutingPipelineResponse///PointingToDeclaration//-629979791">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-core</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.routing</a><span class="delimiter">/</span><span class="current">RoutingPipelineResponse</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Routing</span><wbr><span>Pipeline</span><wbr><span><span>Response</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">RoutingPipelineResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>call<span class="token operator">: </span><a href="../-routing-pipeline-call/index.html">RoutingPipelineCall</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pipeline<span class="token operator">: </span><a href="../../io.ktor.server.response/-application-send-pipeline/index.html">ApplicationSendPipeline</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>engineResponse<span class="token operator">: </span><a href="../../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a></span></span><span class="token punctuation">)</span> : <a href="../../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a></div><p class="paragraph">An application response handled by <a href="../-routing-root/index.html">RoutingRoot</a>.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1719193772%2FConstructors%2F-629979791" anchor-label="RoutingPipelineResponse" id="-1719193772%2FConstructors%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-routing-pipeline-response.html"><span>Routing</span><wbr><span>Pipeline</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1719193772%2FConstructors%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../-routing-pipeline-call/index.html">RoutingPipelineCall</a><span class="token punctuation">, </span></span><span class="parameter ">pipeline<span class="token operator">: </span><a href="../../io.ktor.server.response/-application-send-pipeline/index.html">ApplicationSendPipeline</a><span class="token punctuation">, </span></span><span class="parameter ">engineResponse<span class="token operator">: </span><a href="../../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="473799743%2FProperties%2F-629979791" anchor-label="call" id="473799743%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="call.html"><span><span>call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="473799743%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="call.html">call</a><span class="token operator">: </span><a href="../-routing-pipeline-call/index.html">RoutingPipelineCall</a></div><div class="brief "><p class="paragraph">An <a href="../../io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a> instance this <a href="../../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a> is attached to.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205072567%2FProperties%2F-629979791" anchor-label="cookies" id="-1205072567%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/cookies.html"><span><span>cookies</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205072567%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../io.ktor.server.response/-application-response/cookies.html">cookies</a><span class="token operator">: </span><a href="../../io.ktor.server.response/-response-cookies/index.html">ResponseCookies</a></div><div class="brief "><p class="paragraph">Provides access to cookies for this response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-167623270%2FProperties%2F-629979791" anchor-label="engineResponse" id="-167623270%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="engine-response.html"><span>engine</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-167623270%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="engine-response.html">engineResponse</a><span class="token operator">: </span><a href="../../io.ktor.server.response/-pipeline-response/index.html">PipelineResponse</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1958833102%2FProperties%2F-629979791" anchor-label="headers" id="-1958833102%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/headers.html"><span><span>headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1958833102%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../io.ktor.server.response/-application-response/headers.html">headers</a><span class="token operator">: </span><a href="../../io.ktor.server.response/-response-headers/index.html">ResponseHeaders</a></div><div class="brief "><p class="paragraph">Provides access to headers for the current response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-161515962%2FProperties%2F-629979791" anchor-label="isCommitted" id="-161515962%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/is-committed.html"><span>is</span><wbr><span><span>Committed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-161515962%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../io.ktor.server.response/-application-response/is-committed.html">isCommitted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates that this response is already committed and no further changes are allowed.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="955033984%2FProperties%2F-629979791" anchor-label="isSent" id="955033984%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/is-sent.html"><span>is</span><wbr><span><span>Sent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="955033984%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../io.ktor.server.response/-application-response/is-sent.html">isSent</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates that this response is already fully sent to the client.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1827803013%2FProperties%2F-629979791" anchor-label="pipeline" id="-1827803013%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pipeline.html"><span><span>pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1827803013%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="pipeline.html">pipeline</a><span class="token operator">: </span><a href="../../io.ktor.server.response/-application-send-pipeline/index.html">ApplicationSendPipeline</a></div><div class="brief "><p class="paragraph">A pipeline for sending content.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1192892799%2FProperties%2F-629979791" anchor-label="responseType" id="-1192892799%2FProperties%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/response-type.html"><span>response</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1192892799%2FProperties%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/response-type.html">responseType</a><span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">A type of response object that is passed in the <a href="../../io.ktor.server.response/respond.html">respond</a> function. Can be useful for custom serializations.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-811444550%2FFunctions%2F-629979791" anchor-label="cacheControl" id="-811444550%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/cache-control.html"><span>cache</span><wbr><span><span>Control</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-811444550%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/cache-control.html"><span class="token function">cacheControl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-cache-control/index.html">CacheControl</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">Cache-Control</code> header with the specified <a href="../../io.ktor.server.response/cache-control.html">value</a> to a response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="593638318%2FFunctions%2F-629979791" anchor-label="contentRange" id="593638318%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/content-range.html"><span>content</span><wbr><span><span>Range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593638318%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/content-range.html"><span class="token function">contentRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">range<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html">LongRange</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fullLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-range-units/index.html">RangeUnits</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/content-range.html"><span class="token function">contentRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">range<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-long-range/index.html">LongRange</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fullLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">unit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>RangeUnits.Bytes.unitToken</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">Content-Range</code> header with the specified <a href="../../io.ktor.server.response/content-range.html">range</a> and <a href="../../io.ktor.server.response/content-range.html">fullLength</a> to a response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-944571543%2FFunctions%2F-629979791" anchor-label="etag" id="-944571543%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/etag.html"><span><span>etag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-944571543%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/etag.html"><span class="token function">etag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the <code class="lang-kotlin">E-Tag</code> header with the specified <a href="../../io.ktor.server.response/etag.html">value</a> to a response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="24855611%2FFunctions%2F228467713" anchor-label="expires" id="24855611%2FFunctions%2F228467713" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/expires.html"><span><span>expires</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="24855611%2FFunctions%2F228467713"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/expires.html"><span class="token function">expires</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append response <code class="lang-kotlin">Expires</code> HTTP header <a href="../../io.ktor.server.response/expires.html">value</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="723610246%2FFunctions%2F-1738636826" anchor-label="header" id="723610246%2FFunctions%2F-1738636826" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain,:ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain,:ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain,:ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="723610246%2FFunctions%2F-1738636826"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a header with the specified <a href="../../io.ktor.server.response/header.html">name</a> and <a href="../../io.ktor.server.response/header.html">value</a> to a response.</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">date<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/Temporal.html">Temporal</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append HTTP response header with temporal <a href="../../io.ktor.server.response/header.html">date</a> (date, time and so on)</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1653939393%2FFunctions%2F228467713" anchor-label="lastModified" id="-1653939393%2FFunctions%2F228467713" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/last-modified.html"><span>last</span><wbr><span><span>Modified</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1653939393%2FFunctions%2F228467713"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.response/last-modified.html"><span class="token function">lastModified</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dateTime<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html">ZonedDateTime</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append response <code class="lang-kotlin">Last-Modified</code> HTTP header value from <a href="../../io.ktor.server.response/last-modified.html">dateTime</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="47877742%2FFunctions%2F-629979791" anchor-label="link" id="47877742%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.http/link.html"><span><span>link</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="47877742%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.http/link.html"><span class="token function">link</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">header<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-link-header/index.html">LinkHeader</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append <code class="lang-kotlin">Link</code> header to HTTP response</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/index.html">ApplicationResponse</a><span class="token punctuation">.</span><a href="../../io.ktor.server.http/link.html"><span class="token function">link</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">uri<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>rel<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append <code class="lang-kotlin">Link</code> header to HTTP response with specified <a href="../../io.ktor.server.http/link.html">uri</a> and <a href="../../io.ktor.server.http/link.html">rel</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-90189002%2FFunctions%2F-629979791" anchor-label="push" id="-90189002%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/push.html"><span><span>push</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-90189002%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/push.html"><span class="token function">push</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../io.ktor.server.response/-response-push-builder/index.html">ResponsePushBuilder</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Produces HTTP/2 push from a server to a client or sets an HTTP/1.x hint header or does nothing. Exact behaviour is up to engine implementation.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="827261955%2FFunctions%2F-629979791" anchor-label="status" id="827261955%2FFunctions%2F-629979791" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.server.response/-application-response/status.html"><span><span>status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="827261955%2FFunctions%2F-629979791"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-filterable-set=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain" data-active="" data-toggle=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain">jvmAndNix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server:ktor-server-core:dokkaHtmlPartial/jvmAndNixMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-status-code/index.html">HttpStatusCode</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns a response status code or <code class="lang-kotlin">null</code> if a status code is not set.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../io.ktor.server.response/-application-response/status.html"><span class="token function">status</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-status-code/index.html">HttpStatusCode</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Specifies a status code for a response.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

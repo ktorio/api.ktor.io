@@ -1,0 +1,571 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>HttpServerTestSuite</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" defer></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><link href="../../../styles/multimodule.css" rel="Stylesheet"><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>ktor</span></a></div>
+      <div><dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.testing.suites/-http-server-test-suite/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">1.6.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageids="ktor-server-test-suites::io.ktor.server.testing.suites/HttpServerTestSuite///PointingToDeclaration//908875656">
+          <div class="breadcrumbs"><a href="../../index.html">ktor-server-test-suites</a>/<a href="../index.html">io.ktor.server.testing.suites</a>/<a href="index.html">HttpServerTestSuite</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Http</span><wbr><span>Server</span><wbr><span>Test</span><wbr><span><span>Suite</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">HttpServerTestSuite</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">TEngine</a><span class="token operator"> : </span><a href="../../../ktor-server-host-common/io.ktor.server.engine/-application-engine/index.html">ApplicationEngine</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">TConfiguration</a><span class="token operator"> : </span><a href="../../../ktor-server-host-common/io.ktor.server.engine/-application-engine/-configuration/index.html">ApplicationEngine.Configuration</a><span class="token operator">&gt;</span><span class="token punctuation">(</span>hostFactory<span class="token operator">: </span><a href="../../../ktor-server-host-common/io.ktor.server.engine/-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">TEngine</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">TConfiguration</a><span class="token operator">&gt;</span><span class="token punctuation">)</span> : <a href="../../../ktor-server-test-host/io.ktor.server.testing/-engine-test-base/index.html">EngineTestBase</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">TEngine</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">TConfiguration</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-1733221708%2FFunctions%2F908875656" anchor-label="queryParameterContainingSemicolon" id="-1733221708%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="query-parameter-containing-semicolon.html"><span>query</span><wbr><span>Parameter</span><wbr><span>Containing</span><wbr><span><span>Semicolon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1733221708%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="query-parameter-containing-semicolon.html"><span class="token function">queryParameterContainingSemicolon</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1109647255%2FFunctions%2F908875656" anchor-label="setUpBase" id="-1109647255%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#-1109647255%2FFunctions%2F908875656"><span>set</span><wbr><span>Up</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1109647255%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-sustainability-test-suite/index.html#-1109647255%2FFunctions%2F908875656"><span class="token function">setUpBase</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="430132238%2FFunctions%2F908875656" anchor-label="tearDownBase" id="430132238%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#430132238%2FFunctions%2F908875656"><span>tear</span><wbr><span>Down</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="430132238%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-sustainability-test-suite/index.html#430132238%2FFunctions%2F908875656"><span class="token function">tearDownBase</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1763451216%2FFunctions%2F908875656" anchor-label="test404" id="1763451216%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test404.html"><span><span>test404</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1763451216%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test404.html"><span class="token function">test404</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-846646392%2FFunctions%2F908875656" anchor-label="testClosedConnection" id="-846646392%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-closed-connection.html"><span>test</span><wbr><span>Closed</span><wbr><span><span>Connection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-846646392%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-closed-connection.html"><span class="token function">testClosedConnection</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1004698825%2FFunctions%2F908875656" anchor-label="testConnectionReset" id="-1004698825%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-connection-reset.html"><span>test</span><wbr><span>Connection</span><wbr><span><span>Reset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1004698825%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-connection-reset.html"><span class="token function">testConnectionReset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-351258098%2FFunctions%2F908875656" anchor-label="testCookie" id="-351258098%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-cookie.html"><span>test</span><wbr><span><span>Cookie</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-351258098%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-cookie.html"><span class="token function">testCookie</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="568598479%2FFunctions%2F908875656" anchor-label="testFormUrlEncoded" id="568598479%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-form-url-encoded.html"><span>test</span><wbr><span>Form</span><wbr><span>Url</span><wbr><span><span>Encoded</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="568598479%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-form-url-encoded.html"><span class="token function">testFormUrlEncoded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1483951611%2FFunctions%2F908875656" anchor-label="testHeader" id="-1483951611%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-header.html"><span>test</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1483951611%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-header.html"><span class="token function">testHeader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-227048111%2FFunctions%2F908875656" anchor-label="testHeadersReturnCorrectly" id="-227048111%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-headers-return-correctly.html"><span>test</span><wbr><span>Headers</span><wbr><span>Return</span><wbr><span><span>Correctly</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-227048111%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-headers-return-correctly.html"><span class="token function">testHeadersReturnCorrectly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1588110073%2FFunctions%2F908875656" anchor-label="testHeadRequest" id="1588110073%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-head-request.html"><span>test</span><wbr><span>Head</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1588110073%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-head-request.html"><span class="token function">testHeadRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="955187796%2FFunctions%2F908875656" anchor-label="testNoRespond" id="955187796%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-no-respond.html"><span>test</span><wbr><span>No</span><wbr><span><span>Respond</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="955187796%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-no-respond.html"><span class="token function">testNoRespond</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="149632281%2FFunctions%2F908875656" anchor-label="testParentContextPropagates" id="149632281%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-parent-context-propagates.html"><span>test</span><wbr><span>Parent</span><wbr><span>Context</span><wbr><span><span>Propagates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="149632281%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-parent-context-propagates.html"><span class="token function">testParentContextPropagates</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-441539764%2FFunctions%2F908875656" anchor-label="testPathComponentsDecoding" id="-441539764%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-path-components-decoding.html"><span>test</span><wbr><span>Path</span><wbr><span>Components</span><wbr><span><span>Decoding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-441539764%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-path-components-decoding.html"><span class="token function">testPathComponentsDecoding</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1389340166%2FFunctions%2F908875656" anchor-label="testProxyHeaders" id="-1389340166%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-proxy-headers.html"><span>test</span><wbr><span>Proxy</span><wbr><span><span>Headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1389340166%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-proxy-headers.html"><span class="token function">testProxyHeaders</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="441297494%2FFunctions%2F908875656" anchor-label="testRedirect" id="441297494%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-redirect.html"><span>test</span><wbr><span><span>Redirect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="441297494%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-redirect.html"><span class="token function">testRedirect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1647503255%2FFunctions%2F908875656" anchor-label="testRedirectFromInterceptor" id="-1647503255%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-redirect-from-interceptor.html"><span>test</span><wbr><span>Redirect</span><wbr><span>From</span><wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1647503255%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-redirect-from-interceptor.html"><span class="token function">testRedirectFromInterceptor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="584123940%2FFunctions%2F908875656" anchor-label="testRemoteHost" id="584123940%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-remote-host.html"><span>test</span><wbr><span>Remote</span><wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="584123940%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-remote-host.html"><span class="token function">testRemoteHost</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-789142353%2FFunctions%2F908875656" anchor-label="testRequestParameters" id="-789142353%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-request-parameters.html"><span>test</span><wbr><span>Request</span><wbr><span><span>Parameters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-789142353%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-request-parameters.html"><span class="token function">testRequestParameters</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1851296705%2FFunctions%2F908875656" anchor-label="testRequestParts" id="1851296705%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-request-parts.html"><span>test</span><wbr><span>Request</span><wbr><span><span>Parts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1851296705%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-request-parts.html"><span class="token function">testRequestParts</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="378467448%2FFunctions%2F908875656" anchor-label="testRequestTwiceInOneBufferWithKeepAlive" id="378467448%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-request-twice-in-one-buffer-with-keep-alive.html"><span>test</span><wbr><span>Request</span><wbr><span>Twice</span><wbr><span>In</span><wbr><span>One</span><wbr><span>Buffer</span><wbr><span>With</span><wbr><span>Keep</span><wbr><span><span>Alive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378467448%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-request-twice-in-one-buffer-with-keep-alive.html"><span class="token function">testRequestTwiceInOneBufferWithKeepAlive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1370796550%2FFunctions%2F908875656" anchor-label="testRequestTwiceNoKeepAlive" id="-1370796550%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-request-twice-no-keep-alive.html"><span>test</span><wbr><span>Request</span><wbr><span>Twice</span><wbr><span>No</span><wbr><span>Keep</span><wbr><span><span>Alive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1370796550%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-request-twice-no-keep-alive.html"><span class="token function">testRequestTwiceNoKeepAlive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="920618687%2FFunctions%2F908875656" anchor-label="testRequestTwiceWithKeepAlive" id="920618687%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-request-twice-with-keep-alive.html"><span>test</span><wbr><span>Request</span><wbr><span>Twice</span><wbr><span>With</span><wbr><span>Keep</span><wbr><span><span>Alive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="920618687%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-request-twice-with-keep-alive.html"><span class="token function">testRequestTwiceWithKeepAlive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1619564309%2FFunctions%2F908875656" anchor-label="testServerPush" id="1619564309%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-server-push.html"><span>test</span><wbr><span>Server</span><wbr><span><span>Push</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1619564309%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-server-push.html"><span class="token function">testServerPush</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1589384982%2FFunctions%2F908875656" anchor-label="testStatusCodeDirect" id="-1589384982%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-status-code-direct.html"><span>test</span><wbr><span>Status</span><wbr><span>Code</span><wbr><span><span>Direct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1589384982%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-status-code-direct.html"><span class="token function">testStatusCodeDirect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="290455097%2FFunctions%2F908875656" anchor-label="testStatusCodeViaResponseObject" id="290455097%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-status-code-via-response-object.html"><span>test</span><wbr><span>Status</span><wbr><span>Code</span><wbr><span>Via</span><wbr><span>Response</span><wbr><span><span>Object</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290455097%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-status-code-via-response-object.html"><span class="token function">testStatusCodeViaResponseObject</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="227239084%2FFunctions%2F908875656" anchor-label="testStatusPages404" id="227239084%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-status-pages404.html"><span>test</span><wbr><span>Status</span><wbr><span><span>Pages404</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="227239084%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-status-pages404.html"><span class="token function">testStatusPages404</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1095925876%2FFunctions%2F908875656" anchor-label="testUpgrade" id="-1095925876%2FFunctions%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="test-upgrade.html"><span>test</span><wbr><span><span>Upgrade</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1095925876%2FFunctions%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-upgrade.html"><span class="token function">testUpgrade</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="1331158667%2FProperties%2F908875656" anchor-label="applicationEngineFactory" id="1331158667%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#1331158667%2FProperties%2F908875656">applicationEngineFactory</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1331158667%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="1331158667%2FProperties%2F908875656" anchor-label="applicationEngineFactory" id="1331158667%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#1331158667%2FProperties%2F908875656">applicationEngineFactory</a><span class="token operator">: </span><a href="../../../ktor-server-host-common/io.ktor.server.engine/-application-engine-factory/index.html">ApplicationEngineFactory</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">TEngine</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">TConfiguration</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1903030612%2FProperties%2F908875656" anchor-label="coroutineContext" id="-1903030612%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#-1903030612%2FProperties%2F908875656">coroutineContext</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1903030612%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="-1903030612%2FProperties%2F908875656" anchor-label="coroutineContext" id="-1903030612%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#-1903030612%2FProperties%2F908875656">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="136021809%2FProperties%2F908875656" anchor-label="test" id="136021809%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#136021809%2FProperties%2F908875656">test</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="136021809%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="136021809%2FProperties%2F908875656" anchor-label="test" id="136021809%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#136021809%2FProperties%2F908875656">test</a><span class="token operator">: </span><span data-unresolved-link="org.junit.rules/TestName///PointingToDeclaration/">TestName</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-289504987%2FProperties%2F908875656" anchor-label="testLog" id="-289504987%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#-289504987%2FProperties%2F908875656">testLog</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-289504987%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="-289504987%2FProperties%2F908875656" anchor-label="testLog" id="-289504987%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#-289504987%2FProperties%2F908875656">testLog</a><span class="token operator">: </span><span data-unresolved-link="org.slf4j/Logger///PointingToDeclaration/">Logger</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="791336950%2FProperties%2F908875656" anchor-label="timeout" id="791336950%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#791336950%2FProperties%2F908875656">timeout</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="791336950%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="791336950%2FProperties%2F908875656" anchor-label="timeout" id="791336950%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#791336950%2FProperties%2F908875656">timeout</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1638170586%2FProperties%2F908875656" anchor-label="timeoutRule" id="1638170586%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-sustainability-test-suite/index.html#1638170586%2FProperties%2F908875656">timeoutRule</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1638170586%2FProperties%2F908875656"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"><a data-name="1638170586%2FProperties%2F908875656" anchor-label="timeoutRule" id="1638170586%2FProperties%2F908875656" data-filterable-set=":ktor-server:ktor-server-test-suites:dokkaHtmlPartial/jvmMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-sustainability-test-suite/index.html#1638170586%2FProperties%2F908875656">timeoutRule</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.debug.junit4/CoroutinesTimeout///PointingToDeclaration/">CoroutinesTimeout</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>

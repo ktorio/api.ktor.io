@@ -1,0 +1,792 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ByteChannel</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" defer></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><link href="../../../styles/multimodule.css" rel="Stylesheet"><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>ktor</span></a></div>
+      <div><dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.utils.io/-byte-channel/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">1.6.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../3.1.x/ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.x/ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../2.3.x/ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.x/ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.x/ktor-io/io.ktor.utils.io/-byte-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command></div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageids="ktor-io::io.ktor.utils.io/ByteChannel///PointingToDeclaration//-1955460546">
+          <div class="breadcrumbs"><a href="../../index.html">ktor-io</a>/<a href="../index.html">io.ktor.utils.io</a>/<a href="index.html">ByteChannel</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Byte</span><wbr><span><span>Channel</span></span></h1>
+            <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+              <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ByteChannel</a> : <a href="../-byte-read-channel/index.html">ByteReadChannel</a>, <a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Channel for asynchronous reading and writing of sequences of bytes. This is a buffered <strong>single-reader single-writer channel</strong>.</p><p class="paragraph">Read operations can be invoked concurrently with write operations, but multiple reads or multiple writes cannot be invoked concurrently with themselves. Exceptions are <a href="../../../ktor-io/io.ktor.utils.io/-byte-channel/close.html">close</a> and <a href="../../../ktor-io/io.ktor.utils.io/-byte-channel/flush.html">flush</a> which can be invoked concurrently with any other operations and between themselves at any time.</p></div>            </div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-471440214%2FFunctions%2F-1955460546" anchor-label="attachJob" id="-471440214%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="attach-job.html"><span>attach</span><wbr><span><span>Job</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-471440214%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="attach-job.html"><span class="token function">attachJob</span></a><span class="token punctuation">(</span>job<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1749321672%2FFunctions%2F-1955460546" anchor-label="awaitFreeSpace" id="1749321672%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/await-free-space.html"><span>await</span><wbr><span>Free</span><wbr><span><span>Space</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749321672%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/await-free-space.html"><span class="token function">awaitFreeSpace</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Invokes block when at least 1 byte is available for write.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2143828271%2FFunctions%2F-1955460546" anchor-label="cancel" id="2143828271%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/cancel.html"><span><span>cancel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2143828271%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-byte-read-channel/cancel.html"><span class="token function">cancel</span></a><span class="token punctuation">(</span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Close channel with optional <a href="../-byte-read-channel/cancel.html">cause</a> cancellation. Unlike <a href="../-byte-write-channel/close.html">ByteWriteChannel.close</a> that could close channel normally, cancel does always close with error so any operations on this channel will always fail and all suspensions will be resumed with exception.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-115384320%2FFunctions%2F-1955460546" anchor-label="close" id="-115384320%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-115384320%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-byte-write-channel/close.html"><span class="token function">close</span></a><span class="token punctuation">(</span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Closes this channel with an optional exceptional <a href="../-byte-write-channel/close.html">cause</a>. It flushes all pending write bytes (via <a href="../-byte-write-channel/flush.html">flush</a>). This is an idempotent operation -- repeated invocations of this function have no effect and return <code class="lang-kotlin">false</code>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1665744258%2FFunctions%2F-1955460546" anchor-label="discard" id="-1665744258%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/discard.html"><span><span>discard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1665744258%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/discard.html"><span class="token function">discard</span></a><span class="token punctuation">(</span>max<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Discard up to <a href="../-byte-read-channel/discard.html">max</a> bytes</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1901632394%2FFunctions%2F-1955460546" anchor-label="flush" id="1901632394%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/flush.html"><span><span>flush</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1901632394%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-byte-write-channel/flush.html"><span class="token function">flush</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Flushes all pending write bytes making them available for read.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2008694725%2FFunctions%2F-1955460546" anchor-label="peekTo" id="-2008694725%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/peek-to.html"><span>peek</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2008694725%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/peek-to.html"><span class="token function">peekTo</span></a><span class="token punctuation">(</span>destination<span class="token operator">: </span><a href="../../io.ktor.utils.io.bits/-memory/index.html">Memory</a><span class="token punctuation">, </span>destinationOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span>min<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span>max<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>Long.MAX_VALUE<span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Try to copy at least <a href="../-byte-read-channel/peek-to.html">min</a> but up to <a href="../-byte-read-channel/peek-to.html">max</a> bytes to the specified <a href="../-byte-read-channel/peek-to.html">destination</a> buffer from this input skipping <a href="../-byte-read-channel/peek-to.html">offset</a> bytes. If there are not enough bytes available to provide <a href="../-byte-read-channel/peek-to.html">min</a> bytes after skipping <a href="../-byte-read-channel/peek-to.html">offset</a> bytes then it will trigger the underlying source reading first and after that will simply copy available bytes even if EOF encountered so <a href="../-byte-read-channel/peek-to.html">min</a> is not a requirement but a desired number of bytes. It is safe to specify <a href="../-byte-read-channel/peek-to.html">max</a> greater than the destination free space. <code class="lang-kotlin">min</code> shouldn't be bigger than the <a href="../-byte-read-channel/peek-to.html">destination</a> free space. This function could trigger the underlying source suspending reading. It is allowed to specify too big <a href="../-byte-read-channel/peek-to.html">offset</a> so in this case this function will always return <code class="lang-kotlin">0</code> after prefetching all underlying bytes but note that it may lead to significant memory consumption. This function usually copy more bytes than <a href="../-byte-read-channel/peek-to.html">min</a> (unless <code class="lang-kotlin">max = min</code>) but it is not guaranteed. When <code class="lang-kotlin">0</code> is returned with <code class="lang-kotlin">offset = 0</code> then it makes sense to check <a href="../-byte-read-channel/is-closed-for-read.html">isClosedForRead</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="2053838412%2FFunctions%2F-1955460546" anchor-label="readAvailable" id="2053838412%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-available.html"><span>read</span><wbr><span><span>Available</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053838412%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-available.html"><span class="token function">readAvailable</span></a><span class="token punctuation">(</span>dst<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><br><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-available.html"><span class="token function">readAvailable</span></a><span class="token punctuation">(</span>dst<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>length<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads all available bytes to <a href="../-byte-read-channel/read-available.html">dst</a> buffer and returns immediately or suspends if no bytes available</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="824763719%2FFunctions%2F-1955460546" anchor-label="readBoolean" id="824763719%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-boolean.html"><span>read</span><wbr><span><span>Boolean</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="824763719%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-boolean.html"><span class="token function">readBoolean</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a boolean value (suspending if no bytes available yet) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-844113853%2FFunctions%2F-1955460546" anchor-label="readByte" id="-844113853%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-byte.html"><span>read</span><wbr><span><span>Byte</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-844113853%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-byte.html"><span class="token function">readByte</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a byte (suspending if no bytes available yet) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1688906214%2FFunctions%2F-1955460546" anchor-label="readDouble" id="-1688906214%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-double.html"><span>read</span><wbr><span><span>Double</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1688906214%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-double.html"><span class="token function">readDouble</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads double number (suspending if not enough bytes available) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1748347373%2FFunctions%2F-1955460546" anchor-label="readFloat" id="-1748347373%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-float.html"><span>read</span><wbr><span><span>Float</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1748347373%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-float.html"><span class="token function">readFloat</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads float number (suspending if not enough bytes available) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1333100655%2FFunctions%2F-1955460546" anchor-label="readFully" id="-1333100655%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-fully.html"><span>read</span><wbr><span><span>Fully</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1333100655%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-fully.html"><span class="token function">readFully</span></a><span class="token punctuation">(</span>dst<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a><span class="token punctuation">, </span>n<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><br><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-fully.html"><span class="token function">readFully</span></a><span class="token punctuation">(</span>dst<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>length<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads all <a href="../-byte-read-channel/read-fully.html">length</a> bytes to <a href="../-byte-read-channel/read-fully.html">dst</a> buffer or fails if channel has been closed. Suspends if not enough bytes available.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="598794336%2FFunctions%2F-1955460546" anchor-label="readInt" id="598794336%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-int.html"><span>read</span><wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="598794336%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-int.html"><span class="token function">readInt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads an int number (suspending if not enough bytes available) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1368343217%2FFunctions%2F-1955460546" anchor-label="readLong" id="-1368343217%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-long.html"><span>read</span><wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368343217%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-long.html"><span class="token function">readLong</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a long number (suspending if not enough bytes available) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1199086492%2FFunctions%2F-1955460546" anchor-label="readPacket" id="1199086492%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-packet.html"><span>read</span><wbr><span><span>Packet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1199086492%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-packet.html"><span class="token function">readPacket</span></a><span class="token punctuation">(</span>size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>headerSizeHint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-byte-read-packet/index.html">ByteReadPacket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads the specified amount of bytes and makes a byte packet from them. Fails if channel has been closed and not enough bytes available. Accepts <a href="../-byte-read-channel/read-packet.html">headerSizeHint</a> to be provided, see <a href="../../io.ktor.utils.io.core/-byte-packet-builder/index.html">BytePacketBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="308328061%2FFunctions%2F-1955460546" anchor-label="readRemaining" id="308328061%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-remaining.html"><span>read</span><wbr><span><span>Remaining</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="308328061%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-remaining.html"><span class="token function">readRemaining</span></a><span class="token punctuation">(</span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span>headerSizeHint<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-byte-read-packet/index.html">ByteReadPacket</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads up to <a href="../-byte-read-channel/read-remaining.html">limit</a> bytes and makes a byte packet or until end of stream encountered. Accepts <a href="../-byte-read-channel/read-remaining.html">headerSizeHint</a> to be provided, see <a href="../../io.ktor.utils.io.core/-byte-packet-builder/index.html">BytePacketBuilder</a>.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1251237407%2FFunctions%2F-1955460546" anchor-label="readSession" id="1251237407%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-session.html"><span>read</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1251237407%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">expect </span></strike><strike><span class="token keyword">abstract </span></strike><strike><span class="token keyword"></span></strike><strike><span class="token keyword">fun </span></strike><a href="../-byte-read-channel/read-session.html"><strike><span class="token function">readSession</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>consumer</strike><strike><span class="token operator">: </span></strike><span class="token keyword"></span><a href="../-read-session/index.html">ReadSession</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Starts non-suspendable read session. After channel preparation <a href="../-byte-read-channel/read-session.html">consumer</a> lambda will be invoked immediately event if there are no bytes available for read yet.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-911108109%2FFunctions%2F-1955460546" anchor-label="readShort" id="-911108109%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-short.html"><span>read</span><wbr><span><span>Short</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-911108109%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-short.html"><span class="token function">readShort</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a short number (suspending if not enough bytes available) or fails if channel has been closed and not enough bytes.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1978212510%2FFunctions%2F-1955460546" anchor-label="readSuspendableSession" id="-1978212510%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-suspendable-session.html"><span>read</span><wbr><span>Suspendable</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1978212510%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">expect </span></strike><strike><span class="token keyword">abstract </span></strike><strike><span class="token keyword">suspend </span></strike><strike><span class="token keyword">fun </span></strike><a href="../-byte-read-channel/read-suspendable-session.html"><strike><span class="token function">readSuspendableSession</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>consumer</strike><strike><span class="token operator">: </span></strike><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../-suspendable-read-session/index.html">SuspendableReadSession</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Starts a suspendable read session. After channel preparation <a href="../-byte-read-channel/read-suspendable-session.html">consumer</a> lambda will be invoked immediately even if there are no bytes available for read yet. <a href="../-byte-read-channel/read-suspendable-session.html">consumer</a> lambda could suspend as much as needed.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="982901764%2FFunctions%2F-1955460546" anchor-label="readUTF8Line" id="982901764%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-u-t-f8-line.html"><span>read</span><wbr><span><span>UTF8Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="982901764%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-read-channel/read-u-t-f8-line.html"><span class="token function">readUTF8Line</span></a><span class="token punctuation">(</span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a line of UTF-8 characters up to <a href="../-byte-read-channel/read-u-t-f8-line.html">limit</a> characters. Supports both CR-LF and LF line endings. Throws an exception if the specified <a href="../-byte-read-channel/read-u-t-f8-line.html">limit</a> has been exceeded.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="460202862%2FFunctions%2F-1955460546" anchor-label="readUTF8LineTo" id="460202862%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-u-t-f8-line-to.html"><span>read</span><wbr><span>UTF8Line</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="460202862%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-byte-read-channel/read-u-t-f8-line-to.html">A</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-appendable/index.html">Appendable</a><span class="token operator">&gt; </span><a href="../-byte-read-channel/read-u-t-f8-line-to.html"><span class="token function">readUTF8LineTo</span></a><span class="token punctuation">(</span>out<span class="token operator">: </span><a href="../-byte-read-channel/read-u-t-f8-line-to.html">A</a><span class="token punctuation">, </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Reads a line of UTF-8 characters to the specified <a href="../-byte-read-channel/read-u-t-f8-line-to.html">out</a> buffer up to <a href="../-byte-read-channel/read-u-t-f8-line-to.html">limit</a> characters. Supports both CR-LF and LF line endings. No line ending characters will be appended to <a href="../-byte-read-channel/read-u-t-f8-line-to.html">out</a> buffer. Throws an exception if the specified <a href="../-byte-read-channel/read-u-t-f8-line-to.html">limit</a> has been exceeded.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1780939956%2FFunctions%2F-1955460546" anchor-label="writeAvailable" id="-1780939956%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-available.html"><span>write</span><wbr><span><span>Available</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1780939956%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-available.html"><span class="token function">writeAvailable</span></a><span class="token punctuation">(</span>src<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><br><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-available.html"><span class="token function">writeAvailable</span></a><span class="token punctuation">(</span>src<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>length<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes as much as possible and only suspends if buffer is full</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="613831398%2FFunctions%2F-1955460546" anchor-label="writeByte" id="613831398%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-byte.html"><span>write</span><wbr><span><span>Byte</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613831398%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-byte.html"><span class="token function">writeByte</span></a><span class="token punctuation">(</span>b<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes byte and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="839553862%2FFunctions%2F-1955460546" anchor-label="writeDouble" id="839553862%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-double.html"><span>write</span><wbr><span><span>Double</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="839553862%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-double.html"><span class="token function">writeDouble</span></a><span class="token punctuation">(</span>d<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes double number and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-329357312%2FFunctions%2F-1955460546" anchor-label="writeFloat" id="-329357312%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-float.html"><span>write</span><wbr><span><span>Float</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-329357312%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-float.html"><span class="token function">writeFloat</span></a><span class="token punctuation">(</span>f<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes float number and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1434980954%2FFunctions%2F-1955460546" anchor-label="writeFully" id="-1434980954%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-fully.html"><span>write</span><wbr><span><span>Fully</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1434980954%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span>src<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-buffer/index.html">Buffer</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span>src<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-io-buffer/index.html">IoBuffer</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span>memory<span class="token operator">: </span><a href="../../io.ktor.utils.io.bits/-memory/index.html">Memory</a><span class="token punctuation">, </span>startIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>endIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><br><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span>src<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>length<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes all <a href="../-byte-write-channel/write-fully.html">src</a> bytes and suspends until all bytes written. Causes flush if buffer filled up or when <a href="../-byte-write-channel/auto-flush.html">autoFlush</a> Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="824862938%2FFunctions%2F-1955460546" anchor-label="writeInt" id="824862938%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-int.html"><span>write</span><wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="824862938%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-int.html"><span class="token function">writeInt</span></a><span class="token punctuation">(</span>i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes int number and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1700346266%2FFunctions%2F-1955460546" anchor-label="writeLong" id="-1700346266%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-long.html"><span>write</span><wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1700346266%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-long.html"><span class="token function">writeLong</span></a><span class="token punctuation">(</span>l<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes long number and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1713712317%2FFunctions%2F-1955460546" anchor-label="writePacket" id="-1713712317%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-packet.html"><span>write</span><wbr><span><span>Packet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1713712317%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-packet.html"><span class="token function">writePacket</span></a><span class="token punctuation">(</span>packet<span class="token operator">: </span><a href="../../io.ktor.utils.io.core/-byte-read-packet/index.html">ByteReadPacket</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes a <a href="../-byte-write-channel/write-packet.html">packet</a> fully or fails if channel get closed before the whole packet has been written</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1885334592%2FFunctions%2F-1955460546" anchor-label="writeShort" id="-1885334592%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-short.html"><span>write</span><wbr><span><span>Short</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1885334592%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/write-short.html"><span class="token function">writeShort</span></a><span class="token punctuation">(</span>s<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Writes short number and suspends until written. Crashes if channel get closed while writing.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1390904059%2FFunctions%2F-1955460546" anchor-label="writeSuspendSession" id="1390904059%2FFunctions%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-suspend-session.html"><span>write</span><wbr><span>Suspend</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390904059%2FFunctions%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">expect </span></strike><strike><span class="token keyword">abstract </span></strike><strike><span class="token keyword">suspend </span></strike><strike><span class="token keyword">fun </span></strike><a href="../-byte-write-channel/write-suspend-session.html"><strike><span class="token function">writeSuspendSession</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>visitor</strike><strike><span class="token operator">: </span></strike><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../-writer-suspend-session/index.html">WriterSuspendSession</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><strike><span class="token punctuation">)</span></strike><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-1703700327%2FProperties%2F-1955460546" anchor-label="autoFlush" id="-1703700327%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/auto-flush.html">autoFlush</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1703700327%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-1703700327%2FProperties%2F-1955460546" anchor-label="autoFlush" id="-1703700327%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-write-channel/auto-flush.html">autoFlush</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1703700327%2FProperties%2F-1955460546" anchor-label="autoFlush" id="-1703700327%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns <code class="lang-kotlin">true</code> if channel flushes automatically all pending bytes after every write function call. If <code class="lang-kotlin">false</code> then flush only happens at manual <a href="../-byte-write-channel/flush.html">flush</a> invocation or when the buffer is full.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="84819979%2FProperties%2F-1955460546" anchor-label="availableForRead" id="84819979%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/available-for-read.html">availableForRead</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="84819979%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="84819979%2FProperties%2F-1955460546" anchor-label="availableForRead" id="84819979%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-read-channel/available-for-read.html">availableForRead</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="84819979%2FProperties%2F-1955460546" anchor-label="availableForRead" id="84819979%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns number of bytes that can be read without suspension. Read operations do no suspend and return immediately when this number is at least the number of bytes requested for read.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="613002991%2FProperties%2F-1955460546" anchor-label="availableForWrite" id="613002991%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/available-for-write.html">availableForWrite</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613002991%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="613002991%2FProperties%2F-1955460546" anchor-label="availableForWrite" id="613002991%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-write-channel/available-for-write.html">availableForWrite</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="613002991%2FProperties%2F-1955460546" anchor-label="availableForWrite" id="613002991%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns number of bytes that can be written without suspension. Write operations do no suspend and return immediately when this number is at least the number of bytes requested for write.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1050797316%2FProperties%2F-1955460546" anchor-label="closedCause" id="-1050797316%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/closed-cause.html">closedCause</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1050797316%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-1050797316%2FProperties%2F-1955460546" anchor-label="closedCause" id="-1050797316%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-read-channel/closed-cause.html">closedCause</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1050797316%2FProperties%2F-1955460546" anchor-label="closedCause" id="-1050797316%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">A closure causes exception or <code class="lang-kotlin">null</code> if closed successfully or not yet closed</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-259092752%2FProperties%2F-1955460546" anchor-label="isClosedForRead" id="-259092752%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/is-closed-for-read.html">isClosedForRead</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-259092752%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-259092752%2FProperties%2F-1955460546" anchor-label="isClosedForRead" id="-259092752%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-read-channel/is-closed-for-read.html">isClosedForRead</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-259092752%2FProperties%2F-1955460546" anchor-label="isClosedForRead" id="-259092752%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns <code class="lang-kotlin">true</code> if the channel is closed and no remaining bytes are available for read. It implies that <a href="../-byte-read-channel/available-for-read.html">availableForRead</a> is zero.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1664932395%2FProperties%2F-1955460546" anchor-label="isClosedForWrite" id="-1664932395%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/is-closed-for-write.html">isClosedForWrite</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1664932395%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-1664932395%2FProperties%2F-1955460546" anchor-label="isClosedForWrite" id="-1664932395%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-read-channel/is-closed-for-write.html">isClosedForWrite</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1508871049%2FProperties%2F-1955460546" anchor-label="readByteOrder" id="1508871049%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/read-byte-order.html">readByteOrder</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1508871049%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="1508871049%2FProperties%2F-1955460546" anchor-label="readByteOrder" id="1508871049%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace strikethrough"><strike><span class="token keyword">expect </span></strike><strike><span class="token keyword">abstract </span></strike><strike><span class="token keyword"></span></strike><strike><span class="token keyword">var </span></strike><a href="../-byte-read-channel/read-byte-order.html"><strike>readByteOrder</strike></a><strike><span class="token operator">: </span></strike><a href="../../io.ktor.utils.io.core/-byte-order/index.html">ByteOrder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1508871049%2FProperties%2F-1955460546" anchor-label="readByteOrder" id="1508871049%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Byte order that is used for multi-byte read operations (such as <a href="../-byte-read-channel/read-short.html">readShort</a>, <a href="../-byte-read-channel/read-int.html">readInt</a>, <a href="../-byte-read-channel/read-long.html">readLong</a>, <a href="../-byte-read-channel/read-float.html">readFloat</a>, and <a href="../-byte-read-channel/read-double.html">readDouble</a>).</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-502746076%2FProperties%2F-1955460546" anchor-label="totalBytesRead" id="-502746076%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-read-channel/total-bytes-read.html">totalBytesRead</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-502746076%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-502746076%2FProperties%2F-1955460546" anchor-label="totalBytesRead" id="-502746076%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-read-channel/total-bytes-read.html">totalBytesRead</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-502746076%2FProperties%2F-1955460546" anchor-label="totalBytesRead" id="-502746076%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Number of bytes read from the channel. It is not guaranteed to be atomic so could be updated in the middle of long-running read operation.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="369571582%2FProperties%2F-1955460546" anchor-label="totalBytesWritten" id="369571582%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/total-bytes-written.html">totalBytesWritten</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="369571582%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="369571582%2FProperties%2F-1955460546" anchor-label="totalBytesWritten" id="369571582%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-byte-write-channel/total-bytes-written.html">totalBytesWritten</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="369571582%2FProperties%2F-1955460546" anchor-label="totalBytesWritten" id="369571582%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Number of bytes written to the channel. It is not guaranteed to be atomic so could be updated in the middle of write operation.</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2126127003%2FProperties%2F-1955460546" anchor-label="writeByteOrder" id="-2126127003%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-write-channel/write-byte-order.html">writeByteOrder</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2126127003%2FProperties%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":ktor-io:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":ktor-io:dokkaHtmlPartial/commonMain"><a data-name="-2126127003%2FProperties%2F-1955460546" anchor-label="writeByteOrder" id="-2126127003%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace strikethrough"><strike><span class="token keyword">expect </span></strike><strike><span class="token keyword">abstract </span></strike><strike><span class="token keyword"></span></strike><strike><span class="token keyword">var </span></strike><a href="../-byte-write-channel/write-byte-order.html"><strike>writeByteOrder</strike></a><strike><span class="token operator">: </span></strike><a href="../../io.ktor.utils.io.core/-byte-order/index.html">ByteOrder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-2126127003%2FProperties%2F-1955460546" anchor-label="writeByteOrder" id="-2126127003%2FProperties%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Byte order that is used for multi-byte write operations (such as <a href="../-byte-write-channel/write-short.html">writeShort</a>, <a href="../-byte-write-channel/write-int.html">writeInt</a>, <a href="../-byte-write-channel/write-long.html">writeLong</a>, <a href="../-byte-write-channel/write-float.html">writeFloat</a>, and <a href="../-byte-write-channel/write-double.html">writeDouble</a>).</p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="981359736%2FInheritors%2F-1955460546" anchor-label="ByteChannelSequentialBase" id="981359736%2FInheritors%2F-1955460546" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":ktor-io:dokkaHtmlPartial/commonMain" data-filterable-set=":ktor-io:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="../-byte-channel-sequential-base/index.html">ByteChannelSequentialBase</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="981359736%2FInheritors%2F-1955460546"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
