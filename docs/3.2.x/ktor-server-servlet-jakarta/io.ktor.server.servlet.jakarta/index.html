@@ -1,0 +1,432 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.servlet.jakarta</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.servlet.jakarta/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-server-servlet-jakarta/io.ktor.server.servlet.jakarta/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../3.1.x/ktor-server-servlet-jakarta/io.ktor.server.servlet.jakarta/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-server-servlet-jakarta/io.ktor.server.servlet.jakarta/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-server-servlet-jakarta/io.ktor.server.servlet.jakarta/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server-servlet-jakarta/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-servlet-jakarta/jvmMain" data-filter=":ktor-server-servlet-jakarta/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-server-servlet-jakarta::io.ktor.server.servlet.jakarta////PointingToDeclaration//1007329404">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-servlet-jakarta</a><span class="delimiter">/</span><span class="current">io.ktor.server.servlet.jakarta</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-316045885%2FClasslikes%2F1007329404" anchor-label="AsyncServletApplicationCall" id="-316045885%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-servlet-application-call/index.html"><span>Async</span><wbr><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-316045885%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-async-servlet-application-call/index.html">AsyncServletApplicationCall</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">application<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">, </span></span><span class="parameter ">servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span><span class="token punctuation">, </span></span><span class="parameter ">servletResponse<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletResponse///PointingToDeclaration/">HttpServletResponse</span><span class="token punctuation">, </span></span><span class="parameter ">engineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">userContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">upgrade<span class="token operator">: </span><a href="-servlet-upgrade/index.html">ServletUpgrade</a><span class="token punctuation">, </span></span><span class="parameter ">parentCoroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">managedByEngineHeaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptySet()<span class="token punctuation">, </span></span><span class="parameter ">idleTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../ktor-server-core/io.ktor.server.engine/-base-application-call/index.html">BaseApplicationCall</a>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1377009582%2FClasslikes%2F1007329404" anchor-label="AsyncServletApplicationRequest" id="-1377009582%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-servlet-application-request/index.html"><span>Async</span><wbr><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1377009582%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-async-servlet-application-request/index.html">AsyncServletApplicationRequest</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">idleTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="-servlet-application-request/index.html">ServletApplicationRequest</a>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-954848960%2FClasslikes%2F1007329404" anchor-label="AsyncServletApplicationResponse" id="-954848960%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-async-servlet-application-response/index.html"><span>Async</span><wbr><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-954848960%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-async-servlet-application-response/index.html">AsyncServletApplicationResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="-async-servlet-application-call/index.html">AsyncServletApplicationCall</a><span class="token punctuation">, </span></span><span class="parameter ">servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span><span class="token punctuation">, </span></span><span class="parameter ">servletResponse<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletResponse///PointingToDeclaration/">HttpServletResponse</span><span class="token punctuation">, </span></span><span class="parameter ">engineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">userContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">servletUpgradeImpl<span class="token operator">: </span><a href="-servlet-upgrade/index.html">ServletUpgrade</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">idleTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">managedByEngineHeaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptySet()</span></span><span class="token punctuation">)</span> : <a href="-servlet-application-response/index.html">ServletApplicationResponse</a>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-921495024%2FClasslikes%2F1007329404" anchor-label="DefaultServletUpgrade" id="-921495024%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-default-servlet-upgrade/index.html"><span>Default</span><wbr><span>Servlet</span><wbr><span><span>Upgrade</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-921495024%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-default-servlet-upgrade/index.html">DefaultServletUpgrade</a> : <a href="-servlet-upgrade/index.html">ServletUpgrade</a></div><div class="brief "><p class="paragraph">The default servlet upgrade implementation using Servlet API. Please note that some servlet containers may not support it or it may be broken.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="555482895%2FClasslikes%2F1007329404" anchor-label="KtorServlet" id="555482895%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ktor-servlet/index.html"><span>Ktor</span><wbr><span><span>Servlet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="555482895%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-ktor-servlet/index.html">KtorServlet</a> : <span data-unresolved-link="jakarta.servlet.http/HttpServlet///PointingToDeclaration/">HttpServlet</span>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div><div class="brief "><p class="paragraph">A base class for servlet engine implementations</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1990064659%2FClasslikes%2F1007329404" anchor-label="ServletApplicationEngine" id="-1990064659%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-application-engine/index.html"><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1990064659%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-servlet-application-engine/index.html">ServletApplicationEngine</a> : <a href="-ktor-servlet/index.html">KtorServlet</a></div><div class="brief "><p class="paragraph">This servlet need to be installed into a servlet container</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1874431620%2FClasslikes%2F1007329404" anchor-label="ServletApplicationRequest" id="1874431620%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-application-request/index.html"><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1874431620%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-servlet-application-request/index.html">ServletApplicationRequest</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span></span></span><span class="token punctuation">)</span> : <a href="../../ktor-server-core/io.ktor.server.engine/-base-application-request/index.html">BaseApplicationRequest</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="154671855%2FClasslikes%2F1007329404" anchor-label="ServletApplicationRequestCookies" id="154671855%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-application-request-cookies/index.html"><span>Servlet</span><wbr><span>Application</span><wbr><span>Request</span><wbr><span><span>Cookies</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="154671855%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-servlet-application-request-cookies/index.html">ServletApplicationRequestCookies</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span><span class="token punctuation">, </span></span><span class="parameter ">request<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.request/-pipeline-request/index.html">PipelineRequest</a></span></span><span class="token punctuation">)</span> : <a href="../../ktor-server-core/io.ktor.server.request/-request-cookies/index.html">RequestCookies</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-599088680%2FClasslikes%2F1007329404" anchor-label="ServletApplicationRequestHeaders" id="-599088680%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-application-request-headers/index.html"><span>Servlet</span><wbr><span>Application</span><wbr><span>Request</span><wbr><span><span>Headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-599088680%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-servlet-application-request-headers/index.html">ServletApplicationRequestHeaders</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">servletRequest<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletRequest///PointingToDeclaration/">HttpServletRequest</span></span></span><span class="token punctuation">)</span> : <a href="../../ktor-http/io.ktor.http/-headers/index.html">Headers</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1055580494%2FClasslikes%2F1007329404" anchor-label="ServletApplicationResponse" id="1055580494%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-application-response/index.html"><span>Servlet</span><wbr><span>Application</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055580494%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-servlet-application-response/index.html">ServletApplicationResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">call<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-pipeline-call/index.html">PipelineCall</a><span class="token punctuation">, </span></span><span class="parameter ">servletResponse<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletResponse///PointingToDeclaration/">HttpServletResponse</span><span class="token punctuation">, </span></span><span class="parameter ">managedByEngineHeaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../../ktor-server-core/io.ktor.server.engine/-base-application-response/index.html">BaseApplicationResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-291747773%2FClasslikes%2F1007329404" anchor-label="ServletUpgrade" id="-291747773%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-upgrade/index.html"><span>Servlet</span><wbr><span><span>Upgrade</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-291747773%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-servlet-upgrade/index.html">ServletUpgrade</a></div><div class="brief "><p class="paragraph">Servlet upgrade processing</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-713564171%2FClasslikes%2F1007329404" anchor-label="ServletUpgradeHandler" id="-713564171%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-upgrade-handler/index.html"><span>Servlet</span><wbr><span>Upgrade</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-713564171%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-servlet-upgrade-handler/index.html">ServletUpgradeHandler</a> : <span data-unresolved-link="jakarta.servlet.http/HttpUpgradeHandler///PointingToDeclaration/">HttpUpgradeHandler</span>, <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1019278087%2FClasslikes%2F1007329404" anchor-label="UpgradeRequest" id="1019278087%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-upgrade-request/index.html"><span>Upgrade</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1019278087%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-upgrade-request/index.html">UpgradeRequest</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>response<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet.http/HttpServletResponse///PointingToDeclaration/">HttpServletResponse</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>upgradeMessage<span class="token operator">: </span><a href="../../ktor-http/io.ktor.http.content/-outgoing-content/-protocol-upgrade/index.html">OutgoingContent.ProtocolUpgrade</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>engineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>disableAsyncInput<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1458079623%2FClasslikes%2F1007329404" anchor-label="WebResourcesConfig" id="1458079623%2FClasslikes%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-resources-config/index.html"><span>Web</span><wbr><span>Resources</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1458079623%2FClasslikes%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-resources-config/index.html">WebResourcesConfig</a></div><div class="brief "><p class="paragraph">Web resources serve configuration</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2047254690%2FProperties%2F1007329404" anchor-label="javaSecurityPrincipal" id="2047254690%2FProperties%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="java-security-principal.html"><span>java</span><wbr><span>Security</span><wbr><span><span>Principal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2047254690%2FProperties%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ktor-server-core/io.ktor.server.request/-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="java-security-principal.html">javaSecurityPrincipal</a><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/Principal.html">Principal</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns Java's JAAS Principal</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="638466915%2FProperties%2F1007329404" anchor-label="ServletContextAttribute" id="638466915%2FProperties%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-servlet-context-attribute.html"><span>Servlet</span><wbr><span>Context</span><wbr><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="638466915%2FProperties%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-servlet-context-attribute.html">ServletContextAttribute</a><span class="token operator">: </span><a href="../../ktor-utils/io.ktor.util/-attribute-key/index.html">AttributeKey</a><span class="token operator">&lt;</span><span data-unresolved-link="jakarta.servlet/ServletContext///PointingToDeclaration/">ServletContext</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Attribute that is added by ktor servlet to application attributes to hold <span data-unresolved-link="jakarta.servlet/ServletContext///PointingToDeclaration/">ServletContext</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="276920775%2FProperties%2F1007329404" anchor-label="servletRequestAttributes" id="276920775%2FProperties%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="servlet-request-attributes.html"><span>servlet</span><wbr><span>Request</span><wbr><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="276920775%2FProperties%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ktor-server-core/io.ktor.server.request/-application-request/index.html">ApplicationRequest</a><span class="token punctuation">.</span><a href="servlet-request-attributes.html">servletRequestAttributes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Provides jakarta.servlet request attributes or fail it the underlying engine is not servlet-backed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1741282616%2FFunctions%2F1007329404" anchor-label="putServletAttributes" id="-1741282616%2FFunctions%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="put-servlet-attributes.html"><span>put</span><wbr><span>Servlet</span><wbr><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1741282616%2FFunctions%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="put-servlet-attributes.html"><span class="token function">putServletAttributes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><span data-unresolved-link="jakarta.servlet/ServletRequest///PointingToDeclaration/">ServletRequest</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1664086747%2FFunctions%2F1007329404" anchor-label="webResources" id="-1664086747%2FFunctions%2F1007329404" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-servlet-jakarta/jvmMain" data-filterable-set=":ktor-server-servlet-jakarta/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="web-resources.html"><span>web</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1664086747%2FFunctions%2F1007329404"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-servlet-jakarta/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ktor-server-core/io.ktor.server.routing/-route/index.html">Route</a><span class="token punctuation">.</span><a href="web-resources.html"><span class="token function">webResources</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subPath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"/"</span><span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><a href="-web-resources-config/index.html">WebResourcesConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Serve web resources (usually a directory named webapp containing WEB-INF/web.xml). Note that WEB-INF directory itself is not served by default.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

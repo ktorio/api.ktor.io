@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.plugins.callid</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.plugins.callid/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../3.1.x/ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../3.0.x/ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../2.3.x/ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../2.2.x/ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../2.0.x/ktor-server-call-id/io.ktor.server.plugins.callid/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server-call-id/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-server-call-id/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-call-id/commonMain" data-filter=":ktor-server-call-id/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-call-id/jvmMain" data-filter=":ktor-server-call-id/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-server-call-id::io.ktor.server.plugins.callid////PointingToDeclaration//2076804522">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-call-id</a><span class="delimiter">/</span><span class="current">io.ktor.server.plugins.callid</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1287401633%2FClasslikes%2F1499980602" anchor-label="CallIdConfig" id="-1287401633%2FClasslikes%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-call-id-config/index.html"><span>Call</span><wbr><span>Id</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1287401633%2FClasslikes%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-call-id-config/index.html">CallIdConfig</a></div><div class="brief "><p class="paragraph">A configuration for the <a href="-call-id.html">CallId</a> plugin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2085786512%2FClasslikes%2F1499980602" anchor-label="CallIdProvider" id="2085786512%2FClasslikes%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-call-id-provider/index.html"><span>Call</span><wbr><span>Id</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2085786512%2FClasslikes%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-call-id-provider/index.html">CallIdProvider</a><span class="token operator"> = </span><span class="token punctuation">(</span>call<span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">A function that retrieves or generates call id using provided call</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-217524661%2FClasslikes%2F1499980602" anchor-label="CallIdVerifier" id="-217524661%2FClasslikes%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-call-id-verifier/index.html"><span>Call</span><wbr><span>Id</span><wbr><span><span>Verifier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-217524661%2FClasslikes%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-call-id-verifier/index.html">CallIdVerifier</a><span class="token operator"> = </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">A function that verifies retrieved or generated call id. Should return <code class="lang-kotlin">true</code> for a valid call id. Also it could throw a <a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a> to reject an <a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a> otherwise an illegal call id will be ignored or replaced with generated one.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1640338384%2FClasslikes%2F1499980602" anchor-label="RejectedCallIdException" id="-1640338384%2FClasslikes%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rejected-call-id-exception/index.html"><span>Rejected</span><wbr><span>Call</span><wbr><span>Id</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640338384%2FClasslikes%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>illegalCallId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-illegal-argument-exception/index.html">IllegalArgumentException</a>, <span data-unresolved-link="kotlinx.coroutines/CopyableThrowable///PointingToDeclaration/">CopyableThrowable</span><span class="token operator">&lt;</span><a href="-rejected-call-id-exception/index.html">RejectedCallIdException</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">An exception that could be thrown to reject a call due to illegal call id</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1846910028%2FProperties%2F1499980602" anchor-label="CallId" id="1846910028%2FProperties%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-call-id.html"><span>Call</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1846910028%2FProperties%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-call-id.html">CallId</a><span class="token operator">: </span><a href="../../ktor-server-core/io.ktor.server.application/-route-scoped-plugin/index.html">RouteScopedPlugin</a><span class="token operator">&lt;</span><a href="-call-id-config/index.html">CallIdConfig</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A plugin that allows you to trace client requests end-to-end by using unique request IDs or call IDs. Typically, working with a call ID in Ktor might look as follows:</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-559954901%2FProperties%2F1499980602" anchor-label="callId" id="-559954901%2FProperties%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="call-id.html"><span>call</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-559954901%2FProperties%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ktor-server-core/io.ktor.server.application/-application-call/index.html">ApplicationCall</a><span class="token punctuation">.</span><a href="call-id.html">callId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets a call ID retrieved or generated by the <a href="-call-id.html">CallId</a> plugin. Returns <code class="lang-kotlin">null</code> if there is no call ID is provided and no generators are configured.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="279766315%2FFunctions%2F-550564228" anchor-label="callIdMdc" id="279766315%2FFunctions%2F-550564228" data-filterable-set=":ktor-server-call-id/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/jvmMain" data-filterable-set=":ktor-server-call-id/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="call-id-mdc.html"><span>call</span><wbr><span>Id</span><wbr><span><span>Mdc</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="279766315%2FFunctions%2F-550564228"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server-call-id/jvmMain" data-filterable-set=":ktor-server-call-id/jvmMain" data-active="" data-toggle=":ktor-server-call-id/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ktor-server-call-logging/io.ktor.server.plugins.calllogging/-call-logging-config/index.html">CallLoggingConfig</a><span class="token punctuation">.</span><a href="call-id-mdc.html"><span class="token function">callIdMdc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"CallId"</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Put call id into MDC (diagnostic context value) with <a href="call-id-mdc.html">name</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-185649500%2FFunctions%2F1499980602" anchor-label="generate" id="-185649500%2FFunctions%2F1499980602" data-filterable-set=":ktor-server-call-id/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-call-id/commonMain" data-filterable-set=":ktor-server-call-id/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate.html"><span><span>generate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-185649500%2FFunctions%2F1499980602"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-call-id/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-call-id-config/index.html">CallIdConfig</a><span class="token punctuation">.</span><a href="generate.html"><span class="token function">generate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">64</span><span class="token punctuation">, </span></span><span class="parameter ">dictionary<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>CALL_ID_DEFAULT_DICTIONARY</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Generates a fixed <a href="generate.html">length</a> call ID using the specified <a href="generate.html">dictionary</a>. Note that this function generates pseudo-random identifiers via regular java.util.Random and should not be considered as cryptographically secure. Also note that you need to use the same dictionary for <a href="-call-id-verifier/index.html">CallIdVerifier</a>, otherwise a generated call ID could be discarded or may lead to complete call rejection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

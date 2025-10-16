@@ -1,0 +1,496 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WebRtcDataChannel</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.webrtc/-web-rtc-data-channel/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-client-webrtc/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-webrtc/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/androidMain" data-filter=":ktor-client-webrtc/androidMain">
+                                <span class="checkbox--icon"></span>
+                                android
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/commonMain" data-filter=":ktor-client-webrtc/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/jsAndWasmSharedMain" data-filter=":ktor-client-webrtc/jsAndWasmSharedMain">
+                                <span class="checkbox--icon"></span>
+                                jsAndWasmShared
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-webrtc::io.ktor.client.webrtc/WebRtcDataChannel///PointingToDeclaration//727813081">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-client-webrtc</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.webrtc</a><span class="delimiter">/</span><span class="current">WebRtcDataChannel</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Web</span><wbr><span>Rtc</span><wbr><span>Data</span><wbr><span><span>Channel</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">WebRtcDataChannel</a> : <a href="../-web-rtc/-data-channel/index.html">WebRtc.DataChannel</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-client/ktor-client-webrtc/common/src/io/ktor/client/webrtc/WebRtcDataChannel.kt#L162">source</a>)</span></span></div><p class="paragraph">Abstract class representing a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an <a href="../-web-rtc-peer-connection/index.html">WebRtcPeerConnection</a>.</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><p class="paragraph"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">MDN RTCDataChannel</a></p></div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/-android-web-rtc-data-channel/index.html">AndroidWebRtcDataChannel</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/-js-web-rtc-data-channel/index.html">JsWebRtcDataChannel</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="719589465%2FConstructors%2F727813081" anchor-label="WebRtcDataChannel" id="719589465%2FConstructors%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-rtc-data-channel.html"><span>Web</span><wbr><span>Rtc</span><wbr><span>Data</span><wbr><span><span>Channel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="719589465%2FConstructors%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">receiveOptions<span class="token operator">: </span><a href="../-data-channel-receive-options/index.html">DataChannelReceiveOptions</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1042355800%2FProperties%2F727813081" anchor-label="bufferedAmount" id="-1042355800%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/buffered-amount.html"><span>buffered</span><wbr><span><span>Amount</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1042355800%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/buffered-amount.html">bufferedAmount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">A number of bytes of data currently queued to be sent over the data channel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1182296719%2FProperties%2F727813081" anchor-label="bufferedAmountLowThreshold" id="-1182296719%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/buffered-amount-low-threshold.html"><span>buffered</span><wbr><span>Amount</span><wbr><span>Low</span><wbr><span><span>Threshold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1182296719%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/buffered-amount-low-threshold.html">bufferedAmountLowThreshold</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">A number of queued outgoing data bytes below which the buffer is considered to be "low." When the number of buffered outgoing bytes, as indicated by the bufferedAmount property, falls to or below this value, a <a href="../-data-channel-event/-buffered-amount-low/index.html">DataChannelEvent.BufferedAmountLow</a> event is fired. The default value is 0.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1816368676%2FProperties%2F727813081" anchor-label="id" id="1816368676%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1816368676%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">An ID number (between 0 and 65,534) which uniquely identifies the data channel. It can be null when the data channel is created but not yet assigned an ID.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1149442279%2FProperties%2F727813081" anchor-label="label" id="1149442279%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/label.html"><span><span>label</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1149442279%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/label.html">label</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A string containing a name describing the data channel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="888659686%2FProperties%2F727813081" anchor-label="maxPacketLifeTime" id="888659686%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/max-packet-life-time.html"><span>max</span><wbr><span>Packet</span><wbr><span>Life</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888659686%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/max-packet-life-time.html">maxPacketLifeTime</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The maximum number of milliseconds that attempts to transfer a message may take in unreliable mode.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-947043725%2FProperties%2F727813081" anchor-label="maxRetransmits" id="-947043725%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/max-retransmits.html"><span>max</span><wbr><span><span>Retransmits</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-947043725%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/max-retransmits.html">maxRetransmits</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The maximum number of times the user agent should attempt to retransmit a message which fails the first time in unreliable mode.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-201836039%2FProperties%2F727813081" anchor-label="negotiated" id="-201836039%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/negotiated.html"><span><span>negotiated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-201836039%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/negotiated.html">negotiated</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the data channel was negotiated by the application or the WebRTC layer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1067457038%2FProperties%2F727813081" anchor-label="ordered" id="1067457038%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/ordered.html"><span><span>ordered</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1067457038%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/ordered.html">ordered</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether messages sent on the data channel are required to arrive at their destination in the same order in which they were sent, or if they're allowed to arrive out-of-order.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1951569465%2FProperties%2F727813081" anchor-label="protocol" id="-1951569465%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/protocol.html"><span><span>protocol</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1951569465%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/protocol.html">protocol</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The name of the sub-protocol being used on the data channel, if any; otherwise, the empty string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205375510%2FProperties%2F727813081" anchor-label="state" id="-1205375510%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/state.html"><span><span>state</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205375510%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-rtc/-data-channel/state.html">state</a><span class="token operator">: </span><a href="../-web-rtc/-data-channel/-state/index.html">WebRtc.DataChannel.State</a></div><div class="brief "><p class="paragraph">A state of the data channel's underlying data connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1425729123%2FFunctions%2F727813081" anchor-label="close" id="1425729123%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1425729123%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-web-rtc/-data-channel/close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes the data channel and releases all associated resources. Automatically invokes <code class="lang-kotlin">closeTransport</code>. Accessing the channel after this operation could throw an exception.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1935978734%2FFunctions%2F727813081" anchor-label="closeTransport" id="1935978734%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/close-transport.html"><span>close</span><wbr><span><span>Transport</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1935978734%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-web-rtc/-data-channel/close-transport.html"><span class="token function">closeTransport</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes the data channel transport. The underlying message receiving channel will be closed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1288024874%2FFunctions%2F1340761962" anchor-label="getNative" id="1288024874%2FFunctions%2F1340761962" data-filterable-set=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/[js-and-wasm-shared]get-native.html"><span>get</span><wbr><span><span>Native</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1288024874%2FFunctions%2F1340761962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-webrtc/androidMain" data-filterable-set=":ktor-client-webrtc/androidMain" data-active="" data-toggle=":ktor-client-webrtc/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/jsAndWasmSharedMain" data-toggle=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">WebRtcDataChannel</a><span class="token punctuation">.</span><a href="../[android]get-native.html"><span class="token function">getNative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.webrtc/DataChannel///PointingToDeclaration/">DataChannel</span></div><div class="brief "><p class="paragraph">Returns implementation of the data channel that is used under the hood. Use it with caution.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-webrtc/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#436687806%2FMain%2F174569493">WebRtcDataChannel</a><span class="token punctuation">.</span><a href="../[js-and-wasm-shared]get-native.html"><span class="token function">getNative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="web.rtc/RTCDataChannel///PointingToDeclaration/">RTCDataChannel</span></div><div class="brief "><p class="paragraph">Returns implementation of the data channel that is used under the hood. Use it with caution.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="879414006%2FFunctions%2F727813081" anchor-label="receive" id="879414006%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive.html"><span><span>receive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="879414006%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="receive.html"><span class="token function">receive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-web-rtc/-data-channel/-message/index.html">WebRtc.DataChannel.Message</a></div><div class="brief "><p class="paragraph">Suspends until a message is available in the data channel and returns it.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1532724427%2FFunctions%2F727813081" anchor-label="receiveBinary" id="-1532724427%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-binary.html"><span>receive</span><wbr><span><span>Binary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1532724427%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="receive-binary.html"><span class="token function">receiveBinary</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></div><div class="brief "><p class="paragraph">Receives a binary message from the data channel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="550170057%2FFunctions%2F727813081" anchor-label="receiveText" id="550170057%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-text.html"><span>receive</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="550170057%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="receive-text.html"><span class="token function">receiveText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Receives a text message from the data channel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="338228358%2FFunctions%2F727813081" anchor-label="send" id="338228358%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/send.html"><span><span>send</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="338228358%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-web-rtc/-data-channel/send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sends binary data through the data channel.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-web-rtc/-data-channel/send.html"><span class="token function">send</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sends a text message through the data channel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-598852050%2FFunctions%2F727813081" anchor-label="setBufferedAmountLowThreshold" id="-598852050%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-web-rtc/-data-channel/set-buffered-amount-low-threshold.html"><span>set</span><wbr><span>Buffered</span><wbr><span>Amount</span><wbr><span>Low</span><wbr><span><span>Threshold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598852050%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-web-rtc/-data-channel/set-buffered-amount-low-threshold.html"><span class="token function">setBufferedAmountLowThreshold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">threshold<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the threshold for the buffered amount of data below which the buffer is considered to be "low." When the buffered amount falls to or below this value, a <a href="../-data-channel-event/-buffered-amount-low/index.html">DataChannelEvent.BufferedAmountLow</a> event is fired.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1558221273%2FFunctions%2F727813081" anchor-label="tryReceive" id="1558221273%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="try-receive.html"><span>try</span><wbr><span><span>Receive</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1558221273%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="try-receive.html"><span class="token function">tryReceive</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-web-rtc/-data-channel/-message/index.html">WebRtc.DataChannel.Message</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Immediately returns a message from the data channel or null if no message is available.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-615232552%2FFunctions%2F727813081" anchor-label="tryReceiveBinary" id="-615232552%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="try-receive-binary.html"><span>try</span><wbr><span>Receive</span><wbr><span><span>Binary</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-615232552%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="try-receive-binary.html"><span class="token function">tryReceiveBinary</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Immediately returns binary data from the data channel or null if no binary message is available.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-110326996%2FFunctions%2F727813081" anchor-label="tryReceiveText" id="-110326996%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="try-receive-text.html"><span>try</span><wbr><span>Receive</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-110326996%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="try-receive-text.html"><span class="token function">tryReceiveText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Immediately returns text data from the data channel or null if no text message is available.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DependencyRegistry</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.plugins.di/-dependency-registry/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server-di/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server-di/nonJvmMain">nonJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-di/commonMain" data-filter=":ktor-server-di/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-di/nonJvmMain" data-filter=":ktor-server-di/nonJvmMain">
+                                <span class="checkbox--icon"></span>
+                                nonJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-di::io.ktor.server.plugins.di/DependencyRegistry///PointingToDeclaration//-125654951">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-di</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.plugins.di</a><span class="delimiter">/</span><span class="current">DependencyRegistry</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Dependency</span><wbr><span><span>Registry</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>resolver<span class="token operator">: </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>provider<span class="token operator">: </span><a href="../-dependency-provider/index.html">DependencyProvider</a></span></span><span class="token punctuation">)</span> : <a href="../-dependency-provider/index.html">DependencyProvider</a>, <a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-server/ktor-server-plugins/ktor-server-di/common/src/io/ktor/server/plugins/di/DependencyRegistry.kt#L29">source</a>)</span></span></div><p class="paragraph">A central registry for managing and resolving dependencies within a dependency injection context.</p><p class="paragraph">The <code class="lang-kotlin">DependencyRegistry</code> class acts as both a <code class="lang-kotlin">DependencyProvider</code> and a <code class="lang-kotlin">DependencyResolver</code>. It facilitates the registration of dependencies through a <code class="lang-kotlin">DependencyProvider</code> as well as the resolution and validation of dependencies using the provided resolver mechanism. This registry also supports reflective creation of instances and type-safe access to registered dependencies.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.server.plugins.di.DependencyRegistry">Report a problem</a></p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>resolver</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The delegate resolver for finding registered dependencies.</p></div></div></div></div><div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>provider</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The delegate provider responsible for registering new dependencies..</p></div></div></div></div><div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>reflection</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A reflection implementation that supports dynamic instantiation of classes.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="965689819%2FConstructors%2F-125654951" anchor-label="DependencyRegistry" id="965689819%2FConstructors%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dependency-registry.html"><span>Dependency</span><wbr><span><span>Registry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="965689819%2FConstructors%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resolver<span class="token operator">: </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">, </span></span><span class="parameter ">provider<span class="token operator">: </span><a href="../-dependency-provider/index.html">DependencyProvider</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-358070394%2FClasslikes%2F-125654951" anchor-label="KeyContext" id="-358070394%2FClasslikes%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-key-context/index.html"><span>Key</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-358070394%2FClasslikes%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-key-context/index.html">KeyContext</a><span class="token operator">&lt;</span><a href="-key-context/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">DSL class for performing multiple actions for the given key and type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1654120400%2FProperties%2F-125654951" anchor-label="coroutineContext" id="-1654120400%2FProperties%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-map-dependency-resolver/index.html#-1654120400%2FProperties%2F-125654951"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654120400%2FProperties%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-map-dependency-resolver/index.html#-1654120400%2FProperties%2F-125654951">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="412235280%2FProperties%2F-125654951" anchor-label="provider" id="412235280%2FProperties%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="provider.html"><span><span>provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="412235280%2FProperties%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="provider.html">provider</a><span class="token operator">: </span><a href="../-dependency-provider/index.html">DependencyProvider</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-397949089%2FProperties%2F-125654951" anchor-label="reflection" id="-397949089%2FProperties%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-resolver/reflection.html"><span><span>reflection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-397949089%2FProperties%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-dependency-resolver/reflection.html">reflection</a><span class="token operator">: </span><a href="../-dependency-reflection/index.html">DependencyReflection</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-480570981%2FProperties%2F-125654951" anchor-label="resolver" id="-480570981%2FProperties%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolver.html"><span><span>resolver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-480570981%2FProperties%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="resolver.html">resolver</a><span class="token operator">: </span><a href="../-dependency-resolver/index.html">DependencyResolver</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1426507297%2FFunctions%2F-125654951" anchor-label="cleanup" id="1426507297%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cleanup.html"><span><span>cleanup</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1426507297%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="cleanup.html"><span class="token function">cleanup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a><span class="token punctuation">, </span></span><span class="parameter ">cleanup<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="cleanup.html">T</a><span class="token operator">&gt; </span><a href="cleanup.html"><span class="token function">cleanup</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>cleanup<span class="token operator">: </span><span class="token punctuation">(</span><a href="cleanup.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="cleanup.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1435420925%2FFunctions%2F-125654951" anchor-label="contains" id="-1435420925%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-map/contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1435420925%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-dependency-map/contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks if the given dependency key is present in the dependency map.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1669700804%2FFunctions%2F-125654951" anchor-label="create" id="1669700804%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../create.html"><span><span>create</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1669700804%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../create.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><a href="../create.html"><span class="token function">create</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../create.html">T</a></div><div class="brief "><p class="paragraph">Creates an instance of the specified type <a href="../create.html">T</a> using the dependency resolver. This function uses the <code class="lang-kotlin">DependencyReflection</code> mechanism to dynamically construct an instance of the requested type, resolving dependencies as needed.</p></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../create.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><a href="../create.html"><span class="token function">create</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">kClass<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../create.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../create.html">T</a></div><div class="brief "><p class="paragraph">Creates or retrieves an instance of the specified type <a href="../create.html">T</a> from the <a href="../-dependency-resolver/index.html">DependencyResolver</a>. If the instance does not already exist, it is created using reflection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="189504350%2FFunctions%2F-125654951" anchor-label="get" id="189504350%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-resolver/get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="189504350%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get.html">T</a></div><div class="brief "><p class="paragraph">Retrieves an instance of the dependency associated with the given key from the dependency map.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="584543943%2FFunctions%2F-490103226" anchor-label="getBlocking" id="584543943%2FFunctions%2F-490103226" data-filterable-set=":ktor-server-di/commonMain,:ktor-server-di/nonJvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server-di/commonMain,:ktor-server-di/nonJvmMain" data-filterable-set=":ktor-server-di/commonMain,:ktor-server-di/nonJvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-blocking.html"><span>get</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="584543943%2FFunctions%2F-490103226"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain" data-active="" data-toggle=":ktor-server-di/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-server-di/nonJvmMain" data-filterable-set=":ktor-server-di/nonJvmMain" data-toggle=":ktor-server-di/nonJvmMain">nonJvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../get-blocking.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><a href="../get-blocking.html"><span class="token function">getBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get-blocking.html">T</a></div><div class="brief "><p class="paragraph">Get an item from the dependency map synchronously.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-server-di/nonJvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../get-blocking.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><a href="../get-blocking.html"><span class="token function">getBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get-blocking.html">T</a></div><div class="brief "><p class="paragraph">Blocking is unavailable for other platforms, so we instead attempt to get the completed value.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1744757667%2FFunctions%2F-125654951" anchor-label="getDeferred" id="-1744757667%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-resolver/get-deferred.html"><span>get</span><wbr><span><span>Deferred</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1744757667%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-deferred.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/get-deferred.html"><span class="token function">getDeferred</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Deferred///PointingToDeclaration/">Deferred</span><span class="token operator">&lt;</span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-deferred.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1370106832%2FFunctions%2F-125654951" anchor-label="getInitializer" id="1370106832%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-map/get-initializer.html"><span>get</span><wbr><span><span>Initializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1370106832%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-dependency-map/get-initializer.html"><span class="token function">getInitializer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-dependency-initializer/index.html">DependencyInitializer</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="453030331%2FFunctions%2F-125654951" anchor-label="getOrPut" id="453030331%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mutable-dependency-map/get-or-put.html"><span>get</span><wbr><span>Or</span><wbr><span><span>Put</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453030331%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-or-put.html">T</a><span class="token operator">&gt; </span><a href="../-mutable-dependency-map/get-or-put.html"><span class="token function">getOrPut</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a><span class="token punctuation">, </span></span><span class="parameter ">defaultValue<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-or-put.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-or-put.html">T</a></div><div class="brief "><p class="paragraph">Retrieves the value associated with the specified key if it exists. If the key does not already have an associated value, the result of invoking the <a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/get-or-put.html">defaultValue</a> function will be stored and returned as the value for the given key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="568826245%2FFunctions%2F-125654951" anchor-label="key" id="568826245%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="key.html"><span><span>key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="568826245%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="key.html">T</a><span class="token operator">&gt; </span><a href="key.html"><span class="token function">key</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>handler<span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="key.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="key.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new <code class="lang-kotlin">KeyContext</code> for the specified type <a href="key.html">T</a> and an optional name. The given <a href="key.html">handler</a> is invoked on the created <code class="lang-kotlin">KeyContext</code>, allowing configuration such as defining a provider or cleanup logic for the dependency.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1309976909%2FFunctions%2F-125654951" anchor-label="named" id="1309976909%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-resolver/named.html"><span><span>named</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1309976909%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-dependency-resolver/named.html"><span class="token function">named</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-dependency-resolver-context/index.html">DependencyResolverContext</a></div><div class="brief "><p class="paragraph">Decorates the dependency resolver with a qualified name for the expected type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1887127639%2FFunctions%2F-125654951" anchor-label="plus" id="1887127639%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1887127639%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-dependency-map/index.html">DependencyMap</a><span class="token punctuation">.</span><a href="../plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">right<span class="token operator">: </span><a href="../-dependency-map/index.html">DependencyMap</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-dependency-map/index.html">DependencyMap</a></div><div class="brief "><p class="paragraph">Combines two <code class="lang-kotlin">DependencyMap</code>s into one.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1785655403%2FFunctions%2F-125654951" anchor-label="provide" id="-1785655403%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="provide.html"><span><span>provide</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1785655403%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="provide.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">kClass<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="provide.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="provide.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Provides an instance of the dependency associated with the specified <a href="provide.html">kClass</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="provide.html">T</a><span class="token operator">&gt; </span><a href="provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>provide<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="provide.html">T</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="provide.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Basic call for providing a dependency, like <code class="lang-kotlin">provide&lt;Service&gt; { ServiceImpl() }</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1625183219%2FFunctions%2F-125654951" anchor-label="provide" id="1625183219%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../provide.html"><span><span>provide</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1625183219%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes no parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes one input parameter and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes two input parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes three input parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes four input parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token punctuation">, </span><a href="../provide.html">I5</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token punctuation">, </span><a href="../provide.html">I5</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes five input parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token punctuation">, </span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token punctuation">, </span><a href="../provide.html">I5</a><span class="token punctuation">, </span><a href="../provide.html">I6</a><span class="token operator">&gt; </span><a href="index.html">DependencyRegistry</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>function<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="../provide.html">I1</a><span class="token punctuation">, </span><a href="../provide.html">I2</a><span class="token punctuation">, </span><a href="../provide.html">I3</a><span class="token punctuation">, </span><a href="../provide.html">I4</a><span class="token punctuation">, </span><a href="../provide.html">I5</a><span class="token punctuation">, </span><a href="../provide.html">I6</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-key-context/index.html">DependencyRegistry.KeyContext</a><span class="token operator">&lt;</span><a href="../provide.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Registers a dependency provider that takes six input parameters and returns a value of type <a href="../provide.html">E</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../provide.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-provider/index.html">DependencyProvider</a><span class="token punctuation">.</span><a href="../provide.html"><span class="token function">provide</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>provide<span class="token operator">: </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../provide.html">T</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Basic call for providing a dependency, like <code class="lang-kotlin">provide&lt;Service&gt; { ServiceImpl() }</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-368113850%2FFunctions%2F-125654951" anchor-label="provideDelegate" id="-368113850%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="provide-delegate.html"><span>provide</span><wbr><span><span>Delegate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-368113850%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="provide-delegate.html">T</a><span class="token operator">&gt; </span><a href="provide-delegate.html"><span class="token function">provideDelegate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">thisRef<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">prop<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-property/index.html">KProperty</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.properties/-read-only-property/index.html">ReadOnlyProperty</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span><a href="provide-delegate.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Provides a delegated property for accessing a dependency from a <a href="index.html">DependencyRegistry</a>. This operator function allows property delegation, ensuring the required dependency is registered and retrievable through the registry.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="383101988%2FFunctions%2F-125654951" anchor-label="require" id="383101988%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="require.html"><span><span>require</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383101988%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="require.html"><span class="token function">require</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Indicates that the given dependency is required.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1991808180%2FFunctions%2F-125654951" anchor-label="resolve" id="-1991808180%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve.html"><span><span>resolve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1991808180%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="resolve.html">T</a><span class="token operator">&gt; </span><a href="resolve.html"><span class="token function">resolve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="resolve.html">T</a></div><div class="brief "><p class="paragraph">Get the dependency from the map for the key represented by the type (and optionally, with the given name).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-704996913%2FFunctions%2F-125654951" anchor-label="resolve" id="-704996913%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../resolve.html"><span><span>resolve</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-704996913%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../resolve.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><a href="../resolve.html"><span class="token function">resolve</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../resolve.html">T</a></div><div class="brief "><p class="paragraph">Get the dependency from the map for the key represented by the type (and optionally, with the given name).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="580427373%2FFunctions%2F-125654951" anchor-label="resolveDeferred" id="580427373%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resolve-deferred.html"><span>resolve</span><wbr><span><span>Deferred</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="580427373%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="resolve-deferred.html">T</a><span class="token operator">&gt; </span><a href="resolve-deferred.html"><span class="token function">resolveDeferred</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Deferred///PointingToDeclaration/">Deferred</span><span class="token operator">&lt;</span><a href="resolve-deferred.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Get a deferred dependency from the map for the key represented by the type (and optionally, with the given name).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="733911864%2FFunctions%2F-125654951" anchor-label="set" id="733911864%2FFunctions%2F-125654951" data-filterable-set=":ktor-server-di/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-di/commonMain" data-filterable-set=":ktor-server-di/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-dependency-provider/set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="733911864%2FFunctions%2F-125654951"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-di/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/set.html">T</a><span class="token operator">&gt; </span><a href="../-dependency-provider/set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-dependency-key/index.html">DependencyKey</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../-dependency-resolver/index.html">DependencyResolver</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../../../ktor-server-di/io.ktor.server.plugins.di/-dependency-registry/set.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Associate the given dependency key with the corresponding initializer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

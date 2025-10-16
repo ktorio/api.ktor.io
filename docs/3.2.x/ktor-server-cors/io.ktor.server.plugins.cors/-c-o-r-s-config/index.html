@@ -1,0 +1,482 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CORSConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.plugins.cors/-c-o-r-s-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../3.1.x/ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.x/ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../2.3.x/ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.x/ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.x/ktor-server-cors/io.ktor.server.plugins.cors/-c-o-r-s-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-server-cors/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-cors/commonMain" data-filter=":ktor-server-cors/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-cors::io.ktor.server.plugins.cors/CORSConfig///PointingToDeclaration//1411485441">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-cors</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.plugins.cors</a><span class="delimiter">/</span><span class="current">CORSConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>CORSConfig</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">CORSConfig</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-server/ktor-server-plugins/ktor-server-cors/common/src/io/ktor/server/plugins/cors/CORSConfig.kt#L18">source</a>)</span></span></div><p class="paragraph">A configuration for the <a href="../../io.ktor.server.plugins.cors.routing/-c-o-r-s.html">io.ktor.server.plugins.cors.routing.CORS</a> plugin.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.server.plugins.cors.CORSConfig">Report a problem</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="235054865%2FConstructors%2F1411485441" anchor-label="CORSConfig" id="235054865%2FConstructors%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-r-s-config.html"><span><span>CORSConfig</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="235054865%2FConstructors%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="427561697%2FClasslikes%2F1411485441" anchor-label="Companion" id="427561697%2FClasslikes%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="427561697%2FClasslikes%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-767526227%2FProperties%2F1411485441" anchor-label="allowCredentials" id="-767526227%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-credentials.html"><span>allow</span><wbr><span><span>Credentials</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-767526227%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="allow-credentials.html">allowCredentials</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Allows passing credential information (such as cookies or authentication information) with cross-origin requests. This property sets the <code class="lang-kotlin">Access-Control-Allow-Credentials</code> response header to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="797855754%2FProperties%2F1411485441" anchor-label="allowNonSimpleContentTypes" id="797855754%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-non-simple-content-types.html"><span>allow</span><wbr><span>Non</span><wbr><span>Simple</span><wbr><span>Content</span><wbr><span><span>Types</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="797855754%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="allow-non-simple-content-types.html">allowNonSimpleContentTypes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Allows sending requests with non-simple content-types. The following content types are considered simple:</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1460105765%2FProperties%2F1411485441" anchor-label="allowSameOrigin" id="1460105765%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-same-origin.html"><span>allow</span><wbr><span>Same</span><wbr><span><span>Origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1460105765%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="allow-same-origin.html">allowSameOrigin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Allows requests from the same origin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1436351366%2FProperties%2F1411485441" anchor-label="exposedHeaders" id="-1436351366%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exposed-headers.html"><span>exposed</span><wbr><span><span>Headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1436351366%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="exposed-headers.html">exposedHeaders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Exposed HTTP headers that could be accessed by a client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1682689879%2FProperties%2F1411485441" anchor-label="headerPredicates" id="1682689879%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header-predicates.html"><span>header</span><wbr><span><span>Predicates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682689879%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="header-predicates.html">headerPredicates</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">If present represents the prefix for headers which are permitted in CORS requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="945555476%2FProperties%2F1411485441" anchor-label="headers" id="945555476%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="headers.html"><span><span>headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945555476%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="headers.html">headers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Allowed <a href="../-c-o-r-s.html">CORS</a> headers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1365851473%2FProperties%2F1411485441" anchor-label="hosts" id="-1365851473%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hosts.html"><span><span>hosts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1365851473%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="hosts.html">hosts</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Allowed <a href="../-c-o-r-s.html">CORS</a> hosts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-994110157%2FProperties%2F1411485441" anchor-label="maxAgeDuration" id="-994110157%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../max-age-duration.html"><span>max</span><wbr><span>Age</span><wbr><span><span>Duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-994110157%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html">CORSConfig</a><span class="token punctuation">.</span><a href="../max-age-duration.html">maxAgeDuration</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">Duration to tell the client to keep CORS options.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="838944219%2FProperties%2F1411485441" anchor-label="maxAgeInSeconds" id="838944219%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="max-age-in-seconds.html"><span>max</span><wbr><span>Age</span><wbr><span>In</span><wbr><span><span>Seconds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838944219%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="max-age-in-seconds.html">maxAgeInSeconds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Specifies how long the response to the preflight request can be cached without sending another preflight request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-652675736%2FProperties%2F1411485441" anchor-label="methods" id="-652675736%2FProperties%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="methods.html"><span><span>methods</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-652675736%2FProperties%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="methods.html">methods</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Allowed <a href="../-c-o-r-s.html">CORS</a> HTTP methods.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="48853920%2FFunctions%2F1411485441" anchor-label="allowHeader" id="48853920%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-header.html"><span>allow</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="48853920%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-header.html"><span class="token function">allowHeader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">header<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allow using a specified <a href="allow-header.html">header</a> for the actual <a href="../-c-o-r-s.html">CORS</a> request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772091522%2FFunctions%2F1411485441" anchor-label="allowHeaders" id="-1772091522%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-headers.html"><span>allow</span><wbr><span><span>Headers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772091522%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-headers.html"><span class="token function">allowHeaders</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows using headers matching <a href="allow-headers.html">predicate</a> for the actual <a href="../-c-o-r-s.html">CORS</a> request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1563640174%2FFunctions%2F1411485441" anchor-label="allowHeadersPrefixed" id="-1563640174%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-headers-prefixed.html"><span>allow</span><wbr><span>Headers</span><wbr><span><span>Prefixed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563640174%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-headers-prefixed.html"><span class="token function">allowHeadersPrefixed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">headerPrefix<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows using headers prefixed with <a href="allow-headers-prefixed.html">headerPrefix</a> for the actual <a href="../-c-o-r-s.html">CORS</a> request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-202763749%2FFunctions%2F1411485441" anchor-label="allowHost" id="-202763749%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-host.html"><span>allow</span><wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-202763749%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-host.html"><span class="token function">allowHost</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">schemes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf("http", "https")<span class="token punctuation">, </span></span><span class="parameter ">subDomains<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows requests from the specified domains and schemes. A wildcard is supported for either the host or any subdomain. If you specify a wildcard in the host, you cannot add specific subdomains. Otherwise, you can mix wildcard and non-wildcard subdomains as long as the wildcard is always in front of the domain, e.g. <code class="lang-kotlin">*.sub.domain.com</code> but not <code class="lang-kotlin">sub.*.domain.com</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1766572509%2FFunctions%2F1411485441" anchor-label="allowMethod" id="1766572509%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-method.html"><span>allow</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1766572509%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-method.html"><span class="token function">allowMethod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">method<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-http-method/index.html">HttpMethod</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a specified <a href="allow-method.html">method</a> to a list of methods allowed by <a href="../-c-o-r-s.html">CORS</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1228792599%2FFunctions%2F1411485441" anchor-label="allowOrigins" id="1228792599%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-origins.html"><span>allow</span><wbr><span><span>Origins</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1228792599%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-origins.html"><span class="token function">allowOrigins</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows using an origin matching <a href="allow-origins.html">predicate</a> for the actual <a href="../-c-o-r-s.html">CORS</a> request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-234847812%2FFunctions%2F1411485441" anchor-label="allowXHttpMethodOverride" id="-234847812%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-x-http-method-override.html"><span>allow</span><wbr><span>XHttp</span><wbr><span>Method</span><wbr><span><span>Override</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-234847812%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="allow-x-http-method-override.html"><span class="token function">allowXHttpMethodOverride</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows using the <code class="lang-kotlin">X-Http-Method-Override</code> header for the actual <a href="../-c-o-r-s.html">CORS</a> request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1778456998%2FFunctions%2F1411485441" anchor-label="anyHost" id="1778456998%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="any-host.html"><span>any</span><wbr><span><span>Host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1778456998%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="any-host.html"><span class="token function">anyHost</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows requests from any host.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-640237491%2FFunctions%2F1411485441" anchor-label="anyMethod" id="-640237491%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="any-method.html"><span>any</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-640237491%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="any-method.html"><span class="token function">anyMethod</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows requests with any HTTP method.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2124853515%2FFunctions%2F1411485441" anchor-label="exposeHeader" id="-2124853515%2FFunctions%2F1411485441" data-filterable-set=":ktor-server-cors/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-server-cors/commonMain" data-filterable-set=":ktor-server-cors/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="expose-header.html"><span>expose</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2124853515%2FFunctions%2F1411485441"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-cors/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="expose-header.html"><span class="token function">exposeHeader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">header<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Allows exposing the <a href="expose-header.html">header</a> using <code class="lang-kotlin">Access-Control-Expose-Headers</code>. The <code class="lang-kotlin">Access-Control-Expose-Headers</code> header adds the specified headers to the allowlist that JavaScript in browsers can access.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

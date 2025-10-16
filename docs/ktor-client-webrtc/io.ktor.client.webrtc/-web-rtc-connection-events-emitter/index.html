@@ -1,0 +1,448 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WebRtcConnectionEventsEmitter</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.webrtc/-web-rtc-connection-events-emitter/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-webrtc/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/commonMain" data-filter=":ktor-client-webrtc/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-webrtc::io.ktor.client.webrtc/WebRtcConnectionEventsEmitter///PointingToDeclaration//727813081">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-client-webrtc</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.webrtc</a><span class="delimiter">/</span><span class="current">WebRtcConnectionEventsEmitter</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Web</span><wbr><span>Rtc</span><wbr><span>Connection</span><wbr><span>Events</span><wbr><span><span>Emitter</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">WebRtcConnectionEventsEmitter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../-web-rtc-connection-config/index.html">WebRtcConnectionConfig</a></span></span><span class="token punctuation">)</span> : <a href="../-web-rtc-connection-events/index.html">WebRtcConnectionEvents</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-client/ktor-client-webrtc/common/src/io/ktor/client/webrtc/WebRtcPeerConnectionEvents.kt#L89">source</a>)</span></span></div><p class="paragraph">Internal implementation of <a href="../-web-rtc-connection-events/index.html">WebRtcConnectionEvents</a> that emits events to flows.</p><p class="paragraph">This class maintains the mutable flows and provides methods to emit events from platform-specific WebRTC implementations.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1004156148%2FConstructors%2F727813081" anchor-label="WebRtcConnectionEventsEmitter" id="-1004156148%2FConstructors%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-rtc-connection-events-emitter.html"><span>Web</span><wbr><span>Rtc</span><wbr><span>Connection</span><wbr><span>Events</span><wbr><span><span>Emitter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1004156148%2FConstructors%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../-web-rtc-connection-config/index.html">WebRtcConnectionConfig</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="929217961%2FProperties%2F727813081" anchor-label="dataChannelEvents" id="929217961%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="data-channel-events.html"><span>data</span><wbr><span>Channel</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="929217961%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="data-channel-events.html">dataChannelEvents</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow///PointingToDeclaration/">SharedFlow</span><span class="token operator">&lt;</span><a href="../-data-channel-event/index.html">DataChannelEvent</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of newly added connection dataChannels, as a result of the remote peer calling <a href="../-web-rtc-peer-connection/create-data-channel.html">WebRtcPeerConnection.createDataChannel</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1326660352%2FProperties%2F727813081" anchor-label="iceCandidates" id="-1326660352%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-candidates.html"><span>ice</span><wbr><span><span>Candidates</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326660352%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="ice-candidates.html">iceCandidates</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow///PointingToDeclaration/">SharedFlow</span><span class="token operator">&lt;</span><a href="../-web-rtc/-ice-candidate/index.html">WebRtc.IceCandidate</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of ICE candidates generated by this peer connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1915971607%2FProperties%2F727813081" anchor-label="iceConnectionState" id="1915971607%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-connection-state.html"><span>ice</span><wbr><span>Connection</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1915971607%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="ice-connection-state.html">iceConnectionState</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="../-web-rtc/-ice-connection-state/index.html">WebRtc.IceConnectionState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of ICE connection state changes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1759047866%2FProperties%2F727813081" anchor-label="iceGatheringState" id="-1759047866%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-gathering-state.html"><span>ice</span><wbr><span>Gathering</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1759047866%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="ice-gathering-state.html">iceGatheringState</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="../-web-rtc/-ice-gathering-state/index.html">WebRtc.IceGatheringState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of ICE gathering state changes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-47409243%2FProperties%2F727813081" anchor-label="negotiationNeeded" id="-47409243%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="negotiation-needed.html"><span>negotiation</span><wbr><span><span>Needed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-47409243%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="negotiation-needed.html">negotiationNeeded</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow///PointingToDeclaration/">SharedFlow</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sets a callback to be invoked when negotiation (offer-answer exchange, etc.) is needed for this connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-817220152%2FProperties%2F727813081" anchor-label="signalingState" id="-817220152%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="signaling-state.html"><span>signaling</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-817220152%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="signaling-state.html">signalingState</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="../-web-rtc/-signaling-state/index.html">WebRtc.SignalingState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of signaling state changes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1492318358%2FProperties%2F727813081" anchor-label="state" id="-1492318358%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state.html"><span><span>state</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1492318358%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="state.html">state</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="../-web-rtc/-connection-state/index.html">WebRtc.ConnectionState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of connection state changes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1058041060%2FProperties%2F727813081" anchor-label="stats" id="-1058041060%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stats.html"><span><span>stats</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1058041060%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="stats.html">stats</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-web-rtc/-stats/index.html">WebRtc.Stats</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of connection statistics.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164633961%2FProperties%2F727813081" anchor-label="trackEvents" id="-164633961%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="track-events.html"><span>track</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164633961%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="track-events.html">trackEvents</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow///PointingToDeclaration/">SharedFlow</span><span class="token operator">&lt;</span><a href="../-track-event/index.html">TrackEvent</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Flow of events on a media track (e.g., add, remove).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="772809668%2FFunctions%2F727813081" anchor-label="emitAddTrack" id="772809668%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-add-track.html"><span>emit</span><wbr><span>Add</span><wbr><span><span>Track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="772809668%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-add-track.html"><span class="token function">emitAddTrack</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">track<span class="token operator">: </span><a href="../-web-rtc-media/-track/index.html">WebRtcMedia.Track</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="556859009%2FFunctions%2F727813081" anchor-label="emitConnectionStateChange" id="556859009%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-connection-state-change.html"><span>emit</span><wbr><span>Connection</span><wbr><span>State</span><wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="556859009%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-connection-state-change.html"><span class="token function">emitConnectionStateChange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../-web-rtc/-connection-state/index.html">WebRtc.ConnectionState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="141865202%2FFunctions%2F727813081" anchor-label="emitDataChannelEvent" id="141865202%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-data-channel-event.html"><span>emit</span><wbr><span>Data</span><wbr><span>Channel</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="141865202%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-data-channel-event.html"><span class="token function">emitDataChannelEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../-data-channel-event/index.html">DataChannelEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="719184685%2FFunctions%2F727813081" anchor-label="emitIceCandidate" id="719184685%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-ice-candidate.html"><span>emit</span><wbr><span>Ice</span><wbr><span><span>Candidate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="719184685%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-ice-candidate.html"><span class="token function">emitIceCandidate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">candidate<span class="token operator">: </span><a href="../-web-rtc/-ice-candidate/index.html">WebRtc.IceCandidate</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1026644605%2FFunctions%2F727813081" anchor-label="emitIceConnectionStateChange" id="1026644605%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-ice-connection-state-change.html"><span>emit</span><wbr><span>Ice</span><wbr><span>Connection</span><wbr><span>State</span><wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1026644605%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-ice-connection-state-change.html"><span class="token function">emitIceConnectionStateChange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../-web-rtc/-ice-connection-state/index.html">WebRtc.IceConnectionState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="687067837%2FFunctions%2F727813081" anchor-label="emitIceGatheringStateChange" id="687067837%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-ice-gathering-state-change.html"><span>emit</span><wbr><span>Ice</span><wbr><span>Gathering</span><wbr><span>State</span><wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="687067837%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-ice-gathering-state-change.html"><span class="token function">emitIceGatheringStateChange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../-web-rtc/-ice-gathering-state/index.html">WebRtc.IceGatheringState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-594752296%2FFunctions%2F727813081" anchor-label="emitNegotiationNeeded" id="-594752296%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-negotiation-needed.html"><span>emit</span><wbr><span>Negotiation</span><wbr><span><span>Needed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-594752296%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-negotiation-needed.html"><span class="token function">emitNegotiationNeeded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1238363391%2FFunctions%2F727813081" anchor-label="emitRemoveTrack" id="1238363391%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-remove-track.html"><span>emit</span><wbr><span>Remove</span><wbr><span><span>Track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1238363391%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-remove-track.html"><span class="token function">emitRemoveTrack</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">track<span class="token operator">: </span><a href="../-web-rtc-media/-track/index.html">WebRtcMedia.Track</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="98195805%2FFunctions%2F727813081" anchor-label="emitSignalingStateChange" id="98195805%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-signaling-state-change.html"><span>emit</span><wbr><span>Signaling</span><wbr><span>State</span><wbr><span><span>Change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="98195805%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-signaling-state-change.html"><span class="token function">emitSignalingStateChange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="../-web-rtc/-signaling-state/index.html">WebRtc.SignalingState</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1660659523%2FFunctions%2F727813081" anchor-label="emitStats" id="1660659523%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="emit-stats.html"><span>emit</span><wbr><span><span>Stats</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1660659523%2FFunctions%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emit-stats.html"><span class="token function">emitStats</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stats<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-web-rtc/-stats/index.html">WebRtc.Stats</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

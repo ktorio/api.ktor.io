@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Charsets</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.utils.io.charsets/-charsets/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.2.x</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
+    <div><a href="../../../../3.1.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
+    <div><a href="../../../../3.0.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
+    <div><a href="../../../../2.3.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
+    <div><a href="../../../../2.2.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
+    <div><a href="../../../../2.0.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
+    <div><a href="../../../../1.6.x/ktor-io/io.ktor.utils.io.charsets/-charsets/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/androidNativeMain">androidNative</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/darwinMain">darwin</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":ktor-io/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-io/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/linuxMain">linux</button>
+                <button class="platform-tag platform-selector native-like" data-active="" data-filter=":ktor-io/mingwX64Main">mingwX64</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/posixMain">posix</button>
+                <button class="platform-tag platform-selector wasm-like" data-active="" data-filter=":ktor-io/wasmJsMain">wasmJs</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/androidNativeMain" data-filter=":ktor-io/androidNativeMain">
+                                <span class="checkbox--icon"></span>
+                                androidNative
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/commonMain" data-filter=":ktor-io/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/darwinMain" data-filter=":ktor-io/darwinMain">
+                                <span class="checkbox--icon"></span>
+                                darwin
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/jsMain" data-filter=":ktor-io/jsMain">
+                                <span class="checkbox--icon"></span>
+                                js
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/jvmMain" data-filter=":ktor-io/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/linuxMain" data-filter=":ktor-io/linuxMain">
+                                <span class="checkbox--icon"></span>
+                                linux
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option native-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/mingwX64Main" data-filter=":ktor-io/mingwX64Main">
+                                <span class="checkbox--icon"></span>
+                                mingwX64
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/posixMain" data-filter=":ktor-io/posixMain">
+                                <span class="checkbox--icon"></span>
+                                posix
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option wasm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/wasmJsMain" data-filter=":ktor-io/wasmJsMain">
+                                <span class="checkbox--icon"></span>
+                                wasmJs
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-io::io.ktor.utils.io.charsets/Charsets///PointingToDeclaration//533838455">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-io</a><span class="delimiter">/</span><a href="../index.html">io.ktor.utils.io.charsets</a><span class="delimiter">/</span><span class="current">Charsets</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Charsets</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/androidNativeMain" data-filterable-set=":ktor-io/androidNativeMain" data-active="" data-toggle=":ktor-io/androidNativeMain">androidNative</button><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/darwinMain" data-filterable-set=":ktor-io/darwinMain" data-toggle=":ktor-io/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jsMain" data-filterable-set=":ktor-io/jsMain" data-toggle=":ktor-io/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-toggle=":ktor-io/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-io/linuxMain" data-filterable-set=":ktor-io/linuxMain" data-toggle=":ktor-io/linuxMain">linux</button><button class="platform-bookmark" data-filterable-current=":ktor-io/mingwX64Main" data-filterable-set=":ktor-io/mingwX64Main" data-toggle=":ktor-io/mingwX64Main">mingwX64</button><button class="platform-bookmark" data-filterable-current=":ktor-io/wasmJsMain" data-filterable-set=":ktor-io/wasmJsMain" data-toggle=":ktor-io/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-io/androidNativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/androidNative/src/Charset.androidNative.kt#L11">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/common/src/io/ktor/utils/io/charsets/Encoding.kt#L83">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/darwin/src/CharsetDarwin.kt#L12">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/js/src/io/ktor/utils/io/charsets/Charset.js.kt#L143">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">typealias </span><a href="index.html">Charsets</a><span class="token operator"> = </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-charsets/index.html">kotlin.text.Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/jvm/src/io/ktor/utils/io/charsets/CharsetJVM.kt#L93">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/linuxMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/linux/src/CharsetLinux.kt#L17">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/mingwX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/mingwX64/src/CharsetMingw.kt#L17">source</a>)</span></span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="index.html">Charsets</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.2.3/ktor-io/wasmJs/src/io/ktor/utils/io/charsets/Encoding.wasmJs.kt#L104">source</a>)</span></span></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1696312220%2FProperties%2F-745611871" anchor-label="ISO_8859_1" id="1696312220%2FProperties%2F-745611871" data-filterable-set=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain" data-filterable-set=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-s-o_8859_1.html"><span>ISO_</span><wbr><span>8859_</span><wbr><span>1</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1696312220%2FProperties%2F-745611871"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/androidNativeMain" data-filterable-set=":ktor-io/androidNativeMain" data-active="" data-toggle=":ktor-io/androidNativeMain">androidNative</button><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/darwinMain" data-filterable-set=":ktor-io/darwinMain" data-toggle=":ktor-io/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jsMain" data-filterable-set=":ktor-io/jsMain" data-toggle=":ktor-io/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":ktor-io/linuxMain" data-filterable-set=":ktor-io/linuxMain" data-toggle=":ktor-io/linuxMain">linux</button><button class="platform-bookmark" data-filterable-current=":ktor-io/mingwX64Main" data-filterable-set=":ktor-io/mingwX64Main" data-toggle=":ktor-io/mingwX64Main">mingwX64</button><button class="platform-bookmark" data-filterable-current=":ktor-io/wasmJsMain" data-filterable-set=":ktor-io/wasmJsMain" data-toggle=":ktor-io/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-io/androidNativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/linuxMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/mingwX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-i-s-o_8859_1.html">ISO_8859_1</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="772853646%2FProperties%2F-745611871" anchor-label="UTF_8" id="772853646%2FProperties%2F-745611871" data-filterable-set=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain" data-filterable-set=":ktor-io/commonMain,:ktor-io/androidNativeMain,:ktor-io/darwinMain,:ktor-io/jsMain,:ktor-io/linuxMain,:ktor-io/mingwX64Main,:ktor-io/wasmJsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-t-f_8.html"><span>UTF_</span><wbr><span>8</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="772853646%2FProperties%2F-745611871"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/androidNativeMain" data-filterable-set=":ktor-io/androidNativeMain" data-active="" data-toggle=":ktor-io/androidNativeMain">androidNative</button><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/darwinMain" data-filterable-set=":ktor-io/darwinMain" data-toggle=":ktor-io/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jsMain" data-filterable-set=":ktor-io/jsMain" data-toggle=":ktor-io/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":ktor-io/linuxMain" data-filterable-set=":ktor-io/linuxMain" data-toggle=":ktor-io/linuxMain">linux</button><button class="platform-bookmark" data-filterable-current=":ktor-io/mingwX64Main" data-filterable-set=":ktor-io/mingwX64Main" data-toggle=":ktor-io/mingwX64Main">mingwX64</button><button class="platform-bookmark" data-filterable-current=":ktor-io/wasmJsMain" data-filterable-set=":ktor-io/wasmJsMain" data-toggle=":ktor-io/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-io/androidNativeMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/linuxMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/mingwX64Main"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../../../ktor-io/io.ktor.utils.io.charsets/-charset/index.html">Charset</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-u-t-f_8.html">UTF_8</a><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-417260830%2FFunctions%2F366779371" anchor-label="forName" id="-417260830%2FFunctions%2F366779371" data-filterable-set=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain" data-filterable-set=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../for-name.html"><span>for</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-417260830%2FFunctions%2F366779371"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-active="" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jsMain" data-filterable-set=":ktor-io/jsMain" data-toggle=":ktor-io/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-toggle=":ktor-io/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-io/posixMain" data-filterable-set=":ktor-io/posixMain" data-toggle=":ktor-io/posixMain">posix</button><button class="platform-bookmark" data-filterable-current=":ktor-io/wasmJsMain" data-filterable-set=":ktor-io/wasmJsMain" data-toggle=":ktor-io/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../for-name.html"><span class="token function">forName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div><div class="brief "><p class="paragraph">Find a charset by name.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../for-name.html"><span class="token function">forName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div><div class="brief "><p class="paragraph">Find a charset by name.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../for-name.html"><span class="token function">forName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div><div class="brief "><p class="paragraph">Find a charset by name.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html#1371344659%2FMain%2F-678236332">Charsets</a><span class="token punctuation">.</span><a href="../for-name.html"><span class="token function">forName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div><div class="brief "><p class="paragraph">Find a charset by name.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../for-name.html"><span class="token function">forName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-charset/index.html">Charset</a></div><div class="brief "><p class="paragraph">Find a charset by name.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1063776958%2FFunctions%2F366779371" anchor-label="isSupported" id="-1063776958%2FFunctions%2F366779371" data-filterable-set=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain" data-filterable-set=":ktor-io/commonMain,:ktor-io/jsMain,:ktor-io/posixMain,:ktor-io/wasmJsMain,:ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-supported.html"><span>is</span><wbr><span><span>Supported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1063776958%2FFunctions%2F366779371"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-active="" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jsMain" data-filterable-set=":ktor-io/jsMain" data-toggle=":ktor-io/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-toggle=":ktor-io/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-io/posixMain" data-filterable-set=":ktor-io/posixMain" data-toggle=":ktor-io/posixMain">posix</button><button class="platform-bookmark" data-filterable-current=":ktor-io/wasmJsMain" data-filterable-set=":ktor-io/wasmJsMain" data-toggle=":ktor-io/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../is-supported.html"><span class="token function">isSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if a charset is supported by the current platform.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../is-supported.html"><span class="token function">isSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if a charset is supported by the current platform.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../is-supported.html"><span class="token function">isSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if a charset is supported by the current platform.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html#1371344659%2FMain%2F-678236332">Charsets</a><span class="token punctuation">.</span><a href="../is-supported.html"><span class="token function">isSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if a charset is supported by the current platform.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="index.html">Charsets</a><span class="token punctuation">.</span><a href="../is-supported.html"><span class="token function">isSupported</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Check if a charset is supported by the current platform.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
