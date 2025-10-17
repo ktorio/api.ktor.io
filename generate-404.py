@@ -38,7 +38,9 @@ NEW_JAVASCRIPT_CONTENT = r'''<script type="text/javascript">
                 redirectLink.href = newPath;
                 redirectInfo.style.display = 'block';
             }
-            window.location.replace(newPath);
+
+            const url = newPath + window.location.search + window.location.hash; 
+            window.location.replace(url);
         }
     }
 
