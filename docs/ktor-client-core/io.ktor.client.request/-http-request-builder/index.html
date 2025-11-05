@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>HttpRequestBuilder</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -25,52 +25,43 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.request/-http-request-builder/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../../3.2.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../../3.1.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../../3.0.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../../2.3.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../../2.2.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../../2.0.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../../1.6.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../3.2.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../3.1.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../3.0.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../2.3.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../2.2.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../2.0.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../1.6.x/ktor-client-core/io.ktor.client.request/-http-request-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-core/commonMain">common</button>
-                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":ktor-client-core/jsMain">js</button>
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-core/jvmAndPosixMain">jvmAndPosix</button>
-                <button class="platform-tag platform-selector wasm-like" data-active="" data-filter=":ktor-client-core/wasmJsMain">wasmJs</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/jsMain">js</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/jvmAndPosixMain">jvmAndPosix</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector wasm-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/wasmJsMain">wasmJs</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
@@ -95,6 +86,13 @@
                                 jvmAndPosix
                             </label>
                         </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-core/jvmMain" data-filter=":ktor-client-core/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
                         <li role="option" class="dropdown--option platform-selector-option wasm-like" tabindex="0">
                             <label class="checkbox">
                                 <input type="checkbox" class="checkbox--input" id=":ktor-client-core/wasmJsMain" data-filter=":ktor-client-core/wasmJsMain">
@@ -105,45 +103,47 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-core::io.ktor.client.request/HttpRequestBuilder///PointingToDeclaration//1100408939">
   <div class="breadcrumbs"><a href="../../index.html">ktor-client-core</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.request</a><span class="delimiter">/</span><span class="current">HttpRequestBuilder</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Http</span><wbr><span>Request</span><wbr><span><span>Builder</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">HttpRequestBuilder</a> : <a href="../../../ktor-http/io.ktor.http/-http-message-builder/index.html">HttpMessageBuilder</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-client/ktor-client-core/common/src/io/ktor/client/request/HttpRequest.kt#L75">source</a>)</span></span></div><p class="paragraph">Contains parameters used to make an HTTP request.</p><p class="paragraph">Learn more from <a href="https://ktor.io/docs/request.html">Making requests</a>.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.client.request.HttpRequestBuilder">Report a problem</a></p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">HttpRequestBuilder</a> : <a href="../../../ktor-http/io.ktor.http/-http-message-builder/index.html">HttpMessageBuilder</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.2/ktor-client/ktor-client-core/common/src/io/ktor/client/request/HttpRequest.kt#L75">source</a>)</span></span></div><p class="paragraph">Contains parameters used to make an HTTP request.</p><p class="paragraph">Learn more from <a href="https://ktor.io/docs/request.html">Making requests</a>.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.client.request.HttpRequestBuilder">Report a problem</a></p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
-        <h2 class="">Constructors</h2>
+        <h2 class="tableheader">Constructors</h2>
         <div class="table"><a data-name="1630360599%2FConstructors%2F1100408939" anchor-label="HttpRequestBuilder" id="1630360599%2FConstructors%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-http-request-builder.html"><span>Http</span><wbr><span>Request</span><wbr><span><span>Builder</span></span></a></div>
@@ -160,9 +160,9 @@
         </div>
       </div>
       <div data-togglable="TYPE">
-        <h2 class="">Types</h2>
+        <h2 class="tableheader">Types</h2>
         <div class="table"><a data-name="417126038%2FClasslikes%2F1100408939" anchor-label="Companion" id="417126038%2FClasslikes%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
@@ -179,9 +179,9 @@
         </div>
       </div>
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="-1584846092%2FProperties%2F1100408939" anchor-label="attributes" id="-1584846092%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="attributes.html"><span><span>attributes</span></span></a></div>
@@ -196,7 +196,7 @@
             </div>
           </div>
 <a data-name="1670614921%2FProperties%2F1100408939" anchor-label="body" id="1670614921%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="body.html"><span><span>body</span></span></a></div>
@@ -205,13 +205,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="body.html">body</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">The <a href="../../io.ktor.client.call/body.html">body</a> for this request. Initially <a href="../../io.ktor.client.utils/-empty-content/index.html">EmptyContent</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="body.html">body</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></div><div class="brief "><p class="paragraph">The <a href="body.html">body</a> for this request. Initially <a href="../../io.ktor.client.utils/-empty-content/index.html">EmptyContent</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="941186927%2FProperties%2F1100408939" anchor-label="bodyType" id="941186927%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="body-type.html"><span>body</span><wbr><span><span>Type</span></span></a></div>
@@ -220,13 +220,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="body-type.html">bodyType</a><span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a> of <a href="../../io.ktor.client.call/body.html">body</a> for this request. Null for default types that don't need serialization.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="body-type.html">bodyType</a><span class="token operator">: </span><a href="../../../ktor-utils/io.ktor.util.reflect/-type-info/index.html">TypeInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a> of <a href="body.html">body</a> for this request. Null for default types that don't need serialization.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-169302444%2FProperties%2F1100408939" anchor-label="executionContext" id="-169302444%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="execution-context.html"><span>execution</span><wbr><span><span>Context</span></span></a></div>
@@ -235,13 +235,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="execution-context.html">executionContext</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span></div><div class="brief "><p class="paragraph">A deferred used to control the execution of this request.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="execution-context.html">executionContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/index.html">Job</a></div><div class="brief "><p class="paragraph">A deferred used to control the execution of this request.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1844158642%2FProperties%2F1100408939" anchor-label="expectSuccess" id="-1844158642%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/expect-success.html"><span>expect</span><wbr><span><span>Success</span></span></a></div>
@@ -256,7 +256,7 @@
             </div>
           </div>
 <a data-name="-2062273271%2FProperties%2F1100408939" anchor-label="headers" id="-2062273271%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="headers.html"><span><span>headers</span></span></a></div>
@@ -271,7 +271,7 @@
             </div>
           </div>
 <a data-name="827155849%2FProperties%2F1100408939" anchor-label="host" id="827155849%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../host.html"><span><span>host</span></span></a></div>
@@ -286,7 +286,7 @@
             </div>
           </div>
 <a data-name="-307152470%2FProperties%2F1100408939" anchor-label="method" id="-307152470%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="method.html"><span><span>method</span></span></a></div>
@@ -301,7 +301,7 @@
             </div>
           </div>
 <a data-name="1541565986%2FProperties%2F1100408939" anchor-label="port" id="1541565986%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../port.html"><span><span>port</span></span></a></div>
@@ -316,7 +316,7 @@
             </div>
           </div>
 <a data-name="230031424%2FProperties%2F1100408939" anchor-label="url" id="230031424%2FProperties%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="url.html"><span><span>url</span></span></a></div>
@@ -333,9 +333,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="-1277745650%2FFunctions%2F1100408939" anchor-label="accept" id="-1277745650%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../accept.html"><span><span>accept</span></span></a></div>
@@ -350,7 +350,7 @@
             </div>
           </div>
 <a data-name="-1066558702%2FFunctions%2F1100408939" anchor-label="basicAuth" id="-1066558702%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../basic-auth.html"><span>basic</span><wbr><span><span>Auth</span></span></a></div>
@@ -365,7 +365,7 @@
             </div>
           </div>
 <a data-name="967372942%2FFunctions%2F1100408939" anchor-label="bearerAuth" id="967372942%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../bearer-auth.html"><span>bearer</span><wbr><span><span>Auth</span></span></a></div>
@@ -380,7 +380,7 @@
             </div>
           </div>
 <a data-name="-284356444%2FFunctions%2F1100408939" anchor-label="bufferPolicy" id="-284356444%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins.sse/buffer-policy.html"><span>buffer</span><wbr><span><span>Policy</span></span></a></div>
@@ -395,7 +395,7 @@
             </div>
           </div>
 <a data-name="324292513%2FFunctions%2F1100408939" anchor-label="build" id="324292513%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="build.html"><span><span>build</span></span></a></div>
@@ -410,7 +410,7 @@
             </div>
           </div>
 <a data-name="-1091560531%2FFunctions%2F1100408939" anchor-label="cookie" id="-1091560531%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../cookie.html"><span><span>cookie</span></span></a></div>
@@ -425,7 +425,7 @@
             </div>
           </div>
 <a data-name="523372413%2FFunctions%2F1116196499" anchor-label="fetchOptions" id="523372413%2FFunctions%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../../ktor-client-core/io.ktor.client/[wasm-js]fetch-options.html"><span>fetch</span><wbr><span><span>Options</span></span></a></div>
@@ -442,7 +442,7 @@
             </div>
           </div>
 <a data-name="492230744%2FFunctions%2F1100408939" anchor-label="getCapabilityOrNull" id="492230744%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-capability-or-null.html"><span>get</span><wbr><span>Capability</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
@@ -457,7 +457,7 @@
             </div>
           </div>
 <a data-name="-2046113971%2FFunctions%2F1100408939" anchor-label="header" id="-2046113971%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../header.html"><span><span>header</span></span></a></div>
@@ -472,7 +472,7 @@
             </div>
           </div>
 <a data-name="533056725%2FFunctions%2F1100408939" anchor-label="headers" id="533056725%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../headers.html"><span><span>headers</span></span></a></div>
@@ -487,7 +487,7 @@
             </div>
           </div>
 <a data-name="960972025%2FFunctions%2F1100408939" anchor-label="onDownload" id="960972025%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/on-download.html"><span>on</span><wbr><span><span>Download</span></span></a></div>
@@ -502,7 +502,7 @@
             </div>
           </div>
 <a data-name="-1975660366%2FFunctions%2F1100408939" anchor-label="onUpload" id="-1975660366%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/on-upload.html"><span>on</span><wbr><span><span>Upload</span></span></a></div>
@@ -517,7 +517,7 @@
             </div>
           </div>
 <a data-name="411297065%2FFunctions%2F1100408939" anchor-label="parameter" id="411297065%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../parameter.html"><span><span>parameter</span></span></a></div>
@@ -532,7 +532,7 @@
             </div>
           </div>
 <a data-name="-609972919%2FFunctions%2F1100408939" anchor-label="retry" id="-609972919%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/retry.html"><span><span>retry</span></span></a></div>
@@ -547,7 +547,7 @@
             </div>
           </div>
 <a data-name="757003662%2FFunctions%2F1100408939" anchor-label="setAttributes" id="757003662%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set-attributes.html"><span>set</span><wbr><span><span>Attributes</span></span></a></div>
@@ -562,7 +562,7 @@
             </div>
           </div>
 <a data-name="-1207376774%2FFunctions%2F1100408939" anchor-label="setBody" id="-1207376774%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../set-body.html"><span>set</span><wbr><span><span>Body</span></span></a></div>
@@ -577,7 +577,7 @@
             </div>
           </div>
 <a data-name="319520694%2FFunctions%2F1100408939" anchor-label="setCapability" id="319520694%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set-capability.html"><span>set</span><wbr><span><span>Capability</span></span></a></div>
@@ -592,7 +592,7 @@
             </div>
           </div>
 <a data-name="-2015097587%2FFunctions%2F1100408939" anchor-label="skipSavingBody" id="-2015097587%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/skip-saving-body.html"><span>skip</span><wbr><span>Saving</span><wbr><span><span>Body</span></span></a></div>
@@ -607,7 +607,7 @@
             </div>
           </div>
 <a data-name="-1196439924%2FFunctions%2F1100408939" anchor-label="takeFrom" id="-1196439924%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="take-from.html"><span>take</span><wbr><span><span>From</span></span></a></div>
@@ -622,7 +622,7 @@
             </div>
           </div>
 <a data-name="699865360%2FFunctions%2F1100408939" anchor-label="takeFrom" id="699865360%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../take-from.html"><span>take</span><wbr><span><span>From</span></span></a></div>
@@ -631,13 +631,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><a href="../-http-request/index.html">HttpRequest</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a></div><div class="brief "><p class="paragraph">Mutates <a href="../../../ktor-client-core/io.ktor.client.request/index.html">this</a> copying all the data from another <a href="../take-from.html">request</a> using it as base.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><a href="../-http-request-data/index.html">HttpRequestData</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a></div><div class="brief "><p class="paragraph">Sets the <a href="index.html">HttpRequestBuilder</a> from <a href="../take-from.html">request</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><a href="../-http-request/index.html">HttpRequest</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a></div><div class="brief "><p class="paragraph">Mutates <a href="index.html">this</a> copying all the data from another <a href="../take-from.html">request</a> using it as base.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">request<span class="token operator">: </span><a href="../-http-request-data/index.html">HttpRequestData</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">HttpRequestBuilder</a></div><div class="brief "><p class="paragraph">Sets the <a href="index.html">HttpRequestBuilder</a> from <a href="../take-from.html">request</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1313392567%2FFunctions%2F1100408939" anchor-label="takeFromWithExecutionContext" id="-1313392567%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="take-from-with-execution-context.html"><span>take</span><wbr><span>From</span><wbr><span>With</span><wbr><span>Execution</span><wbr><span><span>Context</span></span></a></div>
@@ -652,7 +652,7 @@
             </div>
           </div>
 <a data-name="1159668160%2FFunctions%2F1100408939" anchor-label="timeout" id="1159668160%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../io.ktor.client.plugins/timeout.html"><span><span>timeout</span></span></a></div>
@@ -667,7 +667,7 @@
             </div>
           </div>
 <a data-name="-1853148984%2FFunctions%2F13068371" anchor-label="unixSocket" id="-1853148984%2FFunctions%2F13068371" data-filterable-set=":ktor-client-core/jvmAndPosixMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jvmAndPosixMain" data-filterable-set=":ktor-client-core/jvmAndPosixMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jvmAndPosixMain" data-filterable-set=":ktor-client-core/jvmAndPosixMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../unix-socket.html"><span>unix</span><wbr><span><span>Socket</span></span></a></div>
@@ -684,7 +684,7 @@
             </div>
           </div>
 <a data-name="430640096%2FFunctions%2F1100408939" anchor-label="url" id="430640096%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="url.html"><span><span>url</span></span></a></div>
@@ -698,17 +698,19 @@
               </div>
             </div>
           </div>
-<a data-name="1849458661%2FFunctions%2F1100408939" anchor-label="url" id="1849458661%2FFunctions%2F1100408939" data-filterable-set=":ktor-client-core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain">
+<a data-name="2135366825%2FFunctions%2F2144941292" anchor-label="url" id="2135366825%2FFunctions%2F2144941292" data-filterable-set=":ktor-client-core/commonMain,:ktor-client-core/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/commonMain,:ktor-client-core/jvmMain" data-filterable-set=":ktor-client-core/commonMain,:ktor-client-core/jvmMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../url.html"><span><span>url</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1849458661%2FFunctions%2F1100408939"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135366825%2FFunctions%2F2144941292"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-url/index.html">Url</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">url</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Executes a <a href="../url.html">block</a> that configures the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">urlString<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">urlString</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scheme<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="../url.html">url</a> using the specified <a href="../url.html">scheme</a>, <a href="../url.html">host</a>, <a href="../url.html">port</a> and <a href="../url.html">path</a>. Pass <code class="lang-kotlin">null</code> to keep the existing value in the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a>.</p></div></div></div>
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-core/commonMain" data-filterable-set=":ktor-client-core/commonMain" data-active="" data-toggle=":ktor-client-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-client-core/jvmMain" data-filterable-set=":ktor-client-core/jvmMain" data-toggle=":ktor-client-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-url/index.html">Url</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">url</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Executes a <a href="../url.html">block</a> that configures the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a> associated to this request.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">urlString<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="url.html">HttpRequestBuilder.url</a> from <a href="../url.html">urlString</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scheme<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <a href="../url.html">url</a> using the specified <a href="../url.html">scheme</a>, <a href="../url.html">host</a>, <a href="../url.html">port</a> and <a href="../url.html">path</a>. Pass <code class="lang-kotlin">null</code> to keep the existing value in the <a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-core/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1694235884%2FMain%2F2084126251">HttpRequestBuilder</a><span class="token punctuation">.</span><a href="../url.html"><span class="token function">url</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html">URL</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Sets the <a href="../../../ktor-client-core/io.ktor.client.request/-http-request-builder/url.html">HttpRequestBuilder.url</a> from <a href="../url.html">url</a>.</p></div></div>                  </div>
                 </div>
               </div>
             </div>
@@ -719,17 +721,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

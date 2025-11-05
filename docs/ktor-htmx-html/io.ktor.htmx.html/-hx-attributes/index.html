@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>HxAttributes</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -25,49 +25,39 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.htmx.html/-hx-attributes/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../../3.2.x/ktor-htmx-html/io.ktor.htmx.html/-hx-attributes/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../3.2.x/ktor-htmx-html/io.ktor.htmx.html/-hx-attributes/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-htmx-html/commonMain">common</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-htmx-html/commonMain">common</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
@@ -81,45 +71,47 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="ktor-htmx-html::io.ktor.htmx.html/HxAttributes///PointingToDeclaration//-365124085">
   <div class="breadcrumbs"><a href="../../index.html">ktor-htmx-html</a><span class="delimiter">/</span><a href="../index.html">io.ktor.htmx.html</a><span class="delimiter">/</span><span class="current">HxAttributes</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Hx</span><wbr><span><span>Attributes</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx-html/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="index.html">HxAttributes</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>map<span class="token operator">: </span><span data-unresolved-link="kotlinx.html.impl/DelegatingMap///PointingToDeclaration/">DelegatingMap</span></span></span><span class="token punctuation">)</span> : <a href="../../../ktor-utils/io.ktor.util.collections/-string-map-delegate/index.html">StringMapDelegate</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-shared/ktor-htmx/ktor-htmx-html/common/src/io/ktor/htmx/html/HxAttributes.kt#L25">source</a>)</span></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx-html/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="index.html">HxAttributes</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>map<span class="token operator">: </span><span data-unresolved-link="kotlinx.html.impl/DelegatingMap///PointingToDeclaration/">DelegatingMap</span></span></span><span class="token punctuation">)</span> : <a href="../../../ktor-utils/io.ktor.util.collections/-string-map-delegate/index.html">StringMapDelegate</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.2/ktor-shared/ktor-htmx/ktor-htmx-html/common/src/io/ktor/htmx/html/HxAttributes.kt#L25">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
-        <h2 class="">Constructors</h2>
+        <h2 class="tableheader">Constructors</h2>
         <div class="table"><a data-name="1395602741%2FConstructors%2F-365124085" anchor-label="HxAttributes" id="1395602741%2FConstructors%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-hx-attributes.html"><span>Hx</span><wbr><span><span>Attributes</span></span></a></div>
@@ -136,9 +128,9 @@
         </div>
       </div>
       <div data-togglable="TYPE">
-        <h2 class="">Types</h2>
+        <h2 class="tableheader">Types</h2>
         <div class="table"><a data-name="1771344274%2FClasslikes%2F-365124085" anchor-label="On" id="1771344274%2FClasslikes%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-on/index.html"><span><span>On</span></span></a></div>
@@ -155,9 +147,9 @@
         </div>
       </div>
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="2021354811%2FProperties%2F-365124085" anchor-label="boost" id="2021354811%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="boost.html"><span><span>boost</span></span></a></div>
@@ -172,7 +164,7 @@
             </div>
           </div>
 <a data-name="-1010136962%2FProperties%2F-365124085" anchor-label="confirm" id="-1010136962%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="confirm.html"><span><span>confirm</span></span></a></div>
@@ -187,7 +179,7 @@
             </div>
           </div>
 <a data-name="1444912337%2FProperties%2F-365124085" anchor-label="delete" id="1444912337%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="delete.html"><span><span>delete</span></span></a></div>
@@ -202,7 +194,7 @@
             </div>
           </div>
 <a data-name="116246870%2FProperties%2F-365124085" anchor-label="disable" id="116246870%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="disable.html"><span><span>disable</span></span></a></div>
@@ -217,7 +209,7 @@
             </div>
           </div>
 <a data-name="-1376235699%2FProperties%2F-365124085" anchor-label="disabledElt" id="-1376235699%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="disabled-elt.html"><span>disabled</span><wbr><span><span>Elt</span></span></a></div>
@@ -232,7 +224,7 @@
             </div>
           </div>
 <a data-name="2107666575%2FProperties%2F-365124085" anchor-label="disinherit" id="2107666575%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="disinherit.html"><span><span>disinherit</span></span></a></div>
@@ -247,7 +239,7 @@
             </div>
           </div>
 <a data-name="-2085960087%2FProperties%2F-365124085" anchor-label="encoding" id="-2085960087%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="encoding.html"><span><span>encoding</span></span></a></div>
@@ -262,7 +254,7 @@
             </div>
           </div>
 <a data-name="241151165%2FProperties%2F-365124085" anchor-label="ext" id="241151165%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="ext.html"><span><span>ext</span></span></a></div>
@@ -277,7 +269,7 @@
             </div>
           </div>
 <a data-name="-1359119064%2FProperties%2F-365124085" anchor-label="get" id="-1359119064%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get.html"><span><span>get</span></span></a></div>
@@ -292,7 +284,7 @@
             </div>
           </div>
 <a data-name="-266665686%2FProperties%2F-365124085" anchor-label="history" id="-266665686%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="history.html"><span><span>history</span></span></a></div>
@@ -307,7 +299,7 @@
             </div>
           </div>
 <a data-name="-1607439549%2FProperties%2F-365124085" anchor-label="historyElt" id="-1607439549%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="history-elt.html"><span>history</span><wbr><span><span>Elt</span></span></a></div>
@@ -322,7 +314,7 @@
             </div>
           </div>
 <a data-name="-385216618%2FProperties%2F-365124085" anchor-label="include" id="-385216618%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="include.html"><span><span>include</span></span></a></div>
@@ -337,7 +329,7 @@
             </div>
           </div>
 <a data-name="1890409423%2FProperties%2F-365124085" anchor-label="indicator" id="1890409423%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="indicator.html"><span><span>indicator</span></span></a></div>
@@ -352,7 +344,7 @@
             </div>
           </div>
 <a data-name="857228963%2FProperties%2F-365124085" anchor-label="inherit" id="857228963%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="inherit.html"><span><span>inherit</span></span></a></div>
@@ -367,7 +359,7 @@
             </div>
           </div>
 <a data-name="1731860962%2FProperties%2F-365124085" anchor-label="map" id="1731860962%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="map.html"><span><span>map</span></span></a></div>
@@ -382,7 +374,7 @@
             </div>
           </div>
 <a data-name="-1267401059%2FProperties%2F-365124085" anchor-label="on" id="-1267401059%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on.html"><span><span>on</span></span></a></div>
@@ -397,7 +389,7 @@
             </div>
           </div>
 <a data-name="194815318%2FProperties%2F-365124085" anchor-label="params" id="194815318%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="params.html"><span><span>params</span></span></a></div>
@@ -412,7 +404,7 @@
             </div>
           </div>
 <a data-name="1214415926%2FProperties%2F-365124085" anchor-label="patch" id="1214415926%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="patch.html"><span><span>patch</span></span></a></div>
@@ -427,7 +419,7 @@
             </div>
           </div>
 <a data-name="848225084%2FProperties%2F-365124085" anchor-label="post" id="848225084%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="post.html"><span><span>post</span></span></a></div>
@@ -442,7 +434,7 @@
             </div>
           </div>
 <a data-name="-1598808176%2FProperties%2F-365124085" anchor-label="preserve" id="-1598808176%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="preserve.html"><span><span>preserve</span></span></a></div>
@@ -457,7 +449,7 @@
             </div>
           </div>
 <a data-name="-1833092296%2FProperties%2F-365124085" anchor-label="prompt" id="-1833092296%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="prompt.html"><span><span>prompt</span></span></a></div>
@@ -472,7 +464,7 @@
             </div>
           </div>
 <a data-name="-1350322967%2FProperties%2F-365124085" anchor-label="pushUrl" id="-1350322967%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="push-url.html"><span>push</span><wbr><span><span>Url</span></span></a></div>
@@ -487,7 +479,7 @@
             </div>
           </div>
 <a data-name="-1150825585%2FProperties%2F-365124085" anchor-label="put" id="-1150825585%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="put.html"><span><span>put</span></span></a></div>
@@ -502,7 +494,7 @@
             </div>
           </div>
 <a data-name="-499840287%2FProperties%2F-365124085" anchor-label="replaceUrl" id="-499840287%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="replace-url.html"><span>replace</span><wbr><span><span>Url</span></span></a></div>
@@ -517,7 +509,7 @@
             </div>
           </div>
 <a data-name="-566684785%2FProperties%2F-365124085" anchor-label="request" id="-566684785%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="request.html"><span><span>request</span></span></a></div>
@@ -532,7 +524,7 @@
             </div>
           </div>
 <a data-name="-585295200%2FProperties%2F-365124085" anchor-label="select" id="-585295200%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="select.html"><span><span>select</span></span></a></div>
@@ -547,7 +539,7 @@
             </div>
           </div>
 <a data-name="2052520408%2FProperties%2F-365124085" anchor-label="selectOob" id="2052520408%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="select-oob.html"><span>select</span><wbr><span><span>Oob</span></span></a></div>
@@ -562,7 +554,7 @@
             </div>
           </div>
 <a data-name="636375465%2FProperties%2F-365124085" anchor-label="swap" id="636375465%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="swap.html"><span><span>swap</span></span></a></div>
@@ -577,7 +569,7 @@
             </div>
           </div>
 <a data-name="1290435119%2FProperties%2F-365124085" anchor-label="swapOob" id="1290435119%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="swap-oob.html"><span>swap</span><wbr><span><span>Oob</span></span></a></div>
@@ -592,7 +584,7 @@
             </div>
           </div>
 <a data-name="-660274783%2FProperties%2F-365124085" anchor-label="sync" id="-660274783%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="sync.html"><span><span>sync</span></span></a></div>
@@ -607,7 +599,7 @@
             </div>
           </div>
 <a data-name="997638059%2FProperties%2F-365124085" anchor-label="target" id="997638059%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="target.html"><span><span>target</span></span></a></div>
@@ -622,7 +614,7 @@
             </div>
           </div>
 <a data-name="1915248774%2FProperties%2F-365124085" anchor-label="trigger" id="1915248774%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="trigger.html"><span><span>trigger</span></span></a></div>
@@ -637,7 +629,7 @@
             </div>
           </div>
 <a data-name="2052688902%2FProperties%2F-365124085" anchor-label="validate" id="2052688902%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="validate.html"><span><span>validate</span></span></a></div>
@@ -652,7 +644,7 @@
             </div>
           </div>
 <a data-name="1810828970%2FProperties%2F-365124085" anchor-label="vals" id="1810828970%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="vals.html"><span><span>vals</span></span></a></div>
@@ -667,7 +659,7 @@
             </div>
           </div>
 <a data-name="-1009421520%2FProperties%2F-365124085" anchor-label="vars" id="-1009421520%2FProperties%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="vars.html"><span><span>vars</span></span></a></div>
@@ -684,9 +676,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="-429842062%2FFunctions%2F-365124085" anchor-label="get" id="-429842062%2FFunctions%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="index.html#-429842062%2FFunctions%2F-365124085"><span><span>get</span></span></a></div>
@@ -701,7 +693,7 @@
             </div>
           </div>
 <a data-name="-1191501268%2FFunctions%2F-365124085" anchor-label="on" id="-1191501268%2FFunctions%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on.html"><span><span>on</span></span></a></div>
@@ -716,7 +708,7 @@
             </div>
           </div>
 <a data-name="-364848234%2FFunctions%2F-365124085" anchor-label="remove" id="-364848234%2FFunctions%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="index.html#-364848234%2FFunctions%2F-365124085"><span><span>remove</span></span></a></div>
@@ -731,7 +723,7 @@
             </div>
           </div>
 <a data-name="1976701411%2FFunctions%2F-365124085" anchor-label="set" id="1976701411%2FFunctions%2F-365124085" data-filterable-set=":ktor-htmx-html/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx-html/commonMain" data-filterable-set=":ktor-htmx-html/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="index.html#1976701411%2FFunctions%2F-365124085"><span><span>set</span></span></a></div>
@@ -751,17 +743,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

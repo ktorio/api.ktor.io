@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>DefaultWebSocketSession</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -25,49 +25,39 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.websocket/-default-web-socket-session/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../../3.2.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../../3.1.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../../3.0.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../../2.3.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../../2.2.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../../2.0.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../3.2.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../3.1.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../3.0.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../2.3.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../2.2.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../2.0.x/ktor-websockets/io.ktor.websocket/-default-web-socket-session/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-websockets/commonMain">common</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-websockets/commonMain">common</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
@@ -81,45 +71,47 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="ktor-websockets::io.ktor.websocket/DefaultWebSocketSession///PointingToDeclaration//24554598">
   <div class="breadcrumbs"><a href="../../index.html">ktor-websockets</a><span class="delimiter">/</span><a href="../index.html">io.ktor.websocket</a><span class="delimiter">/</span><span class="current">DefaultWebSocketSession</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Default</span><wbr><span>Web</span><wbr><span>Socket</span><wbr><span><span>Session</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">DefaultWebSocketSession</a> : <a href="../-web-socket-session/index.html">WebSocketSession</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-shared/ktor-websockets/common/src/io/ktor/websocket/DefaultWebSocketSession.kt#L36">source</a>)</span></span></div><p class="paragraph">A default WebSocket session with ping-pong and timeout processing and built-in <a href="close-reason.html">closeReason</a> population.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.websocket.DefaultWebSocketSession">Report a problem</a></p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">DefaultWebSocketSession</a> : <a href="../-web-socket-session/index.html">WebSocketSession</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.2/ktor-shared/ktor-websockets/common/src/io/ktor/websocket/DefaultWebSocketSession.kt#L36">source</a>)</span></span></div><p class="paragraph">A default WebSocket session with ping-pong and timeout processing and built-in <a href="close-reason.html">closeReason</a> population.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.websocket.DefaultWebSocketSession">Report a problem</a></p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="1935381058%2FProperties%2F24554598" anchor-label="closeReason" id="1935381058%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="close-reason.html"><span>close</span><wbr><span><span>Reason</span></span></a></div>
@@ -128,13 +120,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="close-reason.html">closeReason</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Deferred///PointingToDeclaration/">Deferred</span><span class="token operator">&lt;</span><a href="../-close-reason/index.html">CloseReason</a><span class="token operator">?</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A close reason for this session. It could be <code class="lang-kotlin">null</code> if a session is terminated with no close reason (for example due to connection failure).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="close-reason.html">closeReason</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html">Deferred</a><span class="token operator">&lt;</span><a href="../-close-reason/index.html">CloseReason</a><span class="token operator">?</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A close reason for this session. It could be <code class="lang-kotlin">null</code> if a session is terminated with no close reason (for example due to connection failure).</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1654120400%2FProperties%2F24554598" anchor-label="coroutineContext" id="-1654120400%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/index.html#-1654120400%2FProperties%2F24554598"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
@@ -149,7 +141,7 @@
             </div>
           </div>
 <a data-name="-1442418037%2FProperties%2F24554598" anchor-label="extensions" id="-1442418037%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/extensions.html"><span><span>extensions</span></span></a></div>
@@ -164,7 +156,7 @@
             </div>
           </div>
 <a data-name="319418169%2FProperties%2F24554598" anchor-label="incoming" id="319418169%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/incoming.html"><span><span>incoming</span></span></a></div>
@@ -173,13 +165,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-socket-session/incoming.html">incoming</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.channels/ReceiveChannel///PointingToDeclaration/">ReceiveChannel</span><span class="token operator">&lt;</span><a href="../-frame/index.html">Frame</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An incoming frames channel. Note that if you use <code class="lang-kotlin">webSocket</code> to handle a WebSockets session, the incoming channel doesn't contain control frames such as the ping/pong or close frames. If you need control over control frames, use the <code class="lang-kotlin">webSocketRaw</code> function.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-socket-session/incoming.html">incoming</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-receive-channel/index.html">ReceiveChannel</a><span class="token operator">&lt;</span><a href="../-frame/index.html">Frame</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An incoming frames channel. Note that if you use <code class="lang-kotlin">webSocket</code> to handle a WebSockets session, the incoming channel doesn't contain control frames such as the ping/pong or close frames. If you need control over control frames, use the <code class="lang-kotlin">webSocketRaw</code> function.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-2128942619%2FProperties%2F24554598" anchor-label="masking" id="-2128942619%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/masking.html"><span><span>masking</span></span></a></div>
@@ -194,7 +186,7 @@
             </div>
           </div>
 <a data-name="-1303378731%2FProperties%2F24554598" anchor-label="maxFrameSize" id="-1303378731%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/max-frame-size.html"><span>max</span><wbr><span>Frame</span><wbr><span><span>Size</span></span></a></div>
@@ -209,7 +201,7 @@
             </div>
           </div>
 <a data-name="1880739507%2FProperties%2F24554598" anchor-label="outgoing" id="1880739507%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/outgoing.html"><span><span>outgoing</span></span></a></div>
@@ -218,13 +210,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-socket-session/outgoing.html">outgoing</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span><span class="token operator">&lt;</span><a href="../-frame/index.html">Frame</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An outgoing frames channel. It could have limited capacity so sending too many frames may lead to suspension at corresponding send invocations. It also may suspend if a peer doesn't read frames for some reason.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-websockets/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-web-socket-session/outgoing.html">outgoing</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.channels/-send-channel/index.html">SendChannel</a><span class="token operator">&lt;</span><a href="../-frame/index.html">Frame</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">An outgoing frames channel. It could have limited capacity so sending too many frames may lead to suspension at corresponding send invocations. It also may suspend if a peer doesn't read frames for some reason.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1294211090%2FProperties%2F24554598" anchor-label="pingInterval" id="1294211090%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../ping-interval.html"><span>ping</span><wbr><span><span>Interval</span></span></a></div>
@@ -239,7 +231,7 @@
             </div>
           </div>
 <a data-name="1183483999%2FProperties%2F24554598" anchor-label="pingIntervalMillis" id="1183483999%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="ping-interval-millis.html"><span>ping</span><wbr><span>Interval</span><wbr><span><span>Millis</span></span></a></div>
@@ -254,7 +246,7 @@
             </div>
           </div>
 <a data-name="2008348770%2FProperties%2F24554598" anchor-label="timeout" id="2008348770%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../timeout.html"><span><span>timeout</span></span></a></div>
@@ -269,7 +261,7 @@
             </div>
           </div>
 <a data-name="-1204404297%2FProperties%2F24554598" anchor-label="timeoutMillis" id="-1204404297%2FProperties%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="timeout-millis.html"><span>timeout</span><wbr><span><span>Millis</span></span></a></div>
@@ -286,9 +278,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="2118258221%2FFunctions%2F24554598" anchor-label="close" id="2118258221%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../close.html"><span><span>close</span></span></a></div>
@@ -303,7 +295,7 @@
             </div>
           </div>
 <a data-name="2046835934%2FFunctions%2F24554598" anchor-label="closeExceptionally" id="2046835934%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../close-exceptionally.html"><span>close</span><wbr><span><span>Exceptionally</span></span></a></div>
@@ -318,7 +310,7 @@
             </div>
           </div>
 <a data-name="-1913716821%2FFunctions%2F24554598" anchor-label="extension" id="-1913716821%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../extension.html"><span><span>extension</span></span></a></div>
@@ -333,7 +325,7 @@
             </div>
           </div>
 <a data-name="1688022337%2FFunctions%2F24554598" anchor-label="extensionOrNull" id="1688022337%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../extension-or-null.html"><span>extension</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
@@ -348,7 +340,7 @@
             </div>
           </div>
 <a data-name="212607895%2FFunctions%2F24554598" anchor-label="flush" id="212607895%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/flush.html"><span><span>flush</span></span></a></div>
@@ -363,7 +355,7 @@
             </div>
           </div>
 <a data-name="1561708927%2FFunctions%2F24554598" anchor-label="send" id="1561708927%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/send.html"><span><span>send</span></span></a></div>
@@ -378,7 +370,7 @@
             </div>
           </div>
 <a data-name="205828996%2FFunctions%2F24554598" anchor-label="send" id="205828996%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../send.html"><span><span>send</span></span></a></div>
@@ -393,7 +385,7 @@
             </div>
           </div>
 <a data-name="-180654435%2FFunctions%2F24554598" anchor-label="start" id="-180654435%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="start.html"><span><span>start</span></span></a></div>
@@ -408,7 +400,7 @@
             </div>
           </div>
 <a data-name="282317786%2FFunctions%2F24554598" anchor-label="terminate" id="282317786%2FFunctions%2F24554598" data-filterable-set=":ktor-websockets/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-websockets/commonMain" data-filterable-set=":ktor-websockets/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-socket-session/terminate.html"><span><span>terminate</span></span></a></div>
@@ -428,17 +420,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

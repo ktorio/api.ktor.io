@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>BufferedByteWriteChannel</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -25,51 +25,42 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.utils.io/-buffered-byte-write-channel/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../../3.2.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../../3.1.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../../3.0.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../3.2.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../3.1.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../3.0.x/ktor-io/io.ktor.utils.io/-buffered-byte-write-channel/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/commonMain">common</button>
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/jvmAndPosixMain">jvmAndPosix</button>
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-io/posixMain">posix</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-io/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-io/jvmAndPosixMain">jvmAndPosix</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-io/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-io/posixMain">posix</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
@@ -87,6 +78,13 @@
                                 jvmAndPosix
                             </label>
                         </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-io/jvmMain" data-filter=":ktor-io/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
                         <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
                             <label class="checkbox">
                                 <input type="checkbox" class="checkbox--input" id=":ktor-io/posixMain" data-filter=":ktor-io/posixMain">
@@ -97,45 +95,47 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="ktor-io::io.ktor.utils.io/BufferedByteWriteChannel///PointingToDeclaration//-2056813312">
   <div class="breadcrumbs"><a href="../../index.html">ktor-io</a><span class="delimiter">/</span><a href="../index.html">io.ktor.utils.io</a><span class="delimiter">/</span><span class="current">BufferedByteWriteChannel</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Buffered</span><wbr><span>Byte</span><wbr><span>Write</span><wbr><span><span>Channel</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">BufferedByteWriteChannel</a> : <a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-io/common/src/io/ktor/utils/io/BufferedByteWriteChannel.kt#L7">source</a>)</span></span></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-channel/index.html">ByteChannel</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">BufferedByteWriteChannel</a> : <a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.2/ktor-io/common/src/io/ktor/utils/io/BufferedByteWriteChannel.kt#L7">source</a>)</span></span></div><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-byte-channel/index.html">ByteChannel</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="-1703700327%2FProperties%2F-2056813312" anchor-label="autoFlush" id="-1703700327%2FProperties%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/auto-flush.html"><span>auto</span><wbr><span><span>Flush</span></span></a></div>
@@ -150,7 +150,7 @@
             </div>
           </div>
 <a data-name="-733142082%2FProperties%2F-2056813312" anchor-label="availableForWrite" id="-733142082%2FProperties%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../available-for-write.html"><span>available</span><wbr><span>For</span><wbr><span><span>Write</span></span></a></div>
@@ -165,7 +165,7 @@
             </div>
           </div>
 <a data-name="1978217873%2FProperties%2F-2056813312" anchor-label="closedCause" id="1978217873%2FProperties%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/closed-cause.html"><span>closed</span><wbr><span><span>Cause</span></span></a></div>
@@ -180,7 +180,7 @@
             </div>
           </div>
 <a data-name="1666867296%2FProperties%2F-2056813312" anchor-label="isClosedForWrite" id="1666867296%2FProperties%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/is-closed-for-write.html"><span>is</span><wbr><span>Closed</span><wbr><span>For</span><wbr><span><span>Write</span></span></a></div>
@@ -195,7 +195,7 @@
             </div>
           </div>
 <a data-name="96502063%2FProperties%2F-2056813312" anchor-label="writeBuffer" id="96502063%2FProperties%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/write-buffer.html"><span>write</span><wbr><span><span>Buffer</span></span></a></div>
@@ -204,7 +204,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-byte-write-channel/write-buffer.html">writeBuffer</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-byte-write-channel/write-buffer.html">writeBuffer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-sink/index.html">Sink</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -212,9 +212,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="1397349310%2FFunctions%2F-962523480" anchor-label="asSink" id="1397349310%2FFunctions%2F-962523480" data-filterable-set=":ktor-io/jvmAndPosixMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmAndPosixMain" data-filterable-set=":ktor-io/jvmAndPosixMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmAndPosixMain" data-filterable-set=":ktor-io/jvmAndPosixMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../as-sink.html"><span>as</span><wbr><span><span>Sink</span></span></a></div>
@@ -225,13 +225,13 @@
                 <div class="title">
                   <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
                     <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmAndPosixMain" data-filterable-set=":ktor-io/jvmAndPosixMain" data-active="" data-toggle=":ktor-io/jvmAndPosixMain">jvmAndPosix</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../as-sink.html"><span class="token function">asSink</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.io/RawSink///PointingToDeclaration/">RawSink</span></div><div class="brief "><p class="paragraph">Converts the current <code class="lang-kotlin">ByteWriteChannel</code> instance into a <code class="lang-kotlin">RawSink</code>.</p></div></div>                  </div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmAndPosixMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../as-sink.html"><span class="token function">asSink</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-raw-sink/index.html">RawSink</a></div><div class="brief "><p class="paragraph">Converts the current <code class="lang-kotlin">ByteWriteChannel</code> instance into a <code class="lang-kotlin">RawSink</code>.</p></div></div>                  </div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-531519139%2FFunctions%2F-2056813312" anchor-label="awaitFreeSpace" id="-531519139%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../await-free-space.html"><span>await</span><wbr><span>Free</span><wbr><span><span>Space</span></span></a></div>
@@ -246,7 +246,7 @@
             </div>
           </div>
 <a data-name="-591455164%2FFunctions%2F-2056813312" anchor-label="cancel" id="-591455164%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/cancel.html"><span><span>cancel</span></span></a></div>
@@ -261,7 +261,7 @@
             </div>
           </div>
 <a data-name="1314668563%2FFunctions%2F-2056813312" anchor-label="cancel" id="1314668563%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../cancel.html"><span><span>cancel</span></span></a></div>
@@ -276,7 +276,7 @@
             </div>
           </div>
 <a data-name="1215827511%2FFunctions%2F-2056813312" anchor-label="close" id="1215827511%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="close.html"><span><span>close</span></span></a></div>
@@ -285,13 +285,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Flush all pending bytes from <a href="../write-buffer.html">writeBuffer</a> to the internal read buffer without suspension and initiate channel close.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Flush all pending bytes from <a href="../-byte-write-channel/write-buffer.html">writeBuffer</a> to the internal read buffer without suspension and initiate channel close.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1722745386%2FFunctions%2F-2056813312" anchor-label="close" id="1722745386%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../close.html"><span><span>close</span></span></a></div>
@@ -306,7 +306,7 @@
             </div>
           </div>
 <a data-name="1021930029%2FFunctions%2F-2056813312" anchor-label="counted" id="1021930029%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../counted.html"><span><span>counted</span></span></a></div>
@@ -321,7 +321,7 @@
             </div>
           </div>
 <a data-name="1901632394%2FFunctions%2F-2056813312" anchor-label="flush" id="1901632394%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/flush.html"><span><span>flush</span></span></a></div>
@@ -336,7 +336,7 @@
             </div>
           </div>
 <a data-name="-698434775%2FFunctions%2F-2056813312" anchor-label="flushAndClose" id="-698434775%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-byte-write-channel/flush-and-close.html"><span>flush</span><wbr><span>And</span><wbr><span><span>Close</span></span></a></div>
@@ -351,7 +351,7 @@
             </div>
           </div>
 <a data-name="-1550234027%2FFunctions%2F-2056813312" anchor-label="flushIfNeeded" id="-1550234027%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../flush-if-needed.html"><span>flush</span><wbr><span>If</span><wbr><span><span>Needed</span></span></a></div>
@@ -366,7 +366,7 @@
             </div>
           </div>
 <a data-name="-1814455280%2FFunctions%2F-2056813312" anchor-label="flushWriteBuffer" id="-1814455280%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="flush-write-buffer.html"><span>flush</span><wbr><span>Write</span><wbr><span><span>Buffer</span></span></a></div>
@@ -375,13 +375,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="flush-write-buffer.html"><span class="token function">flushWriteBuffer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Flush all pending bytes from <a href="../write-buffer.html">writeBuffer</a> to the internal read buffer without suspension.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="flush-write-buffer.html"><span class="token function">flushWriteBuffer</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Flush all pending bytes from <a href="../-byte-write-channel/write-buffer.html">writeBuffer</a> to the internal read buffer without suspension.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1698597061%2FFunctions%2F-2056813312" anchor-label="onClose" id="1698597061%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../on-close.html"><span>on</span><wbr><span><span>Close</span></span></a></div>
@@ -396,7 +396,7 @@
             </div>
           </div>
 <a data-name="1620535573%2FFunctions%2F-2056813312" anchor-label="rethrowCloseCauseIfNeeded" id="1620535573%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../rethrow-close-cause-if-needed.html"><span>rethrow</span><wbr><span>Close</span><wbr><span>Cause</span><wbr><span>If</span><wbr><span><span>Needed</span></span></a></div>
@@ -410,23 +410,59 @@
               </div>
             </div>
           </div>
-<a data-name="769051935%2FFunctions%2F-2056813312" anchor-label="write" id="769051935%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+<a data-name="2065935710%2FFunctions%2F-1578420746" anchor-label="toOutputStream" id="2065935710%2FFunctions%2F-1578420746" data-filterable-set=":ktor-io/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../write.html"><span><span>write</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="769051935%2FFunctions%2F-2056813312"></span>
+                  <div><a href="../../io.ktor.utils.io.jvm.javaio/to-output-stream.html"><span>to</span><wbr><span>Output</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2065935710%2FFunctions%2F-1578420746"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">desiredSpace<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Await for <a href="../write.html">desiredSpace</a> will be available for write and invoke <a href="../write.html">block</a> function providing <a href="../../io.ktor.utils.io.core/-memory/index.html">Memory</a> instance and the corresponding range suitable for wiring in the memory. The block function should return number of bytes were written, possibly 0.</p></div></div></div>
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-active="" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../../io.ktor.utils.io.jvm.javaio/to-output-stream.html"><span class="token function">toOutputStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">OutputStream</a></div><div class="brief "><p class="paragraph">Create blocking <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html">java.io.OutputStream</a> for this channel that does block every time the channel suspends at write Similar to do reading in <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/index.html">runBlocking</a> however you can pass it to regular blocking API</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-558249147%2FFunctions%2F1209621610" anchor-label="write" id="-558249147%2FFunctions%2F1209621610" data-filterable-set=":ktor-io/jvmMain,:ktor-io/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain,:ktor-io/commonMain" data-filterable-set=":ktor-io/jvmMain,:ktor-io/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../write.html"><span><span>write</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-558249147%2FFunctions%2F1209621610"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-active="" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">desiredSpace<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Await for <a href="../write.html">desiredSpace</a> will be available for write and invoke <a href="../write.html">block</a> function providing <a href="../../io.ktor.utils.io.core/-memory/index.html">Memory</a> instance and the corresponding range suitable for wiring in the memory. The block function should return number of bytes were written, possibly 0.</p></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write.html"><span class="token function">write</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>buffer<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-980583120%2FFunctions%2F-1578420746" anchor-label="writeAvailable" id="-980583120%2FFunctions%2F-1578420746" data-filterable-set=":ktor-io/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../write-available.html"><span>write</span><wbr><span><span>Available</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-980583120%2FFunctions%2F-1578420746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-active="" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-available.html"><span class="token function">writeAvailable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">buffer<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-available.html"><span class="token function">writeAvailable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Invokes <a href="../write-available.html">block</a> if it is possible to write at least <a href="../write-available.html">min</a> byte providing byte buffer to it so lambda can write to the buffer up to <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/Buffer.html#remaining--">ByteBuffer.remaining</a> bytes. If there are no <a href="../write-available.html">min</a> bytes spaces available then the invocation returns 0.</p></div></div>                  </div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1053023630%2FFunctions%2F-2056813312" anchor-label="writeBuffer" id="-1053023630%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-buffer.html"><span>write</span><wbr><span><span>Buffer</span></span></a></div>
@@ -435,13 +471,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-buffer.html"><span class="token function">writeBuffer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><span data-unresolved-link="kotlinx.io/RawSource///PointingToDeclaration/">RawSource</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-buffer.html"><span class="token function">writeBuffer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span data-unresolved-link="kotlinx.io/RawSource///PointingToDeclaration/">RawSource</span><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-buffer.html"><span class="token function">writeBuffer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-raw-source/index.html">RawSource</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-buffer.html"><span class="token function">writeBuffer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-raw-source/index.html">RawSource</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="241872807%2FFunctions%2F-2056813312" anchor-label="writeByte" id="241872807%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-byte.html"><span>write</span><wbr><span><span>Byte</span></span></a></div>
@@ -456,7 +492,7 @@
             </div>
           </div>
 <a data-name="661636551%2FFunctions%2F-2056813312" anchor-label="writeByteArray" id="661636551%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-byte-array.html"><span>write</span><wbr><span>Byte</span><wbr><span><span>Array</span></span></a></div>
@@ -470,8 +506,25 @@
               </div>
             </div>
           </div>
+<a data-name="-2009231186%2FFunctions%2F-1578420746" anchor-label="writeByteBuffer" id="-2009231186%2FFunctions%2F-1578420746" data-filterable-set=":ktor-io/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../write-byte-buffer.html"><span>write</span><wbr><span>Byte</span><wbr><span><span>Buffer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2009231186%2FFunctions%2F-1578420746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-active="" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-byte-buffer.html"><span class="token function">writeByteBuffer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-1288958763%2FFunctions%2F-2056813312" anchor-label="writeDouble" id="-1288958763%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-double.html"><span>write</span><wbr><span><span>Double</span></span></a></div>
@@ -486,7 +539,7 @@
             </div>
           </div>
 <a data-name="-643925081%2FFunctions%2F-2056813312" anchor-label="writeFloat" id="-643925081%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-float.html"><span>write</span><wbr><span><span>Float</span></span></a></div>
@@ -500,25 +553,25 @@
               </div>
             </div>
           </div>
-<a data-name="654942870%2FFunctions%2F5660256" anchor-label="writeFully" id="654942870%2FFunctions%2F5660256" data-filterable-set=":ktor-io/commonMain,:ktor-io/posixMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain,:ktor-io/posixMain" data-filterable-set=":ktor-io/commonMain,:ktor-io/posixMain">
+<a data-name="1903858330%2FFunctions%2F730759222" anchor-label="writeFully" id="1903858330%2FFunctions%2F730759222" data-filterable-set=":ktor-io/jvmMain,:ktor-io/commonMain,:ktor-io/posixMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain,:ktor-io/commonMain,:ktor-io/posixMain" data-filterable-set=":ktor-io/jvmMain,:ktor-io/commonMain,:ktor-io/posixMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-fully.html"><span>write</span><wbr><span><span>Fully</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="654942870%2FFunctions%2F5660256"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1903858330%2FFunctions%2F730759222"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
                   <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-active="" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/posixMain" data-filterable-set=":ktor-io/posixMain" data-toggle=":ktor-io/posixMain">posix</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">startIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">endIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>value.size</span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/posixMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-678236332">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-byte-var/index.html">ByteVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-678236332">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">src<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-byte-var/index.html">ByteVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain" data-active="" data-toggle=":ktor-io/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-toggle=":ktor-io/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-io/posixMain" data-filterable-set=":ktor-io/posixMain" data-toggle=":ktor-io/posixMain">posix</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">startIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">endIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>value.size</span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-io/posixMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-678236332">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-byte-var/index.html">ByteVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-678236332">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-fully.html"><span class="token function">writeFully</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">src<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlinx.cinterop/-byte-var/index.html">ByteVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">length<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1511231289%2FFunctions%2F-2056813312" anchor-label="writeInt" id="-1511231289%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-int.html"><span>write</span><wbr><span><span>Int</span></span></a></div>
@@ -533,7 +586,7 @@
             </div>
           </div>
 <a data-name="-432018753%2FFunctions%2F-2056813312" anchor-label="writeLong" id="-432018753%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-long.html"><span>write</span><wbr><span><span>Long</span></span></a></div>
@@ -548,7 +601,7 @@
             </div>
           </div>
 <a data-name="298505743%2FFunctions%2F-2056813312" anchor-label="writePacket" id="298505743%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-packet.html"><span>write</span><wbr><span><span>Packet</span></span></a></div>
@@ -557,13 +610,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-packet.html"><span class="token function">writePacket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">copy<span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Buffer///PointingToDeclaration/">Buffer</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-packet.html"><span class="token function">writePacket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Source///PointingToDeclaration/">Source</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Writes the entire source contents to the <a href="../-byte-channel/index.html">ByteChannel</a>. Prevents memory exhaustion by waiting for buffer to flush.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-packet.html"><span class="token function">writePacket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">copy<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-buffer/index.html">Buffer</a></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-packet.html"><span class="token function">writePacket</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-source/index.html">Source</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Writes the entire source contents to the <a href="../-byte-channel/index.html">ByteChannel</a>. Prevents memory exhaustion by waiting for buffer to flush.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-751370329%2FFunctions%2F-2056813312" anchor-label="writeShort" id="-751370329%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-short.html"><span>write</span><wbr><span><span>Short</span></span></a></div>
@@ -578,7 +631,7 @@
             </div>
           </div>
 <a data-name="598868637%2FFunctions%2F-2056813312" anchor-label="writeSource" id="598868637%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-source.html"><span>write</span><wbr><span><span>Source</span></span></a></div>
@@ -587,13 +640,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-source.html"><span class="token function">writeSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Source///PointingToDeclaration/">Source</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../write-source.html"><span class="token function">writeSource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx-io/kotlinx-io-core/kotlinx.io/-source/index.html">Source</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="999830613%2FFunctions%2F-2056813312" anchor-label="writeString" id="999830613%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-string.html"><span>write</span><wbr><span><span>String</span></span></a></div>
@@ -608,7 +661,7 @@
             </div>
           </div>
 <a data-name="-1449253596%2FFunctions%2F-2056813312" anchor-label="writeStringUtf8" id="-1449253596%2FFunctions%2F-2056813312" data-filterable-set=":ktor-io/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/commonMain" data-filterable-set=":ktor-io/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../write-string-utf8.html"><span>write</span><wbr><span>String</span><wbr><span><span>Utf8</span></span></a></div>
@@ -622,23 +675,61 @@
               </div>
             </div>
           </div>
+<a data-name="852273920%2FFunctions%2F-1578420746" anchor-label="writeSuspendSession" id="852273920%2FFunctions%2F-1578420746" data-filterable-set=":ktor-io/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.utils.io.jvm.nio/write-suspend-session.html"><span>write</span><wbr><span>Suspend</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="852273920%2FFunctions%2F-1578420746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-active="" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../../io.ktor.utils.io.jvm.nio/write-suspend-session.html"><span class="token function"><strike>writeSuspendSession</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../io.ktor.utils.io.jvm.nio/-write-suspend-session/index.html">WriteSuspendSession</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-191837457%2FFunctions%2F-1578420746" anchor-label="writeWhile" id="-191837457%2FFunctions%2F-1578420746" data-filterable-set=":ktor-io/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../io.ktor.utils.io.jvm.nio/write-while.html"><span>write</span><wbr><span><span>While</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-191837457%2FFunctions%2F-1578420746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-io/jvmMain" data-filterable-set=":ktor-io/jvmMain" data-active="" data-toggle=":ktor-io/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-io/jvmMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../-byte-write-channel/index.html#-1673328109%2FMain%2F-1578420746">ByteWriteChannel</a><span class="token punctuation">.</span><a href="../../io.ktor.utils.io.jvm.nio/write-while.html"><span class="token function">writeWhile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>block<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

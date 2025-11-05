@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>io.ktor.client.fetch</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
@@ -25,50 +25,40 @@
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.fetch/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../3.2.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../3.1.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../3.0.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../2.3.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../2.2.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../2.0.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../3.2.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../3.1.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../3.0.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../2.3.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../2.2.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../2.0.x/ktor-client-core/io.ktor.client.fetch/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":ktor-client-core/jsMain">js</button>
-                <button class="platform-tag platform-selector wasm-like" data-active="" data-filter=":ktor-client-core/wasmJsMain">wasmJs</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector js-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/jsMain">js</button>
+                <button class="platform-tag platform-selector wasm-like" data-active="" aria-pressed="true" data-filter=":ktor-client-core/wasmJsMain">wasmJs</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
@@ -89,32 +79,34 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="package" id="content" pageids="ktor-client-core::io.ktor.client.fetch////PointingToDeclaration//1116196499">
   <div class="breadcrumbs"><a href="../index.html">ktor-client-core</a><span class="delimiter">/</span><span class="current">io.ktor.client.fetch</span></div>
   <div class="cover ">
@@ -124,9 +116,9 @@
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="TYPE">
-        <h2 class="">Types</h2>
+        <h2 class="tableheader">Types</h2>
         <div class="table"><a data-name="-1709914237%2FClasslikes%2F1116196499" anchor-label="AbortController" id="-1709914237%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-abort-controller/index.html"><span>Abort</span><wbr><span><span>Controller</span></span></a></div>
@@ -143,7 +135,7 @@
             </div>
           </div>
 <a data-name="-269752073%2FClasslikes%2F1116196499" anchor-label="AbortSignal" id="-269752073%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-abort-signal/index.html"><span>Abort</span><wbr><span><span>Signal</span></span></a></div>
@@ -160,7 +152,7 @@
             </div>
           </div>
 <a data-name="-1519063938%2FClasslikes%2F1116196499" anchor-label="AddEventListenerOptions" id="-1519063938%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-add-event-listener-options/index.html"><span>Add</span><wbr><span>Event</span><wbr><span>Listener</span><wbr><span><span>Options</span></span></a></div>
@@ -177,7 +169,7 @@
             </div>
           </div>
 <a data-name="1201392150%2FClasslikes%2F1116196499" anchor-label="ArrayBuffer" id="1201392150%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-array-buffer/index.html"><span>Array</span><wbr><span><span>Buffer</span></span></a></div>
@@ -194,7 +186,7 @@
             </div>
           </div>
 <a data-name="-321054062%2FClasslikes%2F1116196499" anchor-label="ArrayBufferConstructor" id="-321054062%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-array-buffer-constructor/index.html"><span>Array</span><wbr><span>Buffer</span><wbr><span><span>Constructor</span></span></a></div>
@@ -211,7 +203,7 @@
             </div>
           </div>
 <a data-name="559478719%2FClasslikes%2F1116196499" anchor-label="ArrayBufferLike" id="559478719%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-array-buffer-like/index.html"><span>Array</span><wbr><span>Buffer</span><wbr><span><span>Like</span></span></a></div>
@@ -228,7 +220,7 @@
             </div>
           </div>
 <a data-name="-2015799183%2FClasslikes%2F1116196499" anchor-label="ArrayBufferView" id="-2015799183%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-array-buffer-view/index.html"><span>Array</span><wbr><span>Buffer</span><wbr><span><span>View</span></span></a></div>
@@ -245,7 +237,7 @@
             </div>
           </div>
 <a data-name="-1324346401%2FClasslikes%2F1116196499" anchor-label="ArrayLike" id="-1324346401%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-array-like/index.html"><span>Array</span><wbr><span><span>Like</span></span></a></div>
@@ -262,7 +254,7 @@
             </div>
           </div>
 <a data-name="-1199336138%2FClasslikes%2F1116196499" anchor-label="Blob" id="-1199336138%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-blob/index.html"><span><span>Blob</span></span></a></div>
@@ -279,7 +271,7 @@
             </div>
           </div>
 <a data-name="1057057489%2FClasslikes%2F1116196499" anchor-label="Body" id="1057057489%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-body/index.html"><span><span>Body</span></span></a></div>
@@ -296,7 +288,7 @@
             </div>
           </div>
 <a data-name="1002049813%2FClasslikes%2F1116196499" anchor-label="Event" id="1002049813%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-event/index.html"><span><span>Event</span></span></a></div>
@@ -313,7 +305,7 @@
             </div>
           </div>
 <a data-name="-485385535%2FClasslikes%2F1116196499" anchor-label="EventListener" id="-485385535%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-event-listener/index.html"><span>Event</span><wbr><span><span>Listener</span></span></a></div>
@@ -330,7 +322,7 @@
             </div>
           </div>
 <a data-name="-413198270%2FClasslikes%2F1116196499" anchor-label="EventListenerObject" id="-413198270%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-event-listener-object/index.html"><span>Event</span><wbr><span>Listener</span><wbr><span><span>Object</span></span></a></div>
@@ -347,7 +339,7 @@
             </div>
           </div>
 <a data-name="-1035117853%2FClasslikes%2F1116196499" anchor-label="EventListenerOptions" id="-1035117853%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-event-listener-options/index.html"><span>Event</span><wbr><span>Listener</span><wbr><span><span>Options</span></span></a></div>
@@ -364,7 +356,7 @@
             </div>
           </div>
 <a data-name="-1551560316%2FClasslikes%2F1116196499" anchor-label="EventTarget" id="-1551560316%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-event-target/index.html"><span>Event</span><wbr><span><span>Target</span></span></a></div>
@@ -381,7 +373,7 @@
             </div>
           </div>
 <a data-name="-156727707%2FClasslikes%2F1116196499" anchor-label="FormData" id="-156727707%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-form-data/index.html"><span>Form</span><wbr><span><span>Data</span></span></a></div>
@@ -398,7 +390,7 @@
             </div>
           </div>
 <a data-name="-629465559%2FClasslikes%2F1116196499" anchor-label="Headers" id="-629465559%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-headers/index.html"><span><span>Headers</span></span></a></div>
@@ -415,7 +407,7 @@
             </div>
           </div>
 <a data-name="1493790943%2FClasslikes%2F1116196499" anchor-label="PipeOptions" id="1493790943%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-pipe-options/index.html"><span>Pipe</span><wbr><span><span>Options</span></span></a></div>
@@ -432,7 +424,7 @@
             </div>
           </div>
 <a data-name="690927139%2FClasslikes%2F1116196499" anchor-label="ReadableStream" id="690927139%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-readable-stream/index.html"><span>Readable</span><wbr><span><span>Stream</span></span></a></div>
@@ -449,7 +441,7 @@
             </div>
           </div>
 <a data-name="1476655734%2FClasslikes%2F1116196499" anchor-label="ReadableStreamBYOBReader" id="1476655734%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-readable-stream-b-y-o-b-reader/index.html"><span>Readable</span><wbr><span>Stream</span><wbr><span><span>BYOBReader</span></span></a></div>
@@ -466,7 +458,7 @@
             </div>
           </div>
 <a data-name="-1159860805%2FClasslikes%2F1116196499" anchor-label="ReadableStreamDefaultReader" id="-1159860805%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-readable-stream-default-reader/index.html"><span>Readable</span><wbr><span>Stream</span><wbr><span>Default</span><wbr><span><span>Reader</span></span></a></div>
@@ -483,7 +475,7 @@
             </div>
           </div>
 <a data-name="218793360%2FClasslikes%2F1116196499" anchor-label="ReadableStreamReadResult" id="218793360%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-readable-stream-read-result/index.html"><span>Readable</span><wbr><span>Stream</span><wbr><span>Read</span><wbr><span><span>Result</span></span></a></div>
@@ -500,7 +492,7 @@
             </div>
           </div>
 <a data-name="815851328%2FClasslikes%2F1116196499" anchor-label="Request" id="815851328%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-request/index.html"><span><span>Request</span></span></a></div>
@@ -517,7 +509,7 @@
             </div>
           </div>
 <a data-name="2081858704%2FClasslikes%2F1116196499" anchor-label="RequestInit" id="2081858704%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-request-init/index.html"><span>Request</span><wbr><span><span>Init</span></span></a></div>
@@ -534,7 +526,7 @@
             </div>
           </div>
 <a data-name="-1695637486%2FClasslikes%2F1116196499" anchor-label="Response" id="-1695637486%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-response/index.html"><span><span>Response</span></span></a></div>
@@ -551,7 +543,7 @@
             </div>
           </div>
 <a data-name="1274494008%2FClasslikes%2F1116196499" anchor-label="Uint8Array" id="1274494008%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-uint8-array/index.html"><span><span>Uint8Array</span></span></a></div>
@@ -568,7 +560,7 @@
             </div>
           </div>
 <a data-name="1390305072%2FClasslikes%2F1116196499" anchor-label="Uint8ArrayConstructor" id="1390305072%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-uint8-array-constructor/index.html"><span>Uint8Array</span><wbr><span><span>Constructor</span></span></a></div>
@@ -585,7 +577,7 @@
             </div>
           </div>
 <a data-name="-392716173%2FClasslikes%2F1116196499" anchor-label="WritableStream" id="-392716173%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-writable-stream/index.html"><span>Writable</span><wbr><span><span>Stream</span></span></a></div>
@@ -602,7 +594,7 @@
             </div>
           </div>
 <a data-name="1559265211%2FClasslikes%2F1116196499" anchor-label="WritableStreamDefaultWriter" id="1559265211%2FClasslikes%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]-writable-stream-default-writer/index.html"><span>Writable</span><wbr><span>Stream</span><wbr><span>Default</span><wbr><span><span>Writer</span></span></a></div>
@@ -621,9 +613,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="-109122218%2FFunctions%2F1116196499" anchor-label="fetch" id="-109122218%2FFunctions%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]fetch.html"><span><span>fetch</span></span></a></div>
@@ -640,7 +632,7 @@
             </div>
           </div>
 <a data-name="1373202604%2FFunctions%2F1116196499" anchor-label="get" id="1373202604%2FFunctions%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get.html"><span><span>get</span></span></a></div>
@@ -657,7 +649,7 @@
             </div>
           </div>
 <a data-name="-515790200%2FFunctions%2F1116196499" anchor-label="invoke" id="-515790200%2FFunctions%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../ktor-client-core/io.ktor.client.fetch/[wasm-js]invoke.html"><span><span>invoke</span></span></a></div>
@@ -674,7 +666,7 @@
             </div>
           </div>
 <a data-name="2037362579%2FFunctions%2F1116196499" anchor-label="set" id="2037362579%2FFunctions%2F1116196499" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain" data-filterable-set=":ktor-client-core/jsMain,:ktor-client-core/wasmJsMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set.html"><span><span>set</span></span></a></div>
@@ -696,17 +688,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

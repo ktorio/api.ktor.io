@@ -1,23 +1,23 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>WebRtcDataChannel</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -25,61 +25,43 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
 <link href="../../../images/logo-icon.svg"></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
                     Ktor
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
         <div class="navigation-controls--break ui-kit_mobile-only"></div>
         <div class="library-version" id="library-version">
 <dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.webrtc/-web-rtc-data-channel/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
-  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">3.3.x</div>
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
   <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
     <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
-    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.3.x</a></div>
-    <div><a href="../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.2.x</a></div>
-    <div><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.1.x</a></div>
-    <div><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">3.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.3.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.2.x</a></div>
-    <div><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">2.0.x</a></div>
-    <div><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.6.x</a></div>
-  </div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
   <div class="dropdown--overlay"></div>
 </div>
 </dokka-template-command>        </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":ktor-client-webrtc/androidMain">android</button>
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-webrtc/commonMain">common</button>
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-webrtc/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
-                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
-                            <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/androidMain" data-filter=":ktor-client-webrtc/androidMain">
-                                <span class="checkbox--icon"></span>
-                                android
-                            </label>
-                        </li>
                         <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
                             <label class="checkbox">
                                 <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/commonMain" data-filter=":ktor-client-webrtc/commonMain">
@@ -97,45 +79,47 @@
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     Ktor
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-webrtc::io.ktor.client.webrtc/WebRtcDataChannel///PointingToDeclaration//727813081">
   <div class="breadcrumbs"><a href="../../index.html">ktor-client-webrtc</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.webrtc</a><span class="delimiter">/</span><span class="current">WebRtcDataChannel</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Web</span><wbr><span>Rtc</span><wbr><span>Data</span><wbr><span><span>Channel</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">WebRtcDataChannel</a> : <a href="../-web-rtc/-data-channel/index.html">WebRtc.DataChannel</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/ktorio/ktor/blob/3.3.1/ktor-client/ktor-client-webrtc/common/src/io/ktor/client/webrtc/WebRtcDataChannel.kt#L162">source</a>)</span></span></div><p class="paragraph">Abstract class representing a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an <a href="../-web-rtc-peer-connection/index.html">WebRtcPeerConnection</a>.</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><p class="paragraph"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">MDN RTCDataChannel</a></p></div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/-android-web-rtc-data-channel/index.html">AndroidWebRtcDataChannel</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/-js-web-rtc-data-channel/index.html">JsWebRtcDataChannel</a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">WebRtcDataChannel</a> : <a href="../-web-rtc/-data-channel/index.html">WebRtc.DataChannel</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.2/ktor-client/ktor-client-webrtc/common/src/io/ktor/client/webrtc/WebRtcDataChannel.kt#L162">source</a>)</span></span></div><p class="paragraph">Abstract class representing a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an <a href="../-web-rtc-peer-connection/index.html">WebRtcPeerConnection</a>.</p><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><p class="paragraph"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">MDN RTCDataChannel</a></p></div></div></div></div></div><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/-js-web-rtc-data-channel/index.html">JsWebRtcDataChannel</a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
-        <h2 class="">Constructors</h2>
+        <h2 class="tableheader">Constructors</h2>
         <div class="table"><a data-name="719589465%2FConstructors%2F727813081" anchor-label="WebRtcDataChannel" id="719589465%2FConstructors%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-web-rtc-data-channel.html"><span>Web</span><wbr><span>Rtc</span><wbr><span>Data</span><wbr><span><span>Channel</span></span></a></div>
@@ -152,9 +136,9 @@
         </div>
       </div>
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="-1042355800%2FProperties%2F727813081" anchor-label="bufferedAmount" id="-1042355800%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/buffered-amount.html"><span>buffered</span><wbr><span><span>Amount</span></span></a></div>
@@ -169,7 +153,7 @@
             </div>
           </div>
 <a data-name="-1182296719%2FProperties%2F727813081" anchor-label="bufferedAmountLowThreshold" id="-1182296719%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/buffered-amount-low-threshold.html"><span>buffered</span><wbr><span>Amount</span><wbr><span>Low</span><wbr><span><span>Threshold</span></span></a></div>
@@ -184,7 +168,7 @@
             </div>
           </div>
 <a data-name="1816368676%2FProperties%2F727813081" anchor-label="id" id="1816368676%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/id.html"><span><span>id</span></span></a></div>
@@ -199,7 +183,7 @@
             </div>
           </div>
 <a data-name="1149442279%2FProperties%2F727813081" anchor-label="label" id="1149442279%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/label.html"><span><span>label</span></span></a></div>
@@ -214,7 +198,7 @@
             </div>
           </div>
 <a data-name="888659686%2FProperties%2F727813081" anchor-label="maxPacketLifeTime" id="888659686%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/max-packet-life-time.html"><span>max</span><wbr><span>Packet</span><wbr><span>Life</span><wbr><span><span>Time</span></span></a></div>
@@ -229,7 +213,7 @@
             </div>
           </div>
 <a data-name="-947043725%2FProperties%2F727813081" anchor-label="maxRetransmits" id="-947043725%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/max-retransmits.html"><span>max</span><wbr><span><span>Retransmits</span></span></a></div>
@@ -244,7 +228,7 @@
             </div>
           </div>
 <a data-name="-201836039%2FProperties%2F727813081" anchor-label="negotiated" id="-201836039%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/negotiated.html"><span><span>negotiated</span></span></a></div>
@@ -259,7 +243,7 @@
             </div>
           </div>
 <a data-name="1067457038%2FProperties%2F727813081" anchor-label="ordered" id="1067457038%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/ordered.html"><span><span>ordered</span></span></a></div>
@@ -274,7 +258,7 @@
             </div>
           </div>
 <a data-name="-1951569465%2FProperties%2F727813081" anchor-label="protocol" id="-1951569465%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/protocol.html"><span><span>protocol</span></span></a></div>
@@ -289,7 +273,7 @@
             </div>
           </div>
 <a data-name="-1205375510%2FProperties%2F727813081" anchor-label="state" id="-1205375510%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/state.html"><span><span>state</span></span></a></div>
@@ -306,9 +290,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="1425729123%2FFunctions%2F727813081" anchor-label="close" id="1425729123%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/close.html"><span><span>close</span></span></a></div>
@@ -323,7 +307,7 @@
             </div>
           </div>
 <a data-name="1935978734%2FFunctions%2F727813081" anchor-label="closeTransport" id="1935978734%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/close-transport.html"><span>close</span><wbr><span><span>Transport</span></span></a></div>
@@ -337,25 +321,25 @@
               </div>
             </div>
           </div>
-<a data-name="1288024874%2FFunctions%2F1340761962" anchor-label="getNative" id="1288024874%2FFunctions%2F1340761962" data-filterable-set=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/androidMain,:ktor-client-webrtc/jsAndWasmSharedMain">
+<a data-name="1288024874%2FFunctions%2F174569493" anchor-label="getNative" id="1288024874%2FFunctions%2F174569493" data-filterable-set=":ktor-client-webrtc/jsAndWasmSharedMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/jsAndWasmSharedMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="../../../ktor-client-webrtc/io.ktor.client.webrtc/[js-and-wasm-shared]get-native.html"><span>get</span><wbr><span><span>Native</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1288024874%2FFunctions%2F1340761962"></span>
+                  <div><a href="../get-native.html"><span>get</span><wbr><span><span>Native</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1288024874%2FFunctions%2F174569493"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
                   <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-webrtc/androidMain" data-filterable-set=":ktor-client-webrtc/androidMain" data-active="" data-toggle=":ktor-client-webrtc/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/jsAndWasmSharedMain" data-toggle=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button></div>
-<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/androidMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">WebRtcDataChannel</a><span class="token punctuation">.</span><a href="../[android]get-native.html"><span class="token function">getNative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.webrtc/DataChannel///PointingToDeclaration/">DataChannel</span></div><div class="brief "><p class="paragraph">Returns implementation of the data channel that is used under the hood. Use it with caution.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-webrtc/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#436687806%2FMain%2F174569493">WebRtcDataChannel</a><span class="token punctuation">.</span><a href="../[js-and-wasm-shared]get-native.html"><span class="token function">getNative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="web.rtc/RTCDataChannel///PointingToDeclaration/">RTCDataChannel</span></div><div class="brief "><p class="paragraph">Returns implementation of the data channel that is used under the hood. Use it with caution.</p></div></div>                  </div>
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-webrtc/jsAndWasmSharedMain" data-filterable-set=":ktor-client-webrtc/jsAndWasmSharedMain" data-active="" data-toggle=":ktor-client-webrtc/jsAndWasmSharedMain">jsAndWasmShared</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#436687806%2FMain%2F174569493">WebRtcDataChannel</a><span class="token punctuation">.</span><a href="../get-native.html"><span class="token function">getNative</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="web.rtc/RTCDataChannel///PointingToDeclaration/">RTCDataChannel</span></div><div class="brief "><p class="paragraph">Returns implementation of the data channel that is used under the hood. Use it with caution.</p></div></div>                  </div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="879414006%2FFunctions%2F727813081" anchor-label="receive" id="879414006%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="receive.html"><span><span>receive</span></span></a></div>
@@ -370,7 +354,7 @@
             </div>
           </div>
 <a data-name="-1532724427%2FFunctions%2F727813081" anchor-label="receiveBinary" id="-1532724427%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="receive-binary.html"><span>receive</span><wbr><span><span>Binary</span></span></a></div>
@@ -385,7 +369,7 @@
             </div>
           </div>
 <a data-name="550170057%2FFunctions%2F727813081" anchor-label="receiveText" id="550170057%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="receive-text.html"><span>receive</span><wbr><span><span>Text</span></span></a></div>
@@ -400,7 +384,7 @@
             </div>
           </div>
 <a data-name="338228358%2FFunctions%2F727813081" anchor-label="send" id="338228358%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/send.html"><span><span>send</span></span></a></div>
@@ -415,7 +399,7 @@
             </div>
           </div>
 <a data-name="-598852050%2FFunctions%2F727813081" anchor-label="setBufferedAmountLowThreshold" id="-598852050%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-web-rtc/-data-channel/set-buffered-amount-low-threshold.html"><span>set</span><wbr><span>Buffered</span><wbr><span>Amount</span><wbr><span>Low</span><wbr><span><span>Threshold</span></span></a></div>
@@ -430,7 +414,7 @@
             </div>
           </div>
 <a data-name="1558221273%2FFunctions%2F727813081" anchor-label="tryReceive" id="1558221273%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="try-receive.html"><span>try</span><wbr><span><span>Receive</span></span></a></div>
@@ -445,7 +429,7 @@
             </div>
           </div>
 <a data-name="-615232552%2FFunctions%2F727813081" anchor-label="tryReceiveBinary" id="-615232552%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="try-receive-binary.html"><span>try</span><wbr><span>Receive</span><wbr><span><span>Binary</span></span></a></div>
@@ -460,7 +444,7 @@
             </div>
           </div>
 <a data-name="-110326996%2FFunctions%2F727813081" anchor-label="tryReceiveText" id="-110326996%2FFunctions%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
-          <div class="table-row" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="try-receive-text.html"><span>try</span><wbr><span>Receive</span><wbr><span><span>Text</span></span></a></div>
@@ -480,17 +464,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
