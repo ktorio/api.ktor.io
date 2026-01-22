@@ -1,0 +1,623 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>URLBuilder</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.http/-u-r-l-builder/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../../3.2.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../../3.1.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../../3.0.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../../2.3.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../../2.2.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../../2.0.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../../1.6.x/ktor-http/io.ktor.http/-u-r-l-builder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-http/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-http/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-http/commonMain" data-filter=":ktor-http/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-http/jvmMain" data-filter=":ktor-http/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-http::io.ktor.http/URLBuilder///PointingToDeclaration//1758759778">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-http</a><span class="delimiter">/</span><a href="../index.html">io.ktor.http</a><span class="delimiter">/</span><span class="current">URLBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>URLBuilder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">URLBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">protocol<span class="token operator">: </span><a href="../-u-r-l-protocol/index.html">URLProtocol</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_PORT<span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">password<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">pathSegments<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">parameters<span class="token operator">: </span><a href="../-parameters/index.html">Parameters</a><span class="token operator"> = </span>Parameters.Empty<span class="token punctuation">, </span></span><span class="parameter ">fragment<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>trailingQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.3/ktor-http/common/src/io/ktor/http/URLBuilder.kt#L30">source</a>)</span></span></div><p class="paragraph">A URL builder with all mutable components</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.http.URLBuilder">Report a problem</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="314204318%2FConstructors%2F1758759778" anchor-label="URLBuilder" id="314204318%2FConstructors%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-u-r-l-builder.html"><span><span>URLBuilder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="314204318%2FConstructors%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">protocol<span class="token operator">: </span><a href="../-u-r-l-protocol/index.html">URLProtocol</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>DEFAULT_PORT<span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">password<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">pathSegments<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">parameters<span class="token operator">: </span><a href="../-parameters/index.html">Parameters</a><span class="token operator"> = </span>Parameters.Empty<span class="token punctuation">, </span></span><span class="parameter ">fragment<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">trailingQuery<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1349730118%2FClasslikes%2F1758759778" anchor-label="Companion" id="-1349730118%2FClasslikes%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1349730118%2FClasslikes%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1363066728%2FProperties%2F1758759778" anchor-label="authority" id="-1363066728%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../authority.html"><span><span>authority</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1363066728%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../authority.html">authority</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph"><a href="index.html">URLBuilder</a> authority.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2140896053%2FProperties%2F1758759778" anchor-label="encodedFragment" id="2140896053%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoded-fragment.html"><span>encoded</span><wbr><span><span>Fragment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2140896053%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="encoded-fragment.html">encodedFragment</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1944759003%2FProperties%2F1758759778" anchor-label="encodedParameters" id="1944759003%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoded-parameters.html"><span>encoded</span><wbr><span><span>Parameters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1944759003%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="encoded-parameters.html">encodedParameters</a><span class="token operator">: </span><a href="../-parameters-builder/index.html">ParametersBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1404895926%2FProperties%2F1758759778" anchor-label="encodedPassword" id="-1404895926%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoded-password.html"><span>encoded</span><wbr><span><span>Password</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1404895926%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="encoded-password.html">encodedPassword</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2126768088%2FProperties%2F1758759778" anchor-label="encodedPath" id="-2126768088%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../encoded-path.html"><span>encoded</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2126768088%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../encoded-path.html">encodedPath</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-491290560%2FProperties%2F1758759778" anchor-label="encodedPathSegments" id="-491290560%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoded-path-segments.html"><span>encoded</span><wbr><span>Path</span><wbr><span><span>Segments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-491290560%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="encoded-path-segments.html">encodedPathSegments</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="124102170%2FProperties%2F1758759778" anchor-label="encodedUser" id="124102170%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encoded-user.html"><span>encoded</span><wbr><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="124102170%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="encoded-user.html">encodedUser</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1393910007%2FProperties%2F1758759778" anchor-label="fragment" id="1393910007%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fragment.html"><span><span>fragment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1393910007%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="fragment.html">fragment</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">URL fragment (anchor name)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1601934751%2FProperties%2F1758759778" anchor-label="host" id="1601934751%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="host.html"><span><span>host</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1601934751%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="host.html">host</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">name without port (domain)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1472054175%2FProperties%2F1758759778" anchor-label="isAbsolutePath" id="1472054175%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-absolute-path.html"><span>is</span><wbr><span>Absolute</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1472054175%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../is-absolute-path.html">isAbsolutePath</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks if <a href="../-url/index.html">Url</a> has absolute path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1434525812%2FProperties%2F1758759778" anchor-label="isRelativePath" id="1434525812%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../is-relative-path.html"><span>is</span><wbr><span>Relative</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1434525812%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../is-relative-path.html">isRelativePath</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks if <a href="../-url/index.html">Url</a> has absolute path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1350707229%2FProperties%2F1758759778" anchor-label="parameters" id="1350707229%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parameters.html"><span><span>parameters</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1350707229%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="parameters.html">parameters</a><span class="token operator">: </span><a href="../-parameters-builder/index.html">ParametersBuilder</a></div><div class="brief "><p class="paragraph">URL query parameters</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2143085324%2FProperties%2F1758759778" anchor-label="password" id="2143085324%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="password.html"><span><span>password</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2143085324%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="password.html">password</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">password part (optional)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-144395006%2FProperties%2F1758759778" anchor-label="pathSegments" id="-144395006%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="path-segments.html"><span>path</span><wbr><span><span>Segments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-144395006%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="path-segments.html">pathSegments</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">URL path without query</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1890167014%2FProperties%2F1758759778" anchor-label="port" id="1890167014%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="port.html"><span><span>port</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1890167014%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="port.html">port</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">port number</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="109483439%2FProperties%2F1758759778" anchor-label="protocol" id="109483439%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="protocol.html"><span><span>protocol</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="109483439%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="protocol.html">protocol</a><span class="token operator">: </span><a href="../-u-r-l-protocol/index.html">URLProtocol</a></div><div class="brief "><p class="paragraph">URL protocol (scheme)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1743663429%2FProperties%2F1758759778" anchor-label="protocolOrNull" id="1743663429%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="protocol-or-null.html"><span>protocol</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1743663429%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="protocol-or-null.html">protocolOrNull</a><span class="token operator">: </span><a href="../-u-r-l-protocol/index.html">URLProtocol</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-525103129%2FProperties%2F1758759778" anchor-label="trailingQuery" id="-525103129%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trailing-query.html"><span>trailing</span><wbr><span><span>Query</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-525103129%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="trailing-query.html">trailingQuery</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">keep a trailing question character even if there are no query parameters</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="363642076%2FProperties%2F1758759778" anchor-label="user" id="363642076%2FProperties%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user.html"><span><span>user</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="363642076%2FProperties%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="user.html">user</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">username part (optional)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1210507182%2FFunctions%2F1758759778" anchor-label="appendEncodedPathSegments" id="1210507182%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../append-encoded-path-segments.html"><span>append</span><wbr><span>Encoded</span><wbr><span>Path</span><wbr><span><span>Segments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1210507182%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../append-encoded-path-segments.html"><span class="token function">appendEncodedPathSegments</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>components<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Adds <a href="../append-encoded-path-segments.html">components</a> to current <a href="../encoded-path.html">encodedPath</a></p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../append-encoded-path-segments.html"><span class="token function">appendEncodedPathSegments</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Adds <a href="../append-encoded-path-segments.html">segments</a> to current <a href="../encoded-path.html">encodedPath</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="952433942%2FFunctions%2F1758759778" anchor-label="appendPathSegments" id="952433942%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../append-path-segments.html"><span>append</span><wbr><span>Path</span><wbr><span><span>Segments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="952433942%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../append-path-segments.html"><span class="token function">appendPathSegments</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>components<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">encodeSlash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Adds <a href="../append-path-segments.html">components</a> to current <a href="../encoded-path.html">encodedPath</a></p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../append-path-segments.html"><span class="token function">appendPathSegments</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">segments<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">encodeSlash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Adds <a href="../append-path-segments.html">segments</a> to current <a href="../encoded-path.html">encodedPath</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1833505851%2FFunctions%2F1758759778" anchor-label="build" id="-1833505851%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1833505851%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-url/index.html">Url</a></div><div class="brief "><p class="paragraph">Build a <a href="../-url/index.html">Url</a> instance (everything is copied to a new instance)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="933159604%2FFunctions%2F1758759778" anchor-label="buildString" id="933159604%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build-string.html"><span>build</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="933159604%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build-string.html"><span class="token function">buildString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Build a URL string</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1772235186%2FFunctions%2F1758759778" anchor-label="clone" id="1772235186%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../clone.html"><span><span>clone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1772235186%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../clone.html"><span class="token function">clone</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Create a copy of this builder. Modifications in a copy is not reflected in the original instance and vise-versa.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1436990970%2FFunctions%2F1758759778" anchor-label="path" id="-1436990970%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../path.html"><span><span>path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1436990970%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../path.html"><span class="token function">path</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Replace components in the current <a href="../encoded-path.html">encodedPath</a>. The <a href="../path.html">path</a> components will be escaped, except <code class="lang-kotlin">/</code> character.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-260287806%2FFunctions%2F1758759778" anchor-label="pathComponents" id="-260287806%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../path-components.html"><span>path</span><wbr><span><span>Components</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-260287806%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../path-components.html"><span class="token function"><strike>pathComponents</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>components<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../path-components.html"><span class="token function"><strike>pathComponents</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">components<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1453353980%2FFunctions%2F1758759778" anchor-label="set" id="-1453353980%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1453353980%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scheme<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the url parts using the specified <a href="../set.html">scheme</a>, <a href="../set.html">host</a>, <a href="../set.html">port</a> and <a href="../set.html">path</a>. Pass <code class="lang-kotlin">null</code> to keep existing value in the <a href="index.html">URLBuilder</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205506576%2FFunctions%2F-400695766" anchor-label="takeFrom" id="-1205506576%2FFunctions%2F-400695766" data-filterable-set=":ktor-http/commonMain,:ktor-http/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":ktor-http/commonMain,:ktor-http/jvmMain" data-filterable-set=":ktor-http/commonMain,:ktor-http/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../take-from.html"><span>take</span><wbr><span><span>From</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205506576%2FFunctions%2F-400695766"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain" data-active="" data-toggle=":ktor-http/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-http/jvmMain" data-filterable-set=":ktor-http/jvmMain" data-toggle=":ktor-http/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="index.html">URLBuilder</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Take components from another <a href="../take-from.html">url</a> builder</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="../-url/index.html">Url</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Take components from another <a href="../take-from.html">url</a></p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">URLBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">urlString<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">URLBuilder</a></div><div class="brief "><p class="paragraph">Take url parts from <a href="../take-from.html">urlString</a> throws <a href="../-u-r-l-parser-exception/index.html">URLParserException</a></p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-http/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1895331272%2FMain%2F1491409236">URLBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">uri<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html">URI</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html#-1895331272%2FMain%2F1491409236">URLBuilder</a></div><div class="brief "><p class="paragraph">Take URI components from <a href="../take-from.html">uri</a></p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1895331272%2FMain%2F1491409236">URLBuilder</a><span class="token punctuation">.</span><a href="../take-from.html"><span class="token function">takeFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html">URL</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html#-1895331272%2FMain%2F1491409236">URLBuilder</a></div><div class="brief "><p class="paragraph">Take URL components from <a href="../take-from.html">url</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-98236325%2FFunctions%2F1758759778" anchor-label="toString" id="-98236325%2FFunctions%2F1758759778" data-filterable-set=":ktor-http/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-http/commonMain" data-filterable-set=":ktor-http/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-98236325%2FFunctions%2F1758759778"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-http/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

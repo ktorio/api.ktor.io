@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.plugins.logging/-logger/-companion/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../../../3.2.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../../../3.1.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../../../3.0.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../../../2.3.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../../../2.2.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../../../2.0.x/ktor-client-logging/io.ktor.client.plugins.logging/-logger/-companion/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-logging/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-logging/jsAndWasmSharedMain">jsAndWasmShared</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-client-logging/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-logging/posixMain">posix</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-logging/commonMain" data-filter=":ktor-client-logging/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-logging/jsAndWasmSharedMain" data-filter=":ktor-client-logging/jsAndWasmSharedMain">
+                                <span class="checkbox--icon"></span>
+                                jsAndWasmShared
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-logging/jvmMain" data-filter=":ktor-client-logging/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-logging/posixMain" data-filter=":ktor-client-logging/posixMain">
+                                <span class="checkbox--icon"></span>
+                                posix
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-logging::io.ktor.client.plugins.logging/Logger.Companion///PointingToDeclaration//1038871735">
+  <div class="breadcrumbs"><a href="../../../index.html">ktor-client-logging</a><span class="delimiter">/</span><a href="../../index.html">io.ktor.client.plugins.logging</a><span class="delimiter">/</span><a href="../index.html">Logger</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-logging/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.3/ktor-client/ktor-client-plugins/ktor-client-logging/common/src/io/ktor/client/plugins/logging/Logger.kt#L20">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1576833722%2FProperties%2F-545524641" anchor-label="ANDROID" id="1576833722%2FProperties%2F-545524641" data-filterable-set=":ktor-client-logging/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-logging/jvmMain" data-filterable-set=":ktor-client-logging/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-a-n-d-r-o-i-d.html"><span><span>ANDROID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1576833722%2FProperties%2F-545524641"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-logging/jvmMain" data-filterable-set=":ktor-client-logging/jvmMain" data-active="" data-toggle=":ktor-client-logging/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-logging/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#211952060%2FMain%2F-545524641">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-a-n-d-r-o-i-d.html">ANDROID</a><span class="token operator">: </span><a href="../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/index.html">Logger</a></div><div class="brief "><p class="paragraph">Android <a href="../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/index.html">Logger</a>: Logs to the Logcat on Android if the SLF4J provider isn't found. Otherwise, uses the <a href="../../-d-e-f-a-u-l-t.html">Logger.Companion.DEFAULT</a>. Breaks up long log messages that would be truncated by Android's max log length of 4068 characters.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="648327308%2FProperties%2F1823764796" anchor-label="DEFAULT" id="648327308%2FProperties%2F1823764796" data-filterable-set=":ktor-client-logging/commonMain,:ktor-client-logging/jvmMain,:ktor-client-logging/jsAndWasmSharedMain,:ktor-client-logging/posixMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-logging/commonMain,:ktor-client-logging/jvmMain,:ktor-client-logging/jsAndWasmSharedMain,:ktor-client-logging/posixMain" data-filterable-set=":ktor-client-logging/commonMain,:ktor-client-logging/jvmMain,:ktor-client-logging/jsAndWasmSharedMain,:ktor-client-logging/posixMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-d-e-f-a-u-l-t.html"><span><span>DEFAULT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="648327308%2FProperties%2F1823764796"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":ktor-client-logging/commonMain" data-filterable-set=":ktor-client-logging/commonMain" data-active="" data-toggle=":ktor-client-logging/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":ktor-client-logging/jsAndWasmSharedMain" data-filterable-set=":ktor-client-logging/jsAndWasmSharedMain" data-toggle=":ktor-client-logging/jsAndWasmSharedMain">jsAndWasmShared</button><button class="platform-bookmark" data-filterable-current=":ktor-client-logging/jvmMain" data-filterable-set=":ktor-client-logging/jvmMain" data-toggle=":ktor-client-logging/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":ktor-client-logging/posixMain" data-filterable-set=":ktor-client-logging/posixMain" data-toggle=":ktor-client-logging/posixMain">posix</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-logging/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="index.html">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-d-e-f-a-u-l-t.html">DEFAULT</a><span class="token operator">: </span><a href="../index.html">Logger</a></div><div class="brief "><p class="paragraph">Default logger to use.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-logging/jsAndWasmSharedMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="index.html#211952060%2FMain%2F-1931813517">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-d-e-f-a-u-l-t.html">DEFAULT</a><span class="token operator">: </span><a href="../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/index.html">Logger</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-logging/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="index.html#211952060%2FMain%2F-545524641">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-d-e-f-a-u-l-t.html">DEFAULT</a><span class="token operator">: </span><a href="../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/index.html">Logger</a></div></div><div class="content sourceset-dependent-content" data-togglable=":ktor-client-logging/posixMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="index.html#211952060%2FMain%2F-223618869">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-d-e-f-a-u-l-t.html">DEFAULT</a><span class="token operator">: </span><a href="../../../../ktor-client-logging/io.ktor.client.plugins.logging/-logger/index.html">Logger</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="901858712%2FProperties%2F1038871735" anchor-label="EMPTY" id="901858712%2FProperties%2F1038871735" data-filterable-set=":ktor-client-logging/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-logging/commonMain" data-filterable-set=":ktor-client-logging/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-e-m-p-t-y.html"><span><span>EMPTY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901858712%2FProperties%2F1038871735"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-logging/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-e-m-p-t-y.html">EMPTY</a><span class="token operator">: </span><a href="../index.html">Logger</a></div><div class="brief "><p class="paragraph">Empty <a href="../index.html">Logger</a> for test purpose.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1396874131%2FProperties%2F1038871735" anchor-label="SIMPLE" id="-1396874131%2FProperties%2F1038871735" data-filterable-set=":ktor-client-logging/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-logging/commonMain" data-filterable-set=":ktor-client-logging/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../-s-i-m-p-l-e.html"><span><span>SIMPLE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1396874131%2FProperties%2F1038871735"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-logging/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">Logger.Companion</a><span class="token punctuation">.</span><a href="../../-s-i-m-p-l-e.html">SIMPLE</a><span class="token operator">: </span><a href="../index.html">Logger</a></div><div class="brief "><p class="paragraph"><a href="../index.html">Logger</a> using <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/index.html">println</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

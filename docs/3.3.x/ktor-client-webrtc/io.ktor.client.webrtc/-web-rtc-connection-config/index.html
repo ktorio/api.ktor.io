@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WebRtcConnectionConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.webrtc/-web-rtc-connection-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../ktor-client-webrtc/io.ktor.client.webrtc/-web-rtc-connection-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-client-webrtc/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-webrtc/commonMain" data-filter=":ktor-client-webrtc/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-webrtc::io.ktor.client.webrtc/WebRtcConnectionConfig///PointingToDeclaration//727813081">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-client-webrtc</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.webrtc</a><span class="delimiter">/</span><span class="current">WebRtcConnectionConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Web</span><wbr><span>Rtc</span><wbr><span>Connection</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">WebRtcConnectionConfig</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.3/ktor-client/ktor-client-webrtc/common/src/io/ktor/client/webrtc/WebRtcEngine.kt#L20">source</a>)</span></span></div><p class="paragraph">Configuration for WebRtc connections.</p><p class="paragraph">Provides settings for ICE servers, policies, and other parameters needed for WebRtc connections.</p><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><p class="paragraph"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#configuration">MDN RTCPeerConnection config</a></p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="404497415%2FConstructors%2F727813081" anchor-label="WebRtcConnectionConfig" id="404497415%2FConstructors%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-rtc-connection-config.html"><span>Web</span><wbr><span>Rtc</span><wbr><span>Connection</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="404497415%2FConstructors%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1520212672%2FProperties%2F727813081" anchor-label="bundlePolicy" id="1520212672%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bundle-policy.html"><span>bundle</span><wbr><span><span>Policy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1520212672%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="bundle-policy.html">bundlePolicy</a><span class="token operator">: </span><a href="../-web-rtc/-bundle-policy/index.html">WebRtc.BundlePolicy</a></div><div class="brief "><p class="paragraph">Specifies how to handle negotiation of candidates when the remote peer is not compatible with the SDP BUNDLE standard. Defaults to <a href="../-web-rtc/-bundle-policy/-b-a-l-a-n-c-e-d/index.html">WebRtc.BundlePolicy.BALANCED</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1926020691%2FProperties%2F727813081" anchor-label="dataChannelEventsReplay" id="-1926020691%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="data-channel-events-replay.html"><span>data</span><wbr><span>Channel</span><wbr><span>Events</span><wbr><span><span>Replay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926020691%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="data-channel-events-replay.html">dataChannelEventsReplay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Replay for the shared flow of data channels events in the connection. Defaults to 10.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-338341511%2FProperties%2F727813081" anchor-label="exceptionHandler" id="-338341511%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exception-handler.html"><span>exception</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-338341511%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="exception-handler.html">exceptionHandler</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-exception-handler/index.html">CoroutineExceptionHandler</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Custom coroutine exception handler that will be used to catch background exceptions (e.g., during a statistics collection, emitting events). If no handler is provided <a href="../-default-exception-handler/index.html">DefaultExceptionHandler</a> is used.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-854527585%2FProperties%2F727813081" anchor-label="iceCandidatePoolSize" id="-854527585%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-candidate-pool-size.html"><span>ice</span><wbr><span>Candidate</span><wbr><span>Pool</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-854527585%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="ice-candidate-pool-size.html">iceCandidatePoolSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The size of the prefetched ICE candidate pool. In some cases, this could speed up the connection establishment process. Defaults to 0 (meaning no candidate prefetching will occur).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1356888388%2FProperties%2F727813081" anchor-label="iceCandidatesReplay" id="1356888388%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-candidates-replay.html"><span>ice</span><wbr><span>Candidates</span><wbr><span><span>Replay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1356888388%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="ice-candidates-replay.html">iceCandidatesReplay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Replay for the shared flow of ICE candidates. Defaults to 20.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1252110993%2FProperties%2F727813081" anchor-label="iceServers" id="-1252110993%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-servers.html"><span>ice</span><wbr><span><span>Servers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1252110993%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="ice-servers.html">iceServers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-web-rtc/-ice-server/index.html">WebRtc.IceServer</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-151235164%2FProperties%2F727813081" anchor-label="iceTransportPolicy" id="-151235164%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ice-transport-policy.html"><span>ice</span><wbr><span>Transport</span><wbr><span><span>Policy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-151235164%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="ice-transport-policy.html">iceTransportPolicy</a><span class="token operator">: </span><a href="../-web-rtc/-ice-transport-policy/index.html">WebRtc.IceTransportPolicy</a></div><div class="brief "><p class="paragraph">Specifies the ICE transport policy to use when gathering ICE candidates. Defaults to <a href="../-web-rtc/-ice-transport-policy/-a-l-l/index.html">WebRtc.IceTransportPolicy.ALL</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1726242049%2FProperties%2F727813081" anchor-label="remoteTracksReplay" id="-1726242049%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remote-tracks-replay.html"><span>remote</span><wbr><span>Tracks</span><wbr><span><span>Replay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1726242049%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="remote-tracks-replay.html">remoteTracksReplay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Replay for the shared flow of operations on remote tracks (additions, removals). Defaults to 10.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1572960909%2FProperties%2F727813081" anchor-label="rtcpMuxPolicy" id="-1572960909%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rtcp-mux-policy.html"><span>rtcp</span><wbr><span>Mux</span><wbr><span><span>Policy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1572960909%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="rtcp-mux-policy.html">rtcpMuxPolicy</a><span class="token operator">: </span><a href="../-web-rtc/-rtcp-mux-policy/index.html">WebRtc.RtcpMuxPolicy</a></div><div class="brief "><p class="paragraph">A string which specifies the RTCP mux policy to use when gathering ICE candidates to support non-multiplexed RTCP. Defaults to <a href="../-web-rtc/-rtcp-mux-policy/-r-e-q-u-i-r-e/index.html">WebRtc.RtcpMuxPolicy.REQUIRE</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1196153944%2FProperties%2F727813081" anchor-label="statsRefreshRate" id="1196153944%2FProperties%2F727813081" data-filterable-set=":ktor-client-webrtc/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-webrtc/commonMain" data-filterable-set=":ktor-client-webrtc/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stats-refresh-rate.html"><span>stats</span><wbr><span>Refresh</span><wbr><span><span>Rate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1196153944%2FProperties%2F727813081"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-webrtc/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="stats-refresh-rate.html">statsRefreshRate</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Refresh rate of <a href="../-web-rtc/-stats/index.html">WebRtc.Stats</a>. <code class="lang-kotlin">null</code> means there will be no statistics collected. You can provide a custom <a href="exception-handler.html">exceptionHandler</a> to handle exceptions during a statistics collection. Defaults to <code class="lang-kotlin">null</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

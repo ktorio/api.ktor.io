@@ -1,0 +1,766 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>HxEvents</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.htmx/-hx-events/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../ktor-htmx/io.ktor.htmx/-hx-events/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../../3.2.x/ktor-htmx/io.ktor.htmx/-hx-events/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":ktor-htmx/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-htmx/commonMain" data-filter=":ktor-htmx/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-htmx::io.ktor.htmx/HxEvents///PointingToDeclaration//731234321">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-htmx</a><span class="delimiter">/</span><a href="../index.html">io.ktor.htmx</a><span class="delimiter">/</span><span class="current">HxEvents</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Hx</span><wbr><span><span>Events</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">HxEvents</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.3/ktor-shared/ktor-htmx/common/src/io/ktor/htmx/HxEvents.kt#L14">source</a>)</span></span></div><p class="paragraph">Constants for HTMX events.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.htmx.HxEvents">Report a problem</a></p><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div></div></span></div><div><div class="title"><p class="paragraph"><a href="https://htmx.org/events/">Official documentation</a></p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="43640725%2FProperties%2F731234321" anchor-label="Abort" id="43640725%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-abort.html"><span><span>Abort</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="43640725%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-abort.html">Abort</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Send this event to an element to abort a request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="42455428%2FProperties%2F731234321" anchor-label="AfterOnLoad" id="42455428%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-on-load.html"><span>After</span><wbr><span>On</span><wbr><span><span>Load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="42455428%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-after-on-load.html">AfterOnLoad</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after an AJAX request has completed processing a successful response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="419769792%2FProperties%2F731234321" anchor-label="AfterProcessNode" id="419769792%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-process-node.html"><span>After</span><wbr><span>Process</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="419769792%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-after-process-node.html">AfterProcessNode</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after htmx has initialized a node.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1176449022%2FProperties%2F731234321" anchor-label="AfterRequest" id="-1176449022%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-request.html"><span>After</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1176449022%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-after-request.html">AfterRequest</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after an AJAX request has completed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-251736482%2FProperties%2F731234321" anchor-label="AfterSettle" id="-251736482%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-settle.html"><span>After</span><wbr><span><span>Settle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251736482%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-after-settle.html">AfterSettle</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after the DOM has settled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-106552810%2FProperties%2F731234321" anchor-label="AfterSwap" id="-106552810%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-swap.html"><span>After</span><wbr><span><span>Swap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-106552810%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-after-swap.html">AfterSwap</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after new content has been swapped in.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354240386%2FProperties%2F731234321" anchor-label="BeforeCleanupElement" id="-354240386%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-cleanup-element.html"><span>Before</span><wbr><span>Cleanup</span><wbr><span><span>Element</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354240386%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-cleanup-element.html">BeforeCleanupElement</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before htmx disables an element or removes it from the DOM.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1916886573%2FProperties%2F731234321" anchor-label="BeforeHistorySave" id="-1916886573%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-history-save.html"><span>Before</span><wbr><span>History</span><wbr><span><span>Save</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1916886573%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-history-save.html">BeforeHistorySave</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before content is saved to the history cache.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="256929393%2FProperties%2F731234321" anchor-label="BeforeOnLoad" id="256929393%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-on-load.html"><span>Before</span><wbr><span>On</span><wbr><span><span>Load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="256929393%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-on-load.html">BeforeOnLoad</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before any response processing occurs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1851089677%2FProperties%2F731234321" anchor-label="BeforeProcessNode" id="-1851089677%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-process-node.html"><span>Before</span><wbr><span>Process</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1851089677%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-process-node.html">BeforeProcessNode</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before htmx initializes a node.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1177276597%2FProperties%2F731234321" anchor-label="BeforeRequest" id="1177276597%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-request.html"><span>Before</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1177276597%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-request.html">BeforeRequest</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before an AJAX request is made.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1542027794%2FProperties%2F731234321" anchor-label="BeforeSend" id="-1542027794%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-send.html"><span>Before</span><wbr><span><span>Send</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1542027794%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-send.html">BeforeSend</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered just before an AJAX request is sent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1076160957%2FProperties%2F731234321" anchor-label="BeforeSwap" id="-1076160957%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-swap.html"><span>Before</span><wbr><span><span>Swap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1076160957%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-before-swap.html">BeforeSwap</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before a swap is done, allows you to configure the swap.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1173964920%2FProperties%2F731234321" anchor-label="ConfigRequest" id="1173964920%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-config-request.html"><span>Config</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1173964920%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-config-request.html">ConfigRequest</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before the request, allows you to customize parameters, headers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="25568261%2FProperties%2F731234321" anchor-label="Confirm" id="25568261%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-confirm.html"><span><span>Confirm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="25568261%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-confirm.html">Confirm</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after a trigger occurs on an element, allows you to cancel (or delay) issuing the AJAX request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="255702699%2FProperties%2F731234321" anchor-label="HistoryCacheError" id="255702699%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-history-cache-error.html"><span>History</span><wbr><span>Cache</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="255702699%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-history-cache-error.html">HistoryCacheError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered on an error during cache writing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="291925899%2FProperties%2F731234321" anchor-label="HistoryCacheMiss" id="291925899%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-history-cache-miss.html"><span>History</span><wbr><span>Cache</span><wbr><span><span>Miss</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="291925899%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-history-cache-miss.html">HistoryCacheMiss</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered on a cache miss in the history subsystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2139710521%2FProperties%2F731234321" anchor-label="HistoryCacheMissError" id="-2139710521%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-history-cache-miss-error.html"><span>History</span><wbr><span>Cache</span><wbr><span>Miss</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2139710521%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-history-cache-miss-error.html">HistoryCacheMissError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered on an unsuccessful remote retrieval.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-246042043%2FProperties%2F731234321" anchor-label="HistoryCacheMissLoad" id="-246042043%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-history-cache-miss-load.html"><span>History</span><wbr><span>Cache</span><wbr><span>Miss</span><wbr><span><span>Load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-246042043%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-history-cache-miss-load.html">HistoryCacheMissLoad</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered on a successful remote retrieval.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1924791707%2FProperties%2F731234321" anchor-label="HistoryRestore" id="1924791707%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-history-restore.html"><span>History</span><wbr><span><span>Restore</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924791707%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-history-restore.html">HistoryRestore</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when htmx handles a history restoration action.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1864981391%2FProperties%2F731234321" anchor-label="Load" id="1864981391%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-load.html"><span><span>Load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1864981391%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-load.html">Load</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when new content is added to the DOM.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1984188852%2FProperties%2F731234321" anchor-label="NoSseSourceError" id="-1984188852%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-no-sse-source-error.html"><span>No</span><wbr><span>Sse</span><wbr><span>Source</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1984188852%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-no-sse-source-error.html">NoSseSourceError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an element refers to a SSE event in its trigger, but no parent SSE source has been defined.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1290354046%2FProperties%2F731234321" anchor-label="OnLoadError" id="-1290354046%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-on-load-error.html"><span>On</span><wbr><span>Load</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1290354046%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-on-load-error.html">OnLoadError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an exception occurs during the onLoad handling in htmx.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1551346392%2FProperties%2F731234321" anchor-label="OobAfterSwap" id="-1551346392%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oob-after-swap.html"><span>Oob</span><wbr><span>After</span><wbr><span><span>Swap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1551346392%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-oob-after-swap.html">OobAfterSwap</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after an out of band element has been swapped in.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1379878257%2FProperties%2F731234321" anchor-label="OobBeforeSwap" id="1379878257%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oob-before-swap.html"><span>Oob</span><wbr><span>Before</span><wbr><span><span>Swap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1379878257%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-oob-before-swap.html">OobBeforeSwap</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before an out of band element swap is done, allows you to configure the swap.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1991824579%2FProperties%2F731234321" anchor-label="OobErrorNoTarget" id="-1991824579%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oob-error-no-target.html"><span>Oob</span><wbr><span>Error</span><wbr><span>No</span><wbr><span><span>Target</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1991824579%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-oob-error-no-target.html">OobErrorNoTarget</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an out of band element does not have a matching ID in the current DOM.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1525453521%2FProperties%2F731234321" anchor-label="Prompt" id="1525453521%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-prompt.html"><span><span>Prompt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1525453521%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-prompt.html">Prompt</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after a prompt is shown.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="623855114%2FProperties%2F731234321" anchor-label="PushedIntoHistory" id="623855114%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pushed-into-history.html"><span>Pushed</span><wbr><span>Into</span><wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="623855114%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-pushed-into-history.html">PushedIntoHistory</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered after a URL is pushed into history.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1529082786%2FProperties%2F731234321" anchor-label="ResponseError" id="-1529082786%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-response-error.html"><span>Response</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1529082786%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-response-error.html">ResponseError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an HTTP response error (non-200 or 300 response code) occurs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-698428059%2FProperties%2F731234321" anchor-label="SendError" id="-698428059%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-send-error.html"><span>Send</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-698428059%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-send-error.html">SendError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when a network error prevents an HTTP request from happening.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1661145070%2FProperties%2F731234321" anchor-label="SseError" id="-1661145070%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sse-error.html"><span>Sse</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1661145070%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-sse-error.html">SseError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an error occurs with a SSE source.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-899653706%2FProperties%2F731234321" anchor-label="SseOpen" id="-899653706%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sse-open.html"><span>Sse</span><wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-899653706%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-sse-open.html">SseOpen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when a SSE source is opened.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1073728976%2FProperties%2F731234321" anchor-label="SwapError" id="-1073728976%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-swap-error.html"><span>Swap</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1073728976%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-swap-error.html">SwapError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an error occurs during the swap phase.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1385684910%2FProperties%2F731234321" anchor-label="TargetError" id="1385684910%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-target-error.html"><span>Target</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1385684910%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-target-error.html">TargetError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an invalid target is specified.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1022114684%2FProperties%2F731234321" anchor-label="Timeout" id="-1022114684%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-timeout.html"><span><span>Timeout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1022114684%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-timeout.html">Timeout</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when a request timeout occurs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-419473313%2FProperties%2F731234321" anchor-label="ValidationFailed" id="-419473313%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-validation-failed.html"><span>Validation</span><wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-419473313%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-validation-failed.html">ValidationFailed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an element fails validation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="323539292%2FProperties%2F731234321" anchor-label="ValidationHalted" id="323539292%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-validation-halted.html"><span>Validation</span><wbr><span><span>Halted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="323539292%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-validation-halted.html">ValidationHalted</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when a request is halted due to validation errors.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="231421414%2FProperties%2F731234321" anchor-label="ValidationValidate" id="231421414%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-validation-validate.html"><span>Validation</span><wbr><span><span>Validate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="231421414%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-validation-validate.html">ValidationValidate</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered before an element is validated.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1921723225%2FProperties%2F731234321" anchor-label="XhrAbort" id="-1921723225%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-xhr-abort.html"><span>Xhr</span><wbr><span><span>Abort</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1921723225%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-xhr-abort.html">XhrAbort</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an AJAX request aborts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-159676734%2FProperties%2F731234321" anchor-label="XhrLoadend" id="-159676734%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-xhr-loadend.html"><span>Xhr</span><wbr><span><span>Loadend</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-159676734%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-xhr-loadend.html">XhrLoadend</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an AJAX request ends.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-394288869%2FProperties%2F731234321" anchor-label="XhrLoadstart" id="-394288869%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-xhr-loadstart.html"><span>Xhr</span><wbr><span><span>Loadstart</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-394288869%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-xhr-loadstart.html">XhrLoadstart</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered when an AJAX request starts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-361336362%2FProperties%2F731234321" anchor-label="XhrProgress" id="-361336362%2FProperties%2F731234321" data-filterable-set=":ktor-htmx/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-htmx/commonMain" data-filterable-set=":ktor-htmx/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-xhr-progress.html"><span>Xhr</span><wbr><span><span>Progress</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-361336362%2FProperties%2F731234321"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-htmx/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-xhr-progress.html">XhrProgress</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Triggered periodically during an AJAX request that supports progress events.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

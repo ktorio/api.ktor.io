@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OkHttpConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.client.engine.okhttp/-ok-http-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.3.x"><span class="versions-dropdown-button-text">3.3.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../../3.2.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../../3.1.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../../3.0.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../../2.3.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../../2.2.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../../2.0.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../../1.6.x/ktor-client-okhttp/io.ktor.client.engine.okhttp/-ok-http-config/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-client-okhttp/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-client-okhttp/jvmMain" data-filter=":ktor-client-okhttp/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-client-okhttp::io.ktor.client.engine.okhttp/OkHttpConfig///PointingToDeclaration//-821193274">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-client-okhttp</a><span class="delimiter">/</span><a href="../index.html">io.ktor.client.engine.okhttp</a><span class="delimiter">/</span><span class="current">OkHttpConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Ok</span><wbr><span>Http</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OkHttpConfig</a> : <a href="../../../ktor-client-core/io.ktor.client.engine/-http-client-engine-config/index.html">HttpClientEngineConfig</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.3.3/ktor-client/ktor-client-okhttp/jvm/src/io/ktor/client/engine/okhttp/OkHttpConfig.kt#L15">source</a>)</span></span></div><p class="paragraph">A configuration for the <a href="../-ok-http/index.html">OkHttp</a> client engine.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.client.engine.okhttp.OkHttpConfig">Report a problem</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="779943094%2FConstructors%2F-821193274" anchor-label="OkHttpConfig" id="779943094%2FConstructors%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ok-http-config.html"><span>Ok</span><wbr><span>Http</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="779943094%2FConstructors%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="531794950%2FProperties%2F-821193274" anchor-label="clientCacheSize" id="531794950%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="client-cache-size.html"><span>client</span><wbr><span>Cache</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="531794950%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="client-cache-size.html">clientCacheSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Specifies the size of cache that keeps recently used <span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span> instances. Set this property to <code class="lang-kotlin">0</code> to disable caching.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1122547294%2FProperties%2F-821193274" anchor-label="dispatcher" id="-1122547294%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1122547294%2FProperties%2F-821193274"><span><span>dispatcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1122547294%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-1122547294%2FProperties%2F-821193274">dispatcher</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/index.html">CoroutineDispatcher</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1057067926%2FProperties%2F-821193274" anchor-label="pipelining" id="-1057067926%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1057067926%2FProperties%2F-821193274"><span><span>pipelining</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1057067926%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#-1057067926%2FProperties%2F-821193274">pipelining</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1371139491%2FProperties%2F-821193274" anchor-label="preconfigured" id="-1371139491%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="preconfigured.html"><span><span>preconfigured</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371139491%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="preconfigured.html">preconfigured</a><span class="token operator">: </span><span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Allows you to specify a preconfigured <span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="149884643%2FProperties%2F-821193274" anchor-label="proxy" id="149884643%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#149884643%2FProperties%2F-821193274"><span><span>proxy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="149884643%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#149884643%2FProperties%2F-821193274">proxy</a><span class="token operator">: </span><a href="../../../ktor-client-core/io.ktor.client.engine/-proxy-config/index.html">ProxyConfig</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1145163587%2FProperties%2F-821193274" anchor-label="threadsCount" id="1145163587%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1145163587%2FProperties%2F-821193274"><span>threads</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1145163587%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="index.html#1145163587%2FProperties%2F-821193274"><strike>threadsCount</strike></a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="929308089%2FProperties%2F-821193274" anchor-label="webSocketFactory" id="929308089%2FProperties%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="web-socket-factory.html"><span>web</span><wbr><span>Socket</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="929308089%2FProperties%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="web-socket-factory.html">webSocketFactory</a><span class="token operator">: </span><span data-unresolved-link="okhttp3/WebSocket.Factory///PointingToDeclaration/">WebSocket.Factory</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Specifies the <span data-unresolved-link="okhttp3/WebSocket.Factory///PointingToDeclaration/">WebSocket.Factory</span> used to create a <span data-unresolved-link="okhttp3/WebSocket///PointingToDeclaration/">WebSocket</span> instance. Otherwise, <span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span> is used directly.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1856404956%2FFunctions%2F-821193274" anchor-label="addInterceptor" id="-1856404956%2FFunctions%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-interceptor.html"><span>add</span><wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1856404956%2FFunctions%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-interceptor.html"><span class="token function">addInterceptor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interceptor<span class="token operator">: </span><span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an <span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span> to the <a href="../-ok-http/index.html">OkHttp</a> client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="400583574%2FFunctions%2F-821193274" anchor-label="addNetworkInterceptor" id="400583574%2FFunctions%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-network-interceptor.html"><span>add</span><wbr><span>Network</span><wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="400583574%2FFunctions%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-network-interceptor.html"><span class="token function">addNetworkInterceptor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">interceptor<span class="token operator">: </span><span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a network <span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span> to the <a href="../-ok-http/index.html">OkHttp</a> client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1443752684%2FFunctions%2F-821193274" anchor-label="config" id="1443752684%2FFunctions%2F-821193274" data-filterable-set=":ktor-client-okhttp/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-client-okhttp/jvmMain" data-filterable-set=":ktor-client-okhttp/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="config.html"><span><span>config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1443752684%2FFunctions%2F-821193274"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-client-okhttp/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="config.html"><span class="token function">config</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span data-unresolved-link="okhttp3/OkHttpClient.Builder///PointingToDeclaration/">OkHttpClient.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures <span data-unresolved-link="okhttp3/OkHttpClient///PointingToDeclaration/">OkHttpClient</span> using <span data-unresolved-link="okhttp3/OkHttpClient.Builder///PointingToDeclaration/">OkHttpClient.Builder</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2025 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
