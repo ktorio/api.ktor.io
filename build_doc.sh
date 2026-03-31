@@ -25,18 +25,18 @@ else
 
   echo "Copying old versions..."
   mkdir "$versionsDir"
-  cp -R docs ${versionsDir}/${currentVersion}
+  cp -R docs "$versionsDir/$currentVersion"
 
   # Move all version directories matching [MAJOR].[MINOR].x pattern
-  mv ${versionsDir}/${currentVersion}/[0-9]*.[0-9]*.x/ ${versionsDir}/
+  mv "$versionsDir/$currentVersion"/[0-9]*.[0-9]*.x/ "$versionsDir/"
 
   echo "Done."
 fi
 
 # Delete existing version if it exists (to allow regeneration)
-if [ -d ${versionsDir}/${API_VERSION} ]; then
+if [ -d "$versionsDir/$API_VERSION" ]; then
   echo "Deleting existing version $API_VERSION from versions directory..."
-  rm -rf ${versionsDir:?}/${API_VERSION}
+  rm -rf "${versionsDir:?}/$API_VERSION"
 fi
 
 # Remove generated/copied files from all versions
@@ -48,11 +48,12 @@ GENERATED_FILES=(
 
 echo "Cleaning up generated files from all versions..."
 for pattern in "${GENERATED_FILES[@]}"; do
-  rm -f ${versionsDir}/*/${pattern}
+  rm -f "$versionsDir"/*/"$pattern"
 done
 
 versionsDir=$(realpath "$versionsDir")
-echo -e "\nOld versions:"
+echo -e "\nVersions dir: $versionsDir"
+echo "Old versions:"
 find "$versionsDir" -maxdepth 1 -type d -exec basename {} \; | tail -n +2 | sort --reverse
 
 # Try to clone the Ktor repository at the specific version. Use the main branch if failed.
@@ -62,8 +63,8 @@ else
   echo -e "\nCloning the Ktor repository..."
   # Extract major version (everything before first dot)
   MAJOR_VERSION="${KTOR_VERSION%%.*}"
-  git clone --quiet --depth 1 --branch "$KTOR_VERSION" "$KTOR_REPO_URL" "$KTOR_DIR" ||
-    git clone --quiet --depth 1 --branch "release/${MAJOR_VERSION}.x" "$KTOR_REPO_URL" "$KTOR_DIR" ||
+  git clone -c advice.detachedHead=false --quiet --depth 1 --branch "$KTOR_VERSION" "$KTOR_REPO_URL" "$KTOR_DIR" 2>/dev/null ||
+    git clone --quiet --depth 1 --branch "release/${MAJOR_VERSION}.x" "$KTOR_REPO_URL" "$KTOR_DIR" 2>/dev/null ||
     git clone --quiet --depth 1 "$KTOR_REPO_URL" "$KTOR_DIR"
 fi
 echo
@@ -75,13 +76,19 @@ if [[ -t 0 ]]; then
 fi
 
 # Generate new API docs
+echo
+echo "Generating new API docs..."
 cd "$KTOR_DIR"
-./gradlew --quiet :ktor-dokka:dokkaGenerate -Pversion="${KTOR_VERSION}" -Pktor.dokka.versionsDirectory="$versionsDir"
+./gradlew --quiet :ktor-dokka:dokkaGenerate -Pversion="$KTOR_VERSION" -Pktor.dokka.versionsDirectory="$versionsDir"
 cd ..
 
 # Update docs
+if [ ! -d "$versionsDir/$API_VERSION" ]; then
+  echo "Error: Expected output directory '$versionsDir/$API_VERSION' not found. Dokka generation may have failed."
+  exit 1
+fi
 rm -rf docs
-cp -R ${versionsDir}/${API_VERSION} ./docs
+cp -R "$versionsDir/$API_VERSION" ./docs
 echo api.ktor.io > ./docs/CNAME
 
 # Add Google Tag Manager script to the files
