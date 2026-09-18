@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import re
+import sys
 from pathlib import Path
 
 # Template replacement constants
@@ -129,9 +130,13 @@ def generate_404_html(docs_dir: Path):
     return True
 
 def main():
-    docs_dir = Path('docs')
-    if not docs_dir.exists():
-        print("Error: docs/ directory not found")
+    if len(sys.argv) != 2:
+        print(f"Usage: {Path(sys.argv[0]).name} docs_directory")
+        return 1
+
+    docs_dir = Path(sys.argv[1])
+    if not docs_dir.is_dir():
+        print(f"Error: Directory {docs_dir} does not exist")
         return 1
 
     return 0 if generate_404_html(docs_dir) else 1

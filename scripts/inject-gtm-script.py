@@ -55,12 +55,12 @@ def patch_html_file(file_path: Path, version_dir: Path) -> bool:
 
 
 def main():
-    if len(sys.argv) != 2:
-        print(f"Usage: {Path(sys.argv[0]).name} version_directory")
+    if len(sys.argv) != 3:
+        print(f"Usage: {Path(sys.argv[0]).name} version_directory gtm_script")
         sys.exit(1)
 
     version_dir = Path(sys.argv[1])
-    gtm_script = Path(GTM_SCRIPT)
+    gtm_script = Path(sys.argv[2])
 
     if not version_dir.is_dir():
         print(f"Error: Directory {version_dir} does not exist.")
@@ -73,7 +73,7 @@ def main():
     scripts_dir = version_dir / "scripts"
     scripts_dir.mkdir(parents=True, exist_ok=True)
 
-    shutil.copy2(gtm_script, scripts_dir / gtm_script.name)
+    shutil.copy2(gtm_script, scripts_dir / GTM_SCRIPT)
     print(f"Copied {gtm_script} to {scripts_dir}/")
 
     html_files = [f for f in version_dir.rglob("*.html") if f.is_file()]
