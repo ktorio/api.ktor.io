@@ -1,0 +1,622 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>io.ktor.server.auth.oidc</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.auth.oidc/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.6.x"><span class="versions-dropdown-button-text">3.6.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.6.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.6.x</span></a><a href="../../not-found-version.html?v=3.5.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.5.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.5.x</span></a><a href="../../not-found-version.html?v=3.4.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="../../not-found-version.html?v=3.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-server-auth-oidc/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-auth-oidc/jvmMain" data-filter=":ktor-server-auth-oidc/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="ktor-server-auth-oidc::io.ktor.server.auth.oidc////PointingToDeclaration//500524936">
+  <div class="breadcrumbs"><a href="../index.html">ktor-server-auth-oidc</a><span class="delimiter">/</span><span class="current">io.ktor.server.auth.oidc</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1680932244%2FClasslikes%2F500524936" anchor-label="ClientAuthenticationMethod" id="-1680932244%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-client-authentication-method/index.html"><span>Client</span><wbr><span>Authentication</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1680932244%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-subclass-opt-in-required/index.html"><span class="token annotation builtin">SubclassOptInRequired</span></a><span class="token punctuation">(</span><span>markerClass<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../ktor-utils/io.ktor.util.annotations/-internal-ktor-subclassing/index.html">InternalKtorSubclassing::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">interface </span><a href="-client-authentication-method/index.html">ClientAuthenticationMethod</a></div><div class="brief "><p class="paragraph">Client authentication methods for provider endpoints that require client credentials, such as the token endpoint and the token introspection endpoint.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1038052315%2FClasslikes%2F500524936" anchor-label="CodeChallengeMethod" id="1038052315%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-code-challenge-method/index.html"><span>Code</span><wbr><span>Challenge</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1038052315%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-subclass-opt-in-required/index.html"><span class="token annotation builtin">SubclassOptInRequired</span></a><span class="token punctuation">(</span><span>markerClass<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../ktor-utils/io.ktor.util.annotations/-internal-ktor-subclassing/index.html">InternalKtorSubclassing::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">interface </span><a href="-code-challenge-method/index.html">CodeChallengeMethod</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="643489623%2FClasslikes%2F500524936" anchor-label="Oidc" id="643489623%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc/index.html"><span><span>Oidc</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="643489623%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc/index.html">Oidc</a></div><div class="brief "><p class="paragraph">First-class OpenID Connect plugin for Ktor server authentication.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1502217836%2FClasslikes%2F500524936" anchor-label="OidcBearerConfig" id="-1502217836%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-bearer-config/index.html"><span>Oidc</span><wbr><span>Bearer</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1502217836%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-bearer-config/index.html">OidcBearerConfig</a></div><div class="brief "><p class="paragraph">Access-token verification policy for resource-server Bearer authentication.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1608693272%2FClasslikes%2F500524936" anchor-label="OidcDiscoveryException" id="1608693272%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-discovery-exception/index.html"><span>Oidc</span><wbr><span>Discovery</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1608693272%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-discovery-exception/index.html">OidcDiscoveryException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html">RuntimeException</a></div><div class="brief "><p class="paragraph">Base exception for OpenID Connect discovery failures.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-696053700%2FClasslikes%2F500524936" anchor-label="OidcEnvConfig" id="-696053700%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-env-config/index.html"><span>Oidc</span><wbr><span>Env</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696053700%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-oidc-env-config/index.html">OidcEnvConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>issuer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientSecret<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scopes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Serializable OpenID Connect provider values commonly stored in application configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1683423522%2FClasslikes%2F500524936" anchor-label="OidcJwtConfig" id="1683423522%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-jwt-config/index.html"><span>Oidc</span><wbr><span>Jwt</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1683423522%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-jwt-config/index.html">OidcJwtConfig</a></div><div class="brief "><p class="paragraph">JWT verification configuration shared by ID tokens and JWT access tokens.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-58149575%2FClasslikes%2F500524936" anchor-label="OidcMetadataRefreshFailure" id="-58149575%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-metadata-refresh-failure/index.html"><span>Oidc</span><wbr><span>Metadata</span><wbr><span>Refresh</span><wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-58149575%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-metadata-refresh-failure/index.html">OidcMetadataRefreshFailure</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>provider<span class="token operator">: </span><a href="-oidc-provider/index.html">OidcProvider</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>consecutiveFailures<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Details of a failed periodic OpenID Connect discovery metadata refresh. Routes and token validation continue with the last successful discovery document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1255921330%2FClasslikes%2F500524936" anchor-label="OidcOAuthConfig" id="1255921330%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-o-auth-config/index.html"><span>Oidc</span><wbr><span>OAuth</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1255921330%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-o-auth-config/index.html">OidcOAuthConfig</a></div><div class="brief "><p class="paragraph">OAuth/OpenID Connect configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="646812546%2FClasslikes%2F500524936" anchor-label="OidcPluginConfig" id="646812546%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-plugin-config/index.html"><span>Oidc</span><wbr><span>Plugin</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="646812546%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-plugin-config/index.html">OidcPluginConfig</a></div><div class="brief "><p class="paragraph">Configuration for the <a href="-oidc/index.html">Oidc</a> plugin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="612742246%2FClasslikes%2F500524936" anchor-label="OidcProvider" id="612742246%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-provider/index.html"><span>Oidc</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="612742246%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-provider/index.html">OidcProvider</a></div><div class="brief "><p class="paragraph">Typed authentication capabilities for one configured OpenID Connect provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1177961596%2FClasslikes%2F500524936" anchor-label="OidcProviderConfig" id="-1177961596%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-provider-config/index.html"><span>Oidc</span><wbr><span>Provider</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1177961596%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-provider-config/index.html">OidcProviderConfig</a></div><div class="brief "><p class="paragraph">Configuration for a single OpenID Connect provider (issuer).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1432380584%2FClasslikes%2F500524936" anchor-label="OidcSessionsConfig" id="-1432380584%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-sessions-config/index.html"><span>Oidc</span><wbr><span>Sessions</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1432380584%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-sessions-config/index.html">OidcSessionsConfig</a></div><div class="brief "><p class="paragraph">Configuration for OIDC session transport and CSRF protection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1652093630%2FClasslikes%2F500524936" anchor-label="OidcSigningKeyUnavailableException" id="1652093630%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-signing-key-unavailable-exception/index.html"><span>Oidc</span><wbr><span>Signing</span><wbr><span>Key</span><wbr><span>Unavailable</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1652093630%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-signing-key-unavailable-exception/index.html">OidcSigningKeyUnavailableException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html">RuntimeException</a></div><div class="brief "><p class="paragraph">Thrown when the signing key for a token cannot be resolved because of a JWKS failure.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="484774220%2FClasslikes%2F500524936" anchor-label="OidcStateEncryptionKey" id="484774220%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-state-encryption-key/index.html"><span>Oidc</span><wbr><span>State</span><wbr><span>Encryption</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="484774220%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-inline/index.html"><span class="token annotation builtin">JvmInline</span></a></div></div><span class="token keyword">value </span><span class="token keyword">class </span><a href="-oidc-state-encryption-key/index.html">OidcStateEncryptionKey</a></div><div class="brief "><p class="paragraph">Symmetric key material used to encrypt the temporary OAuth state cookie.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1102618350%2FClasslikes%2F500524936" anchor-label="OidcToken" id="-1102618350%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token/index.html"><span>Oidc</span><wbr><span><span>Token</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1102618350%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-subclass-opt-in-required/index.html"><span class="token annotation builtin">SubclassOptInRequired</span></a><span class="token punctuation">(</span><span>markerClass<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../ktor-utils/io.ktor.util.annotations/-internal-ktor-subclassing/index.html">InternalKtorSubclassing::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">interface </span><a href="-oidc-token/index.html">OidcToken</a></div><div class="brief "><p class="paragraph">Token material returned or validated by the OpenID Connect plugin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1414665964%2FClasslikes%2F500524936" anchor-label="OidcTokenExtractor" id="1414665964%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token-extractor/index.html"><span>Oidc</span><wbr><span>Token</span><wbr><span><span>Extractor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1414665964%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-oidc-token-extractor/index.html">OidcTokenExtractor</a><span class="token operator"> = </span><a href="../../ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Extracts a Bearer token candidate from an application call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-745134701%2FClasslikes%2F500524936" anchor-label="OidcTokenIntrospectionConfig" id="-745134701%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token-introspection-config/index.html"><span>Oidc</span><wbr><span>Token</span><wbr><span>Introspection</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-745134701%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-token-introspection-config/index.html">OidcTokenIntrospectionConfig</a></div><div class="brief "><p class="paragraph">RFC 7662 token introspection configuration for Bearer authentication.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="817011000%2FClasslikes%2F500524936" anchor-label="OidcTokenRefreshResult" id="817011000%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token-refresh-result/index.html"><span>Oidc</span><wbr><span>Token</span><wbr><span>Refresh</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="817011000%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-token-refresh-result/index.html">OidcTokenRefreshResult</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>accessToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>refreshToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>expiresIn<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tokenType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idToken<span class="token operator">: </span><a href="-oidc-token/-id/index.html">OidcToken.Id</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Token response returned by <a href="../../ktor-server-auth-oidc/io.ktor.server.auth.oidc/-oidc-token-refresh-result/--root--.html">refreshToken</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="327743906%2FClasslikes%2F500524936" anchor-label="OidcTokenRefreshStrategy" id="327743906%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token-refresh-strategy/index.html"><span>Oidc</span><wbr><span>Token</span><wbr><span>Refresh</span><wbr><span><span>Strategy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="327743906%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-subclass-opt-in-required/index.html"><span class="token annotation builtin">SubclassOptInRequired</span></a><span class="token punctuation">(</span><span>markerClass<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="../../ktor-utils/io.ktor.util.annotations/-internal-ktor-subclassing/index.html">InternalKtorSubclassing::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">interface </span><a href="-oidc-token-refresh-strategy/index.html">OidcTokenRefreshStrategy</a></div><div class="brief "><p class="paragraph">Strategy used to refresh OpenID Connect browser sessions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1617587519%2FClasslikes%2F500524936" anchor-label="OidcTokenRejectedException" id="1617587519%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-token-rejected-exception/index.html"><span>Oidc</span><wbr><span>Token</span><wbr><span>Rejected</span><wbr><span><span>Exception</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1617587519%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-oidc-token-rejected-exception/index.html">OidcTokenRejectedException</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cause<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html">RuntimeException</a></div><div class="brief "><p class="paragraph">Thrown when a token fails OpenID Connect validation and must not be trusted.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1402545035%2FClasslikes%2F500524936" anchor-label="OpenIdProviderMetadata" id="1402545035%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-id-provider-metadata/index.html"><span>Open</span><wbr><span>Id</span><wbr><span>Provider</span><wbr><span><span>Metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1402545035%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">class </span><a href="-open-id-provider-metadata/index.html">OpenIdProviderMetadata</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>issuer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authorizationEndpoint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tokenEndpoint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userInfoEndpoint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>jwksUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>registrationEndpoint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scopesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>responseTypesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>responseModesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>grantTypesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>acrValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subjectTypesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idTokenSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idTokenEncryptionAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idTokenEncryptionEncValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userinfoSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userinfoEncryptionAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userinfoEncryptionEncValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestObjectSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestObjectEncryptionAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestObjectEncryptionEncValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tokenEndpointAuthMethodsSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tokenEndpointAuthSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>displayValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>claimTypesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>claimsSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>claimsLocalesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>uiLocalesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>claimsParameterSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestParameterSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requestUriParameterSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>requireRequestUriRegistration<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authorizationResponseIssParameterSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opPolicyUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opTosUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>endSessionEndpoint<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>checkSessionIframe<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">OpenID Connect discovery document containing OAuth 2.0 authorization server metadata.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-426334157%2FClasslikes%2F500524936" anchor-label="OpenIdTestAccessTokenBuilder" id="-426334157%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-id-test-access-token-builder/index.html"><span>Open</span><wbr><span>Id</span><wbr><span>Test</span><wbr><span>Access</span><wbr><span>Token</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-426334157%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-open-id-test-access-token-builder/index.html">OpenIdTestAccessTokenBuilder</a> : <a href="-open-id-test-token-builder/index.html">OpenIdTestTokenBuilder</a></div><div class="brief "><p class="paragraph">Builder for access tokens issued by <a href="-open-id-test-keys/index.html">OpenIdTestKeys</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1907229988%2FClasslikes%2F500524936" anchor-label="OpenIdTestIdTokenBuilder" id="-1907229988%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-id-test-id-token-builder/index.html"><span>Open</span><wbr><span>Id</span><wbr><span>Test</span><wbr><span>Id</span><wbr><span>Token</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1907229988%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-open-id-test-id-token-builder/index.html">OpenIdTestIdTokenBuilder</a> : <a href="-open-id-test-token-builder/index.html">OpenIdTestTokenBuilder</a></div><div class="brief "><p class="paragraph">Builder for ID tokens issued by <a href="-open-id-test-keys/index.html">OpenIdTestKeys</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1992117531%2FClasslikes%2F500524936" anchor-label="OpenIdTestKeys" id="-1992117531%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-id-test-keys/index.html"><span>Open</span><wbr><span>Id</span><wbr><span>Test</span><wbr><span><span>Keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1992117531%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-open-id-test-keys/index.html">OpenIdTestKeys</a></div><div class="brief "><p class="paragraph">Local signing keys for OpenID Connect tests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1065140937%2FClasslikes%2F500524936" anchor-label="OpenIdTestTokenBuilder" id="-1065140937%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-id-test-token-builder/index.html"><span>Open</span><wbr><span>Id</span><wbr><span>Test</span><wbr><span>Token</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1065140937%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-open-id-test-token-builder/index.html">OpenIdTestTokenBuilder</a></div><div class="brief "><p class="paragraph">Base claim builder for test JWTs issued by <a href="-open-id-test-keys/index.html">OpenIdTestKeys</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1371949593%2FClasslikes%2F500524936" anchor-label="ProtectedResourceMetadata" id="-1371949593%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-protected-resource-metadata/index.html"><span>Protected</span><wbr><span>Resource</span><wbr><span><span>Metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371949593%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">class </span><a href="-protected-resource-metadata/index.html">ProtectedResourceMetadata</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>resource<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authorizationServers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>jwksUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scopesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bearerMethodsSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourceSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourceName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourceDocumentation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourcePolicyUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resourceTosUri<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tlsClientCertificateBoundAccessTokens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>authorizationDetailsTypesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpopSigningAlgValuesSupported<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dpopBoundAccessTokensRequired<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">OAuth 2.0 Protected Resource Metadata as defined in RFC 9728.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1162028987%2FClasslikes%2F500524936" anchor-label="ProtectedResourceMetadataConfig" id="-1162028987%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-protected-resource-metadata-config/index.html"><span>Protected</span><wbr><span>Resource</span><wbr><span>Metadata</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162028987%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-protected-resource-metadata-config/index.html">ProtectedResourceMetadataConfig</a></div><div class="brief "><p class="paragraph">Configuration for OAuth 2.0 Protected Resource Metadata (RFC 9728).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1854989982%2FClasslikes%2F500524936" anchor-label="TokenClaims" id="-1854989982%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-token-claims/index.html"><span>Token</span><wbr><span><span>Claims</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1854989982%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="-token-claims/index.html">TokenClaims</a></div><div class="brief "><p class="paragraph">Structured JWT claims access.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-533893426%2FClasslikes%2F500524936" anchor-label="TokenIntrospection" id="-533893426%2FClasslikes%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-token-introspection/index.html"><span>Token</span><wbr><span><span>Introspection</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-533893426%2FClasslikes%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">class </span><a href="-token-introspection/index.html">TokenIntrospection</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>active<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>clientId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>username<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tokenType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>expiresAt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>issuedAt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>notBefore<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subject<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>audience<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>issuer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>jwtId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>claims<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a><span class="token operator"> = </span>JsonObject(emptyMap())</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Normalized RFC 7662 token introspection response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1099685979%2FProperties%2F500524936" anchor-label="OidcMetadataRefreshFailed" id="1099685979%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-oidc-metadata-refresh-failed.html"><span>Oidc</span><wbr><span>Metadata</span><wbr><span>Refresh</span><wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1099685979%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">val </span><a href="-oidc-metadata-refresh-failed.html">OidcMetadataRefreshFailed</a><span class="token operator">: </span><a href="../../ktor-events/io.ktor.events/-event-definition/index.html">EventDefinition</a><span class="token operator">&lt;</span><a href="-oidc-metadata-refresh-failure/index.html">OidcMetadataRefreshFailure</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Monitor event raised when a periodic OpenID Connect discovery metadata refresh fails.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1072896919%2FFunctions%2F500524936" anchor-label="fetchOpenIdMetadata" id="-1072896919%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fetch-open-id-metadata.html"><span>fetch</span><wbr><span>Open</span><wbr><span>Id</span><wbr><span><span>Metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1072896919%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../ktor-client-core/io.ktor.client/-http-client/index.html">HttpClient</a><span class="token punctuation">.</span><a href="fetch-open-id-metadata.html"><span class="token function">fetchOpenIdMetadata</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">issuer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-open-id-provider-metadata/index.html">OpenIdProviderMetadata</a></div><div class="brief "><p class="paragraph">Fetches OpenID Connect discovery document from the authorization server.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

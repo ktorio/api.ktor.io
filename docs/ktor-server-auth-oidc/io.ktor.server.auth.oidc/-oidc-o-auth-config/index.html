@@ -1,0 +1,379 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script type="text/javascript" src="../../../scripts/gtm.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OidcOAuthConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<link href="../../../images/logo-icon.svg"></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Ktor
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;io.ktor.server.auth.oidc/-oidc-o-auth-config/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="3.6.x"><span class="versions-dropdown-button-text">3.6.x</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.6.x"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">3.6.x</span></a><a href="../../../not-found-version.html?v=3.5.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.5.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.5.x</span></a><a href="../../../not-found-version.html?v=3.4.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.4.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.4.x</span></a><a href="../../../not-found-version.html?v=3.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.3.x</span></a><a href="../../../not-found-version.html?v=3.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.2.x</span></a><a href="../../../not-found-version.html?v=3.1.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.1.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.1.x</span></a><a href="../../../not-found-version.html?v=3.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="3.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">3.0.x</span></a><a href="../../../not-found-version.html?v=2.3.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.3.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.3.x</span></a><a href="../../../not-found-version.html?v=2.2.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.x</span></a><a href="../../../not-found-version.html?v=2.0.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.x</span></a><a href="../../../not-found-version.html?v=1.6.x" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.6.x"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.6.x</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":ktor-server-auth-oidc/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":ktor-server-auth-oidc/jvmMain" data-filter=":ktor-server-auth-oidc/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Ktor
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="ktor-server-auth-oidc::io.ktor.server.auth.oidc/OidcOAuthConfig///PointingToDeclaration//500524936">
+  <div class="breadcrumbs"><a href="../../index.html">ktor-server-auth-oidc</a><span class="delimiter">/</span><a href="../index.html">io.ktor.server.auth.oidc</a><span class="delimiter">/</span><span class="current">OidcOAuthConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Oidc</span><wbr><span>OAuth</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../ktor-io/io.ktor.utils.io/-experimental-ktor-api/index.html"><span class="token annotation builtin">ExperimentalKtorApi</span></a></div></div><span class="token keyword">class </span><a href="index.html">OidcOAuthConfig</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/ktorio/ktor/blob/3.6.0/ktor-server/ktor-server-plugins/ktor-server-auth-oidc/jvm/src/io/ktor/server/auth/oidc/OidcConfig.kt#L560">source</a>)</span></span></div><p class="paragraph">OAuth/OpenID Connect configuration.</p><p class="paragraph">OAuth installs a provider-specific login route and callback route. The callback requires an ID token and the <code class="lang-kotlin">openid</code> scope, then passes the verified <a href="../-oidc-token/-id/index.html">OidcToken.Id</a> to <a href="on-authenticated.html">onAuthenticated</a>.</p><p class="paragraph">Browser sessions are enabled by default. Customize them with <a href="sessions.html">sessions</a> or opt out with <a href="disable-sessions.html">disableSessions</a>. Plugin-managed <a href="refresh.html">refresh</a> and <a href="logout.html">logout</a> routes require sessions. When sessions are disabled, <a href="on-authenticated.html">onAuthenticated</a> is required so verified token material is not discarded.</p><p class="paragraph"><a href="https://ktor.io/feedback/?fqname=io.ktor.server.auth.oidc.OidcOAuthConfig">Report a problem</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1193448825%2FProperties%2F500524936" anchor-label="clientId" id="-1193448825%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="client-id.html"><span>client</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1193448825%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="client-id.html">clientId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">OAuth client ID. Required when OAuth is configured.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="467492882%2FProperties%2F500524936" anchor-label="clientSecret" id="467492882%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="client-secret.html"><span>client</span><wbr><span><span>Secret</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="467492882%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="client-secret.html">clientSecret</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">OAuth client secret. Required when OAuth is configured.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2072781354%2FProperties%2F500524936" anchor-label="codeChallengeMethod" id="-2072781354%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="code-challenge-method.html"><span>code</span><wbr><span>Challenge</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2072781354%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="code-challenge-method.html">codeChallengeMethod</a><span class="token operator">: </span><a href="../-code-challenge-method/index.html">CodeChallengeMethod</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Code challenge method used for PKCE (RFC 7636) during the authorization code flow.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1668160806%2FProperties%2F500524936" anchor-label="fetchUserInfo" id="-1668160806%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fetch-user-info.html"><span>fetch</span><wbr><span>User</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1668160806%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="fetch-user-info.html">fetchUserInfo</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">When <code class="lang-kotlin">true</code>, requests the OpenID Provider UserInfo endpoint after token exchange and uses that response for <a href="../-oidc-token/-id/user-info.html">OidcToken.Id.userInfo</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1529917910%2FProperties%2F500524936" anchor-label="loginUri" id="-1529917910%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="login-uri.html"><span>login</span><wbr><span><span>Uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1529917910%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="login-uri.html">loginUri</a><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Configures the OAuth login route URI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-606071427%2FProperties%2F500524936" anchor-label="redirectUri" id="-606071427%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="redirect-uri.html"><span>redirect</span><wbr><span><span>Uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-606071427%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="redirect-uri.html">redirectUri</a><span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Configures the OAuth callback route URI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1778128037%2FProperties%2F500524936" anchor-label="resourceIndicators" id="-1778128037%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="resource-indicators.html"><span>resource</span><wbr><span><span>Indicators</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1778128037%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="resource-indicators.html">resourceIndicators</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Optional resource indicators added to authorization, token, and refresh requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-711651762%2FProperties%2F500524936" anchor-label="scopes" id="-711651762%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scopes.html"><span><span>scopes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-711651762%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="scopes.html">scopes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">OAuth scopes requested during authorization.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1417131614%2FProperties%2F500524936" anchor-label="stateEncryptionKey" id="-1417131614%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state-encryption-key.html"><span>state</span><wbr><span>Encryption</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1417131614%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="state-encryption-key.html">stateEncryptionKey</a><span class="token operator">: </span><a href="../-oidc-state-encryption-key/index.html">OidcStateEncryptionKey</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Symmetric key used to encrypt the in-flight OAuth state cookie carrying <code class="lang-kotlin">state</code>, <code class="lang-kotlin">nonce</code>, and the PKCE code verifier between the login redirect and the callback.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1437909334%2FProperties%2F500524936" anchor-label="tokenEndpointAuthMethod" id="1437909334%2FProperties%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="token-endpoint-auth-method.html"><span>token</span><wbr><span>Endpoint</span><wbr><span>Auth</span><wbr><span><span>Method</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1437909334%2FProperties%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="token-endpoint-auth-method.html">tokenEndpointAuthMethod</a><span class="token operator">: </span><a href="../-client-authentication-method/index.html">ClientAuthenticationMethod</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Client authentication method for token endpoint requests: authorization code exchange and token refresh.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1883477144%2FFunctions%2F500524936" anchor-label="disableSessions" id="-1883477144%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disable-sessions.html"><span>disable</span><wbr><span><span>Sessions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1883477144%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="disable-sessions.html"><span class="token function">disableSessions</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disables browser sessions for this OAuth flow.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1857758264%2FFunctions%2F500524936" anchor-label="logout" id="1857758264%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="logout.html"><span><span>logout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1857758264%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="logout.html"><span class="token function">logout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"/oidc/"</span><span class="token punctuation">, </span></span><span class="parameter ">onLogout<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the plugin-managed logout route.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="logout.html"><span class="token function">logout</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"/oidc/"</span><span class="token punctuation">, </span></span><span class="parameter ">postLogoutRedirectUri<span class="token operator">: </span><a href="../../../ktor-http/io.ktor.http/-u-r-l-builder/index.html">URLBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">onLogout<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the plugin-managed logout route and includes <code class="lang-kotlin">post_logout_redirect_uri</code> in RP-initiated logout.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1263031275%2FFunctions%2F500524936" anchor-label="onAuthenticated" id="-1263031275%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-authenticated.html"><span>on</span><wbr><span><span>Authenticated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1263031275%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-authenticated.html"><span class="token function">onAuthenticated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-server-auth-oidc/io.ktor.server.auth.oidc/-oidc-o-auth-authenticated-handler/index.html">OidcOAuthAuthenticatedHandler</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the handler called after a successful OAuth/OIDC login.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="666478920%2FFunctions%2F500524936" anchor-label="onAuthenticationFailed" id="666478920%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-authentication-failed.html"><span>on</span><wbr><span>Authentication</span><wbr><span><span>Failed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="666478920%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-authentication-failed.html"><span class="token function">onAuthenticationFailed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="../../../ktor-server-auth/io.ktor.server.auth/-unauthorized-handler/index.html">UnauthorizedHandler</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the handler called when OIDC verification fails after token exchange.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1698657753%2FFunctions%2F500524936" anchor-label="refresh" id="-1698657753%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="refresh.html"><span><span>refresh</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1698657753%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="refresh.html"><span class="token function">refresh</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"/oidc/"</span><span class="token punctuation">, </span></span><span class="parameter ">onRefresh<span class="token operator">: </span><span class="token keyword">suspend </span><a href="../../../ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the plugin-managed session refresh route.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1387191747%2FFunctions%2F500524936" anchor-label="sessions" id="1387191747%2FFunctions%2F500524936" data-filterable-set=":ktor-server-auth-oidc/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":ktor-server-auth-oidc/jvmMain" data-filterable-set=":ktor-server-auth-oidc/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sessions.html"><span><span>sessions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1387191747%2FFunctions%2F500524936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":ktor-server-auth-oidc/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="sessions.html"><span class="token function">sessions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configure<span class="token operator">: </span><a href="../-oidc-sessions-config/index.html">OidcSessionsConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the OIDC session for this OAuth flow, including cookie transport and CSRF protection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 JetBrains s.r.o and contributors. Apache License 2.0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
